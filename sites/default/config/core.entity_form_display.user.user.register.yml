@@ -1,0 +1,38 @@
+uuid: dbaa88bb-7e71-43a8-b09f-61c7b82e3266
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.register
+    - field.field.user.user.feeds_item
+    - field.field.user.user.field_artist_id
+    - field.field.user.user.field_legacy_id
+  module:
+    - user
+_core:
+  default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
+id: user.user.register
+targetEntityType: user
+bundle: user
+mode: register
+content:
+  account:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  contact:
+    weight: 5
+    region: content
+  language:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  feeds_item: true
+  field_artist_id: true
+  field_legacy_id: true
+  google_analytics: true
+  path: true
+  timezone: true

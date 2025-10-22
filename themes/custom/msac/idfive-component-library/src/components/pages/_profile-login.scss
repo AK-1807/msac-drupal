@@ -1,0 +1,116 @@
+.profile-login-tabs {
+  max-width: none;
+  .form-text,
+  .form-email {
+    max-width: none;
+  }
+  *[id$="--description"] {
+    @extend %visible-for-screen-readers;
+  }
+  #edit-user-type {
+    .form-item {
+      display: inline-block;
+      &:not(:last-child) {
+        margin-right: rem(16);
+      }
+    }
+  }
+}
+.node-organization-msac-profiles-truncated-ind-org-node-form,
+.node-artist-msac-profiles-truncated-ind-org-node-form {
+  @include media("800") {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -$silc-grid--gutter;
+  }
+  .form-wrapper {
+    @include media("800") {
+      padding-left: $silc-grid--gutter;
+      width: 50%;
+    }
+    &.field--name-field-artist-artistic-categories,
+    &.field--name-field-org-type {
+      @include media("800") {
+        width: 100%;
+      }
+    }
+    > .form-wrapper {
+      padding-left: 0;
+      width: 100%;
+    }
+  }
+  .form-item {
+    .form-text,
+    .form-select {
+      max-width: none;
+    }
+  }
+  .shs-field-container {
+    margin-bottom: rem(32);
+    @include media("800") {
+      display: flex;
+      margin-left: -$silc-grid--gutter;
+      margin-bottom: rem(24);
+    }
+  }
+  .shs-widget-container {
+    @include media("800") {
+      padding-left: $silc-grid--gutter;
+      width: 50%;
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(16);
+      @include media("800") {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .fieldset-wrapper {
+    .form-wrapper {
+      padding-left: 0;
+      width: 100%;
+    }
+  }
+  .field--name-body {
+    margin-bottom: rem(32);
+    width: 100%;
+    .form-item {
+      margin-bottom: rem(8);
+      padding-left: 0;
+    }
+    .filter-wrapper {
+      border: none;
+      padding: 0;
+    }
+    .filter-help {
+      float: none;
+      padding: 0;
+      width: 100%;
+    }
+  }
+  .form-actions {
+    @include media("800") {
+      padding-left: $silc-grid--gutter;
+      width: 100%;
+    }
+  }
+  #group-artist-rosters,
+  #group-organization-rosters {
+    width: 100%;
+  }
+}
+
+.node-organization-msac-profiles-truncated-ind-org-node-form {
+  .field--name-title {
+    @include media("800") {
+      padding-left: 0 !important;
+      width: 100%;
+    }
+    > .form-item {
+      @include media("800") {
+        width: 50%;
+        padding-left: $silc-grid--gutter;
+      }
+    }
+  }
+}

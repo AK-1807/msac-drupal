@@ -1,0 +1,14 @@
+uuid: 9768f6b4-b8d4-4984-83cd-22288bae5a6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.basic_admin
+  module:
+    - user
+id: user_add_role_action.basic_admin
+label: 'Add the Basic Admin role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: basic_admin

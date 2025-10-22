@@ -1,0 +1,19 @@
+uuid: 492d799a-db3f-487b-9ce5-44f9e80c4a4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_district_contact_phone
+    - node.type.district
+id: node.district.field_district_contact_phone
+field_name: field_district_contact_phone
+entity_type: node
+bundle: district
+label: 'Contact Phone'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

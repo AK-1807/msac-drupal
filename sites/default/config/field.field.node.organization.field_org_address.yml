@@ -1,0 +1,61 @@
+uuid: 489ef471-d205-4911-b77a-2a2147c4496c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_org_address
+    - node.type.organization
+  module:
+    - address
+id: node.organization.field_org_address
+field_name: field_org_address
+entity_type: node
+bundle: organization
+label: Address
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    langcode: ''
+    country_code: US
+    administrative_area: MD
+    locality: ''
+    dependent_locality: null
+    postal_code: ''
+    sorting_code: null
+    address_line1: ''
+    address_line2: ''
+    organization: null
+    given_name: null
+    additional_name: null
+    family_name: null
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: hidden
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    organization:
+      override: hidden
+    addressLine1:
+      override: optional
+    addressLine2:
+      override: optional
+    postalCode:
+      override: optional
+    sortingCode:
+      override: optional
+    dependentLocality:
+      override: hidden
+    locality:
+      override: optional
+    administrativeArea:
+      override: required
+  fields: {  }
+field_type: address

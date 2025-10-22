@@ -1,0 +1,17 @@
+uuid: 1cd5eaa6-1918-4453-8ffe-a2d723729f8f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: District
+type: district
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

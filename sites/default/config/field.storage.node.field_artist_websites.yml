@@ -1,0 +1,19 @@
+uuid: 88486a35-e7b6-4196-83f2-b981cab4c3f5
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_artist_websites
+field_name: field_artist_websites
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

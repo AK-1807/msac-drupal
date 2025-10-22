@@ -1,0 +1,72 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.idfive_media_browser_image
+    - field.field.paragraph.ip_card.field_ip_cd_image
+    - field.field.paragraph.ip_card.field_ip_cd_link
+    - field.field.paragraph.ip_card.field_ip_cd_text
+    - field.field.paragraph.ip_card.field_ip_cd_title
+    - paragraphs.paragraphs_type.ip_card
+  module:
+    - entity_browser
+    - link_attributes
+    - text
+_core:
+  default_config_hash: 0vBQ49YQdRkLzET5C23kitnKW20hvdwrzcKEmjSt01o
+id: paragraph.ip_card.default
+targetEntityType: paragraph
+bundle: ip_card
+mode: default
+content:
+  field_ip_cd_image:
+    weight: 3
+    settings:
+      entity_browser: idfive_media_browser_image
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings: {  }
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+  field_ip_cd_link:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        target: true
+        id: false
+        name: false
+        rel: false
+        class: false
+        accesskey: false
+        aria-label: false
+        title: false
+    third_party_settings: {  }
+    type: link_attributes
+    region: content
+  field_ip_cd_text:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_ip_cd_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

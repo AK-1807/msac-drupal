@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "type": "node--ae_district",
+      "id": "8d909aa3-8b7c-4453-8416-0acd0f6f931c",
+      "attributes": {
+        "title": "Station North Arts and Entertainment District",
+        "thumbnail": "https://via.placeholder.com/300x300",
+        "street_address": "120 W North Avenue",
+        "city": "Baltimore",
+        "state": "MD",
+        "zip": "21550",
+        "lat": "39.309675",
+        "lng": "-76.613486",
+        "path": {
+          "alias": "https://idfive.com"
+        }
+      },
+      "relationships": {
+        "county": {
+          "data": {
+            "type": "node--county",
+            "id": "da021feb-0577-41e9-a6f6-644196da6d2a"
+          }
+        }
+      }
+    },
+    {
+      "type": "node--ae_district",
+      "id": "633b6f79-4a82-4c2c-a5d5-0fa30ff2503a",
+      "attributes": {
+        "title": "Pennsylvania Avenue Black Arts & Entertainment District",
+        "thumbnail": "https://via.placeholder.com/300x300",
+        "street_address": "PO Box 16433",
+        "city": "Baltimore",
+        "state": "MD",
+        "zip": "21217",
+        "lat": "39.305893",
+        "lng": "-76.636877",
+        "path": {
+          "alias": "https://idfive.com"
+        }
+      },
+      "relationships": {
+        "county": {
+          "data": {
+            "type": "node--county",
+            "id": "da021feb-0577-41e9-a6f6-644196da6d2a"
+          }
+        }
+      }
+    },
+    {
+      "type": "node--ae_district",
+      "id": "9d415819-a783-4128-b51d-011d126d8f06",
+      "attributes": {
+        "title": "Bromo Tower Arts and Entertainment District",
+        "thumbnail": "https://via.placeholder.com/300x300",
+        "street_address": "20 South Charles St",
+        "city": "Baltimore",
+        "state": "MD",
+        "zip": "21202",
+        "lat": "39.293508",
+        "lng": "-76.62036",
+        "path": {
+          "alias": "https://idfive.com"
+        }
+      },
+      "relationships": {
+        "county": {
+          "data": {
+            "type": "node--county",
+            "id": "da021feb-0577-41e9-a6f6-644196da6d2a"
+          }
+        }
+      }
+    },
+    {
+      "type": "node--ae_district",
+      "id": "c6347d99-4112-40cd-ba0b-691751fc9c59",
+      "attributes": {
+        "title": "Highlandtown Arts and Entertainment District",
+        "thumbnail": "https://via.placeholder.com/300x300",
+        "street_address": "3323 Eastern Avenue",
+        "city": "Baltimore",
+        "state": "MD",
+        "zip": "21224",
+        "lat": "39.289847",
+        "lng": "-76.569219",
+        "path": {
+          "alias": "https://idfive.com"
+        }
+      },
+      "relationships": {
+        "county": {
+          "data": {
+            "type": "node--county",
+            "id": "da021feb-0577-41e9-a6f6-644196da6d2a"
+          }
+        }
+      }
+    }
+  ]
+}

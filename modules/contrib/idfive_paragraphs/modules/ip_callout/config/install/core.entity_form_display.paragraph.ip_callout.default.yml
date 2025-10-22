@@ -1,0 +1,70 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.idfive_media_browser_image
+    - field.field.paragraph.ip_callout.field_ip_co_headline
+    - field.field.paragraph.ip_callout.field_ip_co_image
+    - field.field.paragraph.ip_callout.field_ip_co_link
+    - field.field.paragraph.ip_callout.field_ip_co_text
+    - paragraphs.paragraphs_type.ip_callout
+  module:
+    - entity_browser
+    - link_attributes
+_core:
+  default_config_hash: AI5vnCD8QL9_fZGsKPk6kgVnY3d_IVaZz3ppq3LaGZc
+id: paragraph.ip_callout.default
+targetEntityType: paragraph
+bundle: ip_callout
+mode: default
+content:
+  field_ip_co_headline:
+    weight: 0
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_ip_co_image:
+    weight: 2
+    settings:
+      entity_browser: idfive_media_browser_image
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings: {  }
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+  field_ip_co_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        target: true
+        id: false
+        name: false
+        rel: false
+        class: false
+        accesskey: false
+        aria-label: false
+        title: false
+    third_party_settings: {  }
+    type: link_attributes
+    region: content
+  field_ip_co_text:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+hidden:
+  created: true
+  status: true

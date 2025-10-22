@@ -1,0 +1,10 @@
+uuid: 468088ba-f49c-407a-b0f7-464e7e11c084
+langcode: en
+status: true
+dependencies: {  }
+id: home_feature
+label: 'Home Feature'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

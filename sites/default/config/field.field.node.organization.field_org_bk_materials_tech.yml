@@ -1,0 +1,26 @@
+uuid: bc99bb2a-d765-42b5-95ff-487a59fbfa85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_org_bk_materials_tech
+    - node.type.organization
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - plain_text
+id: node.organization.field_org_bk_materials_tech
+field_name: field_org_bk_materials_tech
+entity_type: node
+bundle: organization
+label: 'Materials & Technology Needed'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

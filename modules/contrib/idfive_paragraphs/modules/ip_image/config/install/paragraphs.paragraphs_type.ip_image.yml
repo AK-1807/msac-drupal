@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ip_image
+label: Image
+icon_uuid: null
+description: 'Paragraphs integration of images for use in idfive client projects. Images loaded from site media library'
+behavior_plugins: {  }

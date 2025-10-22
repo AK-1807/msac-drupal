@@ -1,0 +1,21 @@
+uuid: c89b3e8b-2567-4a03-98b0-4c878d4f0fd1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_artist_reference_phone
+    - paragraphs.paragraphs_type.reference
+  module:
+    - telephone
+id: paragraph.reference.field_artist_reference_phone
+field_name: field_artist_reference_phone
+entity_type: paragraph
+bundle: reference
+label: Phone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

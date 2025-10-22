@@ -1,0 +1,21 @@
+uuid: e133aae5-4612-4519-a0c2-31827e979bf8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_juried_exhib_year
+    - node.type.artist
+  module:
+    - options
+id: node.artist.field_artist_juried_exhib_year
+field_name: field_artist_juried_exhib_year
+entity_type: node
+bundle: artist
+label: 'Juried Exhibition Year'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

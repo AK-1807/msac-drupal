@@ -1,0 +1,12 @@
+uuid: 5e15a0c6-8535-4a45-8683-7da3b8ad6dcb
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: roster_contributor
+label: 'Roster Contributor'
+weight: 6
+is_admin: null
+permissions:
+  - 'delete own files'

@@ -1,0 +1,8 @@
+uuid: 75cf3b8a-9be0-4c41-bc46-471e6f53de7a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Booking Prices'
+vid: booking_prices
+description: ''
+weight: 0

@@ -1,0 +1,23 @@
+uuid: b3f69096-cf5b-4e47-aa04-64f64d8a2c7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_work_featured
+    - node.type.work
+id: node.work.field_work_featured
+field_name: field_work_featured
+entity_type: node
+bundle: work
+label: Featured
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

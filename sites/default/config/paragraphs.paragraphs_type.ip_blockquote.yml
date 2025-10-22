@@ -1,0 +1,12 @@
+uuid: 798a83f5-41a0-4e57-b3dd-c5a78909b1d0
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: jezGi2ZYpANHFnkNmiU6OZS7q6gJvIdnB25i7wDlVb4
+id: ip_blockquote
+label: Blockquote
+icon_uuid: null
+icon_default: null
+description: 'This Paragraph type provides a way to add a blockquote into the Kitchen Sink Widgets. It is controlled by the idfive Paragraphs module.'
+behavior_plugins: {  }

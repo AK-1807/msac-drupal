@@ -1,0 +1,20 @@
+uuid: ea33fdf1-7b4d-4c77-91ac-dd0f639c8b0d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_work_legacy_work_id
+field_name: field_work_legacy_work_id
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

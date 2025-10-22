@@ -1,0 +1,177 @@
+uuid: 5b51e7db-9e51-4f2c-9fe9-76441d07a5cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.msac_profiles_truncated_ind_org_node
+    - field.field.node.organization.body
+    - field.field.node.organization.field_county
+    - field.field.node.organization.field_org_address
+    - field.field.node.organization.field_org_artistic_categories
+    - field.field.node.organization.field_org_arts_in_edu_roster
+    - field.field.node.organization.field_org_bk_contact_info
+    - field.field.node.organization.field_org_bk_materials_tech
+    - field.field.node.organization.field_org_bk_price
+    - field.field.node.organization.field_org_bk_references
+    - field.field.node.organization.field_org_bk_travel_req_rest
+    - field.field.node.organization.field_org_cover
+    - field.field.node.organization.field_org_cover_caption
+    - field.field.node.organization.field_org_districts
+    - field.field.node.organization.field_org_email
+    - field.field.node.organization.field_org_engmt_type_1
+    - field.field.node.organization.field_org_engmt_type_1_text
+    - field.field.node.organization.field_org_engmt_type_2
+    - field.field.node.organization.field_org_engmt_type_2_text
+    - field.field.node.organization.field_org_engmt_type_3
+    - field.field.node.organization.field_org_engmt_type_3_text
+    - field.field.node.organization.field_org_engmt_type_4
+    - field.field.node.organization.field_org_engmt_type_4_text
+    - field.field.node.organization.field_org_engmt_type_5
+    - field.field.node.organization.field_org_engmt_type_5_text
+    - field.field.node.organization.field_org_engmt_type_6
+    - field.field.node.organization.field_org_engmt_type_6_text
+    - field.field.node.organization.field_org_engmt_type_7
+    - field.field.node.organization.field_org_engmt_type_7_text
+    - field.field.node.organization.field_org_engmt_type_8
+    - field.field.node.organization.field_org_engmt_type_8_text
+    - field.field.node.organization.field_org_image
+    - field.field.node.organization.field_org_p_work
+    - field.field.node.organization.field_org_phone
+    - field.field.node.organization.field_org_population_types
+    - field.field.node.organization.field_org_presenting_touring
+    - field.field.node.organization.field_org_quote
+    - field.field.node.organization.field_org_services
+    - field.field.node.organization.field_org_show_email
+    - field.field.node.organization.field_org_social_behance
+    - field.field.node.organization.field_org_social_dribbble
+    - field.field.node.organization.field_org_social_facebook
+    - field.field.node.organization.field_org_social_instagram
+    - field.field.node.organization.field_org_social_linkedin
+    - field.field.node.organization.field_org_social_twitter
+    - field.field.node.organization.field_org_social_vimeo
+    - field.field.node.organization.field_org_social_youtube
+    - field.field.node.organization.field_org_type
+    - field.field.node.organization.field_org_websites
+    - node.type.organization
+  module:
+    - allowed_formats
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_organization_rosters:
+      children:
+        - field_org_arts_in_edu_roster
+        - field_org_presenting_touring
+      label: 'I have already been approved to be a part of...'
+      region: hidden
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        id: ''
+        description: 'Select if you have been approved to be included in either roster in the past.'
+        required_fields: true
+id: node.organization.msac_profiles_truncated_ind_org_node
+targetEntityType: node
+bundle: organization
+mode: msac_profiles_truncated_ind_org_node
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 3
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
+  field_county:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_org_type:
+    type: options_buttons
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_org_address: true
+  field_org_aftr_wknd: true
+  field_org_aftr_wknd_offered: true
+  field_org_artistic_categories: true
+  field_org_arts_in_edu_roster: true
+  field_org_bk_contact_info: true
+  field_org_bk_materials_tech: true
+  field_org_bk_price: true
+  field_org_bk_references: true
+  field_org_bk_travel_req_rest: true
+  field_org_ci_fldtrips_for: true
+  field_org_ci_fldtrips_offered: true
+  field_org_cover: true
+  field_org_cover_caption: true
+  field_org_districts: true
+  field_org_email: true
+  field_org_engmt_type_1: true
+  field_org_engmt_type_1_text: true
+  field_org_engmt_type_2: true
+  field_org_engmt_type_2_text: true
+  field_org_engmt_type_3: true
+  field_org_engmt_type_3_text: true
+  field_org_engmt_type_4: true
+  field_org_engmt_type_4_text: true
+  field_org_engmt_type_5: true
+  field_org_engmt_type_5_text: true
+  field_org_engmt_type_6: true
+  field_org_engmt_type_6_text: true
+  field_org_engmt_type_7: true
+  field_org_engmt_type_7_text: true
+  field_org_engmt_type_8: true
+  field_org_engmt_type_8_text: true
+  field_org_image: true
+  field_org_lectures: true
+  field_org_p_work: true
+  field_org_pf_fldtrips: true
+  field_org_pf_fldtrips_for: true
+  field_org_phone: true
+  field_org_population_types: true
+  field_org_presenting_touring: true
+  field_org_quote: true
+  field_org_services: true
+  field_org_show_email: true
+  field_org_social_behance: true
+  field_org_social_dribbble: true
+  field_org_social_facebook: true
+  field_org_social_instagram: true
+  field_org_social_linkedin: true
+  field_org_social_twitter: true
+  field_org_social_vimeo: true
+  field_org_social_youtube: true
+  field_org_visiting_for: true
+  field_org_visiting_offered: true
+  field_org_websites: true
+  field_org_workshops: true
+  moderation_state: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

@@ -1,0 +1,21 @@
+uuid: a7916c8b-e626-4eb0-9f37-9f630648e10d
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+_core:
+  default_config_hash: ShhMN0_mP5hs050Da0Ca50LVk2egTBW1TMGflC3s79M
+id: paragraph.field_ip_bl_link
+field_name: field_ip_bl_link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

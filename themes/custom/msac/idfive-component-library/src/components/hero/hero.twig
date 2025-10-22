@@ -1,0 +1,15 @@
+<div class="hero">
+<figure class="hero__media">
+    <div class="hero__media-image">
+        <img src="{{ media|path }}" alt="alt text lorem">
+    </div>
+    {% if caption %}
+    <figcaption class="hero__media-caption{% if logo %} hero__media-caption-w-logo{% endif %}">{{ caption }}</figcaption>
+    {% endif %}
+    </figure>
+    {% if logo %}
+    <figure class="hero__logo">
+        <img src="{{ logo.src|path }}" alt="{{logo.alt}}"/>
+    </figure>
+    {% endif %}
+</div>

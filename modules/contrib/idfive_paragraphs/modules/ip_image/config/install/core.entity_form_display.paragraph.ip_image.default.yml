@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.idfive_media_browser_image
+    - field.field.paragraph.ip_image.field_ip_im_caption
+    - field.field.paragraph.ip_image.field_ip_im_image
+    - paragraphs.paragraphs_type.ip_image
+  module:
+    - entity_browser
+id: paragraph.ip_image.default
+targetEntityType: paragraph
+bundle: ip_image
+mode: default
+content:
+  field_ip_im_caption:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ip_im_image:
+    weight: 0
+    settings:
+      entity_browser: idfive_media_browser_image
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: default
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+hidden:
+  created: true
+  status: true

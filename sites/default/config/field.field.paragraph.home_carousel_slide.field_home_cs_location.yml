@@ -1,0 +1,19 @@
+uuid: b8892397-1f3c-42ec-bdd9-df04e42f2005
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_home_cs_location
+    - paragraphs.paragraphs_type.home_carousel_slide
+id: paragraph.home_carousel_slide.field_home_cs_location
+field_name: field_home_cs_location
+entity_type: paragraph
+bundle: home_carousel_slide
+label: 'Slide Location'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

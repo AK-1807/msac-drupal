@@ -1,0 +1,54 @@
+uuid: 01142161-7ac0-4414-8ef8-2a0f5af712bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.idfive_media_browser
+  module:
+    - entity_browser_entity_form
+    - views
+_core:
+  default_config_hash: afROORGjVIFK_Of-S9FdEv_yeD2wGbz4iBnfGRW_BaA
+name: idfive_media_browser_video
+label: 'Media Browser Video'
+display: modal
+display_configuration:
+  width: '800'
+  height: '800'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  1654d95c-b928-4ac7-bc73-7db5869b9817:
+    id: view
+    uuid: 1654d95c-b928-4ac7-bc73-7db5869b9817
+    label: 'Video Library'
+    weight: 1
+    settings:
+      submit_text: 'Select Video'
+      auto_select: false
+      view: idfive_media_browser
+      view_display: entity_browser_video
+  bcbf00f0-34b8-417a-833a-18bf4445b362:
+    id: entity_form
+    uuid: bcbf00f0-34b8-417a-833a-18bf4445b362
+    label: 'Add Local Video'
+    weight: 2
+    settings:
+      submit_text: 'Save Video'
+      entity_type: media
+      bundle: video
+      form_mode: default
+  b5d84ac0-2508-46f1-84ec-b12c326faca0:
+    id: entity_form
+    uuid: b5d84ac0-2508-46f1-84ec-b12c326faca0
+    label: 'Add Remote Video'
+    weight: 3
+    settings:
+      submit_text: 'Save Video'
+      entity_type: media
+      bundle: remote_video
+      form_mode: default

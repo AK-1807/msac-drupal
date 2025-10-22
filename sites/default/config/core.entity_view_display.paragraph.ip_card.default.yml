@@ -1,0 +1,58 @@
+uuid: 2541d6e3-877b-4912-8235-f701abd9a7e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ip_card.field_ip_cd_image
+    - field.field.paragraph.ip_card.field_ip_cd_link
+    - field.field.paragraph.ip_card.field_ip_cd_text
+    - field.field.paragraph.ip_card.field_ip_cd_title
+    - paragraphs.paragraphs_type.ip_card
+  module:
+    - link
+    - text
+_core:
+  default_config_hash: Lr-LZhrhb7KY4uR2CTorNj2pFzSRD0HUmSqPRWpkNZU
+id: paragraph.ip_card.default
+targetEntityType: paragraph
+bundle: ip_card
+mode: default
+content:
+  field_ip_cd_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_ip_cd_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_ip_cd_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ip_cd_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

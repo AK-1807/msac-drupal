@@ -1,0 +1,374 @@
+<?php
+
+/**
+ * @file
+ * Contains custom functionality and modifications for MSAC Profiles.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Link;
+use Drupal\Core\Url;
+
+// TEMP: remove after artist award fields edits ///////////////////////////////////////////////////.
+use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\Core\Entity\EntityInterface;
+
+// TEMP ///////////////////////////////////////////////////.
+
+/**
+ * Implements hook_help().
+ *
+ * @inheritdoc
+ */
+function msac_profiles_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.msac_profiles':
+      $text = file_get_contents(dirname(__FILE__) . "/README.md");
+      if (!\Drupal::moduleHandler()->moduleExists('markdown')) {
+        return '<pre>' . $text . '</pre>';
+      }
+      else {
+        // Use the Markdown filter to render the README.
+        $filter_manager = \Drupal::service('plugin.manager.filter');
+        $settings = \Drupal::configFactory()->get('markdown.settings')->getRawData();
+        $config = ['settings' => $settings];
+        $filter = $filter_manager->createInstance('markdown', $config);
+        return $filter->process($text, 'en');
+      }
+  }
+  return NULL;
+}
+
+/**
+ * Implements hook_entity_type_build().
+ */
+function msac_profiles_entity_type_build(array &$entity_types) {
+  // Create a custom registration form.
+  $entity_types['user']->setFormClass('msac_profiles_register', 'Drupal\msac_profiles\Form\MsacProfilesRegisterForm');
+  // Create a custom user edit form.
+  $entity_types['user']->setFormClass('msac_profiles_account', 'Drupal\msac_profiles\Form\MsacProfilesAccountForm');
+  // Create a custom truncated node form for artists/orgs.
+  $entity_types['node']->setFormClass('msac_profiles_truncated_ind_org_node', 'Drupal\msac_profiles\Form\MsacProfilesTruncatedIndOrgNodeForm');
+  // Create a custom form mode for artists/orgs on about.
+  $entity_types['node']->setFormClass('msac_profiles_about_node', 'Drupal\msac_profiles\Form\MsacProfilesAboutNodeForm');
+  // Create a custom form mode for works on work.
+  $entity_types['node']->setFormClass('msac_profiles_work_node', 'Drupal\msac_profiles\Form\MsacProfilesWorkNodeForm');
+  // Create a custom form mode for deleting works.
+  $entity_types['node']->setFormClass('msac_profiles_work_node_delete', 'Drupal\msac_profiles\Form\MsacProfilesWorkNodeDeleteForm');
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function msac_profiles_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  switch ($form_id) {
+    case 'user_login_form':
+      $link = Link::fromTextAndUrl('Forgot Password', Url::fromUserInput('/user/password', ['attributes' => ['class' => ['forgot-password-link']]]))->toString();
+
+      $form['#suffix'] = $link;
+      $form['#submit'][] = '_msac_profiles_user_login_form_submit';
+      break;
+
+    case 'node_work_msac_profiles_work_node_form':
+    case 'node_work_msac_profiles_work_node_delete_form':
+      $form['actions']['cancel'] = [
+        '#type' => 'submit',
+        '#weight' => 20,
+        '#name' => 'cancel_go_back',
+        '#value' => t('Cancel'),
+        '#submit' => ['_msac_profiles_work_form_cancel'],
+        '#limit_validation_errors' => [],
+      ];
+      unset($form['actions']['delete']);
+      unset($form['actions']['preview']);
+      break;
+
+    case 'user_msac_profiles_account_form':
+      $form['actions']['cancel'] = [
+        '#type' => 'submit',
+        '#weight' => 20,
+        '#name' => 'cancel_go_back',
+        '#value' => t('Cancel'),
+        '#submit' => ['_msac_profiles_about_form_cancel'],
+        '#limit_validation_errors' => [],
+      ];
+      break;
+
+    case 'node_artist_msac_profiles_about_node_form':
+      $arts_in_education_fields = [
+        'field_artist_population_types',
+        'field_artist_engmt_type_1',
+        'field_artist_engmt_type_1_text',
+        'field_artist_engmt_type_2',
+        'field_artist_engmt_type_2_text',
+        'field_artist_engmt_type_3',
+        'field_artist_engmt_type_3_text',
+        'field_artist_engmt_type_4',
+        'field_artist_engmt_type_4_text',
+        'field_artist_engmt_type_5',
+        'field_artist_engmt_type_5_text',
+        'field_artist_engmt_type_6',
+        'field_artist_engmt_type_6_text',
+        'field_artist_engmt_type_7',
+        'field_artist_engmt_type_7_text',
+        'field_artist_engmt_type_8',
+        'field_artist_engmt_type_8_text',
+      ];
+      $node = $form_state->getFormObject()->getEntity();
+      if ($node->field_artist_arts_in_edu_roster->value) {
+        // Logic to remove form field if checkbox is unchecked
+        foreach ($arts_in_education_fields as $field) {
+          $child_field = $field . '_text';
+          if (isset($form[$child_field])) {
+            unset($form[$field]);
+            if (!$node->$field->value) {
+              unset($form[$child_field]);
+            }
+          }
+        }
+      } else {
+        foreach ($arts_in_education_fields as $field) {
+          if (isset($form[$field])) {
+            $form[$field]['#access'] = FALSE;
+          }
+        }
+      }
+      $form['actions']['cancel'] = [
+        '#type' => 'submit',
+        '#weight' => 20,
+        '#name' => 'cancel_go_back',
+        '#value' => t('Cancel'),
+        '#submit' => ['_msac_profiles_about_form_cancel'],
+        '#limit_validation_errors' => [],
+      ];
+      // unset fields if parent empty
+
+      break;
+
+    case 'node_artist_msac_profiles_truncated_ind_org_node_form':
+      // // Fix for label on checkbox wrapper. Look into field groups if more needed.
+      // $form['field_artist_arts_in_edu_roster']['#prefix'] = "<div class='form-wrapper form-wrapper--full'><div class='form-label'>Artist Roster</div>";
+      // $form['field_artist_arts_in_edu_roster']['#suffix'] = "</div>";
+      // $form['field_artist_presenting_touring']['#prefix'] = "<div class='form-wrapper form-wrapper--full'><div class='form-label'>Presenting & Touring</div>";
+      // $form['field_artist_presenting_touring']['#suffix'] = "</div>";
+      break;
+
+    case 'node_organization_msac_profiles_about_node_form':
+      $arts_in_education_fields = [
+        'field_org_population_types',
+        'field_org_engmt_type_1',
+        'field_org_engmt_type_1_text',
+        'field_org_engmt_type_2',
+        'field_org_engmt_type_2_text',
+        'field_org_engmt_type_3',
+        'field_org_engmt_type_3_text',
+        'field_org_engmt_type_4',
+        'field_org_engmt_type_4_text',
+        'field_org_engmt_type_5',
+        'field_org_engmt_type_5_text',
+        'field_org_engmt_type_6',
+        'field_org_engmt_type_6_text',
+        'field_org_engmt_type_7',
+        'field_org_engmt_type_7_text',
+        'field_org_engmt_type_8',
+        'field_org_engmt_type_8_text',
+      ];
+      $node = $form_state->getFormObject()->getEntity();
+      if ($node->field_org_arts_in_edu_roster->value) {
+        // Logic to remove form field if checkbox is unchecked
+        foreach ($arts_in_education_fields as $field) {
+          $child_field = $field . '_text';
+          if (isset($form[$child_field])) {
+            unset($form[$field]);
+            if (!$node->$field->value) {
+              unset($form[$child_field]);
+            }
+          }
+        }
+      } else {
+        foreach ($arts_in_education_fields as $field) {
+          if (isset($form[$field])) {
+            $form[$field]['#access'] = FALSE;
+          }
+        }
+      }
+      $form['actions']['cancel'] = [
+        '#type' => 'submit',
+        '#weight' => 20,
+        '#name' => 'cancel_go_back',
+        '#value' => t('Cancel'),
+        '#submit' => ['_msac_profiles_about_form_cancel'],
+        '#limit_validation_errors' => [],
+      ];
+      break;
+
+    case 'node_organization_msac_profiles_truncated_ind_org_node_form':
+      // // Fix for label on checkbox wrapper. Look into field groups if more needed.
+      // $form['field_org_arts_in_edu_roster']['#prefix'] = "<div class='form-wrapper form-wrapper--full'><div class='form-label'>Artist Roster</div>";
+      // $form['field_org_arts_in_edu_roster']['#suffix'] = "</div>";
+      // $form['field_org_presenting_touring']['#prefix'] = "<div class='form-wrapper form-wrapper--full'><div class='form-label'>Presenting & Touring</div>";
+      // $form['field_org_presenting_touring']['#suffix'] = "</div>";
+      break;
+  }
+}
+
+/**
+ * Custom submit handler for user login form.
+ */
+function _msac_profiles_user_login_form_submit($form, FormStateInterface $form_state) {
+  $current_user = \Drupal::currentUser();
+  $roles = $current_user->getRoles();
+  // Check if user is an admin.
+  if (in_array('artist', $roles)) {
+    // Set redirect to /profile page.
+    $form_state->setRedirect('msac_profiles.msac_profile_dashboard');
+  }
+}
+
+/**
+ * Custom cancel handler for work add/edit form.
+ */
+function _msac_profiles_work_form_cancel($form, FormStateInterface $form_state) {
+  // Set redirect to /profile/work page.
+  $form_state->setRedirect('msac_profiles.msac_profile_work');
+}
+
+/**
+ * Custom cancel handler for about and account forms .
+ */
+function _msac_profiles_about_form_cancel($form, FormStateInterface $form_state) {
+  // Set redirect to /profile/dashboard page.
+  $form_state->setRedirect('msac_profiles.msac_profile_dashboard');
+}
+
+/**
+ * Implements hook_theme().
+ */
+function msac_profiles_theme($existing, $type, $theme, $path) {
+  $module_directory = \Drupal::service('extension.path.resolver')->getPath('module', 'msac_profiles');
+  return [
+    'msac_profiles_login' => [
+      'template' => 'msac-profiles-login',
+      'render element' => 'form',
+      'variables' => [
+        'module_directory' => $module_directory,
+        'profile_settings' => NULL,
+        'registration_form' => NULL,
+        'login_form' => NULL,
+      ],
+    ],
+    'msac_profiles_interstatial' => [
+      'template' => 'msac-profiles-interstatial',
+      'render element' => 'form',
+      'variables' => [
+        'module_directory' => $module_directory,
+        'profile_settings' => NULL,
+        'truncated_form' => NULL,
+      ],
+    ],
+    'msac_profiles_dashboard' => [
+      'template' => 'msac-profiles-dashboard',
+      'render element' => 'form',
+      'variables' => [
+        'module_directory' => $module_directory,
+        'profile_settings' => NULL,
+        'profile' => NULL,
+      ],
+    ],
+    'msac_profiles_about' => [
+      'template' => 'msac-profiles-about',
+      'render element' => 'form',
+      'variables' => [
+        'module_directory' => $module_directory,
+        'profile_settings' => NULL,
+        'about_form' => NULL,
+        'profile' => NULL,
+      ],
+    ],
+    'msac_profiles_work' => [
+      'template' => 'msac-profiles-work',
+      'variables' => [
+        'module_directory' => $module_directory,
+        'profile_settings' => NULL,
+        'work' => NULL,
+        'profile' => NULL,
+      ],
+    ],
+    'msac_profiles_work_add_edit' => [
+      'template' => 'msac-profiles-work-add-edit',
+      'variables' => [
+        'module_directory' => $module_directory,
+        'profile_settings' => NULL,
+        'work_form' => NULL,
+        'work_title' => NULL,
+        'work_intro' => NULL,
+        'profile' => NULL,
+      ],
+    ],
+    'msac_profiles_account' => [
+      'template' => 'msac-profiles-account',
+      'variables' => [
+        'module_directory' => $module_directory,
+        'profile_settings' => NULL,
+        'user_form' => NULL,
+        'profile' => NULL,
+      ],
+    ],
+  ];
+
+}
+
+/**
+ * TEMP TEMP TEMP TEMP Implements hook_entity_update().
+ */
+function msac_profiles_entity_presave(EntityInterface $entity) {
+  switch ($entity->bundle()) {
+    case 'artist':
+      if (!empty($entity) && $entity->hasField('field_artist_iaa_recipient') && $entity->field_artist_iaa_recipient->getValue()) {
+        $entity = _msac_profiles_create_awards_paragraph($entity);
+      }
+      break;
+  }
+}
+
+// TEMP ///////////////////////////////////////////////////.
+
+/**
+ * TEMP TEMP TEMP TEMP Creates new award from legacy field.
+ */
+function _msac_profiles_create_awards_paragraph($entity) {
+  // Get and sort legacy values.
+  $tids = $entity->field_artist_iaa_recipient->getValue();
+  $years = [];
+  foreach ($tids as $key => $reference) {
+    $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($reference['target_id']);
+    $years[$key]['name'] = trim($term->name->value);
+    $years[$key]['year'] = trim($term->name->value);
+    if ($term->name->value == 'Prior to 2012') {
+      $years[$key]['year'] = '2011';
+    }
+  }
+  usort($years, function ($a, $b) {
+    return $a['year'] <=> $b['year'];
+  });
+  $combined = implode(", ", array_column($years, "name"));
+  // Create paragraph.
+  $paragraph = Paragraph::create(['type' => 'artist_award']);
+  $paragraph->set('field_artist_award_text', $combined);
+  $paragraph->set('field_artist_award_type', 'individual-artist');
+  $paragraph->isNew();
+  $paragraph->save();
+  // Grab any existing paragraphs from the node, and add this one.
+  $current = $entity->get('field_artist_awards')->getValue();
+  $current[] = [
+    'target_id' => $paragraph->id(),
+    'target_revision_id' => $paragraph->getRevisionId(),
+  ];
+  $entity->set('field_artist_awards', $current);
+  // Unset legacy field so does not run again.
+  $entity->set('field_artist_iaa_recipient', []);
+  return $entity;
+}
+// TEMP ///////////////////////////////////////////////////.

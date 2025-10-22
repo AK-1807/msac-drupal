@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * IP Card paragraph bundle.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% if content.field_ip_cd_image|field_value %}
+	{% set thumbnail = file_url(content.field_ip_cd_image[0]['#media'].field_media_image.entity.uri.value | image_style('large')) %}
+	{% set thumbnail_alt = content.field_ip_cd_image[0]['#media'].field_media_image.alt %}
+{% endif %}
+<div class="silc-grid__col {{ ip_card_cols }}">
+	<div class="{{ ip_card_type }}" data-clickable="{{ ip_card_clickable }}">
+		{% if thumbnail %}
+			<div class="card__media">
+				<img src="{{ thumbnail }}" alt="{{ thumbnail_alt }}" aria-hidden="true"/>
+			</div>
+		{% endif %}
+		<div class="card__content">
+			{% if paragraph.field_ip_cd_title.0.value %}
+				<h2 class="card__title">
+					{{ content.field_ip_cd_title }}</h2>
+			{% endif %}
+			{# <div class="card__body">
+							{{ content.field_ip_cd_text }}
+						</div> #}
+			{% for key, item in content.field_ip_cd_link %}
+			{% if key|first != '#' %}
+				<a href="{{ content.field_ip_cd_link[key]['#url'] }}" class="card__cta button" {% if content.field_ip_cd_link[key]['#options'].attributes.target %} target="{{ content.field_ip_cd_link[key]['#options'].attributes.target }}" {% endif %}>
+					{{ content.field_ip_cd_link[key]['#title'] }}
+				</a>
+			{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+	{{ content|without('field_ip_cd_title', 'field_ip_cd_text', 'field_ip_cd_image', 'field_ip_cd_link') }}
+</div>

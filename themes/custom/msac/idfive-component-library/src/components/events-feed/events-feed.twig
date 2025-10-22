@@ -1,0 +1,18 @@
+<ul class="feed-items">
+  {% for item in items %}
+    <li class="feed-item">
+      <a class="feed-item__cta" href="{{item.url}}">
+        <h3 class="feed-item__title">{{item.title}}</h3>
+        {% if item.location %}
+          <span class="feed-item__location">{{item.location}}</span>
+        {% endif %}
+        {% if item.dateTime %}
+          <span class="feed-item__date-time">{{item.dateTime}}</span>
+        {% endif %}
+        {% if item.description %}
+          <div class="feed-item__description">{{item.description}}</div>
+        {% endif %}
+      </a>
+    </li>
+  {% endfor %}
+</ul>

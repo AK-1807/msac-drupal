@@ -1,0 +1,25 @@
+{
+  "preview": "@page-preview",
+  "context": {
+    "hero": {
+      "media": "/img/AC_Hero.png"
+    },
+    "title": "Arts Calendar",
+    "breadcrumb": {
+      "links": [
+        {
+          "url": "http://idfive",
+          "name": "Home"
+        },
+        {
+          "url": "http://idfive",
+          "name": "Explore Arts in Maryland"
+        },
+        {
+          "url": "http://idfive",
+          "name": "Arts Calendar"
+        }
+      ]
+    }
+  }
+}

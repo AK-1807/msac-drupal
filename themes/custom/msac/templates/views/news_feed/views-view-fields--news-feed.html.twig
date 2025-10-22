@@ -1,0 +1,7 @@
+{% set row_node = row._entity %}
+<li class="feed-item">
+    <a href="{{ path('entity.node.canonical', {'node': row_node.id}) }}" class="feed-item__cta">
+    <h3 class="feed-item__title">{{ fields.title.content }}</h3>
+    <div class="feed-item__description">{{ fields.body.content }}</div>
+  </a>
+</li>

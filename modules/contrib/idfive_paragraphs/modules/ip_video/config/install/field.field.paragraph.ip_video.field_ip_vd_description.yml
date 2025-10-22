@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_vd_description
+    - paragraphs.paragraphs_type.ip_video
+  module:
+    - text
+_core:
+  default_config_hash: uU6CQRk0BHA1r2UrwhJG--liJOtIzDUL-OvqpBh_0RA
+id: paragraph.ip_video.field_ip_vd_description
+field_name: field_ip_vd_description
+entity_type: paragraph
+bundle: ip_video
+label: Description
+description: 'Descriptive text for video embed'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

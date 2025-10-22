@@ -1,0 +1,34 @@
+<div class="program-contact">
+	<div class="program-contact__top">
+		<div class="program-contact__photo">
+			<img src="{{ file_url(content.field_person_image|field_target_entity.uri.value | image_style('optimized')) }}" alt="{{ content.field_person_image['#items'].alt }}">
+		</div>
+		<div class="program-contact__heading">Contact</div>
+	</div>
+	<div class="program-contact__content">
+		<a href="{{ url }}" class="program-contact__name">
+			{{ label }}
+		</a>
+		<p class="program-contact__title">{{ content.field_person_title|field_value }}</p>
+
+		{% apply spaceless %}
+			<ul class="program-contact__contact-methods">
+				{% if content.field_person_email|field_value %}
+					<li class="program-contact__contact-method">
+						{% include directory ~ '/templates/helpers/icon.html.twig' with {'icon': 'mail'} %}
+						<a href="mailto:{{ content.field_person_email|field_value }}">{{ content.field_person_email|field_value }}</a>
+					</li>
+				{% endif %}
+				{% if content.field_person_phone|field_value %}
+					<li class="program-contact__contact-method">
+						{% include directory ~ '/templates/helpers/icon.html.twig' with {'icon': 'phone'} %}
+						<a href="tel:{{ content.field_person_phone|field_value }}">{{ content.field_person_phone|field_value }}</a>
+					</li>
+				{% endif %}
+			</ul>
+		{% endapply %}
+		<p class="program-contact__button">
+			<a class="button" href="{{ url }}">See Bio  &gt;</a>
+		</p>
+	</div>
+</div>

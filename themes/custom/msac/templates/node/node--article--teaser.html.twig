@@ -1,0 +1,17 @@
+<div class="news__teaser">
+	{% if content.field_article_image|field_value %}
+		<div class="news__teaser-thumbnail">
+			<img src="{{ file_url(content.field_article_image|field_target_entity.uri.value | image_style('optimized')) }}" alt="{{ content.field_article_image['#items'].alt }}" aria-hidden="true">
+		</div>
+	{% endif %}
+	<div class="news__teaser-content">
+		<div class="news__teaser-content-left">
+			<h2 class="news__teaser-title h3">
+				<a href="{{ url }}">{{ label }}</a>
+			</h2>
+			<div class="news__teaser-body">
+				{{ content.body }}
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,22 @@
+uuid: 9164b169-9682-47e6-8950-6bc0f1cf255e
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+_core:
+  default_config_hash: 6B4VHwBKCLhWpAOb8o6fDfQPp88S2hr2_IuxHxVsKfA
+id: paragraph.field_ip_im_image
+field_name: field_ip_im_image
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

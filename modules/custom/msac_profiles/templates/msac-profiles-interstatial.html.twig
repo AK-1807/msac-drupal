@@ -1,0 +1,22 @@
+<!-- Load interstatial form -->
+{% include module_directory ~ '/templates/includes/headers/anon_header.html.twig' %}
+<div class="page-content outer-pad">
+  <div class="silc-grid silc-grid--justify-center">
+    <div class="silc-grid__col silc-grid__col--10-1024 silc-grid__col--8-1200">
+      {{ drupal_messages() }}
+      <div class="text-content">
+        <div class="h4">{{ profile_settings.if_intro_text.value | raw }}</div>
+        <span class="hint-text">* All fields are required.</span>
+      </div>
+    </div>
+    <div class="silc-grid__col silc-grid__col--12">
+      <div class="silc-grid silc-grid--justify-center">
+        <div class="silc-grid__col silc-grid__col--10-1024 silc-grid__col--8-1200">
+          <div class="msac_profiles__form-wrap">
+            {{ truncated_form }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

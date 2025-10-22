@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: UuCt4PhrK8ojED2ESO_GOZZbxdkfFFKObGYlLisc_OY
+id: ip_video
+label: Video
+icon_uuid: null
+description: 'This Paragraph type provides an embedded video into the Kitchen Sink Widgets. It is controlled by the idfive Paragraphs module.'
+behavior_plugins: {  }

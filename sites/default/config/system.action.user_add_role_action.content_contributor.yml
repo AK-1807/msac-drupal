@@ -1,0 +1,14 @@
+uuid: 917b00d6-fb95-4c16-ae8d-cf0a8699c451
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.content_contributor
+  module:
+    - user
+id: user_add_role_action.content_contributor
+label: 'Add the Content Contributor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: content_contributor

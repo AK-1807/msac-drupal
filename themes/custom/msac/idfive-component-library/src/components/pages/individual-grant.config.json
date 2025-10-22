@@ -1,0 +1,107 @@
+{
+  "preview": "@page-preview",
+  "context": {
+    "background": "/img/individual-grant-sketch-bg.png",
+    "title": "Maryland Touring Grant",
+    "breadcrumb": {
+      "links": [
+        {
+          "url": "http://idfive",
+          "name": "Home"
+        },
+        {
+          "url": "http://idfive",
+          "name": "Programs"
+        },
+        {
+          "url": "http://idfive",
+          "name": "Presenting & Touring"
+        },
+        {
+          "url": "http://idfive",
+          "name": "Maryland Touring Grant"
+        }
+      ]
+    },
+    "aside": {
+      "title": "Quick Resources",
+      "sections": [
+        {
+          "title": "",
+          "content": "<p><a href=\"sample.pdf\">Download Full Guidelines</a></p>"
+        },
+        {
+          "title": "For…",
+          "content": "<ul><li><a href=\"\"Nonprofits & Government</a></li><li><a href=\"\">Schools & Universities</a></li><li><a href=\"\">County Arts Councils</a></li><li><a href=\"\">A&E Districts</a></li></ul>"
+        },
+        {
+          "title": "Funding Amount",
+          "content": "<p>$500-$3,500</p>"
+        },
+        {
+          "title": "Deadlines",
+          "content": "<p>4/27/2018</p>"
+        },
+        {
+          "title": "",
+          "content": "<a class=\"button\" href=\"\">Apply Now</a>"
+        }
+      ]
+    },
+    "accordion": {
+      "id": "accordion-0",
+      "sections": [
+        {
+          "title": "Before You Apply",
+          "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+        },
+        {
+          "title": "Application Process",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quos quidem corporis. Odit harum facilis delectus consequuntur accusantium neque quisquam distinctio corrupti atque? Illum repellat incidunt cupiditate deserunt atque voluptas?</p><p>Tempora ullam similique ipsum error hic sed rem, consectetur eos iste minima! Quos inventore ad quasi pariatur itaque deleniti molestias officia quam! Dolore saepe rerum qui suscipit adipisci quae nisi?</p>"
+        },
+        {
+          "title": "Receiving Funding",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis beatae ut sunt architecto optio error modi explicabo, sint harum hic impedit. Nam, sequi consequatur quisquam a nobis perspiciatis reiciendis odit!</p><p>Eum nesciunt distinctio reprehenderit inventore porro deserunt ipsam illum accusantium necessitatibus vitae, iusto culpa excepturi facilis reiciendis nobis perspiciatis in error sed quas possimus aliquam earum dolore. Deleniti, libero sunt.</p>"
+        }
+      ]
+    },
+    "programContacts": [
+      {
+        "photo": "/img/IG_Program_Contact_1.jpg",
+        "name": "Ken Skrzesz",
+        "title": "Executive Director",
+        "email": "kenneth.skrzesz1@maryland.gov",
+        "phone": "410-767-7962"
+      },
+      {
+        "photo": "/img/IG_Program_Contact_2.jpg",
+        "name": "Jane Smith",
+        "title": "Title Here",
+        "email": "jane.smith@maryland.gov",
+        "phone": "410-767-7962"
+      }
+    ],
+    "relatedGrants": [
+      {
+        "title": "Creativity Grant",
+        "body": "",
+        "image": "/img/IG_Related_Grant_1.jpg",
+        "url": "https://idfive.com",
+        "cta": {
+          "url": "https://idfive.com",
+          "text": "Learn More"
+        }
+      },
+      {
+        "title": "Folklife Project Grant",
+        "body": "",
+        "image": "/img/IG_Related_Grant_2.jpg",
+        "url": "https://idfive.com",
+        "cta": {
+          "url": "https://idfive.com",
+          "text": "Learn More"
+        }
+      }
+    ]
+  }
+}

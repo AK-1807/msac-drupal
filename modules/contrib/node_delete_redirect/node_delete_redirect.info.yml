@@ -1,0 +1,11 @@
+name: Node Delete Redirect
+description: Enables user of the right permission to define redirection path on node deletion.
+type: module
+core_version_requirement: ^9.3 || ^10
+
+package: Content
+
+dependencies:
+  - drupal:node
+
+configure: node_delete_redirect.admin_settings_form

@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * Theme override for image field, to allow for editing when media lib used.
+ *
+ * Removes excess markup.
+ */
+#}
+
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    label_display == 'inline' ? 'clearfix',
+  ]
+%}
+
+<span{{attributes.addClass(classes)}}>
+	{% for item in items %}
+		{{ item.content }}
+	{% endfor %}
+</span>
+

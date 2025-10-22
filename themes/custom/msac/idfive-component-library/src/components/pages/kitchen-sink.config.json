@@ -1,0 +1,107 @@
+{
+  "preview": "@page-preview",
+  "context": {
+    "hero": {
+      "media": "/img/KS_Hero.png",
+      "caption": "Optional hero image caption to describe what's occurring in the image.",
+      "logo": {
+        "src": "https://via.placeholder.com/250x175",
+        "alt": "Alt Text"
+      }
+    },
+    "title": "Kitchen Sink",
+    "breadcrumb": {
+      "links": [
+        {
+          "url": "http://idfive",
+          "name": "Home"
+        },
+        {
+          "url": "http://idfive",
+          "name": "Kitchen Sink"
+        }
+      ]
+    },
+    "blockquote": {
+      "quote": "Lorem Ipsum Dolor Sit Amet duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur sit amet suis aut dolor",
+      "author": "",
+      "source": "",
+      "sourceUrl": "",
+      "portrait": ""
+    },
+    "accordion": {
+      "id": "accordion-0",
+      "sections": [
+        {
+          "title": "Accordion 1",
+          "content": "<p>This is the content area of accordion 1</p>"
+        },
+        {
+          "title": "Accordion 2",
+          "content": "<p>This is the content area of accordion 2</p>"
+        },
+        {
+          "title": "Accordion 3",
+          "content": "<figure role=\"group\" class=\"align-right\"> <img alt=\"Image description lorem ipsum dolor sit amet\" src=\"https://via.placeholder.com/400x300\"> <figcaption>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Duis aute irure dolor in reprehenderit</figcaption> </figure> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio recusandae quasi praesentium, vitae perspiciatis aperiam, alias necessitatibus eaque vero atque eveniet sequi quis accusamus ipsum voluptates sapiente, sint ullam ab!</p><p>Nemo sit dolore harum quo suscipit eum, praesentium nihil aspernatur, voluptatum necessitatibus numquam temporibus ad nostrum autem rerum ipsa laboriosam facere iure. Asperiores corporis minima sit sed consequuntur, explicabo earum!</p><p>Neque, atque. Quibusdam laboriosam sed ipsam, officiis itaque praesentium cum accusamus, dolorum facilis nulla doloribus nesciunt mollitia deserunt iure sint quae dolorem illo ea velit ullam? Maxime illo provident vitae?</p><p>Provident, facilis voluptate iste eaque nisi, repellendus cumque molestiae vero quidem, amet quas expedita ab voluptas. Reiciendis recusandae deleniti, doloremque dolorum adipisci facilis iste praesentium ipsam officiis dolore natus perspiciatis!</p>"
+        }
+      ]
+    },
+    "carousel": {
+      "slides": [
+        {
+          "image": "/img/KS_Carousel_Slide_1.jpg",
+          "title": "Slide Title Lorem Ipsum Dolor Sit Amet Duis Aute Irure Dolor 1",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus."
+        },
+        {
+          "image": "http://via.placeholder.com/1000x600?text=2",
+          "title": "Slide Title Lorem Ipsum Dolor Sit Amet Duis Aute Irure Dolor 2",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus."
+        },
+        {
+          "image": "http://via.placeholder.com/1000x600?text=3",
+          "title": "Slide Title Lorem Ipsum Dolor Sit Amet Duis Aute Irure Dolor 3",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa sunt voluptate nobis! Dolor id facilis praesentium dignissimos! Fugit quis eveniet et iure explicabo. Aperiam, eligendi? Facere maiores veritatis natus."
+        }
+      ]
+    },
+    "cardGroup": {
+      "cards": [
+        {
+          "title": "Card 1 Title",
+          "body": "",
+          "image": "/img/KS_Card_1.jpg",
+          "url": "https://idfive.com",
+          "cta": {
+            "url": "https://idfive.com",
+            "text": "Learn More"
+          }
+        },
+        {
+          "title": "Card 2 Title",
+          "body": "",
+          "image": "/img/KS_Card_2.jpg",
+          "url": "https://idfive.com",
+          "cta": {
+            "url": "https://idfive.com",
+            "text": "Learn More"
+          }
+        },
+        {
+          "title": "Card 3 Title",
+          "body": "",
+          "image": "/img/KS_Card_3.jpg",
+          "url": "https://idfive.com",
+          "cta": {
+            "url": "https://idfive.com",
+            "text": "Learn More"
+          }
+        }
+      ]
+    },
+    "iframe": {
+      "title": "Arts Across Maryland (Statewide)",
+      "media": "https://www.youtube.com/embed/EbslCQrBNmk"
+    }
+  }
+}

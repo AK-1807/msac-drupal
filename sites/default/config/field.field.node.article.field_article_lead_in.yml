@@ -1,0 +1,19 @@
+uuid: d68e57a3-ecab-4598-bacb-84d6f6fc4258
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_article_lead_in
+    - node.type.article
+id: node.article.field_article_lead_in
+field_name: field_article_lead_in
+entity_type: node
+bundle: article
+label: 'Lead In'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

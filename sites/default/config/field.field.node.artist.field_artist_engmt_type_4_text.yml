@@ -1,0 +1,26 @@
+uuid: c882c90a-fee5-4baf-9ea2-6ca1de6fcd72
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_engmt_type_4_text
+    - node.type.artist
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - plain_text
+id: node.artist.field_artist_engmt_type_4_text
+field_name: field_artist_engmt_type_4_text
+entity_type: node
+bundle: artist
+label: 'Residencies Offered'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,300 @@
+uuid: c3b1e9ea-2889-45b9-b55e-e045893d335b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.person.body
+    - field.field.node.person.field_county
+    - field.field.node.person.field_person_artistic_categories
+    - field.field.node.person.field_person_email
+    - field.field.node.person.field_person_executive_member
+    - field.field.node.person.field_person_featured
+    - field.field.node.person.field_person_first_name
+    - field.field.node.person.field_person_image
+    - field.field.node.person.field_person_last_name
+    - field.field.node.person.field_person_mpac_type
+    - field.field.node.person.field_person_phone
+    - field.field.node.person.field_person_programs
+    - field.field.node.person.field_person_title
+    - field.field.node.person.field_person_type
+    - image.style.thumbnail
+    - node.type.person
+  module:
+    - conditional_fields
+    - content_moderation
+    - field_group
+    - image
+    - path
+    - shs
+    - telephone
+    - text
+third_party_settings:
+  field_group:
+    group_content:
+      children:
+        - group_details
+        - group_bio
+        - group_programs
+      label: Content
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        id: ''
+        direction: vertical
+    group_details:
+      children:
+        - title
+        - field_person_first_name
+        - field_person_last_name
+        - field_person_image
+        - field_person_title
+        - field_person_phone
+        - field_person_email
+        - field_county
+        - field_person_executive_member
+        - field_person_type
+        - field_person_mpac_type
+        - field_person_artistic_categories
+      label: Details
+      region: content
+      parent_name: group_content
+      weight: 14
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_bio:
+      children:
+        - body
+      label: Bio
+      region: content
+      parent_name: group_content
+      weight: 15
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_programs:
+      children:
+        - field_person_programs
+      label: Programs
+      region: content
+      parent_name: group_content
+      weight: 17
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: node.person.default
+targetEntityType: node
+bundle: person
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_county:
+    type: options_select
+    weight: 35
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_person_artistic_categories:
+    type: options_shs
+    weight: 40
+    region: content
+    settings:
+      display_node_count: false
+      create_new_items: false
+      create_new_levels: false
+      force_deepest: true
+    third_party_settings:
+      conditional_fields:
+        6981a592-ed54-4017-a5cb-d0239c38d088:
+          entity_type: node
+          bundle: person
+          dependee: field_person_type
+          settings:
+            state: visible
+            condition: value
+            grouping: OR
+            values_set: 3
+            value: ''
+            values: "msacc\r\nmsacs"
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_person_email:
+    type: email_default
+    weight: 34
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_person_executive_member:
+    type: boolean_checkbox
+    weight: 36
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_person_first_name:
+    type: string_textfield
+    weight: 28
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_person_image:
+    type: image_image
+    weight: 31
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_person_last_name:
+    type: string_textfield
+    weight: 29
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_person_mpac_type:
+    type: options_buttons
+    weight: 38
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        7771b55c-c65d-491f-8c98-62488d27e246:
+          entity_type: node
+          bundle: person
+          dependee: field_person_type
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 4
+            value: ''
+            values: mpac
+            value_form:
+              -
+                value: mpac
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_person_phone:
+    type: telephone_default
+    weight: 33
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_person_programs:
+    type: options_buttons
+    weight: 101
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_person_title:
+    type: string_textfield
+    weight: 32
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_person_type:
+    type: options_select
+    weight: 37
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_person_featured: true

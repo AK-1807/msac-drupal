@@ -1,0 +1,19 @@
+uuid: bbc7a20d-04ed-40bf-b190-1e32522d678a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_artist_bk_travel_req_rest
+field_name: field_artist_bk_travel_req_rest
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,392 @@
+uuid: 3a87afc6-f4bd-4ed8-a131-82d50b20a17a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.article.body
+    - field.field.node.article.field_article_date
+    - field.field.node.article.field_article_image
+    - field.field.node.article.field_article_lead_in
+    - field.field.node.article.field_article_legacy_node_id
+    - field.field.node.article.field_article_legacy_path
+    - field.field.node.article.field_article_media_contact
+    - field.field.node.article.field_article_programs
+    - field.field.node.article.field_article_type
+    - node.type.article
+  module:
+    - feeds_tamper
+    - node
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      7ce247b0-bdc2-4743-894b-7f01bd4d6a58:
+        find: News
+        replace: news
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 7ce247b0-bdc2-4743-894b-7f01bd4d6a58
+        plugin: find_replace
+        source: category
+        weight: 0
+        label: 'Find replace - News'
+      35ee654a-dfab-4055-973c-cdd99c5c6fa3:
+        find: 'Arts Across Maryland'
+        replace: arts_across_maryland
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 35ee654a-dfab-4055-973c-cdd99c5c6fa3
+        plugin: find_replace
+        source: category
+        weight: 1
+        label: 'Find replace - Arts Across Maryland'
+      2b1856ff-9c39-49ef-a243-3f5f085f63d1:
+        find: eNewsletter
+        replace: newsletter
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 2b1856ff-9c39-49ef-a243-3f5f085f63d1
+        plugin: find_replace
+        source: category
+        weight: 2
+        label: 'Find replace - Newsletter'
+      a1dfb7f3-6076-48e1-9f0a-dc5b226e53bd:
+        find: 'Press Release'
+        replace: press_release
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: a1dfb7f3-6076-48e1-9f0a-dc5b226e53bd
+        plugin: find_replace
+        source: category
+        weight: 3
+        label: 'Find replace - Press Release'
+      fbb16377-0e18-49d7-84b6-694decf28ef4:
+        find: Publication
+        replace: publication
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: fbb16377-0e18-49d7-84b6-694decf28ef4
+        plugin: find_replace
+        source: category
+        weight: 4
+        label: 'Find replace - Publication'
+      e866ec73-8247-4c2f-b91e-8987093cdf6b:
+        separator: ','
+        limit: null
+        uuid: e866ec73-8247-4c2f-b91e-8987093cdf6b
+        plugin: explode
+        source: programs
+        weight: 1
+        label: Explode
+      7a2c8cae-9ffb-43d5-9e78-cca288fc6d55:
+        allowed_tags: ''
+        uuid: 7a2c8cae-9ffb-43d5-9e78-cca288fc6d55
+        plugin: strip_tags
+        source: headline
+        weight: 0
+        label: 'Strip tags'
+      8828473e-0c6d-48ff-940a-9021f487dbe0:
+        default_value: news
+        only_if_empty: true
+        uuid: 8828473e-0c6d-48ff-940a-9021f487dbe0
+        plugin: default_value
+        source: category
+        weight: 5
+        label: 'Set value or default value'
+      a08846ab-a881-48f4-9368-c0fbf637c72b:
+        find: 'Arts & Entertainment Districts'
+        replace: 'Arts & Entertainment Districts'
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: a08846ab-a881-48f4-9368-c0fbf637c72b
+        plugin: find_replace
+        source: programs
+        weight: -10
+        label: 'Find replace - Arts & Entertainment Districts'
+      6d1db8ac-f89a-4ac0-b0ce-b807ab8be5dc:
+        find: 'Arts in Education Programs'
+        replace: 'Arts in Education'
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 6d1db8ac-f89a-4ac0-b0ce-b807ab8be5dc
+        plugin: find_replace
+        source: programs
+        weight: -9
+        label: 'Find replace - Arts in Education Programs'
+      cbccf9a7-edce-4687-8048-9444178c1559:
+        find: 'County Arts Agencies of Maryland'
+        replace: 'County Arts Agencies of Maryland Network'
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: cbccf9a7-edce-4687-8048-9444178c1559
+        plugin: find_replace
+        source: programs
+        weight: -8
+        label: 'Find replace - County Arts Agencies of Maryland'
+      8c11af0c-1c27-4ebf-8979-0eaf6def4343:
+        find: 'Creativity Grants'
+        replace: 'Creativity Grants'
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 8c11af0c-1c27-4ebf-8979-0eaf6def4343
+        plugin: find_replace
+        source: programs
+        weight: -7
+        label: 'Find replace - Creativity Grants'
+      9b1b28f1-1bf8-4dc6-b786-2199dfe1d646:
+        find: 'Grants for Organizations'
+        replace: 'Grants for Organizations'
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 9b1b28f1-1bf8-4dc6-b786-2199dfe1d646
+        plugin: find_replace
+        source: programs
+        weight: -6
+        label: 'Find replace - Grants for Organizations'
+      20debc14-3848-4a23-bcfb-d27eda38ae0e:
+        find: 'Independent Artist Award'
+        replace: 'Independent Artist Network'
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 20debc14-3848-4a23-bcfb-d27eda38ae0e
+        plugin: find_replace
+        source: programs
+        weight: -5
+        label: 'Find replace - Independent Artist Award'
+      38d7c738-c367-46d3-ab4c-6195fbcfed99:
+        find: 'Maryland Traditions'
+        replace: 'Maryland Traditions'
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 38d7c738-c367-46d3-ab4c-6195fbcfed99
+        plugin: find_replace
+        source: programs
+        weight: -4
+        label: 'Find replace - Maryland Traditions'
+      3cded4a3-b555-48f3-9857-298fb614be2f:
+        find: 'Professional Development'
+        replace: 'Professional Development'
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 3cded4a3-b555-48f3-9857-298fb614be2f
+        plugin: find_replace
+        source: programs
+        weight: -3
+        label: 'Find replace - Professional Development'
+      dc90708b-ed61-44c7-9dc9-39f02dfc152e:
+        find: 'Public Art Programs'
+        replace: 'Public Art'
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: dc90708b-ed61-44c7-9dc9-39f02dfc152e
+        plugin: find_replace
+        source: programs
+        weight: -2
+        label: 'Find replace - Public Art Programs'
+      8246ec49-384c-472f-ab15-ab000ee23ce6:
+        find: 'Special Request Grant'
+        replace: 'Special Request Grant'
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 8246ec49-384c-472f-ab15-ab000ee23ce6
+        plugin: find_replace
+        source: programs
+        weight: -1
+        label: 'Find replace - Special Request Grant'
+      887983b5-e889-4aeb-a49c-5caca1235535:
+        find: 'Maryland Presenting and Touring'
+        replace: 'Presenting and Touring'
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 887983b5-e889-4aeb-a49c-5caca1235535
+        plugin: find_replace
+        source: programs
+        weight: 0
+        label: 'Find replace - Maryland Presenting and Touring'
+      24aa5b69-7796-4e63-9b50-7c0bb2068a1e:
+        allowed_tags: ''
+        uuid: 24aa5b69-7796-4e63-9b50-7c0bb2068a1e
+        plugin: strip_tags
+        source: title
+        weight: 0
+        label: 'Strip tags'
+id: news
+label: News
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: csv
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: article
+  langcode: en
+  update_existing: 2
+  update_non_existent: _delete
+  skip_hash_check: true
+  authorize: true
+  expire: -1
+  owner_feed_author: true
+  owner_id: 0
+  insert_new: 1
+custom_sources:
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  category:
+    value: category
+    label: category
+    machine_name: category
+    type: csv
+  path:
+    value: path
+    label: path
+    machine_name: path
+    type: csv
+  body:
+    value: body
+    label: body
+    machine_name: body
+    type: csv
+  date_published:
+    value: date_published
+    label: date_published
+    machine_name: date_published
+    type: csv
+  media_contact:
+    value: media_contact
+    label: media_contact
+    machine_name: media_contact
+    type: csv
+  programs:
+    value: programs
+    label: programs
+    machine_name: programs
+    type: csv
+  image:
+    value: image
+    label: image
+    machine_name: image
+    type: csv
+  image_alt:
+    value: image_alt
+    label: image_alt
+    machine_name: image_alt
+    type: csv
+  image_title:
+    value: image_title
+    label: image_title
+    machine_name: image_title
+    type: csv
+  file_attachement:
+    value: file_attachement
+    label: file_attachement
+    machine_name: file_attachement
+    type: csv
+  headline:
+    value: headline
+    label: headline
+    machine_name: headline
+    type: csv
+  status:
+    value: status
+    label: status
+    machine_name: status
+    type: csv
+mappings:
+  -
+    target: field_article_legacy_node_id
+    map:
+      value: nid
+    unique:
+      value: '1'
+  -
+    target: title
+    map:
+      value: title
+    unique: {  }
+  -
+    target: field_article_type
+    map:
+      value: category
+  -
+    target: field_article_legacy_path
+    map:
+      value: path
+    unique: {  }
+  -
+    target: body
+    map:
+      value: body
+      summary: ''
+    settings:
+      format: full_html
+  -
+    target: field_article_date
+    map:
+      value: date_published
+    settings:
+      timezone: UTC
+  -
+    target: field_article_media_contact
+    map:
+      value: media_contact
+    settings:
+      format: full_html
+  -
+    target: field_article_programs
+    map:
+      target_id: programs
+    settings:
+      reference_by: title
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_article_image
+    map:
+      target_id: image
+      alt: image_alt
+      title: image_title
+    settings:
+      reference_by: fid
+      existing: '2'
+      autocreate: 0
+  -
+    target: field_article_lead_in
+    map:
+      value: headline
+  -
+    target: moderation_state
+    map:
+      value: status
+    unique: {  }

@@ -1,0 +1,14 @@
+uuid: b43b14bb-2026-4ede-838a-9d35419dec13
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.pending_artist
+  module:
+    - user
+id: user_add_role_action.pending_artist
+label: 'Add the Pending Artist role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: pending_artist

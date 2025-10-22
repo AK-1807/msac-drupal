@@ -1,0 +1,26 @@
+uuid: 05f7717f-547f-41b5-a85a-38ee93975cf8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - node.type.grant
+    - node.type.location
+    - node.type.organization
+    - node.type.page
+    - node.type.person
+  module:
+    - file
+    - node
+id: basic_admin
+label: 'Basic Admin'
+weight: 8
+is_admin: null
+permissions:
+  - 'create article content'
+  - 'create grant content'
+  - 'create location content'
+  - 'create organization content'
+  - 'create page content'
+  - 'create person content'
+  - 'delete own files'

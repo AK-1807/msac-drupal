@@ -1,0 +1,18 @@
+{
+  "preview": "@page-preview",
+  "context": {
+    "title": "My Arts Directory Profile",
+    "breadcrumb": {
+      "links": [
+        {
+          "url": "http://idfive",
+          "name": "Home"
+        },
+        {
+          "url": "http://idfive",
+          "name": "My Arts Directory Profile"
+        }
+      ]
+    }
+  }
+}

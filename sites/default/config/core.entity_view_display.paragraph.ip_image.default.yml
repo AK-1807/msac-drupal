@@ -1,0 +1,34 @@
+uuid: f98ba136-2227-4850-a84c-645bedb5bdad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ip_image.field_ip_im_caption
+    - field.field.paragraph.ip_image.field_ip_im_image
+    - paragraphs.paragraphs_type.ip_image
+_core:
+  default_config_hash: TQCyDXvZgaGwOuel3fWLRZvMINjE1N5-jE1uPBqa_Mg
+id: paragraph.ip_image.default
+targetEntityType: paragraph
+bundle: ip_image
+mode: default
+content:
+  field_ip_im_caption:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ip_im_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

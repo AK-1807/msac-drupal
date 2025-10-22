@@ -1,0 +1,25 @@
+uuid: 58045076-27a9-4e37-ac36-8e03e38f5d91
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - idfive
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: idfive_branding
+theme: idfive
+region: primary_menu
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

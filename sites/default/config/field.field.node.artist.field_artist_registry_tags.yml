@@ -1,0 +1,29 @@
+uuid: e80db2eb-162b-43cf-ac84-1538ab1affae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_registry_tags
+    - node.type.artist
+    - taxonomy.vocabulary.registry_tags
+id: node.artist.field_artist_registry_tags
+field_name: field_artist_registry_tags
+entity_type: node
+bundle: artist
+label: 'Registry Tags'
+description: "Registry tags are keywords that may be used to describe your work. For instance, a painter may use the tag 'abstract' to classify his/her work. Once these tags are entered, users will be able to use these keywords to search for your profile using a filter in the Artist Registry. Please add a comma to separate multiple values."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      registry_tags: registry_tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

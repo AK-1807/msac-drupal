@@ -1,0 +1,24 @@
+ioc_intro_text: 'The arts directory is a place where...'
+ioc_artist_text:
+  value: "<ul>\r\n\t<li>Promote your work to the arts community</li>\r\n\t<li>Sell your work or get booked for performances</li>\r\n\t<li>Browse personalized funding opportunities and professional development</li>\r\n</ul>\r\n"
+  format: basic_html
+ioc_org_text:
+  value: "<ul>\r\n\t<li>Help grow the arts community in MD</li>\r\n\t<li>Showcase available services and opportunities</li>\r\n\t<li>Find local artists in your area</li>\r\n</ul>\r\n"
+  format: basic_html
+ioc_artist_title: 'Artists and Performers'
+ioc_org_title: 'Arts Organizations & Businesses'
+if_intro_text:
+  value: "<p>Almost done! We need a bit more information to create your profile. Once complete, you will be able to show off your work to the entire arts community.</p>\r\n\r\n<p>Please note that all edits to your profile must be approved by MSAC before they will be public in the Arts Directory. This should take about 24 hours.</p>\r\n"
+  format: basic_html
+at_intro_text: 'Keep your profile up to date and showcase your work. All the fields except noted below are optional, but any contact information you enter will be displayed on the MSAC website.'
+funding_resources_docs:
+  value: "<p>Coming Soon!&nbsp;</p>\r\n"
+  format: basic_html
+wk_limit: '6'
+acct_intro_text:
+  value: "<p>Intro text about the account, and details about steps needed in order to cancel accounts/etc.&nbsp;</p>\r\n"
+  format: basic_html
+wk_add_image_text: '<p>Showcase photos of your artwork.</p><p><span class="hint-text">* Required Field</span></p>'
+wk_add_video_text: '<p>Showcase videos of your artwork</p><p><span class="hint-text">* Required Field</span></p>'
+wk_add_audio_text: '<p>Showcase your audio.</p><p><span class="hint-text">* Required Field</span></p>'
+wk_add_document_text: '<p>Showcase documents of your artwork.</p><p><span class="hint-text">* Required Field</span></p>'

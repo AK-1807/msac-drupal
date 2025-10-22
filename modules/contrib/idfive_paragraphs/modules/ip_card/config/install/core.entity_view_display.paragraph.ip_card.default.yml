@@ -1,0 +1,59 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ip_card.field_ip_cd_image
+    - field.field.paragraph.ip_card.field_ip_cd_link
+    - field.field.paragraph.ip_card.field_ip_cd_text
+    - field.field.paragraph.ip_card.field_ip_cd_title
+    - image.style.large
+    - paragraphs.paragraphs_type.ip_card
+  module:
+    - link
+    - media
+    - text
+_core:
+  default_config_hash: O3Vvt24VFFkJV9b3xEmR6D8YWyN7M7A7hnC7PsmiIZQ
+id: paragraph.ip_card.default
+targetEntityType: paragraph
+bundle: ip_card
+mode: default
+content:
+  field_ip_cd_image:
+    type: media_thumbnail
+    weight: 4
+    label: hidden
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  field_ip_cd_link:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_ip_cd_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_ip_cd_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

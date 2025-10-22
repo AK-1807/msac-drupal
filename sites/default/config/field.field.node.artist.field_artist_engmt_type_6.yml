@@ -1,0 +1,23 @@
+uuid: 6241c350-6f62-4f17-ae63-3f3fc58f6887
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_engmt_type_6
+    - node.type.artist
+id: node.artist.field_artist_engmt_type_6
+field_name: field_artist_engmt_type_6
+entity_type: node
+bundle: artist
+label: Workshop
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

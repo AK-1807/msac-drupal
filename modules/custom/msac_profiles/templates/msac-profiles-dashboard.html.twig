@@ -1,0 +1,28 @@
+<!-- Header -->
+{% include module_directory ~ '/templates/includes/headers/full_header.html.twig' %}
+<div class="page-content outer-pad">
+  <div class="widget-spacing">
+    <div class="silc-grid silc-grid--collapse silc-grid--justify-center">
+      <div class="silc-grid__col silc-grid__col--10-800 silc-grid__col--8-1200">
+        <!-- Nav -->
+        {% include module_directory ~ '/templates/includes/common/nav.html.twig' %}
+        <!-- Profile Share Functionality -->
+        {% include module_directory ~ '/templates/includes/dashboard/share.html.twig' %}
+        <div class="msac_profiles-dashboard__funding-county">
+          <div class="silc-grid">
+            <div class="silc-grid__col silc-grid__col--6-1024">
+              <!-- Funding -->
+              {% include module_directory ~ '/templates/includes/dashboard/funding.html.twig' %}
+            </div>
+            <div class="silc-grid__col silc-grid__col--6-1024">
+              <!-- My County Arts Agency -->
+              {% include module_directory ~ '/templates/includes/dashboard/county.html.twig' %}
+            </div>
+          </div>
+        </div>
+        <!-- Resources -->
+        {% include module_directory ~ '/templates/includes/dashboard/resources.html.twig' %}
+      </div>
+    </div>
+  </div>
+</div>

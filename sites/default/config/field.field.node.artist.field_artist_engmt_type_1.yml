@@ -1,0 +1,23 @@
+uuid: 88e1a85a-5e7b-4ef6-8d7e-40b183655ea0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_engmt_type_1
+    - node.type.artist
+id: node.artist.field_artist_engmt_type_1
+field_name: field_artist_engmt_type_1
+entity_type: node
+bundle: artist
+label: Lecture
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

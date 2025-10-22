@@ -1,0 +1,14 @@
+uuid: e04d53d6-e427-4f4d-b1ad-af9f632c610d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.basic_admin
+  module:
+    - user
+id: user_remove_role_action.basic_admin
+label: 'Remove the Basic Admin role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: basic_admin

@@ -1,0 +1,44 @@
+uuid: 0b0cfa7f-10d8-4a8a-8a5a-7f9de62e86ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.home.field_home_carousel
+    - field.field.node.home.field_home_cta
+    - field.field.node.home.field_home_features
+    - field.field.node.home.field_home_footer_image
+    - field.field.node.home.field_home_footer_text
+    - field.field.node.home.field_home_hero_links
+    - field.field.node.home.field_home_intro_text
+    - field.field.node.home.field_home_intro_title
+    - field.field.node.home.field_meta
+    - node.type.home
+  module:
+    - user
+id: node.home.teaser
+targetEntityType: node
+bundle: home
+mode: teaser
+content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_home_carousel: true
+  field_home_cta: true
+  field_home_features: true
+  field_home_footer_image: true
+  field_home_footer_text: true
+  field_home_hero_links: true
+  field_home_intro_text: true
+  field_home_intro_title: true
+  field_meta: true
+  search_api_excerpt: true

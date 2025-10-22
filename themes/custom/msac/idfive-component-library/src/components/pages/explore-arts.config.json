@@ -1,0 +1,20 @@
+{
+  "preview": "@page-preview",
+  "context": {
+    "title": "Explore Arts in Maryland",
+    "breadcrumb": {
+      "links": [
+        {
+          "url": "http://idfive",
+          "name": "Home"
+        },
+        {
+          "url": "http://idfive",
+          "name": "Explore Arts"
+        }
+      ]
+    },
+    "hero": "/img/EA_Hero.png",
+    "background": "/img/EA_Background.png"
+  }
+}

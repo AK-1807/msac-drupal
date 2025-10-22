@@ -1,0 +1,8 @@
+uuid: 34f6fb2f-0944-493c-82c3-63ddf620e21c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Artistic Categories'
+vid: artistic_categories
+description: ''
+weight: 0

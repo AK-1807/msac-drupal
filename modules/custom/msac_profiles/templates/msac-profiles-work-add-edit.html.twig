@@ -1,0 +1,19 @@
+<!-- Header -->
+{% include module_directory ~ '/templates/includes/headers/full_header.html.twig' %}
+<div class="page-content outer-pad">
+	<div class="widget-spacing">
+		<div class="silc-grid silc-grid--collapse silc-grid--justify-center">
+			<div class="silc-grid__col silc-grid__col--10-800 silc-grid__col--8-1200">
+				<!-- Nav -->
+				{% include module_directory ~ '/templates/includes/common/nav.html.twig' %}
+				<h2>{{ work_title }}</h2>
+				{% if work_intro %}
+					{{ work_intro|raw }}
+				{% endif %}
+				<div class="msac_profiles-work-add-edit__form msac_profiles__form-wrap">
+					{{ work_form }}
+				</div>
+			</div>
+    </div>
+  </div>
+</div>

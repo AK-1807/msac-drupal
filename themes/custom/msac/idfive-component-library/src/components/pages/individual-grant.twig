@@ -1,0 +1,86 @@
+<div class="page-heading outer-pad">
+	<div class="silc-grid silc-grid--collapse">
+		<div class="silc-grid__col silc-grid__col--12">
+			<h1>{{ title }}</h1>
+			{% include "@breadcrumb" with breadcrumb %}
+		</div>
+	</div>
+</div>
+<div class="page-content outer-pad">
+	<div class="widget-spacing">
+		<div class="silc-grid silc-grid--collapse silc-grid--justify-center silc-grid--justify-right-1024 silc-grid--justify-center-1600">
+			<div class="silc-grid__col silc-grid__col silc-grid__col--8-1024 silc-grid__col--6-1440">
+				{# Body field #}
+				<div class="text-content">
+					<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h2>
+					<h3>To be eligible:</h3>
+					<ul>
+						<li>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</li>
+						<li>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</li>
+						<li>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="silc-grid__col silc-grid__col--10-600 silc-grid__col--8-800 silc-grid__col--4-1024">
+				{% include "@aside" with aside %}
+			</div>
+		</div>
+	</div>
+	<div class="widget-spacing">
+		<div class="silc-grid silc-grid--collapse silc-grid--justify-center">
+			<div class="silc-grid__col silc-grid__col--12">
+				{# KS Widgets #}
+				<div>
+					{% include "@accordion" with accordion %}
+					<div class="widget-spacing">
+						<div class="silc-grid silc-grid--collapse silc-grid--justify-center">
+							<div class="silc-grid__col silc-grid__col--10-800 silc-grid__col--8-1200">
+								<div class="editor-widget text-content">
+									<h2>Resources</h2>
+									<ul class="unstyled-list">
+										<li>
+											<a href="sample.pdf">Resource Name…Lorem Ipsum Dolor Sit Amet</a>
+										</li>
+										<li>
+											<a href="sample.pdf">Resource Name…Lorem Ipsum Dolor Sit Amet</a>
+										</li>
+										<li>
+											<a href="sample.pdf">Resource Name…Lorem Ipsum Dolor Sit Amet</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<ul class="program-contacts">
+						{% for contact in programContacts %}
+							<li class="program-contacts__item">
+								{% include "@program-contact" with contact %}
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="page-background" role="presentation" style="background-image:url({{ background|path }})"></div>
+<div class="footer-cta related-grants outer-pad">
+	<div class="silc-grid silc-grid--collapse silc-grid--justify-center">
+		<div class="silc-grid__col silc-grid__col--12">
+			<h2 class="footer-cta__heading">Similar Funding Opportunities</h2>
+			<ul class="silc-grid silc-grid--collapse silc-grid--justify-center">
+				{% for grant in relatedGrants %}
+					<li class="silc-grid__col silc-grid__col--10-550 silc-grid__col--6-1200">
+						{% include "@card--hz" with grant %}
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
+
+{# FOR DEV ONLY #}
+<script>
+	document.body.classList.add("grant");
+</script>

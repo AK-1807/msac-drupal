@@ -1,0 +1,15 @@
+Global Footer Here.
+
+<!-- HELPFUL TWIG SNIPPETS -->
+
+<!-- Copyright -->
+&copy; {{ "now"|date("Y") }}
+
+<!-- Site Logo -->
+<a href="{{front_page}}" class="main-footer__logo-link">
+  <img src="{{ base_path ~ directory }}/idfive-component-library/build/img/YOUR_LOGO.svg" alt="Site Logo">
+</a>
+
+<!-- Menus. Add menus to corresponding block regions, then display via -->
+<!-- Footer menu block -->
+{{ page.footer_menu }}

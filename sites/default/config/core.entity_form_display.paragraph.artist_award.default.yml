@@ -1,0 +1,32 @@
+uuid: c3561c2c-cf14-4040-a82d-c73610c824cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.artist_award.feeds_item
+    - field.field.paragraph.artist_award.field_artist_award_text
+    - field.field.paragraph.artist_award.field_artist_award_type
+    - paragraphs.paragraphs_type.artist_award
+id: paragraph.artist_award.default
+targetEntityType: paragraph
+bundle: artist_award
+mode: default
+content:
+  field_artist_award_text:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_artist_award_type:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  feeds_item: true
+  status: true

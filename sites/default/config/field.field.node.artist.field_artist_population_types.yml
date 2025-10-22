@@ -1,0 +1,29 @@
+uuid: 7b85648b-e91c-4be1-87c3-85c0130ac83c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_population_types
+    - node.type.artist
+    - taxonomy.vocabulary.arts_in_education
+id: node.artist.field_artist_population_types
+field_name: field_artist_population_types
+entity_type: node
+bundle: artist
+label: 'Audiences Types'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      arts_in_education: arts_in_education
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

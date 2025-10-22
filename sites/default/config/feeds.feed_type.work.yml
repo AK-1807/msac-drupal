@@ -1,0 +1,315 @@
+uuid: aa84875b-a69b-43a7-bc29-36c399b1021a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.work.field_work_audio
+    - field.field.node.work.field_work_description
+    - field.field.node.work.field_work_details
+    - field.field.node.work.field_work_document
+    - field.field.node.work.field_work_featured
+    - field.field.node.work.field_work_image
+    - field.field.node.work.field_work_legacy_node_id
+    - field.field.node.work.field_work_legacy_user_id
+    - field.field.node.work.field_work_legacy_work_id
+    - field.field.node.work.field_work_medium
+    - field.field.node.work.field_work_owner
+    - field.field.node.work.field_work_type
+    - field.field.node.work.field_work_video
+    - field.field.node.work.field_work_year
+    - node.type.work
+  module:
+    - feeds_tamper
+    - node
+    - video_embed_field
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      11d2d51a-f83e-4bb3-b692-97e2189b0941:
+        find: Audio
+        replace: audio
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 11d2d51a-f83e-4bb3-b692-97e2189b0941
+        plugin: find_replace
+        source: type
+        weight: 0
+        label: 'Find replace - Audio -> audio'
+      32388557-1bb7-44f1-8258-1c83d9187800:
+        find: 'Embedded Video'
+        replace: video
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 32388557-1bb7-44f1-8258-1c83d9187800
+        plugin: find_replace
+        source: type
+        weight: 1
+        label: 'Find replace - Embedded Video -> video'
+      0ebd0d62-2fcf-4d12-9c9d-62d596cac086:
+        find: PDF
+        replace: document
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 0ebd0d62-2fcf-4d12-9c9d-62d596cac086
+        plugin: find_replace
+        source: type
+        weight: 2
+        label: 'Find replace - PDF -> document'
+      0a844d2b-b4ed-4ff2-97fc-b386afa03c51:
+        find: Image
+        replace: image
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 0a844d2b-b4ed-4ff2-97fc-b386afa03c51
+        plugin: find_replace
+        source: type
+        weight: 3
+        label: 'Find replace - Image -> image'
+      96d52d93-30fa-41cf-95da-6e7fab1cbe19:
+        allowed_tags: ''
+        uuid: 96d52d93-30fa-41cf-95da-6e7fab1cbe19
+        plugin: strip_tags
+        source: title
+        weight: 0
+        label: 'Strip tags'
+      31417dd4-8f5e-4d5c-95d4-ea8656dc8482:
+        find: '#'
+        replace: '%23'
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 31417dd4-8f5e-4d5c-95d4-ea8656dc8482
+        plugin: find_replace
+        source: image
+        weight: 0
+        label: 'Find replace - # -> %23'
+      62462e95-7219-4a4c-805c-7e167bcc2be0:
+        find: '?'
+        replace: '%3F'
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 62462e95-7219-4a4c-805c-7e167bcc2be0
+        plugin: find_replace
+        source: image
+        weight: 1
+        label: 'Find replace - ? -> %3F'
+id: work
+label: Work
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: csv
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: work
+  langcode: en
+  update_existing: 2
+  update_non_existent: _delete
+  skip_hash_check: true
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+  insert_new: 1
+custom_sources:
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  type:
+    value: type
+    label: type
+    machine_name: type
+    type: csv
+  description:
+    value: description
+    label: description
+    machine_name: description
+    type: csv
+  details:
+    value: details
+    label: details
+    machine_name: details
+    type: csv
+  featured:
+    value: featured
+    label: featured
+    machine_name: featured
+    type: csv
+  medium:
+    value: medium
+    label: medium
+    machine_name: medium
+    type: csv
+  year:
+    value: year
+    label: year
+    machine_name: year
+    type: csv
+  document:
+    value: document
+    label: document
+    machine_name: document
+    type: csv
+  uid:
+    value: uid
+    label: uid
+    machine_name: uid
+    type: csv
+  audio:
+    value: audio
+    label: audio
+    machine_name: audio
+    type: csv
+  video:
+    value: video
+    label: video
+    machine_name: video
+    type: csv
+  image:
+    value: image
+    label: image
+    machine_name: image
+    type: csv
+  image_alt:
+    value: image_alt
+    label: image_alt
+    machine_name: image_alt
+    type: csv
+  image_title:
+    value: image_title
+    label: image_title
+    machine_name: image_title
+    type: csv
+  legacy_work_id:
+    value: legacy_work_id
+    label: legacy_work_id
+    machine_name: legacy_work_id
+    type: csv
+  status:
+    value: status
+    label: status
+    machine_name: status
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    unique: {  }
+  -
+    target: field_work_legacy_node_id
+    map:
+      value: nid
+    unique:
+      value: '1'
+  -
+    target: field_work_type
+    map:
+      value: type
+  -
+    target: field_work_description
+    map:
+      value: description
+  -
+    target: field_work_details
+    map:
+      value: details
+    unique: {  }
+  -
+    target: field_work_featured
+    map:
+      value: featured
+  -
+    target: field_work_medium
+    map:
+      value: medium
+    unique: {  }
+  -
+    target: field_work_year
+    map:
+      value: year
+    unique: {  }
+  -
+    target: field_work_legacy_user_id
+    map:
+      value: uid
+    unique: {  }
+  -
+    target: field_work_owner
+    map:
+      target_id: uid
+    settings:
+      reference_by: field_artist_legacy_user_id
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_work_document
+    map:
+      target_id: document
+      description: ''
+    settings:
+      reference_by: fid
+      existing: '2'
+      autocreate: 0
+  -
+    target: field_work_audio
+    map:
+      target_id: audio
+      description: ''
+    settings:
+      reference_by: fid
+      existing: '2'
+      autocreate: 0
+  -
+    target: field_work_video
+    map:
+      value: video
+    unique: {  }
+  -
+    target: field_work_image
+    map:
+      target_id: image
+      alt: image_alt
+      title: image_title
+    settings:
+      reference_by: fid
+      existing: '2'
+      autocreate: 0
+  -
+    target: uid
+    map:
+      target_id: uid
+    settings:
+      reference_by: field_legacy_id
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_work_legacy_work_id
+    map:
+      value: legacy_work_id
+  -
+    target: moderation_state
+    map:
+      value: status
+    unique: {  }

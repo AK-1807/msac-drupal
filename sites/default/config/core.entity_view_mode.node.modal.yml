@@ -1,0 +1,10 @@
+uuid: 8367bf28-d51e-4745-9a74-20c7245bc91b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.modal
+label: Modal
+targetEntityType: node
+cache: true

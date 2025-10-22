@@ -1,0 +1,21 @@
+uuid: f701d2c7-9d09-4c7f-818c-0d49ae6ba379
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_work_type
+    - node.type.work
+  module:
+    - options
+id: node.work.field_work_type
+field_name: field_work_type
+entity_type: node
+bundle: work
+label: Type
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

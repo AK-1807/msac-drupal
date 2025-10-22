@@ -1,0 +1,27 @@
+uuid: 992ebc8e-6778-4e28-ba69-b1eeb2eb3e11
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ip_webform_embed.field_ip_we_title
+    - field.field.paragraph.ip_webform_embed.field_ip_we_webform
+    - paragraphs.paragraphs_type.ip_webform_embed
+  module:
+    - webform
+_core:
+  default_config_hash: cjZPJMJ6hhR0awJqTYNw3hdV5uISaYzTGUSKJrP1rAM
+id: paragraph.ip_webform_embed.default
+targetEntityType: paragraph
+bundle: ip_webform_embed
+mode: default
+content:
+  field_ip_we_webform:
+    type: webform_entity_reference_entity_view
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_ip_we_title: true

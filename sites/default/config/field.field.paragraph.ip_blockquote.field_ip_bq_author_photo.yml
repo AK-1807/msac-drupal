@@ -1,0 +1,30 @@
+uuid: 3d3f86ed-fdaa-4a28-a8fb-5a09baef8248
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_bq_author_photo
+    - media.type.image
+    - paragraphs.paragraphs_type.ip_blockquote
+_core:
+  default_config_hash: Jigub8QrwsNGdjsYtUemiieRIvpYFjlMey9bDQwOCkc
+id: paragraph.ip_blockquote.field_ip_bq_author_photo
+field_name: field_ip_bq_author_photo
+entity_type: paragraph
+bundle: ip_blockquote
+label: 'Author Photo'
+description: 'Optional. You may add a photo here of the quote author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

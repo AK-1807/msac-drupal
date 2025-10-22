@@ -1,0 +1,6 @@
+.card-group {
+  @extend %widget-spacing;
+  @include media("1440") {
+    max-width: 83.333%;
+  }
+}

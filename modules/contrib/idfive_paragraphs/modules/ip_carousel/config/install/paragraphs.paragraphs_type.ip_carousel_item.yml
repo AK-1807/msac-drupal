@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: lKU38QcsISJ8f3pMLIODptCXGWj8aqw8v05cxnM4h-4
+id: ip_carousel_item
+label: 'Carousel Item'
+icon_uuid: null
+description: '(HIDE FROM KS FIELD) This Paragraph type provides an individual slide into the Carousel, in the Kitchen Sink Widgets. It is controlled by the idfive Paragraphs module.'
+behavior_plugins: {  }

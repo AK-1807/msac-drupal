@@ -1,0 +1,33 @@
+uuid: 88cd5236-4d44-40e1-905a-0e74c5914f79
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.idfive_media_browser
+  module:
+    - views
+_core:
+  default_config_hash: qO-RBboFoi23AmPOf2OKFJsFVosn2NiMafGFXdR9h34
+name: idfive_media_browser_general
+label: 'Media Browser General'
+display: modal
+display_configuration:
+  width: '800'
+  height: '800'
+  link_text: 'Select Media'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  c2c62357-4e5c-43e8-ad52-a14e70fba806:
+    id: view
+    uuid: c2c62357-4e5c-43e8-ad52-a14e70fba806
+    label: 'All Media'
+    weight: 1
+    settings:
+      submit_text: 'Select Media'
+      auto_select: false
+      view: idfive_media_browser
+      view_display: entity_browser_all

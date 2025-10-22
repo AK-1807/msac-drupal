@@ -1,0 +1,33 @@
+uuid: 32ce1aac-8456-4e55-a214-4672278b9e21
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_work_type
+field_name: field_work_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: image
+      label: Image
+    -
+      value: audio
+      label: Audio
+    -
+      value: video
+      label: Video
+    -
+      value: document
+      label: Document
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

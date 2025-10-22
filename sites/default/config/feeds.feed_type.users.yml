@@ -1,0 +1,186 @@
+uuid: ab8a8eb8-c7e2-41b8-b4f5-dcaae422556f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_legacy_id
+  module:
+    - feeds_tamper
+    - user
+third_party_settings:
+  feeds_tamper:
+    tampers: {  }
+id: users
+label: Users
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: csv
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:user'
+processor_configuration:
+  values: {  }
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+  insert_new: 1
+  langcode: en
+custom_sources:
+  name:
+    value: name
+    label: name
+    machine_name: name
+    type: csv
+  uid:
+    value: uid
+    label: uid
+    machine_name: uid
+    type: csv
+  pass:
+    value: pass
+    label: pass
+    machine_name: pass
+    type: csv
+  mail:
+    value: mail
+    label: mail
+    machine_name: mail
+    type: csv
+  roles:
+    value: roles
+    label: roles
+    machine_name: roles
+    type: csv
+  created_date:
+    value: created_date
+    label: created_date
+    machine_name: created_date
+    type: csv
+  last_access:
+    value: last_access
+    label: last_access
+    machine_name: last_access
+    type: csv
+  status:
+    value: status
+    label: status
+    machine_name: status
+    type: csv
+  '':
+    value: ''
+    label: ''
+    machine_name: ''
+    type: csv
+  artist_id:
+    value: artist_id
+    label: artist_id
+    machine_name: artist_id
+    type: csv
+  email:
+    value: email
+    label: email
+    machine_name: email
+    type: csv
+  user_created_date:
+    value: user_created_date
+    label: user_created_date
+    machine_name: user_created_date
+    type: csv
+  user_last_access:
+    value: user_last_access
+    label: user_last_access
+    machine_name: user_last_access
+    type: csv
+  user_status:
+    value: user_status
+    label: user_status
+    machine_name: user_status
+    type: csv
+  user_roles:
+    value: user_roles
+    label: user_roles
+    machine_name: user_roles
+    type: csv
+  user_name:
+    value: user_name
+    label: user_name
+    machine_name: user_name
+    type: csv
+  user_uid:
+    value: user_uid
+    label: user_uid
+    machine_name: user_uid
+    type: csv
+  user_pass:
+    value: user_pass
+    label: user_pass
+    machine_name: user_pass
+    type: csv
+  user_email:
+    value: user_email
+    label: user_email
+    machine_name: user_email
+    type: csv
+mappings:
+  -
+    target: name
+    map:
+      value: user_name
+    unique:
+      value: '1'
+  -
+    target: field_legacy_id
+    map:
+      value: user_uid
+  -
+    target: pass
+    map:
+      value: user_pass
+      pre_hashed: user_pass
+  -
+    target: mail
+    map:
+      value: user_email
+    settings:
+      defuse: false
+    unique: {  }
+  -
+    target: init
+    map:
+      value: user_email
+    settings:
+      defuse: false
+    unique: {  }
+  -
+    target: roles
+    map:
+      target_id: user_roles
+    settings:
+      reference_by: label
+  -
+    target: created
+    map:
+      value: user_created_date
+    settings:
+      timezone: UTC
+  -
+    target: access
+    map:
+      value: user_last_access
+    settings:
+      timezone: UTC
+  -
+    target: status
+    map:
+      value: user_status

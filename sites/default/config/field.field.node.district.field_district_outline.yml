@@ -1,0 +1,26 @@
+uuid: 6fd82a7f-2422-4e1d-a768-23f5f2a2fef1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_district_outline
+    - node.type.district
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - simple_html
+id: node.district.field_district_outline
+field_name: field_district_outline
+entity_type: node
+bundle: district
+label: Outline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

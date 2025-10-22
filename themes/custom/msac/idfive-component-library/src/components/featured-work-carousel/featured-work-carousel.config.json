@@ -1,0 +1,47 @@
+{
+  "context": {
+    "slides": [
+      {
+        "id": 1,
+        "image": "/img/AP_Featured_Photo_1.png",
+        "title": "In the Garden",
+        "medium": "Clay, wax, and pigments",
+        "year": "2010",
+        "dimensions": "2'x3'",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Donec quam felis, ultricies nec, pellentesque eu, pretium quis.",
+        "price": "$500"
+      },
+      {
+        "id": 2,
+        "image": "/img/AP_Featured_Photo_2.png",
+        "title": "Featured Work 2 Lorem",
+        "medium": "Acrylic",
+        "year": "2009",
+        "dimensions": "10'x6'",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Donec quam felis, ultricies nec, pellentesque eu, pretium quis.",
+        "price": ""
+      },
+      {
+        "id": 3,
+        "image": "/img/AP_Featured_Photo_3.png",
+        "title": "Featured Work 3 Lorem",
+        "medium": "Acrylic",
+        "year": "2006",
+        "dimensions": "12'x8'",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Donec quam felis, ultricies nec, pellentesque eu, pretium quis.",
+        "price": "$1000"
+      },
+      {
+        "id": 4,
+        "image": "/img/AP_Featured_Photo_4.png",
+        "title": "Featured Work 4 Lorem",
+        "medium": "Acrylic",
+        "year": "2008",
+        "dimensions": "10'x6'",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Donec quam felis, ultricies nec, pellentesque eu, pretium quis.",
+        "price": ""
+      }
+    ],
+    "modalTitle": "Featured Work: Photos"
+  }
+}

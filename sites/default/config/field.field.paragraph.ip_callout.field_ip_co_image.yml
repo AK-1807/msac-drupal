@@ -1,0 +1,30 @@
+uuid: 736571b3-01ab-4f1c-a1c2-479df83193a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_co_image
+    - media.type.image
+    - paragraphs.paragraphs_type.ip_callout
+_core:
+  default_config_hash: m1moNmG7Y8DOjUp1Bne6gRsF0vlmyHzWPJswrIzwPas
+id: paragraph.ip_callout.field_ip_co_image
+field_name: field_ip_co_image
+entity_type: paragraph
+bundle: ip_callout
+label: Image
+description: 'Please add an image that will serve as the background image of this callout, if desired.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

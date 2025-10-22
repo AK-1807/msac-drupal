@@ -1,0 +1,60 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_cg_item
+    - paragraphs.paragraphs_type.ip_card
+    - paragraphs.paragraphs_type.ip_cards_group
+  module:
+    - entity_reference_revisions
+id: paragraph.ip_cards_group.field_ip_cg_item
+field_name: field_ip_cg_item
+entity_type: paragraph
+bundle: ip_cards_group
+label: Cards
+description: 'Please add the desired number of cards.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      ip_card: ip_card
+    target_bundles_drag_drop:
+      ip_accordion:
+        weight: 12
+        enabled: false
+      ip_accordion_item:
+        weight: 13
+        enabled: false
+      ip_button_link:
+        weight: 14
+        enabled: false
+      ip_card:
+        enabled: true
+        weight: 15
+      ip_cards_group:
+        weight: 16
+        enabled: false
+      ip_carousel:
+        weight: 17
+        enabled: false
+      ip_carousel_item:
+        weight: 18
+        enabled: false
+      ip_html:
+        weight: 19
+        enabled: false
+      ip_table:
+        weight: 20
+        enabled: false
+      ip_views_embed:
+        weight: 21
+        enabled: false
+      ip_webform_embed:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions

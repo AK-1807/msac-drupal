@@ -1,0 +1,18 @@
+uuid: 3eac778f-71f3-41c2-9635-1e7435a7c244
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_org_engmt_type_3
+field_name: field_org_engmt_type_3
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

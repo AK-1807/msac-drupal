@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "type": "node--museum_gallery",
+      "id": "3785c978-8443-4e40-9020-ea8a792c8a52",
+      "attributes": {
+        "title": "American Visionary Art Museum",
+        "thumbnail": "https://via.placeholder.com/300x300",
+        "street_address": "800 Key Hwy",
+        "city": "Baltimore",
+        "state": "MD",
+        "zip": "21230",
+        "lat": "39.280130",
+        "lng": "-76.606770",
+        "path": {
+          "alias": "https://idfive.com"
+        }
+      },
+      "relationships": {
+        "county": {
+          "data": {
+            "type": "node--county",
+            "id": "da021feb-0577-41e9-a6f6-644196da6d2a"
+          }
+        }
+      }
+    },
+    {
+      "type": "node--museum_gallery",
+      "id": "156022b9-12c5-4ba5-87df-0b69570f0d6a",
+      "attributes": {
+        "title": "The Baltimore Museum of Art",
+        "thumbnail": "https://via.placeholder.com/300x300",
+        "street_address": "10 Art Museum Dr",
+        "city": "Baltimore",
+        "state": "MD",
+        "zip": "21218",
+        "lat": "39.325890",
+        "lng": "-76.619390",
+        "path": {
+          "alias": "https://idfive.com"
+        }
+      },
+      "relationships": {
+        "county": {
+          "data": {
+            "type": "node--county",
+            "id": "da021feb-0577-41e9-a6f6-644196da6d2a"
+          }
+        }
+      }
+    },
+    {
+      "type": "node--museum_gallery",
+      "id": "5b088c59-1d98-4b25-a678-8c363fd2cf17",
+      "attributes": {
+        "title": "The Walters Art Museum",
+        "thumbnail": "https://via.placeholder.com/300x300",
+        "street_address": "600 N Charles St",
+        "city": "Baltimore",
+        "state": "MD",
+        "zip": "21201",
+        "lat": "39.296113",
+        "lng": "-76.615785",
+        "path": {
+          "alias": "https://idfive.com"
+        }
+      },
+      "relationships": {
+        "county": {
+          "data": {
+            "type": "node--county",
+            "id": "da021feb-0577-41e9-a6f6-644196da6d2a"
+          }
+        }
+      }
+    }
+  ]
+}

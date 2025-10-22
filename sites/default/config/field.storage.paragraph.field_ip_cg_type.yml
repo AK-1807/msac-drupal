@@ -1,0 +1,32 @@
+uuid: 9f2fc696-ea7a-4e0d-a737-c4efa631604f
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: xI_DvMRMYW6t_XcQTdTI4Y_crzSEf4bwNeela9YwiL4
+id: paragraph.field_ip_cg_type
+field_name: field_ip_cg_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: card
+      label: Card
+    -
+      value: card-clickable
+      label: Card(Clickable)
+    -
+      value: card-hz
+      label: Card(Horizontal)
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

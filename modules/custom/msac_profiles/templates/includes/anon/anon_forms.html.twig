@@ -1,0 +1,56 @@
+<div class="page-content outer-pad">
+  <div class="silc-grid silc-grid--justify-center">
+    <div class="silc-grid__col silc-grid__col--10-1024 silc-grid__col--8-1200">
+
+      {{ drupal_messages() }}
+
+      <div class="text-content">
+        <h2>{{ profile_settings.ioc_intro_text }}</h2>
+      </div>
+    </div>
+    <div class="silc-grid__col silc-grid__col--12">
+      <div class="silc-grid silc-grid--justify-center">
+        <div class="silc-grid__col silc-grid__col--6-800 silc-grid__col--5-1024 silc-grid__col--4-1200">
+          <div class="text-content">
+            <h3>{{ profile_settings.ioc_artist_title }}</h3>
+            {{ profile_settings.ioc_artist_text.value | raw }}
+          </div>
+        </div>
+        <div class="silc-grid__col silc-grid__col--6-800 silc-grid__col--5-1024 silc-grid__col--4-1200">
+          <div class="text-content">
+            <h3>{{ profile_settings.ioc_org_title }}</h3>
+            {{ profile_settings.ioc_org_text.value | raw }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="silc-grid__col silc-grid__col--12">
+      <div class="silc-grid silc-grid--justify-center">
+        <div class="silc-grid__col silc-grid__col--10-800 silc-grid__col--8-1024 silc-grid__col--6-1200">
+          <div class="profile-login-tabs silc-accordion silc-accordion--tabs" id="profile-login-tabs">
+            <div class="silc-accordion__section">
+              <button id="profile-login-tabs-section-1-label" class="silc-accordion__label" aria-controls="profile-login-tabs-section-1-content">
+                Login
+              </button>
+              <div class="silc-accordion__content" id="profile-login-tabs-section-1-content" aria-labelledby="profile-login-tabs-section-1-label">
+                <div class="silc-accordion__content-compartment">
+                  {{ login_form }}
+                </div>
+              </div>
+            </div>
+            <div class="silc-accordion__section">
+              <button id="profile-login-tabs-section-2-label" class="silc-accordion__label" aria-controls="profile-login-tabs-section-2-content">
+                Register
+              </button>
+              <div class="silc-accordion__content" id="profile-login-tabs-section-2-content" aria-labelledby="profile-login-tabs-section-2-label">
+                <div class="silc-accordion__content-compartment">
+                  {{ registration_form }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+uuid: c51f9fe0-1cb4-45b6-9417-1eff6f8ed69d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_artist_reference_email
+    - paragraphs.paragraphs_type.reference
+id: paragraph.reference.field_artist_reference_email
+field_name: field_artist_reference_email
+entity_type: paragraph
+bundle: reference
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

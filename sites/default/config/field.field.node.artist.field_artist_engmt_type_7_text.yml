@@ -1,0 +1,26 @@
+uuid: 6729b160-b725-4cbe-83d1-f6ac99d62c4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_engmt_type_7_text
+    - node.type.artist
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - plain_text
+id: node.artist.field_artist_engmt_type_7_text
+field_name: field_artist_engmt_type_7_text
+entity_type: node
+bundle: artist
+label: 'Professional Development Offered'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

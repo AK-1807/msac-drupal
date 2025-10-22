@@ -1,0 +1,21 @@
+{% set thumbnail = assets_path ~ '/img/MSAC_default_profile_image_square.jpg' %}
+{% set thumbnail_alt = 'Portrait of ' ~ node.title.value %}
+{% if content.field_program_image|field_value %}
+  {% set thumbnail = file_url(content.field_program_image|field_target_entity.uri.value | image_style('optimized')) %}
+  {% set thumbnail_alt = content.field_program_image['#items'].alt %}
+{% endif %}
+<div class="news__teaser">
+	<div class="news__teaser-thumbnail">
+		<img src="{{ thumbnail }}" alt="{{ thumbnail_alt }}" aria-hidden="true">
+	</div>
+	<div class="news__teaser-content">
+		<div class="news__teaser-content-left">
+			<h2 class="news__teaser-title h3">
+				<a href="{{ url }}">{{ label }}</a>
+			</h2>
+			<div class="news__teaser-body">
+				{{ content.body }}
+			</div>
+		</div>
+	</div>
+</div>

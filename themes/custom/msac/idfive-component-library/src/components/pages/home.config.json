@@ -1,0 +1,55 @@
+{
+  "preview": "@page-preview",
+  "context": {
+    "artsEvents": {
+      "items": [
+        {
+          "title": "Barbara Ingram School For the Arts Holiday Spectacular",
+          "url": "https://idfive.com",
+          "location": "Hagarstown",
+          "date-time": "12/15/18, 7PM",
+          "description": ""
+        },
+        {
+          "title": "BSO Presents Gospel Christmas with CeCe Winans",
+          "url": "https://idfive.com",
+          "location": "Baltimore",
+          "date-time": "12/15/18, 7PM",
+          "description": ""
+        },
+        {
+          "title": "Event Title Lorem Ipsum Dolor Sit Amet Consectetur",
+          "url": "https://idfive.com",
+          "location": "City Name",
+          "date-time": "XX/XX/XX, XPM",
+          "description": ""
+        }
+      ]
+    },
+    "artsNews": {
+      "items": [
+        {
+          "title": "News Story Title Lorem Ipsum Dolor Sit Amet Consectetur",
+          "url": "https://idfive.com",
+          "location": "",
+          "dateTime": "",
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget."
+        },
+        {
+          "title": "News Story Title Lorem Ipsum Dolor Sit Amet Consectetur",
+          "url": "https://idfive.com",
+          "location": "",
+          "dateTime": "",
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget."
+        },
+        {
+          "title": "News Story Title Lorem Ipsum Dolor Sit Amet Consectetur",
+          "url": "https://idfive.com",
+          "location": "",
+          "dateTime": "",
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget."
+        }
+      ]
+    }
+  }
+}

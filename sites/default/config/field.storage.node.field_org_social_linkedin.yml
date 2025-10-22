@@ -1,0 +1,19 @@
+uuid: 33d904f7-6c91-4bf8-8509-8e1f52370452
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_org_social_linkedin
+field_name: field_org_social_linkedin
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

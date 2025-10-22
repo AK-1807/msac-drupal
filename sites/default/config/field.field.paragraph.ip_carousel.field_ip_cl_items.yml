@@ -1,0 +1,57 @@
+uuid: eb1f3796-0c39-4a52-90d4-3770d7c2f367
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_cl_items
+    - paragraphs.paragraphs_type.ip_carousel
+    - paragraphs.paragraphs_type.ip_carousel_item
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: J2oFOFzldwynp5b6BomjO5bvxJYO5eOEQJhshD3LRo8
+id: paragraph.ip_carousel.field_ip_cl_items
+field_name: field_ip_cl_items
+entity_type: paragraph
+bundle: ip_carousel
+label: Items
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      ip_carousel_item: ip_carousel_item
+    negate: 0
+    target_bundles_drag_drop:
+      ip_accordion:
+        weight: 10
+        enabled: false
+      ip_accordion_item:
+        weight: 11
+        enabled: false
+      ip_card:
+        weight: 12
+        enabled: false
+      ip_carousel:
+        weight: 13
+        enabled: false
+      ip_carousel_item:
+        weight: 14
+        enabled: true
+      ip_row_four:
+        weight: 15
+        enabled: false
+      ip_row_one:
+        weight: 16
+        enabled: false
+      ip_row_three:
+        weight: 17
+        enabled: false
+      ip_row_two:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

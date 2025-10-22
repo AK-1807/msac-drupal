@@ -1,0 +1,29 @@
+uuid: d90c9dc4-bb68-4aee-b4af-5c928240de08
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_artistic_categories
+    - node.type.person
+    - taxonomy.vocabulary.artistic_categories
+id: node.person.field_person_artistic_categories
+field_name: field_person_artistic_categories
+entity_type: node
+bundle: person
+label: 'Artistic Categories'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      artistic_categories: artistic_categories
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

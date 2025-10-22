@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: aWVzkrTaU0eFf4HTtSZ5Aw7CtLLKlOS0Bt5bQEXVP4I
+id: ip_views_embed
+label: 'Views Embed (Advanced)'
+icon_uuid: null
+description: '(DEVELOPER USE ONLY) This Paragraph type provides a way to embed views created in drupal, into the Kitchen Sink Widgets. It is controlled by the idfive Paragraphs module.'
+behavior_plugins: {  }

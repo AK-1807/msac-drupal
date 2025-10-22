@@ -1,0 +1,162 @@
+@import "~flickity/css/flickity";
+@import "~flickity-fade/flickity-fade";
+
+.carousel-holder {
+  @extend %widget-spacing;
+  position: relative;
+  padding-bottom: rem(44);
+  @include media("800") {
+    max-width: 91.667%;
+  }
+  @include media("1024") {
+    max-width: 83.333%;
+  }
+  @include media("1200") {
+    max-width: 66.667%;
+  }
+}
+
+.carousel {
+  background-color: $white;
+  box-shadow: 0 0 rem(16) 0 rgba($black, 0.2);
+  &.flickity-enabled {
+    &:focus {
+      outline: 5px auto Highlight;
+      outline: 5px auto -webkit-focus-ring-color;
+    }
+  }
+}
+
+.carousel__slide {
+  width: 100%;
+  .carousel--fade & {
+    opacity: 0 !important;
+    &.is-selected {
+      opacity: 1 !important;
+      transition: 0.5s opacity ease-in-out;
+    }
+  }
+}
+
+.carousel__slide-image {
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+    @include media("800") {
+      padding-top: 50%;
+    }
+  }
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.carousel__slide-content {
+  padding: rem(18) rem(30) rem(22);
+  @include media("800") {
+    padding: rem(32) rem(36);
+  }
+}
+
+.carousel__slide-title {
+  @extend %h3;
+  margin-bottom: rem(12);
+}
+
+.carousel__nav {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.carousel__nav-sizer {
+  width: 100%;
+  padding-top: 56.25%;
+  height: 0;
+  left: 0;
+  top: 0;
+  @include media("800") {
+    padding-top: 50%;
+  }
+}
+
+.carousel__nav-previous,
+.carousel__nav-next {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  pointer-events: initial;
+  position: absolute;
+  top: 50%;
+  width: rem(44);
+  height: rem(44);
+  background-color: $black;
+  transform: translateY(-50%);
+  transition: 0.3s background-color ease-in-out;
+  @include media("800") {
+    height: rem(52);
+    width: rem(52);
+  }
+  &:hover {
+    background-color: $red;
+    border: none;
+  }
+  &::after {
+    content: "";
+    width: rem(15);
+    height: rem(15);
+    border-top: rem(5) solid $white;
+    border-left: rem(5) solid $white;
+    position: absolute;
+    top: 50%;
+  }
+}
+
+.carousel__nav-previous {
+  left: 0;
+  &::after {
+    left: 55%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+.carousel__nav-next {
+  right: 0;
+  &::after {
+    left: 45%;
+    transform: translate(-50%, -50%) rotate(135deg);
+  }
+}
+
+.flickity-page-dots {
+  pointer-events: none;
+  bottom: rem(-25);
+  top: auto;
+  text-align: center;
+  .dot {
+    background-color: $black;
+    height: rem(14);
+    width: rem(14);
+    margin: 0 rem(13);
+    opacity: 1;
+    pointer-events: initial;
+    transition: 0.3s background-color ease-in-out;
+    &.is-selected {
+      background-color: $red;
+    }
+  }
+}

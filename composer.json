@@ -1,0 +1,223 @@
+{
+    "name": "drupal/legacy-project",
+    "description": "Project template for Drupal 8 projects with composer following drupal/drupal layout",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/drupal",
+    "support": {
+        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+        "chat": "https://www.drupal.org/node/314178"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8",
+            "exclude": [
+              "drupal/node_delete_redirect",
+              "drupal/config_batch_export"
+            ]
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "drupal/menu_parent_form_ui",
+                "version": "8.0.0",
+                "type": "drupal-module",
+                "source": {
+                    "url": "https://github.com/jimkeller/menu_parent_form_ui.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        },
+        {
+            "type"    : "package",
+            "package" : {
+                "name"    : "mediaelement/mediaelement",
+                "version" : "v4.2.7",
+                "type"    : "drupal-library",
+                "source"  : {
+                    "url"       : "https://github.com/mediaelement/mediaelement.git",
+                    "type"      : "git",
+                    "reference" : "origin/master"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "drupal/node_delete_redirect",
+                "version": "dev-custom",
+                "type": "drupal-module",
+                "source": {
+                    "url": "https://git.drupalcode.org/issue/node_delete_redirect-3297733.git",
+                    "type": "git",
+                    "reference": "D10 compat"
+                }
+            }
+        },
+        {
+            "type": "git",
+            "url": "https://git.drupalcode.org/issue/config_batch_export-3286644.git"
+        }
+    ],
+    "require": {
+        "composer/installers": "^2.2",
+        "cweagans/composer-patches": "^1.7",
+        "drupal/address": "^1.12",
+        "drupal/admin_toolbar": "^3.4",
+        "drupal/ajax_loader": "^2.1",
+        "drupal/allowed_formats": "^2.0",
+        "drupal/audiofield": "^1.13",
+        "drupal/bartik": "^1.0",
+        "drupal/better_exposed_filters": "^6.0",
+        "drupal/captcha": "^2.0",
+        "drupal/ckeditor": "^1.0",
+        "drupal/color": "^1.0",
+        "drupal/conditional_fields": "^4.0@alpha",
+        "drupal/config_batch_export": "dev-3286644-automated-drupal-10",
+        "drupal/core-composer-scaffold": "10.1.7",
+        "drupal/core-project-message": "10.1.7",
+        "drupal/core-recommended": "10.1.7",
+        "drupal/core-vendor-hardening": "^8.8",
+        "drupal/csv_serialization": "^4.0",
+        "drupal/ctools": "^4.0",
+        "drupal/devel": "^5.1",
+        "drupal/diff": "^1.1",
+        "drupal/editor_advanced_link": "^2.2",
+        "drupal/embed": "^1.7",
+        "drupal/entity_browser": "^2.10",
+        "drupal/entity_embed": "^1.5",
+        "drupal/feeds": "^3.0@alpha",
+        "drupal/feeds_tamper": "^2.0@beta",
+        "drupal/field_group": "^3.4",
+        "drupal/geocoder": "^4.15",
+        "drupal/geolocation": "^3.12",
+        "drupal/google_analytics": "^4.0",
+        "drupal/google_tag": "^2.0",
+        "drupal/honeypot": "^2.1",
+        "drupal/imageapi_optimize": "^4.0",
+        "drupal/imageapi_optimize_resmushit": "^2.0@beta",
+        "drupal/imageapi_optimize_tinypng": "^1.2@beta",
+        "drupal/inline_entity_form": "^2.0@RC",
+        "drupal/jsonapi_extras": "^3.23",
+        "drupal/link_attributes": "^2.1",
+        "drupal/link_target": "^1.4",
+        "drupal/linkit": "^6.1",
+        "drupal/markdown": "^3.0",
+        "drupal/markup": "^2.0@beta",
+        "drupal/media_entity_browser": "^2.0@dev",
+        "drupal/media_entity_download": "^2.2",
+        "drupal/metatag": "^2.0",
+        "drupal/module_filter": "^4.0",
+        "drupal/node_delete_redirect": "dev-custom#ded71bf1b4fc6914ccff5adaf16cac72e0a2117b",
+        "drupal/node_title_help_text": "^1.3",
+        "drupal/paragraphs": "^1.15",
+        "drupal/pathauto": "^1.12",
+        "drupal/quickedit": "^1.0",
+        "drupal/rdf": "^2.1",
+        "drupal/recaptcha": "^3.2",
+        "drupal/redirect": "^1.8",
+        "drupal/search_api": "^1.31",
+        "drupal/seven": "^1.0",
+        "drupal/shs": "^2.0@RC",
+        "drupal/smart_trim": "^2.1",
+        "drupal/stable": "^2.0",
+        "drupal/tablefield": "^2.4",
+        "drupal/text_summary_options": "^2.0",
+        "drupal/token": "^1.13",
+        "drupal/twig_field_value": "^2.0",
+        "drupal/twig_tweak": "^3.2",
+        "drupal/upgrade_status": "^4.0",
+        "drupal/video_embed_field": "^2.5",
+        "drupal/viewfield": "^3.0@beta",
+        "drupal/views_data_export": "^1.4",
+        "drupal/views_infinite_scroll": "^2.0",
+        "drupal/viewsreference": "^1.8",
+        "drupal/webform": "^6.2",
+        "drupal/weight": "^3.4",
+        "drupal/xmlsitemap": "^1.4",
+        "drush/drush": "^12.1",
+        "idfive/idfive": "^8.1",
+        "idfive/idfive_move_description": "^8.1",
+        "idfive/idfive_paragraphs": "^8.3",
+        "mediaelement/mediaelement": "^4.2",
+        "michelf/php-markdown": "^2.0",
+        "symfony/symfony": "^6"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "process-timeout": 0,
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "drupal/core-vendor-hardening": true
+        }
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "./"
+            }
+        },
+        "installer-paths": {
+            "core": ["type:drupal-core"],
+            "libraries/{$name}": ["type:drupal-library"],
+            "modules/contrib/{$name}": ["type:drupal-module"],
+            "profiles/contrib/{$name}": ["type:drupal-profile"],
+            "themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+            "modules/custom/{$name}": ["type:drupal-custom-module"],
+            "themes/custom/{$name}": ["type:drupal-custom-theme"]
+        },
+        "drupal-core-project-message": {
+            "include-keys": ["homepage", "support"],
+            "post-create-project-cmd-message": [
+                "<bg=blue;fg=white>                                                         </>",
+                "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
+                "<bg=blue;fg=white>  from the drupal/legacy-project template!               </>",
+                "<bg=blue;fg=white>                                                         </>",
+                "",
+                "<bg=yellow;fg=black>Next steps</>:",
+
+                "  * Install the site: https://www.drupal.org/docs/8/install",
+                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
+                "  * Get support: https://www.drupal.org/support",
+                "  * Get involved with the Drupal community:",
+                "      https://www.drupal.org/getting-involved",
+                "  * Remove the plugin that prints this message:",
+                "      composer remove drupal/core-project-message"
+            ]
+        },
+        "patches": {
+            "drupal/address": {
+                "Feeds module support": "https://www.drupal.org/files/issues/2019-04-19/address-feeds-address-target-2882589-23.patch"
+            },
+            "drupal/link_attributes": {
+                "Add support for Linkit for Link field": "https://www.drupal.org/files/issues/2021-12-07/2939514-20.patch"
+            },
+            "drupal/video_embed_field": {
+                "Mapping for Feeds module missing": "https://www.drupal.org/files/issues/2019-09-02/3056385-feeds-mapping-missing-5.patch"
+            },
+            "drupal/jsonapi_extras": {
+                "Link enhancer to add Aliased URL for internal links": "https://www.drupal.org/files/issues/2020-05-05/jsonapi_extras-url_link_enhancer-2942851-33.patch"
+            }
+        }
+    },
+    "scripts": {
+        "remove-git-submodules": "find . -mindepth 2 -type d -name .git | xargs rm -rf",
+        "post-install-cmd": [
+            "@remove-git-submodules"
+        ],
+        "post-update-cmd": [
+            "@remove-git-submodules"
+        ]
+    }
+}

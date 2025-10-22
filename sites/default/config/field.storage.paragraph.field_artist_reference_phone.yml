@@ -1,0 +1,19 @@
+uuid: 0a7d9504-5a6c-4a13-92cf-7c9afddd79aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - telephone
+id: paragraph.field_artist_reference_phone
+field_name: field_artist_reference_phone
+entity_type: paragraph
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

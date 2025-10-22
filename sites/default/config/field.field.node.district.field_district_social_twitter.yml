@@ -1,0 +1,23 @@
+uuid: ce883895-b696-46af-9ce9-36609b0d2708
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_district_social_twitter
+    - node.type.district
+  module:
+    - link
+id: node.district.field_district_social_twitter
+field_name: field_district_social_twitter
+entity_type: node
+bundle: district
+label: Twitter
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 16
+field_type: link

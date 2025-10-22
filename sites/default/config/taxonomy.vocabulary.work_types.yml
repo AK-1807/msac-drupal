@@ -1,0 +1,8 @@
+uuid: f7e833f5-b71d-4cc5-bb35-24a2a6953b4e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Work Types'
+vid: work_types
+description: ''
+weight: 0

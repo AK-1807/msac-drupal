@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * IP Button/Link paragraph bundle.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{%
+  set classes = [
+    'paragraph-widget',
+    'paragraph-widget--ip_button_link'
+  ]
+%}
+
+{% block paragraph %}
+	<div{{attributes.addClass(classes).setAttribute('id','ip_button_link-'~paragraph.id())}}>
+		<div class="text-content">
+			{% block content %}
+				{% for key, item in content.field_ip_bl_link %}
+					{% if key|first != '#' %}
+						<a href="{{ content.field_ip_bl_link[key]['#url'] }}" class="{{ ip_bl_type }}" {% if content.field_ip_bl_link[key]['#options'].attributes.target %} target="{{ content.field_ip_bl_link[key]['#options'].attributes.target }}" {% endif %}>
+							{{ content.field_ip_bl_link[key]['#title'] }}
+						</a>
+					{% endif %}
+				{% endfor %}
+			{% endblock %}
+		</div>
+		{{ content|without('field_ip_bl_link', 'field_ip_bl_type') }}
+	</div>
+{% endblock paragraph %}

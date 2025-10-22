@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "type": "node--public_art",
+      "id": "95e0b681-1e5d-4836-8831-ddd01bb90b94",
+      "attributes": {
+        "title": "Male/Female",
+        "thumbnail": "https://via.placeholder.com/300x300",
+        "street_address": "1500 N Charles St",
+        "city": "Baltimore",
+        "state": "MD",
+        "zip": "21201",
+        "lat": "39.3071192",
+        "lng": "-76.6163792",
+        "path": {
+          "alias": "https://idfive.com"
+        }
+      },
+      "relationships": {
+        "county": {
+          "data": {
+            "type": "node--county",
+            "id": "da021feb-0577-41e9-a6f6-644196da6d2a"
+          }
+        }
+      }
+    },
+    {
+      "type": "node--public_art",
+      "id": "0ae127ce-4be8-4d3c-81f4-c4c3c89dafde",
+      "attributes": {
+        "title": "Untitled",
+        "thumbnail": "https://via.placeholder.com/300x300",
+        "street_address": "3424 Elm Ave",
+        "city": "Baltimore",
+        "state": "MD",
+        "zip": "21211",
+        "lat": "39.329362",
+        "lng": "-76.631377",
+        "path": {
+          "alias": "https://idfive.com"
+        }
+      },
+      "relationships": {
+        "county": {
+          "data": {
+            "type": "node--county",
+            "id": "da021feb-0577-41e9-a6f6-644196da6d2a"
+          }
+        }
+      }
+    },
+    {
+      "type": "node--public_art",
+      "id": "ef80d099-11ff-4faa-9b5c-7ef940cb5d09",
+      "attributes": {
+        "title": "Endless Ribbon",
+        "thumbnail": "https://via.placeholder.com/300x300",
+        "street_address": "10 Art Museum Drive",
+        "city": "Baltimore",
+        "state": "MD",
+        "zip": "21218",
+        "lat": "39.325741",
+        "lng": "-76.619415",
+        "path": {
+          "alias": "https://idfive.com"
+        }
+      },
+      "relationships": {
+        "county": {
+          "data": {
+            "type": "node--county",
+            "id": "da021feb-0577-41e9-a6f6-644196da6d2a"
+          }
+        }
+      }
+    }
+  ]
+}

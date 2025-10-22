@@ -1,0 +1,19 @@
+uuid: b0c3ff61-7d9d-4492-aa71-91e3db585708
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_person_title
+    - paragraphs.paragraphs_type.person
+id: paragraph.person.field_person_title
+field_name: field_person_title
+entity_type: paragraph
+bundle: person
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

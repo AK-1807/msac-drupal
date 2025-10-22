@@ -1,0 +1,26 @@
+uuid: fb81b711-dc81-4692-a401-e0879ba57891
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_engmt_type_2_text
+    - node.type.artist
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - plain_text
+id: node.artist.field_artist_engmt_type_2_text
+field_name: field_artist_engmt_type_2_text
+entity_type: node
+bundle: artist
+label: 'Online Programs Offered'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

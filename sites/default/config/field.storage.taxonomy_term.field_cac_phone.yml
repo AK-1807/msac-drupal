@@ -1,0 +1,19 @@
+uuid: 186a9075-b3bb-4bd1-b317-3dbf1a855583
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - telephone
+id: taxonomy_term.field_cac_phone
+field_name: field_cac_phone
+entity_type: taxonomy_term
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

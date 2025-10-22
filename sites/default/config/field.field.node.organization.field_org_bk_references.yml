@@ -1,0 +1,26 @@
+uuid: 7c7e5d28-94a1-4b00-9b95-cff9292e9492
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_org_bk_references
+    - node.type.organization
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - plain_text
+id: node.organization.field_org_bk_references
+field_name: field_org_bk_references
+entity_type: node
+bundle: organization
+label: References
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

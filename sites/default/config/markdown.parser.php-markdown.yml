@@ -1,0 +1,11 @@
+dependencies:
+  module:
+    - markdown
+id: php-markdown
+enabled: true
+weight: 0
+render_strategy:
+  type: filter_output
+  custom_allowed_html: null
+  plugins: {  }
+settings: {  }

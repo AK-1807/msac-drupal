@@ -1,0 +1,30 @@
+uuid: c51b0d42-b0ee-49bd-9746-8f2b0d87da32
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_person_type
+field_name: field_person_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: msacs
+      label: 'MSAC Staff'
+    -
+      value: mpac
+      label: 'MPAC Commissioners'
+    -
+      value: msacc
+      label: 'MSAC Councilors'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

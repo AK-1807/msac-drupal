@@ -1,0 +1,1345 @@
+uuid: a535e409-414e-4e4b-8b88-0a5af1af50e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.artist.body
+    - field.field.node.artist.feeds_item
+    - field.field.node.artist.field_artist_address
+    - field.field.node.artist.field_artist_artistic_categories
+    - field.field.node.artist.field_artist_arts_in_edu_roster
+    - field.field.node.artist.field_artist_audio
+    - field.field.node.artist.field_artist_awards
+    - field.field.node.artist.field_artist_bk_contact_info
+    - field.field.node.artist.field_artist_bk_materials_tech
+    - field.field.node.artist.field_artist_bk_price
+    - field.field.node.artist.field_artist_bk_references
+    - field.field.node.artist.field_artist_bk_travel_req_rest
+    - field.field.node.artist.field_artist_cover
+    - field.field.node.artist.field_artist_cover_caption
+    - field.field.node.artist.field_artist_districts
+    - field.field.node.artist.field_artist_email
+    - field.field.node.artist.field_artist_engmt_type_1
+    - field.field.node.artist.field_artist_engmt_type_1_text
+    - field.field.node.artist.field_artist_engmt_type_2
+    - field.field.node.artist.field_artist_engmt_type_2_text
+    - field.field.node.artist.field_artist_engmt_type_3
+    - field.field.node.artist.field_artist_engmt_type_3_text
+    - field.field.node.artist.field_artist_engmt_type_4
+    - field.field.node.artist.field_artist_engmt_type_4_text
+    - field.field.node.artist.field_artist_engmt_type_5
+    - field.field.node.artist.field_artist_engmt_type_5_text
+    - field.field.node.artist.field_artist_engmt_type_6
+    - field.field.node.artist.field_artist_engmt_type_6_text
+    - field.field.node.artist.field_artist_engmt_type_7
+    - field.field.node.artist.field_artist_engmt_type_7_text
+    - field.field.node.artist.field_artist_engmt_type_8
+    - field.field.node.artist.field_artist_engmt_type_8_text
+    - field.field.node.artist.field_artist_first_name
+    - field.field.node.artist.field_artist_gallery_website
+    - field.field.node.artist.field_artist_grants
+    - field.field.node.artist.field_artist_iaa_recipient
+    - field.field.node.artist.field_artist_juried_exhib
+    - field.field.node.artist.field_artist_juried_exhib_year
+    - field.field.node.artist.field_artist_last_name
+    - field.field.node.artist.field_artist_legacy_node_id
+    - field.field.node.artist.field_artist_legacy_user_id
+    - field.field.node.artist.field_artist_legacy_user_name
+    - field.field.node.artist.field_artist_mp_categories
+    - field.field.node.artist.field_artist_mp_image
+    - field.field.node.artist.field_artist_mp_join_date
+    - field.field.node.artist.field_artist_mp_opt_in
+    - field.field.node.artist.field_artist_p_work
+    - field.field.node.artist.field_artist_phone
+    - field.field.node.artist.field_artist_photo
+    - field.field.node.artist.field_artist_population_types
+    - field.field.node.artist.field_artist_presenting_touring
+    - field.field.node.artist.field_artist_price_ranges
+    - field.field.node.artist.field_artist_quote
+    - field.field.node.artist.field_artist_registry_tags
+    - field.field.node.artist.field_artist_resume
+    - field.field.node.artist.field_artist_show_email
+    - field.field.node.artist.field_artist_social_behance
+    - field.field.node.artist.field_artist_social_dribbble
+    - field.field.node.artist.field_artist_social_facebook
+    - field.field.node.artist.field_artist_social_instagram
+    - field.field.node.artist.field_artist_social_linkedin
+    - field.field.node.artist.field_artist_social_twitter
+    - field.field.node.artist.field_artist_social_vimeo
+    - field.field.node.artist.field_artist_social_youtube
+    - field.field.node.artist.field_artist_statement
+    - field.field.node.artist.field_artist_video
+    - field.field.node.artist.field_artist_video_url
+    - field.field.node.artist.field_artist_website
+    - field.field.node.artist.field_artist_websites
+    - field.field.node.artist.field_county
+    - image.style.thumbnail
+    - node.type.artist
+    - workflows.workflow.editorial
+  module:
+    - address
+    - conditional_fields
+    - content_moderation
+    - datetime
+    - field_group
+    - file
+    - image
+    - link
+    - paragraphs
+    - path
+    - telephone
+    - text
+    - video_embed_field
+third_party_settings:
+  field_group:
+    group_content:
+      children:
+        - group_details
+        - group_contact
+        - group_districts
+        - group_social
+        - group_disciplines
+        - group_awards
+        - group_grants
+        - group_booking_info
+        - group_arts_in_education
+        - group_presenting_touring
+        - group_other
+      label: Content
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        id: ''
+        direction: vertical
+    group_contact:
+      children:
+        - field_artist_address
+        - field_artist_email
+        - field_artist_show_email
+        - field_artist_phone
+        - field_county
+        - field_artist_websites
+      label: Contact
+      region: content
+      parent_name: group_content
+      weight: 14
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_social:
+      children:
+        - field_artist_social_facebook
+        - field_artist_social_twitter
+        - field_artist_social_instagram
+        - field_artist_social_linkedin
+        - field_artist_social_youtube
+        - field_artist_social_vimeo
+        - field_artist_social_dribbble
+        - field_artist_social_behance
+      label: Social
+      region: content
+      parent_name: group_content
+      weight: 16
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_details:
+      children:
+        - title
+        - field_artist_cover
+        - field_artist_cover_caption
+        - field_artist_resume
+        - field_artist_photo
+        - field_artist_first_name
+        - field_artist_last_name
+        - field_artist_quote
+        - body
+      label: Details
+      region: content
+      parent_name: group_content
+      weight: 13
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_legacy:
+      children:
+        - field_artist_website
+        - field_artist_mp_opt_in
+        - field_artist_mp_categories
+        - field_artist_mp_join_date
+        - field_artist_mp_image
+        - field_artist_video
+        - field_artist_video_url
+        - field_artist_audio
+        - field_artist_iaa_recipient
+        - field_artist_juried_exhib
+        - field_artist_gallery_website
+        - field_artist_juried_exhib_year
+        - field_artist_legacy_node_id
+        - field_artist_legacy_user_id
+        - field_artist_legacy_user_name
+      label: Legacy
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+        weight: 0
+    group_other:
+      children:
+        - field_artist_statement
+        - field_artist_price_ranges
+        - field_artist_registry_tags
+      label: Other
+      region: content
+      parent_name: group_content
+      weight: 23
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_booking_info:
+      children:
+        - field_artist_bk_price
+        - field_artist_bk_contact_info
+        - field_artist_bk_materials_tech
+        - field_artist_bk_travel_req_rest
+        - field_artist_bk_references
+      label: 'Booking Info'
+      region: content
+      parent_name: group_content
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+        direction: vertical
+    group_arts_in_education:
+      children:
+        - field_artist_arts_in_edu_roster
+        - field_artist_population_types
+        - field_artist_engmt_type_1
+        - field_artist_engmt_type_1_text
+        - field_artist_engmt_type_2
+        - field_artist_engmt_type_2_text
+        - field_artist_engmt_type_3
+        - field_artist_engmt_type_3_text
+        - field_artist_engmt_type_4
+        - field_artist_engmt_type_4_text
+        - field_artist_engmt_type_5
+        - field_artist_engmt_type_5_text
+        - field_artist_engmt_type_6
+        - field_artist_engmt_type_6_text
+        - field_artist_engmt_type_7
+        - field_artist_engmt_type_7_text
+        - field_artist_engmt_type_8
+        - field_artist_engmt_type_8_text
+      label: 'Arts in Education'
+      region: content
+      parent_name: group_content
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+        direction: vertical
+    group_awards:
+      children:
+        - field_artist_awards
+      label: Awards
+      region: content
+      parent_name: group_content
+      weight: 18
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_districts:
+      children:
+        - field_artist_districts
+      label: Districts
+      region: content
+      parent_name: group_content
+      weight: 15
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_disciplines:
+      children:
+        - field_artist_artistic_categories
+      label: Disciplines
+      region: content
+      parent_name: group_content
+      weight: 17
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: 'Note: If a child discipline is select the parent must also be selected'
+        required_fields: true
+    group_grants:
+      children:
+        - field_artist_grants
+      label: Grants
+      region: content
+      parent_name: group_content
+      weight: 19
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_presenting_touring:
+      children:
+        - field_artist_presenting_touring
+      label: 'Presenting & Touring'
+      region: content
+      parent_name: group_content
+      weight: 22
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: node.artist.default
+targetEntityType: node
+bundle: artist
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 8
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_artist_address:
+    type: address_default
+    weight: 17
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_artist_artistic_categories:
+    type: options_buttons
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_artist_arts_in_edu_roster:
+    type: boolean_checkbox
+    weight: 20
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_artist_audio:
+    type: file_generic
+    weight: 46
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_artist_awards:
+    type: entity_reference_paragraphs
+    weight: 19
+    region: content
+    settings:
+      title: Award
+      title_plural: Awards
+      edit_mode: open
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+  field_artist_bk_contact_info:
+    type: text_textarea
+    weight: 11
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '0'
+        hide_guidelines: '0'
+  field_artist_bk_materials_tech:
+    type: text_textarea
+    weight: 13
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '0'
+        hide_guidelines: '0'
+  field_artist_bk_price:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_artist_bk_references:
+    type: text_textarea
+    weight: 15
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '0'
+        hide_guidelines: '0'
+  field_artist_bk_travel_req_rest:
+    type: text_textarea
+    weight: 14
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '0'
+        hide_guidelines: '0'
+  field_artist_cover:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_artist_cover_caption:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_artist_districts:
+    type: options_buttons
+    weight: 17
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_artist_email:
+    type: email_default
+    weight: 18
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_artist_engmt_type_1:
+    type: boolean_checkbox
+    weight: 22
+    region: content
+    settings:
+      display_label: true
+    third_party_settings:
+      conditional_fields:
+        b45879b2-3145-4ffc-8406-ff5d77612230:
+          entity_type: node
+          bundle: artist
+          dependee: field_artist_arts_in_edu_roster
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_artist_engmt_type_1_text:
+    type: text_textarea
+    weight: 23
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        faa86462-1cf0-4eaa-80f0-5692c5163cc2:
+          entity_type: node
+          bundle: artist
+          dependee: field_artist_engmt_type_1
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+        bfd47b76-05b2-43ad-9a2b-e9c973027d91:
+          entity_type: node
+          bundle: artist
+          dependee: field_artist_arts_in_edu_roster
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_artist_engmt_type_2:
+    type: boolean_checkbox
+    weight: 24
+    region: content
+    settings:
+      display_label: true
+    third_party_settings:
+      conditional_fields:
+        e3136bb1-386b-489b-a76e-1fa891d0864c:
+          entity_type: node
+          bundle: artist
+          dependee: field_artist_arts_in_edu_roster
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_artist_engmt_type_2_text:
+    type: text_textarea
+    weight: 25
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        b66db6be-140a-4054-91f4-c29d35dad751:
+          entity_type: node
+          bundle: artist
+          dependee: field_artist_engmt_type_2
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+        b619c2cc-8ddf-4fcb-abbd-bbcecd75b727:
+          entity_type: node
+          bundle: artist
+          dependee: field_artist_arts_in_edu_roster
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_artist_engmt_type_3:
+    type: boolean_checkbox
+    weight: 26
+    region: content
+    settings:
+      display_label: true
+    third_party_settings:
+      conditional_fields:
+        d4f99711-5ace-4df9-97b8-0339e102d926:
+          entity_type: node
+          bundle: artist
+          dependee: field_artist_arts_in_edu_roster
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_artist_engmt_type_3_text:
+    type: text_textarea
+    weight: 27
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        83334cb2-f287-4e71-b123-a2b13cc53a05:
+          entity_type: node
+          bundle: artist
+          dependee: field_artist_engmt_type_3
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+        c7ad118d-3995-472e-875b-63dcd8cea9ef:
+          entity_type: node
+          bundle: artist
+          dependee: field_artist_arts_in_edu_roster
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_artist_engmt_type_4:
+    type: boolean_checkbox
+    weight: 28
+    region: content
+    settings:
+      display_label: true
+    third_party_settings:
+      conditional_fields:
+        ba3820c3-98ef-4e68-b39b-8b3cb55d18a2:
+          entity_type: node
+          bundle: artist
+          dependee: field_artist_arts_in_edu_roster
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_artist_engmt_type_4_text:
+    type: text_textarea
+    weight: 29
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        c7191e4c-55d7-4cb2-9ca1-63e0b891e02b:
+          entity_type: node
+          bundle: artist
+          dependee: field_artist_engmt_type_4
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+        99748132-e274-4d47-b6d4-714e6f2ee414:
+          entity_type: node
+          bundle: artist
+          dependee: field_artist_arts_in_edu_roster
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_artist_engmt_type_5:
+    type: boolean_checkbox
+    weight: 30
+    region: content
+    settings:
+      display_label: true
+    third_party_settings:
+      conditional_fields:
+        5ca54950-e1da-4ae5-9944-da3529b4c3aa:
+          entity_type: node
+          bundle: artist
+          dependee: field_artist_arts_in_edu_roster
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_artist_engmt_type_5_text:
+    type: text_textarea
+    weight: 31
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        d42cba28-d3ca-4189-aa91-faaffb6bda78:
+          entity_type: node
+          bundle: artist
+          dependee: field_artist_engmt_type_5
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+        0debfcc3-1b06-4b53-8a46-194320e3c237:
+          entity_type: node
+          bundle: artist
+          dependee: field_artist_arts_in_edu_roster
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_artist_engmt_type_6:
+    type: boolean_checkbox
+    weight: 32
+    region: content
+    settings:
+      display_label: true
+    third_party_settings:
+      conditional_fields:
+        10af64f8-5d64-4b13-bf8b-e811ebd91738:
+          entity_type: node
+          bundle: artist
+          dependee: field_artist_arts_in_edu_roster
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_artist_engmt_type_6_text:
+    type: text_textarea
+    weight: 33
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        84ebe073-8ae6-4d64-8c84-9c9475ab358b:
+          entity_type: node
+          bundle: artist
+          dependee: field_artist_engmt_type_6
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+        eccafee1-5cf1-45f8-9a78-28ef06499220:
+          entity_type: node
+          bundle: artist
+          dependee: field_artist_arts_in_edu_roster
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_artist_engmt_type_7:
+    type: boolean_checkbox
+    weight: 34
+    region: content
+    settings:
+      display_label: true
+    third_party_settings:
+      conditional_fields:
+        e478a0c5-88bf-4545-aa5c-1a4cda8de223:
+          entity_type: node
+          bundle: artist
+          dependee: field_artist_arts_in_edu_roster
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_artist_engmt_type_7_text:
+    type: text_textarea
+    weight: 35
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        c5eb052c-0f36-4837-9df4-9d4b421f7b5c:
+          entity_type: node
+          bundle: artist
+          dependee: field_artist_engmt_type_7
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+        e0086bfa-4cf3-4f44-a3d6-45355e39bf3f:
+          entity_type: node
+          bundle: artist
+          dependee: field_artist_arts_in_edu_roster
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_artist_engmt_type_8:
+    type: boolean_checkbox
+    weight: 36
+    region: content
+    settings:
+      display_label: true
+    third_party_settings:
+      conditional_fields:
+        54cb83c7-ae45-49e1-8798-35b109fe3714:
+          entity_type: node
+          bundle: artist
+          dependee: field_artist_arts_in_edu_roster
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_artist_engmt_type_8_text:
+    type: text_textarea
+    weight: 37
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        f0f7aadf-4769-40fb-9f49-0bb2cffa4144:
+          entity_type: node
+          bundle: artist
+          dependee: field_artist_engmt_type_8
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+        05b1ee84-1cf1-483e-86a7-47f6f8ff6c97:
+          entity_type: node
+          bundle: artist
+          dependee: field_artist_arts_in_edu_roster
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_artist_first_name:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_artist_gallery_website:
+    type: link_default
+    weight: 49
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_artist_grants:
+    type: options_buttons
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_artist_iaa_recipient:
+    type: entity_reference_autocomplete
+    weight: 47
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_artist_juried_exhib:
+    type: boolean_checkbox
+    weight: 48
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_artist_juried_exhib_year:
+    type: options_select
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_artist_last_name:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_artist_legacy_node_id:
+    type: string_textfield
+    weight: 51
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_artist_legacy_user_id:
+    type: string_textfield
+    weight: 52
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_artist_legacy_user_name:
+    type: string_textfield
+    weight: 53
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_artist_mp_categories:
+    type: entity_reference_autocomplete
+    weight: 34
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_artist_mp_image:
+    type: image_image
+    weight: 36
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_artist_mp_join_date:
+    type: datetime_default
+    weight: 35
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_artist_mp_opt_in:
+    type: boolean_checkbox
+    weight: 33
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_artist_phone:
+    type: telephone_default
+    weight: 20
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_artist_photo:
+    type: image_image
+    weight: 4
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_artist_population_types:
+    type: options_buttons
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        abe61400-8732-4ea3-a134-f7f53f9a2981:
+          entity_type: node
+          bundle: artist
+          dependee: field_artist_arts_in_edu_roster
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_artist_presenting_touring:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_artist_price_ranges:
+    type: options_select
+    weight: 35
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_artist_quote:
+    type: string_textarea
+    weight: 7
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_artist_registry_tags:
+    type: entity_reference_autocomplete_tags
+    weight: 36
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_artist_resume:
+    type: file_generic
+    weight: 3
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_artist_show_email:
+    type: boolean_checkbox
+    weight: 19
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_artist_social_behance:
+    type: link_default
+    weight: 24
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_artist_social_dribbble:
+    type: link_default
+    weight: 23
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_artist_social_facebook:
+    type: link_default
+    weight: 16
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_artist_social_instagram:
+    type: link_default
+    weight: 18
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_artist_social_linkedin:
+    type: link_default
+    weight: 19
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_artist_social_twitter:
+    type: link_default
+    weight: 17
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_artist_social_vimeo:
+    type: link_default
+    weight: 21
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_artist_social_youtube:
+    type: link_default
+    weight: 20
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_artist_statement:
+    type: text_textarea
+    weight: 34
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_artist_video:
+    type: video_embed_field_textfield
+    weight: 37
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_artist_video_url:
+    type: link_default
+    weight: 45
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_artist_website:
+    type: link_default
+    weight: 32
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_artist_websites:
+    type: link_default
+    weight: 22
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_county:
+    type: options_select
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete_tags
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  feeds_item: true
+  field_artist_p_work: true

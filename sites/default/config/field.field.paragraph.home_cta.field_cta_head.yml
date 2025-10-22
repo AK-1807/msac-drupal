@@ -1,0 +1,19 @@
+uuid: 5f8baa95-d537-4408-94d2-66ca1b452cf1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_head
+    - paragraphs.paragraphs_type.home_cta
+id: paragraph.home_cta.field_cta_head
+field_name: field_cta_head
+entity_type: paragraph
+bundle: home_cta
+label: 'CTA Head'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

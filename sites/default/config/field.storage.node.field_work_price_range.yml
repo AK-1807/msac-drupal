@@ -1,0 +1,20 @@
+uuid: c0547040-3a2f-4a76-9cca-7a15ac3b75ea
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_work_price_range
+field_name: field_work_price_range
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,28 @@
+uuid: cf038b2e-6dab-4ed6-b5c0-fe2e180bc01b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_grant_resources
+    - media.type.document
+    - node.type.grant
+id: node.grant.field_grant_resources
+field_name: field_grant_resources
+entity_type: node
+bundle: grant
+label: Resources
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

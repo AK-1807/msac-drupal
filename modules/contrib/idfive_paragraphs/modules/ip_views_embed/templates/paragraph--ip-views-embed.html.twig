@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * IP Views Embed paragraph bundle.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{%
+  set classes = [
+    'paragraph-widget',
+    'paragraph-widget--ip_views_embed',
+  ]
+%}
+
+{% block paragraph %}
+	<div{{attributes.addClass(classes).setAttribute('id','ip_views_embed-'~paragraph.id())}}>
+		{% block content %}
+      {% if content.field_ip_ve_title[0] %}
+        <h2>{{ content.field_ip_ve_title }}</h2>
+      {% endif %}
+      {{ content.field_ip_ve_view }}
+		{% endblock %}
+	</div>
+	{{ content|without('field_ip_ve_title', 'field_ip_ve_view') }}
+{% endblock paragraph %}

@@ -1,0 +1,10 @@
+uuid: 37225741-a402-499b-8942-d347e1bcb5be
+langcode: en
+status: true
+dependencies: {  }
+id: artist_award
+label: 'Artist Award'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

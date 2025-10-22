@@ -1,0 +1,60 @@
+uuid: 3bd9abb0-2114-40b3-aebb-5d0599409a77
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_ac_item
+    - paragraphs.paragraphs_type.ip_accordion
+    - paragraphs.paragraphs_type.ip_accordion_item
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: X38fSVbJ17FHpIqUGvoUmHqR5VboLyAz67TzwtVVNuc
+id: paragraph.ip_accordion.field_ip_ac_item
+field_name: field_ip_ac_item
+entity_type: paragraph
+bundle: ip_accordion
+label: Items
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      ip_accordion_item: ip_accordion_item
+    negate: 0
+    target_bundles_drag_drop:
+      ip_accordion:
+        weight: 2
+        enabled: false
+      ip_accordion_item:
+        weight: 4
+        enabled: true
+      ip_button_link:
+        weight: 13
+        enabled: false
+      ip_card:
+        weight: 14
+        enabled: false
+      ip_carousel:
+        weight: 15
+        enabled: false
+      ip_carousel_item:
+        weight: 16
+        enabled: false
+      ip_html:
+        weight: 17
+        enabled: false
+      ip_table:
+        weight: 18
+        enabled: false
+      ip_views_embed:
+        weight: 19
+        enabled: false
+      ip_webform_embed:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

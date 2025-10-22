@@ -1,0 +1,5 @@
+msac_profiles.settings:
+  title: 'MSAC Profiles Settings'
+  parent: system.admin_config_services
+  description: 'Adjust MSAC Profiles settings'
+  route_name: msac_profiles.settings

@@ -1,0 +1,21 @@
+uuid: 747caad3-0951-4b7c-a158-3731a8a17a9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_article_media_contact
+    - node.type.article
+  module:
+    - text
+id: node.article.field_article_media_contact
+field_name: field_article_media_contact
+entity_type: node
+bundle: article
+label: 'Media Contact'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

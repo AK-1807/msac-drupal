@@ -1,0 +1,20 @@
+uuid: 1fe074f7-bc52-4247-bd8a-2425a499555c
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: 7ukFhztTqtrK2WFgTlRlnShmRBEb0dy5t1rEvgFQsmU
+id: paragraph.field_ip_ac_animate
+field_name: field_ip_ac_animate
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

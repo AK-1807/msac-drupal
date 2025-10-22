@@ -1,0 +1,23 @@
+uuid: f371f603-93c8-4f83-87c9-0b50354b7d6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_org_show_email
+    - node.type.organization
+id: node.organization.field_org_show_email
+field_name: field_org_show_email
+entity_type: node
+bundle: organization
+label: 'Display my email address on my profile'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

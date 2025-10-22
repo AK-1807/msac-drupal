@@ -1,0 +1,17 @@
+{% if caption %}
+    <figure class="iframe">
+{% else %}
+    <div class="iframe">
+{% endif %}
+    <div class="iframe__media-wrapper">
+        <iframe src="{{ media|path }}" title="{{ title }}" allowfullscreen></iframe>
+    </div>
+    {% if caption %}
+        <figcaption>{{ caption }}</figcaption>
+    {% endif %}
+{% if caption %}
+    </figure>
+{% else %}
+    </div>
+{% endif %}
+

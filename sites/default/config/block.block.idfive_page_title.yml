@@ -1,0 +1,20 @@
+uuid: 6383506e-948e-4d64-84f1-b50e4f8dec8b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - idfive
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: idfive_page_title
+theme: idfive
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

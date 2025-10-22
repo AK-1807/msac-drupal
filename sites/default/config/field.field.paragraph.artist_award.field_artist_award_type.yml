@@ -1,0 +1,21 @@
+uuid: 13b0715f-380f-4861-b3de-3ce5751d9545
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_artist_award_type
+    - paragraphs.paragraphs_type.artist_award
+  module:
+    - options
+id: paragraph.artist_award.field_artist_award_type
+field_name: field_artist_award_type
+entity_type: paragraph
+bundle: artist_award
+label: Type
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

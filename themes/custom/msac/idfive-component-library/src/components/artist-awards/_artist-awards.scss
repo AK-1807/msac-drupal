@@ -1,0 +1,49 @@
+.artist-awards {
+  @extend %aside;
+  background-color: $mid-red;
+  color: $white;
+  @include media("1024") {
+    margin-top: rem(60);
+  }
+  @include media("1200") {
+    margin-top: rem(-92);
+  }
+}
+
+.artist-awards__heading {
+  @extend %aside-heading;
+  background-color: $black;
+  color: $white;
+}
+
+.artist-awards__content {
+  display: flex;
+  justify-content: space-between;
+  margin-left: rem(-24);
+}
+
+.artist-awards__award {
+  box-sizing: content-box;
+  flex: 1 1 0px;
+  margin: 0 auto;
+  max-width: rem(118);
+  padding-left: rem(24);
+  text-align: center;
+}
+
+.artist-awards__award-icon {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: rem(50);
+  margin-bottom: rem(8);
+}
+
+.artist-awards__award-name {
+  color: inherit;
+  font-family: $red-hat-text;
+  font-size: rem(18);
+  font-weight: 700;
+  line-height: (26 / 18);
+  margin: 0 0 rem(16);
+}

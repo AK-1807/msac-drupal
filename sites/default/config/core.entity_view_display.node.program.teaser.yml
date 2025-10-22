@@ -1,0 +1,74 @@
+uuid: 394fe782-a838-4e40-9448-e133246a8848
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.program.body
+    - field.field.node.program.field_hero_caption
+    - field.field.node.program.field_hero_image
+    - field.field.node.program.field_hero_logo
+    - field.field.node.program.field_meta
+    - field.field.node.program.field_program_image
+    - field.field.node.program.field_widgets
+    - node.type.program
+  module:
+    - image
+    - smart_trim
+    - user
+id: node.program.teaser
+targetEntityType: node
+bundle: program
+mode: teaser
+content:
+  body:
+    type: smart_trim
+    label: hidden
+    settings:
+      trim_length: 150
+      trim_type: chars
+      trim_suffix: ''
+      wrap_output: false
+      wrap_class: trimmed
+      more:
+        display_link: false
+        target_blank: false
+        link_trim_only: false
+        class: more-link
+        text: More
+        aria_label: 'Read more about [node:title]'
+      summary_handler: full
+      trim_options:
+        text: true
+        trim_zero: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_program_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_hero_caption: true
+  field_hero_image: true
+  field_hero_logo: true
+  field_meta: true
+  field_widgets: true
+  search_api_excerpt: true

@@ -1,0 +1,104 @@
+uuid: ee3b45cf-da53-4402-9ba1-e1783280fb51
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.article.body
+    - field.field.node.article.feeds_item
+    - field.field.node.article.field_article_category
+    - field.field.node.article.field_article_cover_caption
+    - field.field.node.article.field_article_cover_image
+    - field.field.node.article.field_article_date
+    - field.field.node.article.field_article_file_attachment
+    - field.field.node.article.field_article_image
+    - field.field.node.article.field_article_lead_in
+    - field.field.node.article.field_article_legacy_node_id
+    - field.field.node.article.field_article_legacy_path
+    - field.field.node.article.field_article_media_contact
+    - field.field.node.article.field_article_programs
+    - field.field.node.article.field_article_type
+    - field.field.node.article.field_meta
+    - field.field.node.article.field_widgets
+    - node.type.article
+  module:
+    - image
+    - options
+    - smart_trim
+    - user
+_core:
+  default_config_hash: 4NcL2hSQZBpJbYtNuh5jC6kyQTcAc1m5bQpTegEWEso
+id: node.article.teaser
+targetEntityType: node
+bundle: article
+mode: teaser
+content:
+  body:
+    type: smart_trim
+    label: hidden
+    settings:
+      trim_length: 150
+      trim_type: chars
+      trim_suffix: ''
+      wrap_output: false
+      wrap_class: trimmed
+      more:
+        display_link: false
+        target_blank: false
+        link_trim_only: false
+        class: more-link
+        text: More
+        aria_label: 'Read more about [node:title]'
+      summary_handler: full
+      trim_options:
+        text: true
+        trim_zero: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_article_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_article_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_article_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  feeds_item: true
+  field_article_cover_caption: true
+  field_article_cover_image: true
+  field_article_date: true
+  field_article_file_attachment: true
+  field_article_lead_in: true
+  field_article_legacy_node_id: true
+  field_article_legacy_path: true
+  field_article_media_contact: true
+  field_article_programs: true
+  field_meta: true
+  field_widgets: true
+  links: true
+  search_api_excerpt: true

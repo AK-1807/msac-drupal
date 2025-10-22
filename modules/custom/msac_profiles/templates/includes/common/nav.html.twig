@@ -1,0 +1,31 @@
+{% set url = url('<current>') %}
+{% set items = [
+    {
+        'url': '/profile/dashboard',
+        'name': "Dashboard",
+    },
+    {
+        'url': '/profile/about',
+        'name': "About",
+    },
+    {
+        'url': '/profile/work',
+        'name': "Work",
+    },
+    {
+        'url': '/profile/account',
+        'name': "Account",
+    },
+] %}
+
+<div class="msac_profiles-nav">
+    <ul class="msac_profiles-nav__list">
+        {% for item in items %}
+            <li class="msac_profiles-nav__list-item">
+                <a class="msac_profiles-nav__link{% if item.url in url|render|render %} is-active{% endif %}" href="{{ item.url }}">{{ item.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{{ drupal_messages() }}

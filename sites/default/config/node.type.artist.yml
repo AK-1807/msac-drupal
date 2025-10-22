@@ -1,0 +1,20 @@
+uuid: 935fb0c6-10e5-43c1-9941-c08d50352e08
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - node_title_help_text
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  node_title_help_text:
+    title_help: 'This will be the name shown on your public profile.'
+name: Artist
+type: artist
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

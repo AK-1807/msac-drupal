@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * @file
+ * Idfive paragraphs module file.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ *
+ * @inheritdoc
+ */
+function idfive_paragraphs_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.idfive_paragraphs':
+      $text = file_get_contents(dirname(__FILE__) . "/README.md");
+      if (!\Drupal::moduleHandler()->moduleExists('markdown')) {
+        return '<pre>' . $text . '</pre>';
+      }
+      else {
+        // Use the Markdown filter to render the README.
+        $filter_manager = \Drupal::service('plugin.manager.filter');
+        $settings = \Drupal::configFactory()->get('markdown.settings')->getRawData();
+        $config = ['settings' => $settings];
+        $filter = $filter_manager->createInstance('markdown', $config);
+        return $filter->process($text, 'en');
+      }
+  }
+  return NULL;
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * Provides some basic stripped down templates.
+ */
+function idfive_paragraphs_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__default' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__entity_reference_revisions' => [
+      'base hook' => 'paragraph',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_views_view().
+ *
+ * Adds our extended css/js to our entity browser views.
+ */
+function idfive_paragraphs_preprocess_views_view(&$variables) {
+  if ($variables['view']->id() === 'idfive_media_browser') {
+    $variables['view_array']['#attached']['library'][] = 'idfive_paragraphs/view';
+  }
+}

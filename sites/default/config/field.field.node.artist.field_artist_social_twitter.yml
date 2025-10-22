@@ -1,0 +1,23 @@
+uuid: 5c2da558-9747-4129-9b0c-02dd93dae751
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_social_twitter
+    - node.type.artist
+  module:
+    - link
+id: node.artist.field_artist_social_twitter
+field_name: field_artist_social_twitter
+entity_type: node
+bundle: artist
+label: Twitter
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 16
+field_type: link

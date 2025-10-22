@@ -1,0 +1,36 @@
+.collapsible-text {
+  @extend %widget-spacing;
+}
+
+.collapsible-text__collapse {
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s height ease-in-out;
+  &[aria-hidden="false"] {
+    height: auto;
+  }
+  p {
+    &:last-child {
+      margin-bottom: rem(18);
+    }
+  }
+}
+
+.collapsible-text__toggle {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  color: $red;
+  cursor: pointer;
+  display: table;
+  font-family: $red-hat-text;
+  font-size: rem(18);
+  line-height: (26 / 18);
+  padding: 0;
+  text-decoration: underline;
+  transition: 0.25s color ease-in-out;
+  &:hover,
+  &:focus {
+    color: $dark-red;
+  }
+}

@@ -1,0 +1,29 @@
+uuid: be75ad5f-0761-4300-abfe-3fea78672976
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_county
+    - node.type.organization
+    - taxonomy.vocabulary.counties
+id: node.organization.field_county
+field_name: field_county
+entity_type: node
+bundle: organization
+label: 'County of residence'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      counties: counties
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

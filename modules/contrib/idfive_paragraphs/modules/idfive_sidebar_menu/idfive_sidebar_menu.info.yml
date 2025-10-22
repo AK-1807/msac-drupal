@@ -1,0 +1,9 @@
+name: 'idfive Sidebar Menu Block'
+type: module
+description: 'Custom block menu for ICL specific sidebar markup/UX.'
+core_version_requirement: ^8 || ^9 || ^10
+version: VERSION
+package: 'idfive'
+
+dependencies:
+  - drupal:block

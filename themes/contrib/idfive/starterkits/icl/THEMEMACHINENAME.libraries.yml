@@ -1,0 +1,7 @@
+global:
+  version: VERSION
+  css:
+    base:
+     idfive-component-library/public/css/style.css: {}
+  js:
+    idfive-component-library/public/js/bundle.js: {}

@@ -1,0 +1,19 @@
+uuid: 27d62177-b876-408c-983f-018672569345
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_legacy_node_id
+    - node.type.artist
+id: node.artist.field_artist_legacy_node_id
+field_name: field_artist_legacy_node_id
+entity_type: node
+bundle: artist
+label: 'Legacy Node ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

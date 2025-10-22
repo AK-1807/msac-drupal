@@ -1,0 +1,61 @@
+<!-- Header -->
+{% include module_directory ~ '/templates/includes/headers/full_header.html.twig' %}
+<div class="page-content outer-pad">
+	<div class="widget-spacing">
+		<div class="silc-grid silc-grid--collapse silc-grid--justify-center">
+			<div class="silc-grid__col silc-grid__col--10-800 silc-grid__col--8-1200">
+				<!-- Nav -->
+				{% include module_directory ~ '/templates/includes/common/nav.html.twig' %}
+				<h2>My Work</h2>
+				<p>You can add up to six of each different type of work to your profile.</p>
+				<h3>Images</h3>
+				{% if work.image.results %}
+					<div class="msac_profiles__table-wrap">
+						{{ work.image.results }}
+					</div>
+				{% endif %}
+				{% if work.image.msac_works_count < profile_settings.wk_limit %}
+					<a href="/profile/work/add/image" class="button">Add Image</a>
+				{% else %}
+					<p>You can only have up to {{ profile_settings.wk_limit }} images. Please remove an existing image to add more.</p>
+				{% endif %}
+
+				<h3>Videos</h3>
+				{% if work.video.results %}
+					<div class="msac_profiles__table-wrap">
+						{{ work.video.results }}
+					</div>
+				{% endif %}
+				{% if work.video.msac_works_count < profile_settings.wk_limit %}
+					<a href="/profile/work/add/video" class="button">Add Video</a>
+				{% else %}
+					<p>You can only have up to {{ profile_settings.wk_limit }} videos. Please remove an existing video to add more.</p>
+				{% endif %}
+
+				<h3>Documents</h3>
+				{% if work.document.results %}
+					<div class="msac_profiles__table-wrap">
+						{{ work.document.results }}
+					</div>
+				{% endif %}
+				{% if work.document.msac_works_count < profile_settings.wk_limit %}
+					<a href="/profile/work/add/document" class="button">Add Document</a>
+				{% else %}
+					<p>You can only have up to {{ profile_settings.wk_limit }} documents. Please remove an existing document to add more.</p>
+				{% endif %}
+
+				<h3>Audio</h3>
+				{% if work.audio.results %}
+					<div class="msac_profiles__table-wrap">
+						{{ work.audio.results }}
+					</div>
+				{% endif %}
+				{% if work.audio.msac_works_count < profile_settings.wk_limit %}
+					<a href="/profile/work/add/audio" class="button">Add Audio</a>
+				{% else %}
+					<p>You can only have up to {{ profile_settings.wk_limit }} audio. Please remove an existing audio to add more.</p>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,8 @@
+uuid: a58a5c46-38ca-4395-b0ef-d11469a6eb6d
+langcode: en
+status: true
+dependencies: {  }
+name: 'Disciplines [legacy]'
+vid: disciplines
+description: ''
+weight: 0

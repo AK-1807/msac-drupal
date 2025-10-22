@@ -1,0 +1,88 @@
+uuid: c6236706-851b-4ee9-adae-01499fb77a5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.counties.field_abbreviation
+    - field.field.taxonomy_term.counties.field_cac_address
+    - field.field.taxonomy_term.counties.field_cac_email
+    - field.field.taxonomy_term.counties.field_cac_name
+    - field.field.taxonomy_term.counties.field_cac_phone
+    - field.field.taxonomy_term.counties.field_cac_website
+    - field.field.taxonomy_term.counties.field_object_id
+    - taxonomy.vocabulary.counties
+  module:
+    - address
+    - link
+    - text
+id: taxonomy_term.counties.default
+targetEntityType: taxonomy_term
+bundle: counties
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_abbreviation:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_cac_address:
+    type: address_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_cac_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_cac_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_cac_phone:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_cac_website:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_object_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  search_api_excerpt: true

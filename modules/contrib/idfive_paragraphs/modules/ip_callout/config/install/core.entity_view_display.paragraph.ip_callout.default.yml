@@ -1,0 +1,53 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ip_callout.field_ip_co_headline
+    - field.field.paragraph.ip_callout.field_ip_co_image
+    - field.field.paragraph.ip_callout.field_ip_co_link
+    - field.field.paragraph.ip_callout.field_ip_co_text
+    - paragraphs.paragraphs_type.ip_callout
+  module:
+    - link
+id: paragraph.ip_callout.default
+targetEntityType: paragraph
+bundle: ip_callout
+mode: default
+content:
+  field_ip_co_headline:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_ip_co_image:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: ip_url_only
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_ip_co_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_ip_co_text:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden:
+  search_api_excerpt: true

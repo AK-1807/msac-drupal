@@ -1,0 +1,28 @@
+uuid: 99520f5a-9f8c-40ca-8799-c03ab2299993
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.artist
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - simple_html
+id: node.artist.body
+field_name: body
+entity_type: node
+bundle: artist
+label: 'Your Bio'
+description: 'Summary used on artist listing. Keep it short.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

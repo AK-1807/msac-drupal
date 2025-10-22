@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * IP Callout paragraph bundle.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{%
+  set classes = [
+    'paragraph-widget',
+    'paragraph-widget--ip_callout',
+  ]
+%}
+
+{% block paragraph %}
+	<div{{attributes.addClass(classes).setAttribute('id','ip_callout-'~paragraph.id())}}>
+		{% block content %}
+
+			{% set imageBody %}
+        {{ content.field_ip_co_image }}
+    	{% endset %}
+
+			<div class="callout" style="background-image: url({{ imageBody|striptags }})">
+				<h2 class="callout__title">{{ content.field_ip_co_headline }}</h2>
+				<p class="callout__body">{{ content.field_ip_co_text }}</p>
+				{% for key, item in content.field_ip_co_link %}
+					{% if key|first != '#' %}
+						<a href="{{ content.field_ip_co_link[key]['#url'] }}" class="button callout__cta" callout__cta {% if content.field_ip_co_link[key]['#options'].attributes.target %} target="{{ content.field_ip_co_link[key]['#options'].attributes.target }}" {% endif %}>
+							{{ content.field_ip_co_link[key]['#title'] }}
+						</a>
+					{% endif %}
+				{% endfor %}
+			</div>
+		{% endblock %}
+	</div>
+	{{ content|without('field_ip_co_headline', 'field_ip_co_image', 'field_ip_co_link', 'field_ip_co_text') }}</section>
+{% endblock paragraph %}

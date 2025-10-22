@@ -1,0 +1,20 @@
+uuid: cd5f27f1-62e7-4404-9761-488d7dbc1346
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: mxZj_ezMjC2vV7NxPOrS_ozyPsQr0OpNohUF5OO3x3E
+id: paragraph.field_ip_ac_open_first
+field_name: field_ip_ac_open_first
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

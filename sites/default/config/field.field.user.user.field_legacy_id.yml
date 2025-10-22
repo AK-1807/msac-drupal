@@ -1,0 +1,24 @@
+uuid: 0bc5ac39-6d15-4fa1-9122-923933a75628
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_legacy_id
+  module:
+    - user
+id: user.user.field_legacy_id
+field_name: field_legacy_id
+entity_type: user
+bundle: user
+label: 'Legacy ID'
+description: 'The original drupal 7 user id.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

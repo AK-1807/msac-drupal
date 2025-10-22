@@ -1,0 +1,74 @@
+{% extends "node--full.html.twig" %}
+
+
+{% block node_content %}
+  <div class="page-content outer-pad">
+    {{ drupal_messages() }}
+    <div class="silc-grid silc-grid--collapse silc-grid--justify-center">
+      <div class="silc-grid__col silc-grid__col--10-800 silc-grid__col--8-1200">
+        <div class="text-content">
+          {{ content.body }}
+        </div>
+      </div>
+      {% if content.field_widgets|field_value %}
+        <div class="silc-grid__col silc-grid__col--12">
+          <div class="page-widgets">
+            {{ content.field_widgets }}
+          </div>
+        </div>
+				{# if we uncomment this we need to fix col spacing on above div #}
+				{# <div class="silc-grid__col silc-grid__col--10-600 silc-grid__col--8-800 silc-grid__col--4-1024">
+					<aside class="aside">
+						<h2 class="aside__heading">Information</h2>
+						<div class="aside__content">
+							{% if drupal_view_result('program_contacts', 'embed_1') %}
+								<div class="aside__section">
+									<h3 class="aside__section-heading">Faculty / Staff</h3>
+									<div>
+										{{ drupal_view('program_contacts', 'embed_1') }}
+									</div>
+								</div>
+							{% endif %}
+						</div>
+					</aside>
+				</div> #}
+      {% endif %}
+    </div>
+		{% set program_content %}
+      {{ drupal_view('program_grants', 'embed_1') }}
+		{% endset %}
+		{% if program_content is not empty %}
+			<div class="widget-spacing">
+				<div class="silc-grid silc-grid--collapse silc-grid--justify-center">
+					<div class="silc-grid__col silc-grid__col--12">
+						<div>
+							{{ program_content }}
+						</div>
+					</div>
+				</div>
+			</div>
+		{% endif %}
+  </div>
+
+	{# <div class="page-content outer-pad">
+		{{ drupal_messages() }}
+		<div class="widget-spacing">
+			<div class="silc-grid silc-grid--collapse silc-grid--justify-center silc-grid--justify-right-1024 silc-grid--justify-center-1600">
+				<div class="silc-grid__col silc-grid__col silc-grid__col--12-1024 silc-grid__col--12-1440">
+					<div class="text-content">
+						{{ content.body }}
+					</div>
+				</div>
+
+			</div>
+		</div>
+    <div class="silc-grid silc-grid--collapse silc-grid--justify-center">
+      <div class="silc-grid__col silc-grid__col--10-800 silc-grid__col--8-1200">
+				<div class="page-widgets">
+					{{ content.field_widgets }}
+				</div>
+			</div>
+		</div>
+
+	</div> #}
+{% endblock %}

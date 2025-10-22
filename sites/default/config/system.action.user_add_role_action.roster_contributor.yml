@@ -1,0 +1,14 @@
+uuid: b46807fc-e729-4ad0-ac79-7afbfe955bc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.roster_contributor
+  module:
+    - user
+id: user_add_role_action.roster_contributor
+label: 'Add the Roster Contributor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: roster_contributor

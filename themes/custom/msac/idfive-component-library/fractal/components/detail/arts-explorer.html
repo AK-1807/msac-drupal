@@ -1,0 +1,3559 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
+    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
+    <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
+
+<link rel="stylesheet" href="../../themes/mandelbrot/css/default.css?cachebust=1.2.1" type="text/css">
+
+
+<title>Arts Explorer | Component Library</title>
+
+</head>
+<body>
+
+
+
+<div class="Frame" id="frame">
+
+    <div class="Frame-header">
+        <div class="Header">
+    <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
+        <svg class="Header-navToggleIcon Header-navToggleIcon--open" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/>
+</svg>
+
+        <svg class="Header-navToggleIcon Header-navToggleIcon--closed" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+</svg>
+
+    </button>
+    <a href="../../index.html" class="Header-title" data-pjax>Component Library</a>
+</div>
+
+    </div>
+
+    <div class="Frame-body" data-role="body">
+
+        <div class="Frame-panel Frame-panel--main" data-role="main">
+            <div class="Frame-inner" id="pjax-container">
+            
+
+
+    
+    
+
+<div class="Pen" data-behaviour="pen" id="pen-ee8c52dab7f4bd1c3277b59db3e29038">
+
+    
+
+    <div class="Pen-panel Pen-header">
+    <h1 class="Pen-title">
+        <a class="Pen-previewLink" href="../preview/arts-explorer.html" title="Component preview">
+            Arts Explorer
+            <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+
+        </a>
+    </h1>
+    
+
+<div class="Status Status--tag">
+
+<label class="Status-label" style="background-color: #29CC29; border-color: #29CC29;">Ready</label>
+
+</div>
+
+
+</div>
+
+
+    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-ee8c52dab7f4bd1c3277b59db3e29038">
+    <div class="Preview-wrapper" data-role="resizer">
+        <div class="Preview-resizer">
+            
+             <iframe
+                class="Preview-iframe"
+                data-role="window"
+                src="../preview/arts-explorer.html"
+                sandbox="allow-same-origin allow-scripts allow-forms allow-modals"
+                 style=""
+                marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
+            </iframe>
+        </div>
+        <div class="Preview-handle" data-role="resize-handle"></div>
+        <div class="Preview-overlay"></div>
+    </div>
+</div>
+
+
+    <div class="Pen-handle Pen-handle--browser" data-role="resize-handle"></div>
+
+    <div class="Pen-panel Pen-info" data-role="info">
+    <div class="Browser" data-behaviour="browser" id="browser-ee8c52dab7f4bd1c3277b59db3e29038">
+
+    
+
+<div class="Browser-controls">
+    <ul class="Browser-tabs">
+        
+        
+        <li class="Browser-tab Browser-tab--html is-active " data-role="tab">
+            <a href="#browser-ee8c52dab7f4bd1c3277b59db3e29038-panel-html">HTML</a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--view" data-role="tab">
+            <a href="#browser-ee8c52dab7f4bd1c3277b59db3e29038-panel-view">View</a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--context" data-role="tab">
+            <a href="#browser-ee8c52dab7f4bd1c3277b59db3e29038-panel-context">Context</a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="Browser-tab Browser-tab--resources" data-role="tab">
+            <a href="#browser-ee8c52dab7f4bd1c3277b59db3e29038-panel-assets">Assets</a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="Browser-tab Browser-tab--info" data-role="tab">
+            <a href="#browser-ee8c52dab7f4bd1c3277b59db3e29038-panel-info">Info</a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--notes" data-role="tab">
+            <a href="#browser-ee8c52dab7f4bd1c3277b59db3e29038-panel-notes">Notes</a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+    
+    
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-ee8c52dab7f4bd1c3277b59db3e29038-panel-html">
+    <code class="Code Code--lang-html">
+        
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"arts-explorer-root"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">arts-explorer</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">arts-explorer</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">noscript</span>&gt;</span>Please enable Javascript to explore the arts across Maryland.<span class="hljs-tag">&lt;/<span class="hljs-name">noscript</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+        
+    </code>
+</div>
+
+    
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-ee8c52dab7f4bd1c3277b59db3e29038-panel-view">
+    <code class="Code Code--lang-twig">
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"arts-explorer-root"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">arts-explorer</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">arts-explorer</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">noscript</span>&gt;</span>Please enable Javascript to explore the arts across Maryland.<span class="hljs-tag">&lt;/<span class="hljs-name">noscript</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
+    </code>
+</div>
+
+    
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-ee8c52dab7f4bd1c3277b59db3e29038-panel-context">
+    <code class="Code Code--lang-json">
+        
+            
+            <pre><span class="hljs-comment">/* No context defined for this component. */</span></pre>
+            
+        
+    </code>
+</div>
+
+    
+    
+
+
+<div class="Browser-panel Browser-resources" data-role="tab-panel" id="browser-ee8c52dab7f4bd1c3277b59db3e29038-panel-assets">
+    <div class="FileBrowser">
+
+        <div class="FileBrowser-selectWrapper">
+            <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
+            <select class="FileBrowser-select" id="filebrowser-select">
+                
+                <option value="file-c906edcf442a3c0827eb1a81943215c8">_arts-explorer.scss</option>
+                
+                <option value="file-2029495c16b99cc2ae78460f6f90a035">arts-explorer-filters.vue</option>
+                
+                <option value="file-d469f2bab817f2b3d24e6dfbd5f04380">arts-explorer-key.vue</option>
+                
+                <option value="file-2c545a7ae9218718ed2ddb2c3bb698ce">arts-explorer-list-location.vue</option>
+                
+                <option value="file-846b6be28bea38def1a357a013b3fd0f">arts-explorer-list-view.vue</option>
+                
+                <option value="file-59a6f18495731e8c4cafcf9fafcee59c">arts-explorer-map-view.vue</option>
+                
+                <option value="file-3a0dd0a8c99e54a84fb43f3c477ac263">arts-explorer-map.vue</option>
+                
+                <option value="file-fc800b902ac2b23ed55a0b9b2e2ff819">arts-explorer-views.vue</option>
+                
+                <option value="file-a4e2300053aee19c1e26b16cbd72e772">arts-explorer.ts</option>
+                
+                <option value="file-427aabe93cf9aae2c69ede4f65aedcc1">arts-explorer.vue</option>
+                
+                <option value="file-caf0bf241ab00205dc01022a2802cac6">popup.ts</option>
+                
+                <option value="file-d738b6fce5e78ccfb60cb2198fef6df5">store.ts</option>
+                
+                <option value="file-e4c9f67898425f2acc19379b44f853bb">util.ts</option>
+                
+            </select>
+        </div>
+
+        
+        <div class="FileBrowser-item is-active" id="file-c906edcf442a3c0827eb1a81943215c8" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-SCSS FileBrowser-code">
+                                <pre><span class="hljs-selector-class">.arts-explorer</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> rem(-<span class="hljs-number">16</span>);
+  <span class="hljs-attribute">max-width</span>: rem(<span class="hljs-number">1440</span>);
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-keyword">@include</span> media(<span class="hljs-string">"550"</span>) {
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> rem(-<span class="hljs-number">32</span>);
+  }
+  <span class="hljs-keyword">@include</span> media(<span class="hljs-string">"800"</span>) {
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;
+  }
+}
+
+<span class="hljs-selector-class">.arts-explorer__filters</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$black</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-variable">$white</span>;
+  <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">24</span>) rem(<span class="hljs-number">16</span>) rem(<span class="hljs-number">32</span>);
+  <span class="hljs-keyword">@include</span> media(<span class="hljs-string">"550"</span>) {
+    <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">24</span>) rem(<span class="hljs-number">32</span>) rem(<span class="hljs-number">32</span>);
+  }
+  <span class="hljs-keyword">@include</span> media(<span class="hljs-string">"800"</span>) {
+    <span class="hljs-attribute">display</span>: flex;
+    <span class="hljs-attribute">justify-content</span>: flex-start;
+  }
+}
+
+<span class="hljs-selector-class">.arts-explorer__filter</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;
+  <span class="hljs-attribute">max-width</span>: rem(<span class="hljs-number">400</span>);
+  <span class="hljs-keyword">@include</span> media(<span class="hljs-string">"800"</span>) {
+    <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0px</span>;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">max-width</span>: none;
+  }
+  <span class="hljs-keyword">@include</span> media(<span class="hljs-string">"1100"</span>) {
+    <span class="hljs-attribute">align-items</span>: center;
+    <span class="hljs-attribute">display</span>: flex;
+    <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> auto;
+  }
+  &amp;<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:last-child</span>) {
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto rem(<span class="hljs-number">24</span>);
+    <span class="hljs-keyword">@include</span> media(<span class="hljs-string">"800"</span>) {
+      <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> rem(<span class="hljs-number">32</span>) <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
+    }
+  }
+  <span class="hljs-selector-class">.label</span> {
+    <span class="hljs-attribute">display</span>: block;
+    <span class="hljs-attribute">font-family</span>: <span class="hljs-variable">$red-hat-display</span>;
+    <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">22</span>);
+    <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">700</span>;
+    <span class="hljs-attribute">line-height</span>: (<span class="hljs-number">30</span> / <span class="hljs-number">22</span>);
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> rem(<span class="hljs-number">8</span>);
+    <span class="hljs-attribute">white-space</span>: nowrap;
+    <span class="hljs-keyword">@include</span> media(<span class="hljs-string">"1024"</span>) {
+      <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> rem(<span class="hljs-number">16</span>) <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
+    }
+  }
+  <span class="hljs-selector-class">.select</span> {
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$white</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-keyword">@include</span> media(<span class="hljs-string">"1100"</span>) {
+      <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> auto;
+      <span class="hljs-attribute">width</span>: rem(<span class="hljs-number">300</span>);
+    }
+  }
+}
+
+<span class="hljs-selector-class">.arts-explorer__views</span> {
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-keyword">@include</span> media(<span class="hljs-string">"1024"</span>) {
+    <span class="hljs-attribute">display</span>: flex;
+    <span class="hljs-attribute">justify-content</span>: flex-end;
+  }
+}
+
+<span class="hljs-selector-class">.arts-explorer__views-tabs</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$white</span>;
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">10</span>;
+}
+
+<span class="hljs-selector-class">.arts-explorer__views-tabs-item</span> {
+  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0px</span>;
+}
+
+<span class="hljs-selector-class">.arts-explorer__views-tabs-button</span><span class="hljs-selector-class">.button</span> {
+  <span class="hljs-keyword">@extend</span> %tab-panel-tab;
+}
+
+<span class="hljs-selector-class">.arts-explorer__map-view</span> {
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-keyword">@include</span> media(<span class="hljs-string">"1024"</span>) {
+    <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> auto;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">65%</span>;
+  }
+  &amp;<span class="hljs-selector-pseudo">:before</span> {
+    <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
+    <span class="hljs-attribute">display</span>: block;
+    <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">105%</span>;
+    <span class="hljs-keyword">@include</span> media(<span class="hljs-string">"800"</span>) {
+      <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">80%</span>;
+    }
+  }
+}
+
+<span class="hljs-selector-class">.arts-explorer__map</span> {
+  <span class="hljs-attribute">border-bottom</span>: rem(<span class="hljs-number">3</span>) solid <span class="hljs-variable">$black</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">@include</span> media(<span class="hljs-string">"800"</span>) {
+    <span class="hljs-attribute">border-right</span>: rem(<span class="hljs-number">3</span>) solid <span class="hljs-variable">$black</span>;
+    <span class="hljs-attribute">border-left</span>: rem(<span class="hljs-number">3</span>) solid <span class="hljs-variable">$black</span>;
+  }
+  <span class="hljs-keyword">@include</span> media(<span class="hljs-string">"1024"</span>) {
+    <span class="hljs-attribute">border-left</span>: none;
+  }
+}
+
+<span class="hljs-selector-class">.arts-explorer__list-view</span> {
+  <span class="hljs-attribute">background-color</span>: rgba(<span class="hljs-variable">$white</span>, <span class="hljs-number">0.9</span>);
+  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> rem(<span class="hljs-number">16</span>) rgba(<span class="hljs-variable">$black</span>, <span class="hljs-number">0.2</span>);
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">overflow</span>: hidden;
+  <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">18</span>) <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: rem(<span class="hljs-number">44</span>);
+  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">transition</span>: <span class="hljs-number">0.3s</span> opacity ease-in-out, <span class="hljs-number">0.3s</span> visibility ease-in-out;
+  <span class="hljs-keyword">@include</span> media(<span class="hljs-string">"1024"</span>) {
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$white</span>;
+    <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> auto;
+    <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">35%</span>;
+  }
+  &amp;<span class="hljs-selector-attr">[aria-hidden="true"]</span> {
+    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">visibility</span>: hidden;
+  }
+}
+
+<span class="hljs-selector-class">.arts-explorer__list-view-scroller</span> {
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> rem(<span class="hljs-number">36</span>) <span class="hljs-number">0</span> rem(<span class="hljs-number">18</span>);
+  <span class="hljs-attribute">overflow-y</span>: auto;
+}
+
+<span class="hljs-selector-class">.arts-explorer__list-location</span> {
+  <span class="hljs-attribute">align-items</span>: stretch;
+  appearance: none;
+  <span class="hljs-attribute">background-color</span>: transparent;
+  <span class="hljs-attribute">border</span>: none;
+  <span class="hljs-attribute">border-bottom</span>: rem(<span class="hljs-number">5</span>) solid transparent;
+  <span class="hljs-attribute">cursor</span>: pointer;
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-variable">$red-hat-text</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">text-align</span>: left;
+  <span class="hljs-attribute">transition</span>: <span class="hljs-number">0.3s</span> border-bottom-color ease-in-out;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-keyword">@include</span> media(<span class="hljs-string">"1024"</span>) {
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$white</span>;
+  }
+  &amp;<span class="hljs-selector-class">.arts-explorer__list-location--selected</span>,
+  &amp;<span class="hljs-selector-pseudo">:hover</span>,
+  &amp;<span class="hljs-selector-pseudo">:focus</span> {
+    <span class="hljs-attribute">border-bottom-color</span>: <span class="hljs-variable">$yellow</span>;
+    &amp;<span class="hljs-selector-pseudo">:before</span> {
+      <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$yellow</span>;
+    }
+  }
+  &amp;--a_e_district {
+    &amp;<span class="hljs-selector-pseudo">:before</span> {
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">"../../img/ae-district.svg"</span>);
+      <span class="hljs-attribute">background-size</span>: rem(<span class="hljs-number">28</span>) auto;
+      <span class="hljs-keyword">@include</span> media(<span class="hljs-string">"800"</span>) {
+        <span class="hljs-attribute">background-size</span>: rem(<span class="hljs-number">37</span>) auto;
+      }
+    }
+  }
+  &amp;--museum_gallery {
+    &amp;<span class="hljs-selector-pseudo">:before</span> {
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">"../../img/museum-gallery.svg"</span>);
+      <span class="hljs-attribute">background-size</span>: rem(<span class="hljs-number">28</span>) auto;
+      <span class="hljs-keyword">@include</span> media(<span class="hljs-string">"800"</span>) {
+        <span class="hljs-attribute">background-size</span>: rem(<span class="hljs-number">37</span>) auto;
+      }
+    }
+  }
+  &amp;--performance_venue {
+    &amp;<span class="hljs-selector-pseudo">:before</span> {
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">"../../img/performance-venue.svg"</span>);
+      <span class="hljs-attribute">background-size</span>: rem(<span class="hljs-number">34</span>) auto;
+      <span class="hljs-keyword">@include</span> media(<span class="hljs-string">"800"</span>) {
+        <span class="hljs-attribute">background-size</span>: rem(<span class="hljs-number">45</span>);
+      }
+    }
+  }
+  &amp;--public_art {
+    &amp;<span class="hljs-selector-pseudo">:before</span> {
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">"../../img/public-art.svg"</span>);
+      <span class="hljs-attribute">background-size</span>: rem(<span class="hljs-number">18</span>) auto;
+      <span class="hljs-keyword">@include</span> media(<span class="hljs-string">"800"</span>) {
+        <span class="hljs-attribute">background-size</span>: rem(<span class="hljs-number">24</span>) auto;
+      }
+    }
+  }
+  &amp;<span class="hljs-selector-pseudo">:before</span> {
+    <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$white</span>;
+    <span class="hljs-attribute">background-position</span>: center center;
+    <span class="hljs-attribute">background-repeat</span>: no-repeat;
+    <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> auto;
+    <span class="hljs-attribute">display</span>: block;
+    <span class="hljs-attribute">transition</span>: <span class="hljs-number">0.3s</span> background-color ease-in-out;
+    <span class="hljs-attribute">width</span>: rem(<span class="hljs-number">80</span>);
+  }
+}
+
+<span class="hljs-selector-class">.arts-explorer__list-location-info</span> {
+  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span>;
+  <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">8</span>) rem(<span class="hljs-number">12</span>);
+}
+
+<span class="hljs-selector-class">.arts-explorer__list-location-name</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-variable">$black</span>;
+  <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-variable">$red-hat-display</span>;
+  <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">18</span>);
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">700</span>;
+  <span class="hljs-attribute">line-height</span>: (<span class="hljs-number">26</span> / <span class="hljs-number">18</span>);
+  <span class="hljs-attribute">text-decoration</span>: underline;
+  <span class="hljs-keyword">@include</span> media(<span class="hljs-string">"800"</span>) {
+    <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">22</span>);
+    <span class="hljs-attribute">line-height</span>: (<span class="hljs-number">30</span> / <span class="hljs-number">22</span>);
+    <span class="hljs-attribute">text-decoration</span>: none;
+  }
+}
+
+<span class="hljs-selector-class">.arts-explorer__list-location-city</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-variable">$gray-3</span>;
+  <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">16</span>);
+  <span class="hljs-attribute">line-height</span>: (<span class="hljs-number">26</span> / <span class="hljs-number">16</span>);
+}
+
+<span class="hljs-selector-class">.arts-explorer__map-popup</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$white</span>;
+  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> rem(<span class="hljs-number">16</span>) rgba(<span class="hljs-variable">$black</span>, <span class="hljs-number">0.2</span>);
+  <span class="hljs-attribute">max-width</span>: rem(<span class="hljs-number">325</span>);
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">transform</span>: translate(-<span class="hljs-number">50%</span>, calc(-<span class="hljs-number">100%</span> - #{rem(<span class="hljs-number">40</span>)}));
+  <span class="hljs-attribute">visibility</span>: hidden;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">66.667%</span>;
+  &amp;<span class="hljs-selector-class">.arts-explorer__map-popup--visible</span> {
+    <span class="hljs-attribute">visibility</span>: visible;
+  }
+  &amp;<span class="hljs-selector-pseudo">:after</span> {
+    <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
+    <span class="hljs-attribute">border-top</span>: rem(<span class="hljs-number">8</span>) solid <span class="hljs-variable">$white</span>;
+    <span class="hljs-attribute">border-right</span>: rem(<span class="hljs-number">10</span>) solid transparent;
+    <span class="hljs-attribute">border-left</span>: rem(<span class="hljs-number">10</span>) solid transparent;
+    <span class="hljs-attribute">display</span>: block;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">position</span>: absolute;
+    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">left</span>: <span class="hljs-number">50%</span>;
+    <span class="hljs-attribute">transform</span>: translate(-<span class="hljs-number">50%</span>, <span class="hljs-number">100%</span>);
+  }
+}
+
+<span class="hljs-selector-class">.arts-explorer__map-popup-container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+}
+
+<span class="hljs-selector-class">.arts-explorer__map-popup-thumbnail</span> {
+  <span class="hljs-attribute">background-position</span>: center;
+  <span class="hljs-attribute">background-size</span>: cover;
+  <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> auto;
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">width</span>: rem(<span class="hljs-number">115</span>);
+  &amp;<span class="hljs-selector-pseudo">:before</span> {
+    <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$yellow</span>;
+    <span class="hljs-attribute">background-position</span>: center;
+    <span class="hljs-attribute">background-repeat</span>: no-repeat;
+    <span class="hljs-attribute">background-size</span>: rem(<span class="hljs-number">24</span>) auto;
+    <span class="hljs-attribute">display</span>: block;
+    <span class="hljs-attribute">height</span>: rem(<span class="hljs-number">42</span>);
+    <span class="hljs-attribute">width</span>: rem(<span class="hljs-number">42</span>);
+    <span class="hljs-attribute">position</span>: absolute;
+    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+  }
+  <span class="hljs-selector-class">.arts-explorer__map-popup--a_e_district</span> &amp; {
+    &amp;<span class="hljs-selector-pseudo">:before</span> {
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">"../../img/ae-district.svg"</span>);
+    }
+  }
+  <span class="hljs-selector-class">.arts-explorer__map-popup--museum_gallery</span> &amp; {
+    &amp;<span class="hljs-selector-pseudo">:before</span> {
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">"../../img/museum-gallery.svg"</span>);
+    }
+  }
+  <span class="hljs-selector-class">.arts-explorer__map-popup--performance_venue</span> &amp; {
+    &amp;<span class="hljs-selector-pseudo">:before</span> {
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">"../../img/performance-venue.svg"</span>);
+    }
+  }
+  <span class="hljs-selector-class">.arts-explorer__map-popup--public_art</span> &amp; {
+    &amp;<span class="hljs-selector-pseudo">:before</span> {
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">"../../img/public-art.svg"</span>);
+      <span class="hljs-attribute">background-size</span>: rem(<span class="hljs-number">18</span>) auto;
+    }
+  }
+}
+
+<span class="hljs-selector-class">.arts-explorer__map-popup-content</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$white</span>;
+  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0px</span>;
+  <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">18</span>) rem(<span class="hljs-number">24</span>) rem(<span class="hljs-number">24</span>);
+}
+
+<span class="hljs-selector-class">.arts-explorer__map-popup-title</span> {
+  <span class="hljs-attribute">display</span>: table;
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-variable">$red-hat-text</span>;
+  <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">18</span>);
+  <span class="hljs-attribute">margin-bottom</span>: rem(<span class="hljs-number">12</span>);
+}
+<span class="hljs-selector-class">.arts-explorer__map-popup-title</span><span class="hljs-selector-attr">[href]</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-variable">$red</span>;
+  <span class="hljs-attribute">text-decoration</span>: underline;
+  <span class="hljs-attribute">cursor</span>: pointer;
+}
+<span class="hljs-selector-class">.arts-explorer__map-popup-directions</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-variable">$dark-red</span>;
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-variable">$red-hat-text</span>;
+  <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">16</span>);
+  <span class="hljs-attribute">font-style</span>: italic;
+  &amp;<span class="hljs-selector-pseudo">:hover</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$black</span>;
+  }
+}
+
+<span class="hljs-selector-class">.arts-explorer__key</span> {
+  <span class="hljs-keyword">@extend</span> %aside;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$white</span>;
+  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16px</span> <span class="hljs-number">0</span> rgba(<span class="hljs-variable">$black</span>, <span class="hljs-number">0.2</span>);
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> rem(<span class="hljs-number">26</span>) rem(<span class="hljs-number">22</span>);
+  <span class="hljs-attribute">width</span>: calc(<span class="hljs-number">100%</span> - #{rem(<span class="hljs-number">40</span>)});
+  <span class="hljs-keyword">@include</span> media(<span class="hljs-string">"500"</span>) {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">50%</span>;
+  }
+  <span class="hljs-keyword">@include</span> media(<span class="hljs-string">"1024"</span>) {
+    <span class="hljs-attribute">margin-left</span>: rem(<span class="hljs-number">20</span>);
+    <span class="hljs-attribute">position</span>: absolute;
+    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">left</span>: <span class="hljs-number">35%</span>;
+    <span class="hljs-attribute">width</span>: auto;
+  }
+}
+
+<span class="hljs-selector-class">.arts-explorer__key-heading</span> {
+  <span class="hljs-keyword">@extend</span> %aside-heading;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$yellow</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-variable">$black</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-class">.arts-explorer__key-item</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">18</span>);
+  <span class="hljs-attribute">line-height</span>: (<span class="hljs-number">28</span> / <span class="hljs-number">18</span>);
+  &amp;<span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:last-child</span>) {
+    <span class="hljs-attribute">margin-bottom</span>: rem(<span class="hljs-number">8</span>);
+  }
+  &amp;--a_e_district {
+    &amp;<span class="hljs-selector-pseudo">:before</span> {
+      <span class="hljs-attribute">background-size</span>: rem(<span class="hljs-number">20</span>) auto;
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">"../../img/ae-district.svg"</span>);
+    }
+  }
+  &amp;--public_art {
+    &amp;<span class="hljs-selector-pseudo">:before</span> {
+      <span class="hljs-attribute">background-size</span>: rem(<span class="hljs-number">14</span>) auto;
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">"../../img/public-art.svg"</span>);
+    }
+  }
+  &amp;--museum_gallery {
+    &amp;<span class="hljs-selector-pseudo">:before</span> {
+      <span class="hljs-attribute">background-size</span>: rem(<span class="hljs-number">18</span>) auto;
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">"../../img/museum-gallery.svg"</span>);
+    }
+  }
+  &amp;--performance_venue {
+    &amp;<span class="hljs-selector-pseudo">:before</span> {
+      <span class="hljs-attribute">background-size</span>: rem(<span class="hljs-number">22</span>) auto;
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">"../../img/performance-venue.svg"</span>);
+    }
+  }
+  &amp;<span class="hljs-selector-pseudo">:before</span> {
+    <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
+    <span class="hljs-attribute">background-position</span>: center;
+    <span class="hljs-attribute">background-repeat</span>: no-repeat;
+    <span class="hljs-attribute">display</span>: block;
+    <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> auto;
+    <span class="hljs-attribute">margin-right</span>: rem(<span class="hljs-number">12</span>);
+    <span class="hljs-attribute">width</span>: rem(<span class="hljs-number">24</span>);
+  }
+}
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/arts-explorer/_arts-explorer.scss"><span>/components/raw/arts-explorer/_arts-explorer.scss</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/arts-explorer/_arts-explorer.scss</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">8.6 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-2029495c16b99cc2ae78460f6f90a035" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-Vue FileBrowser-code">
+                                <pre><span class="hljs-variable">&lt;template&gt;</span>
+  <span class="hljs-variable">&lt;div class="arts-explorer__filters"&gt;</span>
+    <span class="hljs-variable">&lt;div class="arts-explorer__filter"&gt;</span>
+      <span class="hljs-variable">&lt;label class="label" for="arts-explorer-poi-category"&gt;</span>Show me:&lt;/label&gt;
+      <span class="hljs-variable">&lt;select
+        class="select"
+        id="arts-explorer-poi-category"
+        @change="handleLocationTypeChange($event.target.value)"
+        v-if="locationTypesFetched"
+      &gt;</span>
+        <span class="hljs-variable">&lt;option value="" :selected="!!selectedLocationTypeId"&gt;</span>Everything&lt;/option&gt;
+        <span class="hljs-variable">&lt;option
+          v-for="locationType in locationTypes"
+          :value="locationType.id"
+          :selected="selectedLocationTypeId === locationType.id"
+          :key="locationType.id"
+        &gt;</span>
+          {{ locationType.attributes.name }}
+        &lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+    <span class="hljs-variable">&lt;div class="arts-explorer__filter"&gt;</span>
+      <span class="hljs-variable">&lt;label class="label" for="arts-explorer-counties"&gt;</span>Located In:&lt;/label&gt;
+      <span class="hljs-variable">&lt;select
+        class="select"
+        id="arts-explorer-counties"
+        @change="handleCountyChange($event.target.value)"
+        v-if="countiesFetched"
+      &gt;</span>
+        <span class="hljs-variable">&lt;option value="" :selected="!!selectedCountyId"&gt;</span>All of Maryland&lt;/option&gt;
+        <span class="hljs-variable">&lt;option
+          v-for="county in sortedCounties"
+          :value="county.id"
+          :selected="selectedCountyId == county.id"
+          :key="county.id"
+        &gt;</span>
+          {{ county.attributes.name }}
+        &lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+<span class="hljs-variable">&lt;script lang="ts"&gt;</span>
+import { <span class="hljs-keyword">state</span>, getters } <span class="hljs-keyword">from</span> <span class="hljs-string">"./store"</span>;
+
+export <span class="hljs-keyword">default</span> {
+  computed: {
+    selectedLocationTypeId() {
+      return <span class="hljs-keyword">state</span>.selectedLocationTypeId;
+    },
+    selectedCountyId() {
+      return <span class="hljs-keyword">state</span>.selectedCountyId;
+    },
+    locationTypes() {
+      return <span class="hljs-keyword">state</span>.locationTypes;
+    },
+    counties() {
+      return <span class="hljs-keyword">state</span>.counties;
+    },
+    selectedLocationId() {
+      return <span class="hljs-keyword">state</span>.selectedLocationId;
+    },
+    filteredLocationsById() {
+      return getters.filteredLocationsById();
+    },
+    countiesFetched() {
+      return !<span class="hljs-keyword">state</span>.fetchingCounties &amp;&amp; !<span class="hljs-keyword">state</span>.errorFetchingCounties;
+    },
+    locationTypesFetched() {
+      return !<span class="hljs-keyword">state</span>.fetchingLocationTypes &amp;&amp; !<span class="hljs-keyword">state</span>.errorFetchingLocationTypes;
+    },
+    sortedCounties() {
+      return this.counties.sort((a, b) =&gt; {
+        const aName = a.attributes.name as string;
+        const bName = b.attributes.name as string;
+        return aName.localeCompare(bName);
+      });
+    },
+  },
+  watch: {
+    filteredLocationsById(newVal) {
+      // If the currently selected POI was hidden by a filter, deselect it
+      if (!newVal.hasOwnProperty(<span class="hljs-keyword">state</span>.selectedLocationId)) {
+        <span class="hljs-keyword">state</span>.selectedLocationId = null;
+      }
+    },
+  },
+  methods: {
+    handleLocationTypeChange(locationTypeId) {
+      <span class="hljs-keyword">state</span>.selectedLocationTypeId = locationTypeId;
+    },
+    handleCountyChange(countyId) {
+      <span class="hljs-keyword">state</span>.selectedCountyId = countyId;
+    },
+  },
+};
+&lt;/script&gt;
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/arts-explorer/arts-explorer-filters.vue"><span>/components/raw/arts-explorer/arts-explorer-filters.vue</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/arts-explorer/arts-explorer-filters.vue</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">2.8 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-d469f2bab817f2b3d24e6dfbd5f04380" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-Vue FileBrowser-code">
+                                <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"arts-explorer__key"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"arts-explorer__key-heading"</span>&gt;</span>Key<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"arts-explorer__key-content"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"arts-explorer__key-items"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>
+          <span class="hljs-attr">v-for</span>=<span class="hljs-string">"locationType in locationTypes"</span>
+          <span class="hljs-attr">:key</span>=<span class="hljs-string">"`location-type-${locationType.id}`"</span>
+          <span class="hljs-attr">:class</span>=<span class="hljs-string">"keyItemClass(locationType.id)"</span>
+        &gt;</span>
+          </span><span class="hljs-template-variable">{{ locationType.attributes.name }}</span><span class="xml">
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"ts"</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">import</span> { state, methods } <span class="hljs-keyword">from</span> <span class="hljs-string">"./store"</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  <span class="hljs-attr">computed</span>: {
+    locationTypes() {
+      <span class="hljs-keyword">return</span> state.locationTypes;
+    },
+  },
+  <span class="hljs-attr">methods</span>: {
+    keyItemClass(locationTypeId: string) {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-string">"arts-explorer__key-item"</span>: <span class="hljs-literal">true</span>,
+        [<span class="hljs-string">`arts-explorer__key-item--<span class="hljs-subst">${methods.snakeCaseLocationType(locationTypeId)}</span>`</span>]: <span class="hljs-literal">true</span>,
+      };
+    },
+  },
+};
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</span></pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/arts-explorer/arts-explorer-key.vue"><span>/components/raw/arts-explorer/arts-explorer-key.vue</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/arts-explorer/arts-explorer-key.vue</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">864 Bytes</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-2c545a7ae9218718ed2ddb2c3bb698ce" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-Vue FileBrowser-code">
+                                <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">:class</span>=<span class="hljs-string">"classObj"</span> <span class="hljs-attr">:aria-label</span>=<span class="hljs-string">"`View ${name} on the map`"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"handleClick"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"arts-explorer__list-location-info"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"arts-explorer__list-location-name"</span>&gt;</span></span><span class="hljs-template-variable">{{ name }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">"!!city"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"arts-explorer__list-location-city"</span>&gt;</span></span><span class="hljs-template-variable">{{ city }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"ts"</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">import</span> { state, methods } <span class="hljs-keyword">from</span> <span class="hljs-string">"./store"</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  <span class="hljs-attr">props</span>: {
+    <span class="hljs-attr">location</span>: {
+      <span class="hljs-attr">type</span>: <span class="hljs-built_in">Object</span>,
+      <span class="hljs-attr">required</span>: <span class="hljs-literal">true</span>,
+    },
+  },
+  <span class="hljs-attr">computed</span>: {
+    classObj() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-string">"arts-explorer__list-location"</span>: <span class="hljs-literal">true</span>,
+        [<span class="hljs-string">`arts-explorer__list-location--<span class="hljs-subst">${methods.snakeCaseLocationType(
+          <span class="hljs-keyword">this</span>.location.relationships.field_location_type.data.id
+        )}</span>`</span>]: <span class="hljs-literal">true</span>,
+        <span class="hljs-string">"arts-explorer__list-location--selected"</span>: state.selectedLocationId === <span class="hljs-keyword">this</span>.location.id,
+      };
+    },
+    name() {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.location.attributes.title;
+    },
+    city() {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.location.attributes.field_location_address?.locality;
+    },
+  },
+  <span class="hljs-attr">methods</span>: {
+    handleClick() {
+      state.selectedLocationId = <span class="hljs-keyword">this</span>.location.id;
+    },
+  },
+};
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</span></pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/arts-explorer/arts-explorer-list-location.vue"><span>/components/raw/arts-explorer/arts-explorer-list-location.vue</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/arts-explorer/arts-explorer-list-location.vue</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">1.1 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-846b6be28bea38def1a357a013b3fd0f" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-Vue FileBrowser-code">
+                                <pre><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"arts-explorer__list-view"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"arts-explorer-list-view"</span> <span class="hljs-attr">:role</span>=<span class="hljs-string">"role"</span> <span class="hljs-attr">:aria-hidden</span>=<span class="hljs-string">"hidden &amp;&amp; displayAsTab"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"arts-explorer__list-view-scroller"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"arts-explorer__list-items"</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">"!noResultsFound"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"arts-explorer__list-item"</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">"location in locations"</span> <span class="hljs-attr">:key</span>=<span class="hljs-string">"location.id"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">arts-explorer-list-location</span> <span class="hljs-attr">:location</span>=<span class="hljs-string">"location"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-else</span>&gt;</span>No locations found, please try a different search.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"ts"</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> _get <span class="hljs-keyword">from</span> <span class="hljs-string">"lodash.get"</span>;
+<span class="hljs-keyword">import</span> { getters } <span class="hljs-keyword">from</span> <span class="hljs-string">"./store"</span>;
+<span class="hljs-keyword">import</span> ArtsExplorerListLocation <span class="hljs-keyword">from</span> <span class="hljs-string">"./arts-explorer-list-location.vue"</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  <span class="hljs-attr">components</span>: {
+    <span class="hljs-string">"arts-explorer-list-location"</span>: ArtsExplorerListLocation,
+  },
+  <span class="hljs-attr">props</span>: {
+    <span class="hljs-attr">displayAsTab</span>: {
+      <span class="hljs-attr">type</span>: <span class="hljs-built_in">Boolean</span>,
+      <span class="hljs-attr">required</span>: <span class="hljs-literal">true</span>,
+    },
+    <span class="hljs-attr">hidden</span>: {
+      <span class="hljs-attr">type</span>: <span class="hljs-built_in">Boolean</span>,
+      <span class="hljs-attr">required</span>: <span class="hljs-literal">true</span>,
+    },
+  },
+  <span class="hljs-attr">computed</span>: {
+    locations() {
+      <span class="hljs-keyword">return</span> getters.filteredLocations();
+    },
+    role() {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.displayAsTab ? <span class="hljs-string">"tabpanel"</span> : <span class="hljs-literal">null</span>;
+    },
+    noResultsFound() {
+      <span class="hljs-keyword">return</span> getters.locationsFetched() &amp;&amp; !<span class="hljs-keyword">this</span>.locations.length;
+    },
+  },
+};
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/arts-explorer/arts-explorer-list-view.vue"><span>/components/raw/arts-explorer/arts-explorer-list-view.vue</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/arts-explorer/arts-explorer-list-view.vue</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">1.2 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-59a6f18495731e8c4cafcf9fafcee59c" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-Vue FileBrowser-code">
+                                <pre><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"arts-explorer__map-view"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"arts-explorer-map-view"</span> <span class="hljs-attr">:role</span>=<span class="hljs-string">"role"</span> <span class="hljs-attr">:aria-hidden</span>=<span class="hljs-string">"hidden &amp;&amp; displayAsTab"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">arts-explorer-map</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">"mapReady"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"ts"</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">import</span> ArtsExplorerMap <span class="hljs-keyword">from</span> <span class="hljs-string">"./arts-explorer-map.vue"</span>;
+<span class="hljs-keyword">import</span> { state } <span class="hljs-keyword">from</span> <span class="hljs-string">"./store"</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  <span class="hljs-attr">components</span>: {
+    <span class="hljs-string">"arts-explorer-map"</span>: ArtsExplorerMap,
+  },
+  <span class="hljs-attr">props</span>: {
+    <span class="hljs-attr">displayAsTab</span>: {
+      <span class="hljs-attr">type</span>: <span class="hljs-built_in">Boolean</span>,
+      <span class="hljs-attr">required</span>: <span class="hljs-literal">true</span>,
+    },
+    <span class="hljs-attr">hidden</span>: {
+      <span class="hljs-attr">type</span>: <span class="hljs-built_in">Boolean</span>,
+      <span class="hljs-attr">required</span>: <span class="hljs-literal">true</span>,
+    },
+  },
+  <span class="hljs-attr">computed</span>: {
+    mapReady() {
+      <span class="hljs-keyword">return</span> !state.fetchingLocations &amp;&amp; !state.errorFetchingLocations;
+    },
+    role() {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.displayAsTab ? <span class="hljs-string">"tabpanel"</span> : <span class="hljs-literal">null</span>;
+    },
+  },
+};
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/arts-explorer/arts-explorer-map-view.vue"><span>/components/raw/arts-explorer/arts-explorer-map-view.vue</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/arts-explorer/arts-explorer-map-view.vue</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">732 Bytes</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-3a0dd0a8c99e54a84fb43f3c477ac263" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-Vue FileBrowser-code">
+                                <pre>&lt;template&gt;
+  &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span>="<span class="hljs-title">arts</span>-<span class="hljs-title">explorer__map</span>"&gt;&lt;<span class="hljs-type">/div</span>&gt;</span>
+&lt;/template&gt;
+
+&lt;script lang=<span class="hljs-string">"ts"</span>&gt;
+<span class="hljs-keyword">import</span> { Loader } from <span class="hljs-string">"google-maps"</span>;
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> _get from <span class="hljs-string">"lodash.get"</span>;
+<span class="hljs-keyword">import</span> { getters, actions, state, methods } from <span class="hljs-string">"./store"</span>;
+<span class="hljs-keyword">import</span> generatePopupClass from <span class="hljs-string">"./popup"</span>;
+<span class="hljs-keyword">import</span> mapStyles from <span class="hljs-string">"../../js/map-styles"</span>;
+
+<span class="hljs-keyword">const</span> defaultMarkerIcon = {
+  url: `<span class="hljs-keyword">data</span>:image/svg+xml;charset=UTF-<span class="hljs-number">8</span>;base64,${btoa(
+    `&lt;svg xmlns=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> xmlns:xlink=<span class="hljs-string">"http://www.w3.org/1999/xlink"</span> viewBox=<span class="hljs-string">"0 0 38 47"</span> height=<span class="hljs-string">"39"</span> width=<span class="hljs-string">"30"</span>&gt;&lt;defs&gt;&lt;filter x=<span class="hljs-string">"-23.3%"</span> y=<span class="hljs-string">"-12.8%"</span> width=<span class="hljs-string">"146.7%"</span> height=<span class="hljs-string">"135.9%"</span> filterUnits=<span class="hljs-string">"objectBoundingBox"</span> id=<span class="hljs-string">"a"</span>&gt;&lt;feOffset dy=<span class="hljs-string">"2"</span> <span class="hljs-keyword">in</span>=<span class="hljs-string">"SourceAlpha"</span> result=<span class="hljs-string">"shadowOffsetOuter1"</span>/&gt;&lt;feGaussianBlur stdDeviation=<span class="hljs-string">"2"</span> <span class="hljs-keyword">in</span>=<span class="hljs-string">"shadowOffsetOuter1"</span> result=<span class="hljs-string">"shadowBlurOuter1"</span>/&gt;&lt;feComposite <span class="hljs-keyword">in</span>=<span class="hljs-string">"shadowBlurOuter1"</span> in2=<span class="hljs-string">"SourceAlpha"</span> <span class="hljs-keyword">operator</span>=<span class="hljs-string">"out"</span> result=<span class="hljs-string">"shadowBlurOuter1"</span>/&gt;&lt;feColorMatrix values=<span class="hljs-string">"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0"</span> <span class="hljs-keyword">in</span>=<span class="hljs-string">"shadowBlurOuter1"</span>/&gt;&lt;/filter&gt;&lt;path d=<span class="hljs-string">"M1698 1567c10-10.683 15-18.75 15-24.199 0-8.174-6.716-14.801-15-14.801-8.284 0-15 6.627-15 14.801 0 5.45 5 13.516 15 24.199z"</span> id=<span class="hljs-string">"b"</span>/&gt;&lt;/defs&gt;&lt;g transform=<span class="hljs-string">"translate(-1679 -1526)"</span> fill=<span class="hljs-string">"none"</span> fill-rule=<span class="hljs-string">"evenodd"</span>&gt;&lt;use fill=<span class="hljs-string">"#000"</span> filter=<span class="hljs-string">"url(#a)"</span> xlink:href=<span class="hljs-string">"#b"</span>/&gt;&lt;path stroke=<span class="hljs-string">"#979797"</span> stroke-width=<span class="hljs-string">"2"</span> d=<span class="hljs-string">"M1698 1529c-3.868 0-7.37 1.546-9.904 4.047-2.53 2.496-4.096 5.945-4.096 9.754 0 5.181 4.761 12.739 13.999 22.73 9.24-9.99 14.001-17.548 14.001-22.73 0-3.81-1.566-7.258-4.096-9.754A14.057 14.057 0 001698 1529z"</span> stroke-linejoin=<span class="hljs-string">"square"</span> fill=<span class="hljs-string">"#FFFFFF"</span>/&gt;&lt;/g&gt;&lt;/svg&gt;`
+  )}`,
+};
+<span class="hljs-keyword">const</span> activeMarkerIcon = {
+  url: `<span class="hljs-keyword">data</span>:image/svg+xml;charset=UTF-<span class="hljs-number">8</span>;base64,${btoa(
+    `&lt;svg xmlns=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> xmlns:xlink=<span class="hljs-string">"http://www.w3.org/1999/xlink"</span> viewBox=<span class="hljs-string">"0 0 38 47"</span> height=<span class="hljs-string">"39"</span> width=<span class="hljs-string">"30"</span>&gt;&lt;defs&gt;&lt;filter x=<span class="hljs-string">"-23.3%"</span> y=<span class="hljs-string">"-12.8%"</span> width=<span class="hljs-string">"146.7%"</span> height=<span class="hljs-string">"135.9%"</span> filterUnits=<span class="hljs-string">"objectBoundingBox"</span> id=<span class="hljs-string">"a"</span>&gt;&lt;feOffset dy=<span class="hljs-string">"2"</span> <span class="hljs-keyword">in</span>=<span class="hljs-string">"SourceAlpha"</span> result=<span class="hljs-string">"shadowOffsetOuter1"</span>/&gt;&lt;feGaussianBlur stdDeviation=<span class="hljs-string">"2"</span> <span class="hljs-keyword">in</span>=<span class="hljs-string">"shadowOffsetOuter1"</span> result=<span class="hljs-string">"shadowBlurOuter1"</span>/&gt;&lt;feComposite <span class="hljs-keyword">in</span>=<span class="hljs-string">"shadowBlurOuter1"</span> in2=<span class="hljs-string">"SourceAlpha"</span> <span class="hljs-keyword">operator</span>=<span class="hljs-string">"out"</span> result=<span class="hljs-string">"shadowBlurOuter1"</span>/&gt;&lt;feColorMatrix values=<span class="hljs-string">"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0"</span> <span class="hljs-keyword">in</span>=<span class="hljs-string">"shadowBlurOuter1"</span>/&gt;&lt;/filter&gt;&lt;path d=<span class="hljs-string">"M2192 1932c10-10.683 15-18.75 15-24.199 0-8.174-6.716-14.801-15-14.801-8.284 0-15 6.627-15 14.801 0 5.45 5 13.516 15 24.199z"</span> id=<span class="hljs-string">"b"</span>/&gt;&lt;/defs&gt;&lt;g transform=<span class="hljs-string">"translate(-2173 -1891)"</span> fill=<span class="hljs-string">"none"</span> fill-rule=<span class="hljs-string">"evenodd"</span>&gt;&lt;use fill=<span class="hljs-string">"#000"</span> filter=<span class="hljs-string">"url(#a)"</span> xlink:href=<span class="hljs-string">"#b"</span>/&gt;&lt;path stroke=<span class="hljs-string">"#000"</span> stroke-width=<span class="hljs-string">"2"</span> d=<span class="hljs-string">"M2192 1894c-3.868 0-7.37 1.546-9.904 4.047-2.53 2.496-4.096 5.945-4.096 9.754 0 5.181 4.761 12.739 13.999 22.73 9.24-9.99 14.001-17.548 14.001-22.73 0-3.81-1.566-7.258-4.096-9.754A14.057 14.057 0 002192 1894z"</span> stroke-linejoin=<span class="hljs-string">"square"</span> fill=<span class="hljs-string">"#FFC838"</span>/&gt;&lt;/g&gt;&lt;/svg&gt;`
+  )}`,
+};
+<span class="hljs-keyword">const</span> loader = new Loader(<span class="hljs-string">"AIzaSyD0Q_qKcDfzDAPOj9k8MMlWy4pkRJXZT6Y"</span>);
+
+export <span class="hljs-keyword">default</span> {
+  beforeMount() {
+    <span class="hljs-keyword">this</span>.loadingMaps = <span class="hljs-literal">true</span>;
+    loader
+      .load()
+      .then((google) =&gt; {
+        <span class="hljs-keyword">this</span>.google = google;
+        <span class="hljs-keyword">this</span>.loadingMaps = <span class="hljs-literal">false</span>;
+        <span class="hljs-keyword">this</span>.initMap();
+      })
+      .<span class="hljs-keyword">catch</span>(() =&gt; {
+        <span class="hljs-keyword">this</span>.loadingMaps = <span class="hljs-literal">false</span>;
+        <span class="hljs-keyword">this</span>.errorLoadingMaps = <span class="hljs-literal">true</span>;
+      });
+  },
+  <span class="hljs-keyword">data</span>() {
+    <span class="hljs-keyword">return</span> {
+      google: <span class="hljs-literal">null</span>,
+      map: <span class="hljs-literal">null</span>,
+      markers: <span class="hljs-literal">null</span>,
+      countyPolygons: [],
+      loadingMaps: <span class="hljs-literal">true</span>,
+      errorLoadingMaps: <span class="hljs-literal">false</span>,
+    };
+  },
+  computed: {
+    markerData() {
+      <span class="hljs-keyword">const</span> Popup = generatePopupClass(<span class="hljs-keyword">this</span>.google);
+      <span class="hljs-keyword">return</span> getters.locationsWithThumbnails().map((location) =&gt; {
+        <span class="hljs-keyword">const</span> { title, path } = location.attributes;
+        <span class="hljs-keyword">const</span> locationTypeId = location.relationships.field_location_type.<span class="hljs-keyword">data</span>.id;
+        <span class="hljs-keyword">const</span> position = new <span class="hljs-keyword">this</span>.google.maps.LatLng({
+          lat: parseFloat(location.attributes.field_location_latitude),
+          lng: parseFloat(location.attributes.field_location_longitude),
+        });
+        <span class="hljs-keyword">const</span> marker = new <span class="hljs-keyword">this</span>.google.maps.Marker({
+          animation: <span class="hljs-keyword">this</span>.google.maps.Animation.DROP,
+          icon: defaultMarkerIcon,
+          position,
+        });
+        <span class="hljs-keyword">const</span> popup = new Popup(position, {
+          url: methods.getLocationUrl(
+            path,
+            location.attributes.field_location_url,
+            location.attributes.field_location_no_linking
+          ),
+          category: methods.snakeCaseLocationType(locationTypeId),
+          thumbnail: location.thumbnail,
+          title,
+        });
+        marker.addListener(<span class="hljs-string">"click"</span>, () =&gt; {
+          state.selectedLocationId = state.selectedLocationId !== location.id ? location.id : <span class="hljs-literal">null</span>;
+        });
+
+        <span class="hljs-keyword">return</span> {
+          locationId: location.id,
+          marker,
+          popup,
+        };
+      });
+    },
+    markersByLocationId() {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.markerData.reduce(
+        (acc, cur) =&gt; ({
+          ...acc,
+          [cur.locationId]: cur,
+        }),
+        {}
+      );
+    },
+    filteredLocationsById() {
+      <span class="hljs-keyword">return</span> getters.filteredLocationsById();
+    },
+    selectedLocationId() {
+      <span class="hljs-keyword">return</span> state.selectedLocationId;
+    },
+    selectedCountyId() {
+      <span class="hljs-keyword">return</span> state.selectedCountyId;
+    },
+    selectedCounty() {
+      <span class="hljs-keyword">return</span> getters.countiesById()[state.selectedCountyId];
+    },
+    countyPolygonDataById() {
+      <span class="hljs-keyword">return</span> getters.countyPolygonDataById();
+    },
+    countyPolygonsById() {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.countyPolygons.reduce((acc, cur) =&gt; {
+        <span class="hljs-keyword">if</span> (!acc.hasOwnProperty(cur.id)) {
+          acc[cur.id] = [];
+        }
+
+        <span class="hljs-keyword">return</span> {
+          ...acc,
+          [cur.id]: [...acc[cur.id], cur.polygon],
+        };
+      }, {});
+    },
+    locationTypesById() {
+      <span class="hljs-keyword">return</span> getters.locationTypesById();
+    },
+  },
+  watch: {
+    filteredLocationsById(newVal) {
+      <span class="hljs-comment">// Set visibility of markers based on filtered locations</span>
+      Object.keys(<span class="hljs-keyword">this</span>.markersByLocationId).forEach((locationId) =&gt; {
+        <span class="hljs-keyword">const</span> isVisible = newVal.hasOwnProperty(locationId);
+        <span class="hljs-keyword">const</span> { marker, popup } = <span class="hljs-keyword">this</span>.markersByLocationId[locationId];
+
+        marker.setVisible(isVisible);
+
+        <span class="hljs-comment">// Hide popup if it's currently shown</span>
+        <span class="hljs-keyword">if</span> (!isVisible &amp;&amp; popup.isVisible) {
+          popup.toggleVisibility(<span class="hljs-literal">false</span>);
+        }
+      });
+    },
+    selectedLocationId(newVal, oldVal) {
+      <span class="hljs-keyword">const</span> activeMarker = <span class="hljs-keyword">this</span>.markersByLocationId[newVal];
+      <span class="hljs-keyword">const</span> previouslyActiveMarker = <span class="hljs-keyword">this</span>.markersByLocationId[oldVal];
+
+      <span class="hljs-keyword">if</span> (!!previouslyActiveMarker) {
+        <span class="hljs-comment">// Toggle state of previously selected marker</span>
+        previouslyActiveMarker.popup.toggleVisibility(<span class="hljs-literal">false</span>);
+        previouslyActiveMarker.marker.setIcon(defaultMarkerIcon);
+      }
+
+      <span class="hljs-keyword">if</span> (!!activeMarker) {
+        <span class="hljs-comment">// Add the popup to the map if it hasn't already been added</span>
+        <span class="hljs-keyword">if</span> (!activeMarker.popup.getMap()) {
+          activeMarker.popup.setMap(<span class="hljs-keyword">this</span>.map);
+        }
+
+        <span class="hljs-comment">// Toggle state of selected marker</span>
+        activeMarker.popup.toggleVisibility(<span class="hljs-literal">true</span>);
+        activeMarker.marker.setIcon(activeMarkerIcon);
+
+        <span class="hljs-keyword">this</span>.map.panTo(activeMarker.marker.getPosition());
+      }
+    },
+    selectedCounty(newVal, oldVal) {
+      <span class="hljs-keyword">const</span> newGISObjectId = newVal?.attributes?.field_object_id;
+      <span class="hljs-keyword">const</span> oldGISObjectId = oldVal?.attributes?.field_object_id;
+
+      <span class="hljs-comment">// Hide previously visible polygon</span>
+      <span class="hljs-keyword">if</span> (!!oldGISObjectId &amp;&amp; <span class="hljs-keyword">this</span>.countyPolygonsById.hasOwnProperty(oldGISObjectId)) {
+        <span class="hljs-keyword">for</span> (let i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-keyword">this</span>.countyPolygonsById[oldGISObjectId].length; i++) {
+          <span class="hljs-keyword">this</span>.countyPolygonsById[oldGISObjectId][i].setVisible(<span class="hljs-literal">false</span>);
+        }
+      }
+
+      <span class="hljs-comment">// Fetch polyline data for selected county if it hasn't been fetched yet</span>
+      <span class="hljs-keyword">if</span> (!!newGISObjectId) {
+        <span class="hljs-keyword">if</span> (!getters.countyPolygonDataById().hasOwnProperty(newGISObjectId)) {
+          actions.fetchCountyPolygonData(newGISObjectId).then(() =&gt; {
+            <span class="hljs-keyword">this</span>.addPolygonsToMap(newGISObjectId);
+          });
+        } <span class="hljs-keyword">else</span> {
+          <span class="hljs-comment">// Show polygons if they've already been added to the map previously</span>
+          <span class="hljs-keyword">for</span> (let i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-keyword">this</span>.countyPolygonsById[newGISObjectId].length; i++) {
+            <span class="hljs-keyword">this</span>.countyPolygonsById[newGISObjectId][i].setVisible(<span class="hljs-literal">true</span>);
+          }
+          <span class="hljs-keyword">this</span>.setMapZoomForPolygons(newGISObjectId);
+        }
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">this</span>.resetMap();
+      }
+    },
+  },
+  methods: {
+    initMap() {
+      <span class="hljs-comment">// Latlng of Maryland</span>
+      <span class="hljs-keyword">const</span> center = new <span class="hljs-keyword">this</span>.google.maps.LatLng({
+        lat: <span class="hljs-number">39.0458</span>,
+        lng: -<span class="hljs-number">76.6413</span>,
+      });
+      <span class="hljs-keyword">const</span> zoomControlOptions = {
+        position: <span class="hljs-keyword">this</span>.google.maps.ControlPosition.LEFT_TOP,
+      };
+
+      <span class="hljs-comment">// Create map</span>
+      <span class="hljs-keyword">this</span>.map = new <span class="hljs-keyword">this</span>.google.maps.Map(<span class="hljs-keyword">this</span>.$el, {
+        styles: mapStyles,
+        disableDefaultUI: <span class="hljs-literal">true</span>,
+        zoomControl: <span class="hljs-literal">true</span>,
+        zoom: <span class="hljs-number">12</span>,
+        zoomControlOptions,
+        center,
+      });
+
+      <span class="hljs-comment">// Wait until map has fully rendered before adding markers</span>
+      <span class="hljs-keyword">this</span>.google.maps.event.addListenerOnce(<span class="hljs-keyword">this</span>.map, <span class="hljs-string">"tilesloaded"</span>, () =&gt; {
+        <span class="hljs-keyword">this</span>.plotMarkers();
+        <span class="hljs-keyword">this</span>.map.setZoom(<span class="hljs-keyword">this</span>.getInitialZoomLevel());
+      });
+
+      <span class="hljs-keyword">this</span>.google.maps.event.addListener(<span class="hljs-keyword">this</span>.map, <span class="hljs-string">"click"</span>, () =&gt; {
+        state.selectedLocationId = <span class="hljs-literal">null</span>;
+      });
+    },
+    resetMap() {
+      <span class="hljs-keyword">const</span> center = new <span class="hljs-keyword">this</span>.google.maps.LatLng({
+        lat: <span class="hljs-number">39.0458</span>,
+        lng: -<span class="hljs-number">76.6413</span>,
+      });
+
+      <span class="hljs-keyword">this</span>.map.setCenter(center);
+      <span class="hljs-keyword">this</span>.map.setZoom(<span class="hljs-keyword">this</span>.getInitialZoomLevel());
+    },
+    plotMarkers() {
+      <span class="hljs-keyword">this</span>.markerData.forEach((markerObj) =&gt; {
+        markerObj.marker.setMap(<span class="hljs-keyword">this</span>.map);
+      });
+    },
+    getInitialZoomLevel() {
+      <span class="hljs-comment">// Constants for MD's geography</span>
+      <span class="hljs-keyword">const</span> mdNECorner = new <span class="hljs-keyword">this</span>.google.maps.LatLng(<span class="hljs-number">39.7425</span>, -<span class="hljs-number">75.045</span>);
+      <span class="hljs-keyword">const</span> mdSWCorner = new <span class="hljs-keyword">this</span>.google.maps.LatLng(<span class="hljs-number">37.8713</span>, -<span class="hljs-number">79.4938</span>);
+
+      <span class="hljs-keyword">const</span> mapType = <span class="hljs-keyword">this</span>.map.mapTypes.<span class="hljs-keyword">get</span>(<span class="hljs-keyword">this</span>.map.getMapTypeId());
+      <span class="hljs-keyword">const</span> mapProjection = <span class="hljs-keyword">this</span>.map.getProjection();
+      <span class="hljs-keyword">const</span> mapDiv = <span class="hljs-keyword">this</span>.map.getDiv();
+      <span class="hljs-keyword">const</span> maxZoom = mapType.maxZoom || <span class="hljs-number">21</span>;
+      <span class="hljs-keyword">const</span> minZoom = mapType.minZoom || <span class="hljs-number">0</span>;
+      <span class="hljs-keyword">const</span> ne = mapProjection.fromLatLngToPoint(mdNECorner);
+      <span class="hljs-keyword">const</span> sw = mapProjection.fromLatLngToPoint(mdSWCorner);
+      <span class="hljs-keyword">const</span> worldCoordWidth = Math.abs(ne.x - sw.x);
+      <span class="hljs-keyword">const</span> worldCoordHeight = Math.abs(ne.y - sw.y);
+      <span class="hljs-keyword">const</span> mapDivWidth = mapDiv.offsetWidth;
+      <span class="hljs-keyword">const</span> mapDivHeight = mapDiv.offsetHeight;
+      <span class="hljs-keyword">const</span> fitPad = <span class="hljs-number">40</span>;
+
+      <span class="hljs-keyword">for</span> (let zoom = maxZoom; zoom &gt;= minZoom; --zoom) {
+        <span class="hljs-keyword">if</span> (
+          worldCoordWidth * (<span class="hljs-number">1</span> &lt;&lt; zoom) + <span class="hljs-number">2</span> * fitPad &lt; mapDivWidth &amp;&amp;
+          worldCoordHeight * (<span class="hljs-number">1</span> &lt;&lt; zoom) + <span class="hljs-number">2</span> * fitPad &lt; mapDivHeight
+        ) {
+          <span class="hljs-keyword">return</span> zoom;
+        }
+      }
+
+      <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    },
+    addPolygonsToMap(objectId) {
+      <span class="hljs-keyword">const</span> polygonData = getters.countyPolygonDataById()[objectId];
+      <span class="hljs-keyword">const</span> polygons = polygonData.map((points) =&gt; {
+        <span class="hljs-keyword">return</span> new <span class="hljs-keyword">this</span>.google.maps.Polygon({
+          paths: points,
+          strokeColor: <span class="hljs-string">"#B6B6B6"</span>,
+          strokeWeight: <span class="hljs-number">2</span>,
+          fillColor: <span class="hljs-string">"#FFC838"</span>,
+          fillOpacity: <span class="hljs-number">0.5</span>,
+        });
+      });
+
+      <span class="hljs-keyword">for</span> (let i = <span class="hljs-number">0</span>; i &lt; polygons.length; i++) {
+        <span class="hljs-keyword">const</span> polygon = polygons[i];
+
+        <span class="hljs-comment">// Cache Maps.Polygon object for later reference if a user reselects this county</span>
+        <span class="hljs-keyword">this</span>.countyPolygons = [
+          ...<span class="hljs-keyword">this</span>.countyPolygons,
+          {
+            id: objectId,
+            polygon,
+          },
+        ];
+
+        polygon.setMap(<span class="hljs-keyword">this</span>.map);
+      }
+
+      <span class="hljs-keyword">this</span>.setMapZoomForPolygons(objectId);
+    },
+    setMapZoomForPolygons(objectId) {
+      <span class="hljs-keyword">const</span> polygonData = getters.countyPolygonDataById()[objectId];
+      <span class="hljs-keyword">const</span> allPolygonCoords = polygonData.reduce((acc, cur) =&gt; {
+        <span class="hljs-keyword">return</span> [...acc, ...cur];
+      }, []);
+      <span class="hljs-keyword">const</span> bounds = new <span class="hljs-keyword">this</span>.google.maps.LatLngBounds();
+
+      <span class="hljs-keyword">for</span> (let i = <span class="hljs-number">0</span>; i &lt; allPolygonCoords.length; i++) {
+        bounds.extend(allPolygonCoords[i]);
+      }
+
+      <span class="hljs-keyword">this</span>.map.fitBounds(bounds);
+    },
+  },
+};
+&lt;/script&gt;
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/arts-explorer/arts-explorer-map.vue"><span>/components/raw/arts-explorer/arts-explorer-map.vue</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/arts-explorer/arts-explorer-map.vue</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">11.7 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-fc800b902ac2b23ed55a0b9b2e2ff819" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-Vue FileBrowser-code">
+                                <pre><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"arts-explorer__views"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">"displayAsTabs"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"tablist"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"arts-explorer__views-tabs"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"arts-explorer__views-tabs-item"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span>
+          <span class="hljs-attr">href</span>=<span class="hljs-string">"#arts-explorer-map-view"</span>
+          <span class="hljs-attr">id</span>=<span class="hljs-string">"arts-explorer-map-view-tab"</span>
+          <span class="hljs-attr">class</span>=<span class="hljs-string">"button arts-explorer__views-tabs-button"</span>
+          @<span class="hljs-attr">click.prevent</span>=<span class="hljs-string">"setDisplayMode('map')"</span>
+          <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"View map"</span>
+          <span class="hljs-attr">:aria-selected</span>=<span class="hljs-string">"displayMode === 'map'"</span>
+          <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"arts-explorer-map-view"</span>
+          &gt;</span>Map<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>
+        &gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"arts-explorer__views-tabs-item"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span>
+          <span class="hljs-attr">href</span>=<span class="hljs-string">"#arts-explorer-list-view"</span>
+          <span class="hljs-attr">id</span>=<span class="hljs-string">"arts-explorer-list-view-tab"</span>
+          <span class="hljs-attr">class</span>=<span class="hljs-string">"button arts-explorer__views-tabs-button"</span>
+          @<span class="hljs-attr">click.prevent</span>=<span class="hljs-string">"setDisplayMode('list')"</span>
+          <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"View list"</span>
+          <span class="hljs-attr">:aria-selected</span>=<span class="hljs-string">"displayMode === 'list'"</span>
+          <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"arts-explorer-list-view"</span>
+          &gt;</span>List<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>
+        &gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">map-view</span> <span class="hljs-attr">:display-as-tab</span>=<span class="hljs-string">"displayAsTabs"</span> <span class="hljs-attr">:hidden</span>=<span class="hljs-string">"displayMode !== 'map'"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">list-view</span> <span class="hljs-attr">:display-as-tab</span>=<span class="hljs-string">"displayAsTabs"</span> <span class="hljs-attr">:hidden</span>=<span class="hljs-string">"displayMode !== 'list'"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"ts"</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> _debounce <span class="hljs-keyword">from</span> <span class="hljs-string">"lodash.debounce"</span>;
+<span class="hljs-keyword">import</span> MapView <span class="hljs-keyword">from</span> <span class="hljs-string">"./arts-explorer-map-view.vue"</span>;
+<span class="hljs-keyword">import</span> ListView <span class="hljs-keyword">from</span> <span class="hljs-string">"./arts-explorer-list-view.vue"</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  <span class="hljs-attr">components</span>: {
+    <span class="hljs-string">"map-view"</span>: MapView,
+    <span class="hljs-string">"list-view"</span>: ListView,
+  },
+  data() {
+    <span class="hljs-keyword">return</span> {
+      <span class="hljs-attr">displayAsTabs</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">displayMode</span>: <span class="hljs-string">"map"</span>,
+    };
+  },
+  mounted() {
+    <span class="hljs-keyword">this</span>.handleResize();
+  },
+  <span class="hljs-attr">methods</span>: {
+    handleResize() {
+      <span class="hljs-keyword">const</span> resize = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.displayAsTabs !== <span class="hljs-built_in">window</span>.matchMedia(<span class="hljs-string">"(max-width: 1023px)"</span>).matches) {
+          <span class="hljs-keyword">this</span>.displayAsTabs = <span class="hljs-built_in">window</span>.matchMedia(<span class="hljs-string">"(max-width: 1023px)"</span>).matches;
+        }
+      };
+      <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">"resize"</span>, _debounce(resize, <span class="hljs-number">50</span>));
+      resize();
+    },
+    setDisplayMode(mode) {
+      <span class="hljs-keyword">this</span>.displayMode = mode;
+    },
+  },
+};
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/arts-explorer/arts-explorer-views.vue"><span>/components/raw/arts-explorer/arts-explorer-views.vue</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/arts-explorer/arts-explorer-views.vue</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">2 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-a4e2300053aee19c1e26b16cbd72e772" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-XML FileBrowser-code">
+                                <pre>import Vue from "vue";
+import ArtsExplorer from "./arts-explorer.vue";
+
+export default function initArtsExplorer() {
+  const el = document.getElementById("arts-explorer-root") as HTMLElement;
+  if (el) {
+    new Vue({
+      components: {
+        "arts-explorer": ArtsExplorer,
+      },
+      el,
+    });
+  }
+}
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/arts-explorer/arts-explorer.ts"><span>/components/raw/arts-explorer/arts-explorer.ts</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/arts-explorer/arts-explorer.ts</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">310 Bytes</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-427aabe93cf9aae2c69ede4f65aedcc1" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-Vue FileBrowser-code">
+                                <pre><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"arts-explorer"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">arts-explorer-filters</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">arts-explorer-views</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">arts-explorer-key</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"ts"</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">import</span> ArtsExplorerFilters <span class="hljs-keyword">from</span> <span class="hljs-string">"./arts-explorer-filters.vue"</span>;
+<span class="hljs-keyword">import</span> ArtsExplorerViews <span class="hljs-keyword">from</span> <span class="hljs-string">"./arts-explorer-views.vue"</span>;
+<span class="hljs-keyword">import</span> ArtsExplorerKey <span class="hljs-keyword">from</span> <span class="hljs-string">"./arts-explorer-key.vue"</span>;
+<span class="hljs-keyword">import</span> { actions } <span class="hljs-keyword">from</span> <span class="hljs-string">"./store"</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  beforeMount() {
+    actions.fetchLocations();
+    actions.fetchCounties();
+    actions.fetchLocationTypes();
+  },
+  <span class="hljs-attr">components</span>: {
+    <span class="hljs-string">"arts-explorer-filters"</span>: ArtsExplorerFilters,
+    <span class="hljs-string">"arts-explorer-views"</span>: ArtsExplorerViews,
+    <span class="hljs-string">"arts-explorer-key"</span>: ArtsExplorerKey,
+  },
+};
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/arts-explorer/arts-explorer.vue"><span>/components/raw/arts-explorer/arts-explorer.vue</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/arts-explorer/arts-explorer.vue</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">684 Bytes</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-caf0bf241ab00205dc01022a2802cac6" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-XML FileBrowser-code">
+                                <pre>export default function generatePopupClass(google) {
+  return class Popup extends google.maps.OverlayView {
+    protected position: any;
+    protected content: any;
+    protected containerElement: HTMLElement;
+    protected popupElement: HTMLElement;
+    protected isVisible: boolean;
+
+    constructor(position, content) {
+      super();
+      this.position = position;
+      this.content = content;
+      this.popupElement = this.generateMarkup();
+      this.toggleVisibility(false);
+    }
+
+    private generateMarkup() {
+      const root = document.createElement("DIV") as HTMLElement;
+      const container = document.createElement("DIV") as HTMLElement;
+      const thumbnail = document.createElement("DIV") as HTMLElement;
+      const content = document.createElement("DIV") as HTMLElement;
+      const title = document.createElement("DIV") as HTMLElement;
+      const directions = document.createElement("A") as HTMLAnchorElement;
+
+      root.className = "arts-explorer__map-popup";
+      container.className = "arts-explorer__map-popup-container";
+      thumbnail.className = "arts-explorer__map-popup-thumbnail";
+      content.className = "arts-explorer__map-popup-content";
+      title.className = "arts-explorer__map-popup-title";
+      directions.className = "arts-explorer__map-popup-directions";
+
+      root.classList.add(`arts-explorer__map-popup--${this.content.category}`);
+
+      title.textContent = this.content.title;
+      if (this.content.url) {
+        title.setAttribute("href", this.content.url);
+        title.setAttribute("role", "link");
+        title.setAttribute("tabindex", "0");
+
+        const navigateLink = (event) =&gt; {
+          if (event.type === "click" || event.key === "Enter") {
+            const url = new URL(this.content.url);
+            const target = url.origin === window.location.origin;
+            window.open(url.href, target ? "_self" : "_blank");
+          }
+        };
+        title.addEventListener("click", navigateLink);
+        title.addEventListener("keydown", navigateLink);
+      }
+
+      if (!!this.content.thumbnail) {
+        thumbnail.style.backgroundImage = `url(${this.content.thumbnail})`;
+      }
+
+      directions.href = `https://www.google.com/maps/search/?api=1&amp;query=${this.position.toUrlValue()}`;
+      directions.target = "_blank";
+      directions.innerHTML = `Get Directions&lt;span class="visible-for-screen-readers"&gt; to ${this.content.title} (opens in new tab/window)&lt;/span&gt;`;
+
+      content.appendChild(title);
+      content.appendChild(directions);
+
+      container.appendChild(thumbnail);
+      container.appendChild(content);
+
+      root.appendChild(container);
+
+      return root;
+    }
+
+    private onAdd() {
+      this.getPanes().floatPane.appendChild(this.popupElement);
+    }
+
+    private onRemove() {
+      if (this.popupElement.parentElement) {
+        this.popupElement.parentElement.removeChild(this.popupElement);
+      }
+    }
+
+    private draw() {
+      const popupPosition = this.getProjection().fromLatLngToDivPixel(this.position);
+      const isDisplayed = Math.abs(popupPosition.x) &lt; 4000 &amp;&amp; Math.abs(popupPosition.y) &lt; 4000;
+      const display = isDisplayed ? "block" : "none";
+
+      if (isDisplayed) {
+        this.popupElement.style.left = `${popupPosition.x}px`;
+        this.popupElement.style.top = `${popupPosition.y}px`;
+      }
+
+      if (this.popupElement.style.display !== display) {
+        this.popupElement.style.display = display;
+      }
+    }
+
+    public toggleVisibility(visible?: boolean) {
+      this.isVisible = visible !== undefined ? visible : !this.isVisible;
+      this.popupElement.classList[this.isVisible ? "add" : "remove"]("arts-explorer__map-popup--visible");
+    }
+  };
+}
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/arts-explorer/popup.ts"><span>/components/raw/arts-explorer/popup.ts</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/arts-explorer/popup.ts</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">3.7 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-d738b6fce5e78ccfb60cb2198fef6df5" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-XML FileBrowser-code">
+                                <pre>import Vue from "vue";
+import axios from "axios";
+import * as _get from "lodash.get";
+import * as _snakeCase from "lodash.snakecase";
+import { transformAPIDataToPolygonData } from "./util";
+
+const apiHost = () =&gt; {
+  if (window.location.hostname === "localhost") {
+    return "https://msac.lndo.site";
+  } else {
+    return window.location.origin;
+  }
+};
+const apiBase = `${apiHost()}/jsonapi`;
+
+export const state = Vue.observable({
+  selectedLocationTypeId: null,
+  selectedCountyId: null,
+  selectedLocationId: null,
+  locations: [],
+  locationMedia: [],
+  locationFiles: [],
+  fetchingLocations: true,
+  errorFetchingLocations: false,
+  counties: [],
+  fetchingCounties: true,
+  errorFetchingCounties: false,
+  locationTypes: [],
+  fetchingLocationTypes: true,
+  errorFetchingLocationTypes: false,
+  fetchingCountyPolygonData: false,
+  errorFetchingCountyPolygonData: false,
+  countyPolygonData: [],
+});
+
+export const getters = {
+  locationsWithThumbnails() {
+    return state.locations.map((location) =&gt; {
+      const mediaId = _get(location, "relationships.field_location_image.data.id");
+      const thumbnailUrl = _get(this.locationFilesByMediaId(), `[${mediaId}].attributes.uri.url`);
+      return {
+        ...location,
+        thumbnail: !!thumbnailUrl ? `${apiHost()}${thumbnailUrl}` : "",
+      };
+    });
+  },
+  filteredLocations() {
+    return this.locationsWithThumbnails()
+      .filter((location) =&gt;
+        !!state.selectedLocationTypeId
+          ? location.relationships.field_location_type.data.id === state.selectedLocationTypeId
+          : true
+      )
+      .filter((location) =&gt;
+        !!state.selectedCountyId
+          ? _get(location, "relationships.field_location_county.data.id", "") === state.selectedCountyId
+          : true
+      );
+  },
+  filteredLocationsById() {
+    return this.filteredLocations().reduce(
+      (acc, cur) =&gt; ({
+        ...acc,
+        [cur.id]: cur,
+      }),
+      {}
+    );
+  },
+  locationTypesById() {
+    return state.locationTypes.reduce(
+      (acc, cur) =&gt; ({
+        ...acc,
+        [cur.id]: cur,
+      }),
+      {}
+    );
+  },
+  countiesById() {
+    return state.counties.reduce(
+      (acc, cur) =&gt; ({
+        ...acc,
+        [cur.id]: cur,
+      }),
+      {}
+    );
+  },
+  // Convert array of all county polygons to a dictionary of polygon point arrays by GIS ObjectID
+  countyPolygonDataById() {
+    return state.countyPolygonData.reduce((acc, cur) =&gt; {
+      if (!acc.hasOwnProperty(cur.id)) {
+        acc[cur.id] = [];
+      }
+
+      return {
+        ...acc,
+        [cur.id]: cur.polygons,
+      };
+    }, {});
+  },
+  locationMediaById() {
+    return state.locationMedia.reduce(
+      (acc, cur) =&gt; ({
+        ...acc,
+        [cur.id]: cur,
+      }),
+      {}
+    );
+  },
+  locationFilesById() {
+    return state.locationFiles.reduce(
+      (acc, cur) =&gt; ({
+        ...acc,
+        [cur.id]: cur,
+      }),
+      {}
+    );
+  },
+  locationFilesByMediaId() {
+    return state.locationMedia.reduce((acc, cur) =&gt; {
+      const fileId = _get(cur, "relationships.field_media_image.data.id");
+      if (!!fileId) {
+        acc[cur.id] = this.locationFilesById()[fileId];
+      }
+      return acc;
+    }, {});
+  },
+  locationsFetched() {
+    return !state.fetchingLocations &amp;&amp; !state.errorFetchingLocations;
+  },
+};
+
+export const actions = {
+  fetchLocations() {
+    state.fetchingLocations = true;
+    return axios
+      .get(`${apiBase}/node/location`, {
+        params: {
+          include: "field_location_image,field_location_image.thumbnail",
+          "page[limit]": 200,
+        },
+      })
+      .then((response) =&gt; {
+        state.locations = response.data.data;
+        state.locationMedia = _get(response.data, "included", []).filter((obj) =&gt; obj.type === "media--image");
+        state.locationFiles = _get(response.data, "included", []).filter((obj) =&gt; obj.type === "file--file");
+        state.fetchingLocations = false;
+      })
+      .catch((error) =&gt; {
+        console.error(error);
+        state.fetchingLocations = false;
+        state.errorFetchingLocations = true;
+      });
+  },
+  fetchLocationTypes() {
+    state.fetchingLocationTypes = true;
+    axios
+      .get(`${apiBase}/taxonomy_term/location_types`)
+      .then((response) =&gt; {
+        state.locationTypes = response.data.data;
+        state.fetchingLocationTypes = false;
+      })
+      .catch((error) =&gt; {
+        console.error(error);
+        state.fetchingLocationTypes = false;
+        state.errorFetchingLocationTypes = true;
+      });
+  },
+  fetchCounties() {
+    state.fetchingCounties = true;
+    axios
+      .get(`${apiBase}/taxonomy_term/counties`)
+      .then((response) =&gt; {
+        state.counties = response.data.data;
+        state.fetchingCounties = false;
+      })
+      .catch((error) =&gt; {
+        console.error(error);
+        state.fetchingCounties = false;
+        state.errorFetchingCounties = true;
+      });
+  },
+  fetchCountyPolygonData(objectId) {
+    state.fetchingCountyPolygonData = true;
+    state.errorFetchingCountyPolygonData = false;
+    return axios
+      .get("https://geodata.md.gov/imap/rest/services/Boundaries/MD_PhysicalBoundaries/FeatureServer/1/query", {
+        params: {
+          where: `OBJECTID=${objectId}`,
+          outFields: "OBJECTID",
+          outSR: 4326,
+          f: "json",
+        },
+      })
+      .then((response) =&gt; {
+        state.countyPolygonData = [...state.countyPolygonData, transformAPIDataToPolygonData(response.data)];
+        state.fetchingCountyPolygonData = false;
+      })
+      .catch((error) =&gt; {
+        console.error(error);
+        state.fetchingCountyPolygonData = false;
+        state.errorFetchingCountyPolygonData = true;
+      });
+  },
+};
+
+export const methods = {
+  snakeCaseLocationType(locationTypeId) {
+    const locationType = getters.locationTypesById()[locationTypeId];
+    return !!locationType ? _snakeCase(locationType.attributes.name) : "";
+  },
+  getLocationUrl(path, url, no_link) {
+    return no_link ? false : url ? url.url : `${window.location.origin}${path.alias}`;
+  },
+};
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/arts-explorer/store.ts"><span>/components/raw/arts-explorer/store.ts</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/arts-explorer/store.ts</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">6 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-e4c9f67898425f2acc19379b44f853bb" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-XML FileBrowser-code">
+                                <pre>export function transformAPIDataToPolygonData(apiData) {
+  const features = apiData?.features?.[0];
+  if (!!features) {
+    return {
+      id: features.attributes?.OBJECTID,
+      polygons: features.geometry?.rings?.map((points) =&gt; {
+        return points.map((point) =&gt; ({
+          lat: point[1],
+          lng: point[0],
+        }));
+      }),
+    };
+  }
+}
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/arts-explorer/util.ts"><span>/components/raw/arts-explorer/util.ts</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/arts-explorer/util.ts</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">360 Bytes</span>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
+
+
+    
+    <div class="Browser-panel" data-role="tab-panel" id="browser-ee8c52dab7f4bd1c3277b59db3e29038-panel-info">
+    <ul class="Meta">
+        <li class="Meta-item">
+            <strong class="Meta-key">Handle:</strong>
+            <span class="Meta-value">@arts-explorer</span>
+        </li>
+        
+        
+        
+        
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Preview:</strong>
+            <span class="Meta-value">
+                <ul>
+                    <li><a data-no-pjax href="../preview/arts-explorer.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+</a></li>
+                    <li><a data-no-pjax href="../render/arts-explorer.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+</a></li>
+                </ul>
+            </span>
+        </li>
+        <li class="Meta-item">
+            <strong class="Meta-key">Filesystem Path:</strong>
+            <span class="Meta-value">src/components/arts-explorer/arts-explorer.twig</span>
+        </li>
+        
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Referenced by <em class="Meta-count">(1)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="explore-arts.html">@<span>explore-arts</span></a>
+            
+            </span>
+        </li>
+        
+    </ul>
+</div>
+
+    
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-ee8c52dab7f4bd1c3277b59db3e29038-panel-notes">
+    <div class="Prose Prose--condensed">
+        
+        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
+        
+    </div>
+</div>
+
+    
+
+</div>
+
+</div>
+
+
+    
+
+</div>
+
+
+            </div>
+        </div>
+
+        <div class="Frame-handle" data-role="frame-resize-handle"></div>
+        
+        <div class="Frame-panel Frame-panel--sidebar" data-role="sidebar">
+            <nav class="Navigation">
+
+    
+<div class="Navigation-group">
+
+<div class="Tree" data-behaviour="tree" id="tree-components">
+    <h3 class="Tree-title">components</h3>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-accordion">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Accordion</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="accordion--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="accordion--become-tabs.html" data-pjax>
+                <span>Become Tabs</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="accordion--tabs.html" data-pjax>
+                <span>Tabs</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="ae-district-map.html" data-pjax>
+                <span>Ae District Map</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="artist-awards.html" data-pjax>
+                <span>Artist Awards</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="arts-calendar.html" data-pjax>
+                <span>Arts Calendar</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="arts-directory.html" data-pjax>
+                <span>Arts Directory</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="" data-pjax>
+                <span>Arts Explorer</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="aside.html" data-pjax>
+                <span>Aside</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-blockquote">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Blockquote</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="blockquote--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="blockquote--full-width.html" data-pjax>
+                <span>Full Width</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="breadcrumb.html" data-pjax>
+                <span>Breadcrumb</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button.html" data-pjax>
+                <span>Button</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="calendar.html" data-pjax>
+                <span>Calendar</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="callout.html" data-pjax>
+                <span>Callout</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-card">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Card</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card--hz.html" data-pjax>
+                <span>Hz</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card-group.html" data-pjax>
+                <span>Card Group</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="carousel.html" data-pjax>
+                <span>Carousel</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="checkbox-dropdown.html" data-pjax>
+                <span>Checkbox Dropdown</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="collapsible-text.html" data-pjax>
+                <span>Collapsible Text</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="editor-widget.html" data-pjax>
+                <span>Editor Widget</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="events-feed.html" data-pjax>
+                <span>Events Feed</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="featured-work-carousel.html" data-pjax>
+                <span>Featured Work Carousel</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="hero.html" data-pjax>
+                <span>Hero</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="home-events-feed.html" data-pjax>
+                <span>Home Events Feed</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="iframe.html" data-pjax>
+                <span>Iframe</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-lazyload">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Lazyload</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="lazyload--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="lazyload--iframe.html" data-pjax>
+                <span>Iframe</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="loading-spinner.html" data-pjax>
+                <span>Loading Spinner</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="modal.html" data-pjax>
+                <span>Modal</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="multilevel-taxonomy-select.html" data-pjax>
+                <span>Multilevel Taxonomy Select</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="nav.html" data-pjax>
+                <span>Nav</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-pages">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Pages</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="ae-district.html" data-pjax>
+                <span>Ae District</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="artist-profile.html" data-pjax>
+                <span>Artist Profile</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="directory.html" data-pjax>
+                <span>Directory</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="events.html" data-pjax>
+                <span>Events</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="explore-arts.html" data-pjax>
+                <span>Explore Arts</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="home.html" data-pjax>
+                <span>Home</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="individual-grant.html" data-pjax>
+                <span>Individual Grant</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="kitchen-sink.html" data-pjax>
+                <span>Kitchen Sink</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="organization-profile.html" data-pjax>
+                <span>Organization Profile</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="profile-login.html" data-pjax>
+                <span>Profile Login</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="pagination.html" data-pjax>
+                <span>Pagination</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="program-contact.html" data-pjax>
+                <span>Program Contact</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="share.html" data-pjax>
+                <span>Share</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="site-footer.html" data-pjax>
+                <span>Site Footer</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="site-header.html" data-pjax>
+                <span>Site Header</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="site-search.html" data-pjax>
+                <span>Site Search</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="table.html" data-pjax>
+                <span>Table</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-tags">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Tags</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="tags--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="tags--button.html" data-pjax>
+                <span>Button</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="text-content.html" data-pjax>
+                <span>Text Content</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="webform.html" data-pjax>
+                <span>Webform</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+</div>
+
+
+
+    
+<div class="Navigation-group">
+
+<div class="Tree" data-behaviour="tree" id="tree-docs">
+    <h3 class="Tree-title">documentation</h3>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../index.html" data-pjax>
+                <span>Overview</span>
+                
+            </a>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+</div>
+
+
+
+    
+
+
+</nav>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.1"></script>
+
+
+
+</body>
+</html>

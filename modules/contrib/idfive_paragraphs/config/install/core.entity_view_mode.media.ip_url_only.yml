@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.ip_url_only
+label: 'IP URL Only'
+targetEntityType: media
+cache: true

@@ -1,0 +1,29 @@
+uuid: bbeb3228-e39a-4eb3-bae3-00a9f8412f6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_bk_price
+    - node.type.artist
+    - taxonomy.vocabulary.booking_prices
+id: node.artist.field_artist_bk_price
+field_name: field_artist_bk_price
+entity_type: node
+bundle: artist
+label: 'Booking Price'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      booking_prices: booking_prices
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

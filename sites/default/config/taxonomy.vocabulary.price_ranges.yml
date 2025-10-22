@@ -1,0 +1,8 @@
+uuid: b9e0dd0f-c723-43fe-a192-8e7f81ad5c0c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Price Ranges'
+vid: price_ranges
+description: ''
+weight: 0

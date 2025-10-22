@@ -1,0 +1,41 @@
+.grant {
+  .page-content {
+    position: relative;
+    z-index: 1;
+  }
+  .page-background {
+    background-size: rem(800) auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    @include media("800") {
+      background-size: 150% auto;
+      background-position: center rem(-60);
+    }
+    @include media("1200") {
+      background-size: 120% auto;
+      background-position: right rem(-125);
+    }
+    @include media("1440") {
+      background-size: 110% auto;
+      background-position: right rem(-140);
+    }
+  }
+  .program-contacts {
+    margin-bottom: rem(-192);
+    @include media("800") {
+      margin-bottom: rem(-246);
+    }
+  }
+  .footer-cta__heading {
+    margin-right: auto;
+    margin-left: auto;
+    @include media("550") {
+      width: (10 / 12 * 100%);
+    }
+    @include media("1200") {
+      margin-bottom: rem(18);
+      width: 100%;
+    }
+  }
+}

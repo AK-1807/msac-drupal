@@ -1,0 +1,39 @@
+uuid: d1ba60ff-da3a-4950-923b-29232c17a853
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.document_form
+    - field.field.media.document.field_media_document
+    - field.field.media.document.field_media_document_title
+    - media.type.document
+  module:
+    - file
+_core:
+  default_config_hash: DXitcriWmE5QHvGvk2OzWouaSnXD5uipkRdAG6_pnkg
+id: media.document.document_form
+targetEntityType: media
+bundle: document
+mode: document_form
+content:
+  field_media_document:
+    type: file_default
+    label: visually_hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_media_document_title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

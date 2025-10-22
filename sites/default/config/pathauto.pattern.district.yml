@@ -1,0 +1,22 @@
+uuid: 676e4aa3-5abb-418d-804f-6fc2aa32d84f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: district
+label: District
+type: 'canonical_entities:node'
+pattern: 'directory/districts/[node:title]'
+selection_criteria:
+  2b7cb19a-ba68-4ae7-9ff4-1af3273943c9:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 2b7cb19a-ba68-4ae7-9ff4-1af3273943c9
+    context_mapping:
+      node: node
+    bundles:
+      district: district
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,44 @@
+uuid: 62b4abd5-a6dd-4378-9452-6e8902243ea7
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.idfive_media_browser
+  module:
+    - entity_browser_entity_form
+    - views
+_core:
+  default_config_hash: 5DuODGeYI8uzTTp1JU8QJ_AMJXRvdJYSuO9X5ad8fMA
+name: idfive_media_browser_audio
+label: 'Media Browser Audio'
+display: modal
+display_configuration:
+  width: '800'
+  height: '800'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  563620fe-a205-4775-9582-56f41f5620f4:
+    id: view
+    uuid: 563620fe-a205-4775-9582-56f41f5620f4
+    label: 'Audio Library'
+    weight: 1
+    settings:
+      submit_text: 'Select Audio File'
+      auto_select: false
+      view: idfive_media_browser
+      view_display: entity_browser_audio
+  eb457109-07fd-414a-9105-eb0058e31c37:
+    id: entity_form
+    uuid: eb457109-07fd-414a-9105-eb0058e31c37
+    label: 'Add Audio File'
+    weight: 2
+    settings:
+      submit_text: 'Save Audio File'
+      entity_type: media
+      bundle: audio
+      form_mode: default

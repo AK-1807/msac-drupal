@@ -1,0 +1,23 @@
+uuid: 4f132d9a-b6d0-4b70-96ea-afdba79cfdab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_executive_member
+    - node.type.person
+id: node.person.field_person_executive_member
+field_name: field_person_executive_member
+entity_type: node
+bundle: person
+label: 'Executive Member'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,23 @@
+uuid: f07453ee-60f0-4d5a-9efd-8c99b0633ab5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.grant
+  module:
+    - text
+id: node.grant.body
+field_name: body
+entity_type: node
+bundle: grant
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

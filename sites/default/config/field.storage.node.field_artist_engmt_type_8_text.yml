@@ -1,0 +1,19 @@
+uuid: 616994d5-d903-4c24-8843-2e5d81e71b93
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_artist_engmt_type_8_text
+field_name: field_artist_engmt_type_8_text
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

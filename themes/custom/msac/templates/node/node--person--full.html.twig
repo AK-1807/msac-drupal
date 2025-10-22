@@ -1,0 +1,91 @@
+{% extends "node--full.html.twig" %}
+
+{% block node_hero %}
+	<div class="hero hero--default">
+    <figure class="hero__media">
+      <div class="hero__media-image">
+        <img src="{{ assets_path ~ '/img/MSAC_default_profile_image.jpg' }}" alt="">
+      </div>
+    </figure>
+  </div>
+{% endblock %}
+
+{% block node_heading %}
+	<div class="page-heading outer-pad">
+		{% set thumbnail = assets_path ~ '/img/MSAC_default_profile_image_square.jpg' %}
+		{% set thumbnail_alt = 'Portrait of ' ~ node.title.value %}
+		{% if content.field_person_image|field_value %}
+			{% set thumbnail = file_url(content.field_person_image|field_target_entity.uri.value | image_style('optimized')) %}
+			{% set thumbnail_alt = content.field_person_image['#items'].alt %}
+		{% endif %}
+		<div class="silc-grid silc-grid--collapse silc-grid--justify-center">
+			<div class="silc-position--relative silc-grid__col silc-grid__col--3-1024 silc-grid__col--2-1200">
+				<div class="profile-photo__container">
+					<div class="profile__photo">
+						<img src="{{ thumbnail }}" alt="{{ thumbnail_alt }}">
+					</div>
+					{# <a href="{{ drupal_url('people', {absolute: true}) }}"><span role="presentation">&lt;&nbsp;</span>Back to People</a> #}
+				</div>
+			</div>
+      <div class="silc-grid__col silc-grid__col--9-1024 silc-grid__col--10-1200">
+				<h1>{{ label }}</h1>
+				{% if content.field_person_job_title|field_value %}
+					<div class="profile__disciplines">{{ content.field_person_job_title|field_value }}</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block node_content %}
+	<div class="page-content outer-pad">
+		{{ drupal_messages() }}
+		<div class="widget-spacing">
+			{% set contact_information %}
+				{% if content.field_person_phone|field_value %}
+					<li>
+						{{ content.field_person_phone|field_value }}
+					</li>
+				{% endif %}
+				{% if content.field_person_email|field_value %}
+					<li>
+						<a href="mailto:{{ content.field_person_email|field_value }}">{{ content.field_person_email|field_value }}</a>
+					</li>
+				{% endif %}
+			{% endset %}
+			
+			{% if contact_information|trim is not empty %}
+				{% set contact_body_class = "silc-grid__col silc-grid__col--10-800 silc-grid__col--6-1024 silc-grid__col--6-1200" %}						
+			{% else %}
+				{% set contact_body_class = "silc-grid__col silc-grid__col--10-800 silc-grid__col--11-1024 silc-grid__col--10-1200" %}						
+			{% endif %}
+			<div class="silc-grid silc-grid--collapse silc-grid--justify-center silc-grid--justify-right-1024">
+				<div class="{{ contact_body_class }}">
+					<div class="editor-widget text-content">
+						{% if content.body %}
+							<div class="collapsible-text text-content">
+								{{ content.body }}
+							</div>
+						{% endif %}
+					</div>
+				</div>
+				{% if contact_information|trim is not empty %}
+					<div class="silc-grid__col silc-grid__col--10-800 silc-grid__col--5-1024 silc-grid__col--4-1200">
+						<aside class="aside">
+							<div class="aside__content">
+								<div class="aside__section">
+									<h3 class="aside__section-heading">Contact Information</h3>
+									<div>
+										<ul>
+											{{ contact_information }}
+										</ul>
+									</div>
+								</div>
+							</div>
+						</aside>
+					</div>
+				{% endif %}				
+			</div>
+		</div>
+	</div>
+{% endblock %}

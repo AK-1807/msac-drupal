@@ -1,0 +1,27 @@
+uuid: 189262d7-6def-4477-8f17-8972bf9fe3d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_work_audio
+    - node.type.work
+  module:
+    - file
+id: node.work.field_work_audio
+field_name: field_work_audio
+entity_type: node
+bundle: work
+label: 'Audio (legacy)'
+description: 'This field should only be used to manage legacy mp3 files provided by previous migrations or an admin. Please enter https://www.msac.org into the streaming url field to avoid validation issues.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: artist_work/audio
+  file_extensions: mp3
+  max_filesize: ''
+  description_field: false
+field_type: file

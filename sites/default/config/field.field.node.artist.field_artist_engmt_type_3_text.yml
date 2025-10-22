@@ -1,0 +1,26 @@
+uuid: c3a41cd7-1a6d-4224-8415-e462182bb1a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_engmt_type_3_text
+    - node.type.artist
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - plain_text
+id: node.artist.field_artist_engmt_type_3_text
+field_name: field_artist_engmt_type_3_text
+entity_type: node
+bundle: artist
+label: 'Out of School Time Offered'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

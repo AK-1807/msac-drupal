@@ -1,0 +1,29 @@
+uuid: 83696a92-d6ef-4e62-baa8-d00bfcc8d946
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_county
+    - node.type.district
+    - taxonomy.vocabulary.counties
+id: node.district.field_county
+field_name: field_county
+entity_type: node
+bundle: district
+label: County
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      counties: counties
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

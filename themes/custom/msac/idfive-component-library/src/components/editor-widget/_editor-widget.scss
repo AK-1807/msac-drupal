@@ -1,0 +1,14 @@
+.editor-widget {
+  @extend %widget-spacing;
+  .page-widgets & {
+    @include media("800") {
+      max-width: 91.667%;
+    }
+    @include media("1024") {
+      max-width: 83.333%;
+    }
+    @include media("1200") {
+      max-width: 66.667%;
+    }
+  }
+}

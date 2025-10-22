@@ -1,0 +1,12 @@
+uuid: 8fa27a99-aebc-4d57-bab1-a5b2dff03d55
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Le_Igyek5QiR5sJ5FNqktmPQJsqQ_RBhSs-n0I5tKPo
+id: ip_table
+label: Table
+icon_uuid: null
+icon_default: null
+description: 'This Paragraph type provides a table into the Kitchen Sink Widgets. It is controlled by the idfive Paragraphs module.'
+behavior_plugins: {  }

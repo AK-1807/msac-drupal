@@ -1,0 +1,22 @@
+uuid: c191b96d-bb3b-4c84-98b1-62a65b01bb44
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+_core:
+  default_config_hash: Pq2F5paqNgQlTYelqeOu540KV32LZrQZN6lQiYQsrRo
+id: paragraph.field_ip_bq_author_photo
+field_name: field_ip_bq_author_photo
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

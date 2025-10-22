@@ -1,0 +1,22 @@
+uuid: 902a1d45-43f9-460a-afb4-60f63de4cfee
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: work
+label: Work
+type: 'canonical_entities:node'
+pattern: 'directory/works/[node:title]'
+selection_criteria:
+  832d6809-57ac-4e1a-9d21-715e9ddd5333:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 832d6809-57ac-4e1a-9d21-715e9ddd5333
+    context_mapping:
+      node: node
+    bundles:
+      work: work
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,81 @@
+<div class="featured-work-carousel">
+    <div class="featured-work-carousel__thumbnail-carousel-holder">
+        <div class="carousel">
+            {% for slide in slides %}
+                <div class="carousel__slide" data-wid="{{ slide.id }}">
+                    <div class="carousel__slide-image">
+                        <img src="{{ slide.image|path }}" alt="{{ slide.title }}">
+                    </div>
+                    <button class="carousel__modal-trigger" aria-label="View more details about slide {{ loop.index }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="#FFF" fill-rule="evenodd"><path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zm0 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"/><path d="M10.907 6v4.908H6v2.185h4.907V18h2.185v-4.907H18v-2.185h-4.908V6z"/></g></svg>
+                        <span class="visible-for-screen-readers">View more details about slide {{ loop.index }}</span>
+                    </button>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="carousel__nav">
+            <div class="carousel__nav-sizer"></div>
+            <button class="button carousel__nav-previous" aria-label="Previous slide">
+                <span class="visible-for-screen-readers">Previous slide</span>
+            </button>
+            <button class="button carousel__nav-next" aria-label="Next slide">
+                <span class="visible-for-screen-readers">Next slide</span>
+            </button>
+        </div>
+    </div>
+    <div class="featured-work-carousel__modal modal" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true">
+                <div class="modal__header">
+                    <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="#FFF" fill-rule="evenodd"><path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zm0 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"/><path d="M10.907 6v4.908H6v2.185h4.907V18h2.185v-4.907H18v-2.185h-4.908V6z"/></g></svg>
+                        <span class="visible-for-screen-readers">Close modal</span>
+                    </button>
+                    <h2 class="modal__title">{{ modalTitle }}</h2>
+                </div>
+                <div class="modal__content">
+                    <div class="featured-work-carousel__modal-carousel-holder">
+                        <div class="carousel carousel--fade">
+                            {% for slide in slides %}
+                                <div class="carousel__slide" data-wid="{{ slide.id }}">
+                                    <div class="carousel__slide-image" style="background-image:url({{ slide.image|path }})"></div>
+                                    <div class="featured-work__slide-content carousel__slide-content">
+                                        <div class="text-content">
+                                            <h3 class="featured-work__slide-content-title carousel__slide-title">{{ slide.title }}</h3>
+                                            {% if slide.medium %}
+                                                <div class="featured-work__slide-content-medium hint-text">{{ slide.medium }}</div>
+                                            {% endif %}
+                                            {% if slide.year %}
+                                                <div class="featured-work__slide-content-year hint-text">{{ slide.year }}</div>
+                                            {% endif %}
+                                            {% if slide.dimensions %}
+                                                <div class="featured-work__slide-content-dimensions hint-text">{{ slide.dimensions }}</div>
+                                            {% endif %}
+                                            <div class="featured-work__slide-content-description">{{ slide.description }}</div>
+                                            {% if slide.price %}
+                                                <div class="featured-work__slide-content-for-sale">
+                                                    <span class="tag tag--yellow">For Sale</span>
+                                                    <span class="featured-work__slide-content-for-sale-price">{{ slide.price }}</span>
+                                                    <div class="caption featured-work__slide-content-for-sale-contact">Contact the artist to purchase this piece</div>
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="carousel__nav">
+                            <div class="carousel__nav-sizer"></div>
+                            <button class="button carousel__nav-previous" aria-label="Previous slide">
+                                <span class="visible-for-screen-readers">Previous slide</span>
+                            </button>
+                            <button class="button carousel__nav-next" aria-label="Next slide">
+                                <span class="visible-for-screen-readers">Next slide</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

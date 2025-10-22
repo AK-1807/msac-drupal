@@ -1,0 +1,18 @@
+uuid: 45095f7f-8d6a-4887-846e-f6fb4711a711
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_person_executive_member
+field_name: field_person_executive_member
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

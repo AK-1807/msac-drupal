@@ -1,0 +1,25 @@
+uuid: e9e69ee6-e575-4d5d-a6dc-ea9e337d6182
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_p_work
+    - node.type.artist
+id: node.artist.field_artist_p_work
+field_name: field_artist_p_work
+entity_type: node
+bundle: artist
+label: 'Featured Work'
+description: 'This will be shown as a work spotlight when someone searches for your profile.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: works_reference
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

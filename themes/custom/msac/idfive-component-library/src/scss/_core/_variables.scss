@@ -1,0 +1,129 @@
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+$red-hat-display: "Red Hat Display", sans-serif;
+$red-hat-text: "Red Hat Text", sans-serif;
+
+/* Colors
+	 ========================================================================== */
+
+$red: #ec0000;
+$mid-red: #c8122c;
+$dark-red: #940100;
+$yellow: #ffc838;
+$gray-1: #f3f3f3;
+$gray-2: #d8d8d8;
+$gray-3: #4a4a4a;
+$gray-4: #808080;
+$gray-5: #707070;
+$white: #fff;
+$black: #000;
+
+$silc-utilities--colors: (
+  ("red", $red),
+  ("mid-red", $mid-red),
+  ("dark-red", $dark-red),
+  ("yellow", $yellow),
+  ("gray-1", $gray-1),
+  ("gray-2", $gray-2),
+  ("gray-3", $gray-3),
+  ("gray-4", $gray-4),
+  ("white", $white),
+  ("black", $black)
+);
+
+/* Base
+   ========================================================================== */
+
+$base-line-height: (26 / 18);
+$base-font-size: rem(18);
+$base-font-family: $red-hat-text;
+$base-color: $black;
+$base-margin: rem(18) 0;
+
+/* Links
+   ========================================================================== */
+
+$link-color: $red;
+$link-text-decoration: underline;
+$link-transition: 0.25s color ease-in-out;
+$link_hover-color: $dark-red;
+
+$fancy-link-color: $red;
+$fancy-link-font-family: $base-font-family;
+$fancy-link-font-size: $base-font-size;
+$fancy-link-font-weight: 500;
+$fancy-link-text-decoration: underline;
+$fancy-link_hover-color: $mid-red;
+$fancy-link_transition: 0.25s color ease-in-out;
+
+$fancy-link-icon: ">";
+$fancy-link-icon-transition: 0.25s transform ease-in-out;
+
+/* Lists
+   ========================================================================== */
+
+$unordered-list-style-type: initial;
+$ordered-list-style-type: decimal;
+$list-margin: $base-margin;
+$list-padding: 0;
+$list-list-margin: rem(13.5) 0;
+$list-item-margin: rem(13.5) 0;
+$list-item-font-size: rem(18);
+
+/* Headings
+   ========================================================================== */
+
+$heading-line-height: 1.2;
+
+$h1-color: $black;
+$h2-color: $black;
+$h3-color: $dark-red;
+$h4-color: $black;
+$h5-color: $dark-red;
+$h6-color: $black;
+
+$h1-font-family: $red-hat-display;
+$h2-font-family: $red-hat-display;
+$h3-font-family: $red-hat-display;
+$h4-font-family: $red-hat-display;
+$h5-font-family: $red-hat-display;
+$h6-font-family: $red-hat-display;
+
+$h1-font-size: rem(40);
+$h2-font-size: rem(32);
+$h3-font-size: rem(26);
+$h4-font-size: rem(22);
+$h5-font-size: rem(20);
+$h6-font-size: rem(16);
+
+$h1-font-weight: 700;
+$h2-font-weight: 500;
+$h3-font-weight: 500;
+$h4-font-weight: 700;
+$h5-font-weight: 500;
+$h6-font-weight: 700;
+
+$h1-letter-spacing: 0;
+$h2-letter-spacing: 0;
+$h3-letter-spacing: 0;
+$h4-letter-spacing: 0;
+$h5-letter-spacing: 0;
+$h6-letter-spacing: em(1.75, 16);
+
+$h1-margin: rem(42) 0 rem(20);
+$h2-margin: rem(42) 0 rem(20);
+$h3-margin: rem(42) 0 rem(20);
+$h4-margin: rem(42) 0 rem(20);
+$h5-margin: rem(40) 0 rem(20);
+$h6-margin: rem(40) 0 rem(20);
+
+/* Layout
+   ========================================================================== */
+
+/* Outer-pad
+   ========================================================================== */
+
+/* Section
+   ========================================================================== */

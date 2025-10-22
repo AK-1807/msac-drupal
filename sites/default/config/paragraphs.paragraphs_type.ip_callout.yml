@@ -1,0 +1,12 @@
+uuid: 60cc25a6-658f-44bb-b4b4-c1b9216ed581
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: DLSEIdoAeRMo77SGlfkY_j6-kA8odZqL7FA0l2SXLCc
+id: ip_callout
+label: Callout
+icon_uuid: null
+icon_default: null
+description: 'This Paragraph type provides a way to add a callout into the Kitchen Sink Widgets. It is controlled by the idfive Paragraphs module.'
+behavior_plugins: {  }

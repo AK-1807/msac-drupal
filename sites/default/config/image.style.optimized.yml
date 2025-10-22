@@ -1,0 +1,16 @@
+uuid: 27a316d8-c3e9-4ce7-997d-de718c5052b9
+langcode: en
+status: true
+dependencies: {  }
+name: optimized
+label: Optimized
+effects:
+  e35993e0-5d41-4c53-a1b2-e83c4bb6853d:
+    uuid: e35993e0-5d41-4c53-a1b2-e83c4bb6853d
+    id: image_scale
+    weight: 1
+    data:
+      width: 1600
+      height: null
+      upscale: false
+pipeline: resmushit

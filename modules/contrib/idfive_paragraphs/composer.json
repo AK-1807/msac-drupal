@@ -1,0 +1,37 @@
+{
+  "name": "idfive/idfive_paragraphs",
+  "type": "drupal-module",
+  "description": "This module is designed to provide base idfive kitchen sink widgets.",
+  "keywords": [
+    "Drupal"
+  ],
+  "homepage": "https://bitbucket.org/idfivellc/idfive-component-library-d8-paragraphs",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Anthony Neumann",
+      "homepage": "https://www.drupal.org/u/agn507",
+      "role": "Maintainer"
+    },
+    {
+      "name": "Dan Rogers",
+      "homepage": "https://www.drupal.org/u/dan_rogers",
+      "role": "Maintainer"
+    }
+  ],
+  "require": {
+    "drupal/link_attributes": "*",
+    "drupal/paragraphs": "*",
+    "drupal/tablefield": "^2.3",
+    "drupal/viewsreference": "*",
+    "drupal/webform": "*",
+    "drupal/entity_browser": "*",
+    "drupal/viewfield": "*",
+    "drupal/field_group": "*",
+    "drupal/inline_entity_form": "*"
+  },
+  "support": {
+    "issues": "https://bitbucket.org/idfivellc/idfive-component-library-d8-paragraphs/issues",
+    "source": "https://bitbucket.org/idfivellc/idfive-component-library-d8-paragraphs"
+  }
+}

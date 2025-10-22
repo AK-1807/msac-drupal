@@ -1,0 +1,9 @@
+uuid: 3cbabfd2-7946-4d1a-9429-55113bdb4946
+langcode: en
+status: true
+dependencies: {  }
+id: node__article
+label: 'Content: Article'
+tags:
+  image_src: '[node:field_article_cover_image:entity:field_media_image:optimized:url]'
+  og_image: '[node:field_article_cover_image:entity:field_media_image:optimized:url]'

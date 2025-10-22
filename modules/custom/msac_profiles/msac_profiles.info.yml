@@ -1,0 +1,7 @@
+name: 'MSAC Profiles'
+description: 'Custom integration for MSAC Profiles/Dashboard functionality'
+version: '8.x-1.0'
+core_version_requirement: ^8 || ^9 || ^10
+type: module
+package: MSAC
+configure: msac_profiles.settings

@@ -1,0 +1,91 @@
+@import "~normalize-scss";
+
+// Silc Components
+@import "silc/overrides";
+@import "~silc-core/src/scss/index";
+@import "~silc-grid/src/scss/index";
+@import "~silc-accordion/src/scss/index";
+@import "~silc-nav/src/scss/index";
+@import "~silc-utilities/src/scss/index";
+
+// Core
+@import "_core/variables";
+@import "_core/base";
+@import "_core/typography";
+@import "_core/layout";
+@import "_core/placeholder-selectors";
+@import "_core/functions";
+@import "_core/drupal";
+
+// Custom Components
+@import "components/overrides";
+@import "components/drupal_overrides";
+@import "../components/accordion/accordion";
+@import "../components/ae-district-map/ae-district-map";
+@import "../components/artist-awards/artist-awards";
+@import "../components/arts-calendar/arts-calendar";
+@import "../components/arts-directory/arts-directory";
+@import "../components/arts-explorer/arts-explorer";
+@import "../components/aside/aside";
+@import "../components/blockquote/blockquote";
+@import "../components/breadcrumb/breadcrumb";
+@import "../components/button/button";
+@import "../components/calendar/calendar";
+@import "../components/callout/callout";
+@import "../components/card/card";
+@import "../components/card-group/card-group";
+@import "../components/carousel/carousel";
+@import "../components/checkbox-dropdown/checkbox-dropdown";
+@import "../components/collapsible-text/collapsible-text";
+@import "../components/editor-widget/editor-widget";
+@import "../components/events-feed/events-feed";
+@import "../components/featured-work-carousel/featured-work-carousel";
+@import "../components/hero/hero";
+@import "../components/iframe/iframe";
+@import "../components/lazyload/lazyload";
+@import "../components/loading-spinner/loading-spinner";
+@import "../components/modal/modal";
+@import "../components/multilevel-taxonomy-select/multilevel-taxonomy-select";
+@import "../components/program-contact/program-contact";
+@import "../components/share/share";
+@import "../components/site-footer/site-footer";
+@import "../components/site-header/site-header";
+@import "../components/site-search/site-search";
+@import "../components/table/table";
+@import "../components/tags/tags";
+@import "../components/webform/webform";
+
+// Pages
+@import "../components/pages/directory";
+@import "../components/pages/explore-arts";
+@import "../components/pages/home";
+@import "../components/pages/individual-grant";
+@import "../components/pages/profile";
+@import "../components/pages/profile-login";
+
+
+
+// .external_link{
+//   position: relative;
+//   padding-right: 25px;
+//   &::after{
+//     position: relative;
+//     content: "";
+//     background: url("../img/external_link.svg") no-repeat;
+//     display: inline-block;
+//     margin-right: -24px;
+//     width: 24px;
+//     height: 22px;
+//     right: -6px;
+//     top: 2px;
+//   }
+// }
+
+ol{
+    li{
+        &::before{
+            left: 6px !important;
+            transform: translateX(0) !important;
+        }
+    }
+}

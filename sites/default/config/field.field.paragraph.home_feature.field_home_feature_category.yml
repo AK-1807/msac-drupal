@@ -1,0 +1,19 @@
+uuid: b661a311-5201-4efe-8e08-0a5f26db5120
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_home_feature_category
+    - paragraphs.paragraphs_type.home_feature
+id: paragraph.home_feature.field_home_feature_category
+field_name: field_home_feature_category
+entity_type: paragraph
+bundle: home_feature
+label: 'Feature Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

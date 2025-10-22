@@ -1,0 +1,23 @@
+uuid: b556435e-4224-4282-bd81-3669ae10c02c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_engmt_type_7
+    - node.type.artist
+id: node.artist.field_artist_engmt_type_7
+field_name: field_artist_engmt_type_7
+entity_type: node
+bundle: artist
+label: 'Professional Development'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,25 @@
+uuid: 657683e2-6c8f-4c93-b446-6451bd227b2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_org_p_work
+    - node.type.organization
+id: node.organization.field_org_p_work
+field_name: field_org_p_work
+entity_type: node
+bundle: organization
+label: 'Featured Work'
+description: 'This will be shown as a work spotlight when someone searches for your profile. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: works_reference
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

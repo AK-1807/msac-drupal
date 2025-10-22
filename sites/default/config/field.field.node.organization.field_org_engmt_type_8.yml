@@ -1,0 +1,23 @@
+uuid: 2ee1b6d1-eec6-4ea0-9670-a32a34501967
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_org_engmt_type_8
+    - node.type.organization
+id: node.organization.field_org_engmt_type_8
+field_name: field_org_engmt_type_8
+entity_type: node
+bundle: organization
+label: 'Field Trip'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

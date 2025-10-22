@@ -1,0 +1,19 @@
+uuid: 5c2eeb3f-a9d9-4180-a891-a34a8d7003bd
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_district_social_instagram
+field_name: field_district_social_instagram
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

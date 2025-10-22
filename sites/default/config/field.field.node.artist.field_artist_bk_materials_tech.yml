@@ -1,0 +1,26 @@
+uuid: 5aff50f0-ab13-4089-bce5-3d0b19f6b94c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_bk_materials_tech
+    - node.type.artist
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - plain_text
+id: node.artist.field_artist_bk_materials_tech
+field_name: field_artist_bk_materials_tech
+entity_type: node
+bundle: artist
+label: 'Materials & Technology Needed'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

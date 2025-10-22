@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: bJz_wJYx-qSUy2ZXdCx6X3iPscpi3SJj-Y6F0q0yTe4
+id: paragraph.field_ip_cd_text
+field_name: field_ip_cd_text
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

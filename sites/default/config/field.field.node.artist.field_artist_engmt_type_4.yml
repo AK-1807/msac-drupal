@@ -1,0 +1,23 @@
+uuid: 45268c12-48de-453c-a3b4-7260e5d5668a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_engmt_type_4
+    - node.type.artist
+id: node.artist.field_artist_engmt_type_4
+field_name: field_artist_engmt_type_4
+entity_type: node
+bundle: artist
+label: Residency
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,23 @@
+uuid: eb8b9378-58bf-43b5-aacb-22360e207134
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_cd_text
+    - paragraphs.paragraphs_type.ip_card
+  module:
+    - text
+_core:
+  default_config_hash: 6nBpz_acV1AXQY-HXRdcNQhIsS_xBbaZRNk9M-74lrs
+id: paragraph.ip_card.field_ip_cd_text
+field_name: field_ip_cd_text
+entity_type: paragraph
+bundle: ip_card
+label: 'Card Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

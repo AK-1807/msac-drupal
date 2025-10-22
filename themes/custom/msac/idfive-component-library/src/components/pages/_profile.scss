@@ -1,0 +1,984 @@
+body[class*="path--profile--"]:not(.path--profile--additional_questions),
+body[class*="path--directory--artists--"],
+body[class*="path--directory--organizations--"],
+body[class*="path--directory--districts--"] {
+  h1 {
+    margin: rem(32) 0 rem(24);
+    @include media("800") {
+      margin-bottom: rem(16);
+    }
+    @include media("1200") {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .page-heading {
+    padding-bottom: rem(64);
+    position: relative;
+  }
+  .aside {
+    @include media("1200") {
+      margin-top: 0;
+    }
+    .address-wrapper {
+      align-items: flex-start;
+      display: flex;
+      margin-top: rem(10);
+      .icon-circle {
+        flex: 0 0 auto;
+        margin-right: rem(10);
+      }
+    }
+    .social-media {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        flex: 0 0 auto;
+        margin: 0 rem(6) rem(10) 0;
+      }
+    }
+  }
+  .silc-accordion {
+    max-width: none;
+  }
+  .featured-videos {
+    .iframe {
+      max-width: none;
+    }
+  }
+}
+
+.profile-photo__container {
+  margin-top: rem(-110);
+  width: rem(164);
+  @include media("1024") {
+    margin-top: rem(-76);
+    width: 100%;
+  }
+  @include media("1200") {
+    position: absolute;
+    left: $silc-grid--gutter;
+    right: 0;
+    width: auto;
+  }
+}
+
+.profile__photo {
+  margin-bottom: rem(20);
+  position: relative;
+  width: 100%;
+  &:before {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.profile__discipline {
+  color: $dark-red;
+  font-family: $red-hat-display;
+  font-size: rem(20);
+  font-weight: 500;
+  line-height: (28 / 20);
+  &:not(:last-child) {
+    margin-bottom: rem(8);
+    @include media("800") {
+      margin-bottom: rem(16);
+    }
+  }
+}
+
+.profile__works-list-item {
+  &:not(:last-child) {
+    margin-bottom: rem(40);
+  }
+  &:first-child {
+    .iframe {
+      margin-top: 0;
+    }
+  }
+}
+
+.work__more-info {
+  @extend %button-as-link;
+  display: table;
+  margin-top: rem(8);
+  padding: 0 rem(18) 0 0;
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    border-right: rem(2) solid $red;
+    border-bottom: rem(2) solid $red;
+    height: rem(8);
+    width: rem(8);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    transform-origin: center;
+    transition: 0.25s border-color ease-in-out, 0.3s transform ease-in-out;
+  }
+  &[aria-expanded="true"] {
+    &:after {
+      transform: translateY(-25%) rotate(225deg);
+    }
+  }
+  &:hover,
+  &:focus {
+    &:after {
+      border-right-color: $dark-red;
+      border-bottom-color: $dark-red;
+    }
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.work__title {
+  margin-bottom: rem(14);
+}
+
+.work__info {
+  html:not(.js) & {
+    display: none;
+    &:target {
+      display: block;
+    }
+  }
+  &[aria-expanded="false"] {
+    display: none;
+  }
+  &[aria-expanded="true"] {
+    display: block;
+  }
+}
+
+.work__info--document,
+.work__info--audio {
+  .work__info-compartment {
+    padding-top: rem(10);
+    padding-bottom: rem(30);
+  }
+}
+
+.work__info--video {
+  font-size: rem(16);
+  padding-top: rem(5);
+  .work__description {
+    padding: rem(12) 0 rem(8);
+  }
+}
+
+.work__description,
+.work__medium,
+.work__year,
+.work__details {
+  &:not(:last-child) {
+    margin-bottom: rem(8);
+  }
+}
+
+.msac_profiles-nav {
+  margin-bottom: rem(32);
+  @include media("800") {
+    margin-bottom: rem(48);
+  }
+}
+
+.msac_profiles-nav__list {
+  border: rem(3) solid $yellow;
+  display: flex;
+  flex-wrap: wrap;
+  @include media("800") {
+    border-width: rem(4);
+    flex-wrap: nowrap;
+  }
+}
+
+.msac_profiles-nav__list-item {
+  flex: 1 1 0px;
+  margin: rem(-3);
+  @include media("800") {
+    margin: rem(-4);
+  }
+}
+
+.msac_profiles-nav__link.msac_profiles-nav__link {
+  @extend %tab-panel-tab;
+  @include media("800") {
+    border-width: rem(4);
+    font-size: rem(22);
+  }
+  &:hover,
+  &:focus {
+    @include media("800") {
+      border-width: rem(4);
+    }
+  }
+}
+
+.msac_profiles-dashboard__share {
+  margin-bottom: rem(64);
+  @include media("800") {
+    margin-bottom: rem(88);
+  }
+}
+
+.msac_profiles-dashboard__funding-county {
+  margin-bottom: rem(64);
+  > .silc-grid {
+    > .silc-grid__col {
+      @include media("1024") {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.msac_profiles-dashboard__share-profile {
+  margin-bottom: rem(40);
+}
+
+.msac_profiles-dashboard__share-label {
+  display: inline-block;
+  margin: 0 rem(12) rem(8) 0;
+}
+
+.msac_profiles-dashboard__profile-url {
+  display: table;
+  margin: 0 0 rem(32);
+  @include media("800") {
+    display: inline-block;
+    margin: 0 rem(32) rem(12) 0;
+  }
+}
+
+.msac_profiles-dashboard__copy-profile-btn {
+  display: inline-block;
+  position: relative;
+}
+
+.msac_profiles-dashboard__share-social-list {
+  display: inline-flex;
+}
+
+.msac_profiles-dashboard__share-social-list-item {
+  &:not(:last-child) {
+    margin-right: rem(20);
+  }
+}
+
+.msac_profiles-dashboard__share-social-link {
+  margin-right: 0;
+}
+
+.msac_profiles-dashboard__funding,
+.msac_profiles-dashboard__county {
+  @extend %aside;
+  background-color: $white;
+  border: rem(4) solid $yellow;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: rem(24);
+  .msac_profiles-dashboard__grants-list-item {
+    &:not(:last-child) {
+      margin-bottom: rem(24);
+    }
+  }
+}
+
+.msac_profiles-dashboard__county-url {
+  word-break: break-word;
+}
+
+.msac_profiles-dashboard__county-contact-info {
+  align-items: center;
+  display: flex;
+  margin-top: rem(10);
+  .icon-circle {
+    flex: 0 0 auto;
+    margin-right: rem(10);
+  }
+  a[href^="mailto:"] {
+    word-break: break-word;
+  }
+}
+
+.msac_profiles__intro {
+  margin-bottom: rem(42);
+}
+
+.msac_profiles__form-wrap {
+  fieldset {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  > form {
+    margin-left: -$silc-grid--gutter;
+    @include media("800") {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    [required] {
+      label:not(.multilevel-taxonomy-select__checkbox-label),
+      .fieldset-legend {
+        &:after {
+          content: "*";
+          color: $red;
+        }
+      }
+    }
+    > fieldset {
+      > legend {
+        > .fieldset-legend {
+          @extend %h3;
+          text-transform: none;
+        }
+        &.form-required {
+          &:after {
+            content: "* Required Field";
+            @extend %hint-text;
+            display: block;
+            letter-spacing: 0;
+            margin-top: rem(4);
+            text-transform: none;
+          }
+        }
+      }
+    }
+    > .form-wrapper,
+    > .form-item {
+      padding-left: $silc-grid--gutter;
+      &.form-actions {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  .form-item {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-email,
+  .form-url,
+  .form-tel,
+  .form-text,
+  .form-select,
+  .form-textarea {
+    max-width: none;
+  }
+  .form-checkboxes {
+    .js-form-type-checkbox {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .field-multiple-table {
+    display: block;
+    width: 100%;
+    thead,
+    tbody,
+    tr,
+    td,
+    th {
+      display: block;
+    }
+    th {
+      text-align: left;
+      .label {
+        margin-bottom: rem(20);
+      }
+    }
+    .field-multiple-drag {
+      display: none;
+    }
+  }
+  .tabledrag-toggle-weight {
+    display: none;
+  }
+  .field--type-link {
+    .fieldset-wrapper {
+      margin-left: -$silc-grid--gutter;
+      @include media("800") {
+        display: flex;
+      }
+      > .form-item {
+        padding-left: $silc-grid--gutter;
+        @include media("800") {
+          width: 50%;
+        }
+      }
+    }
+  }
+  [id$="--description"] {
+    @extend %hint-text;
+    margin-top: rem(6);
+    order: 1000;
+  }
+  .field--type-text-with-summary,
+  .field--type-string-long,
+  .field--type-text-long {
+    .filter-wrapper {
+      display: flex;
+      flex-direction: column-reverse;
+      @include media("800") {
+        align-items: center;
+        flex-direction: row-reverse;
+      }
+      .form-item {
+        @include media("800") {
+          flex: 1 0;
+          margin-right: rem(24);
+        }
+      }
+      .filter-help {
+        float: none;
+      }
+    }
+  }
+  .field--widget-options-shs {
+    @include media("800") {
+      width: 100% !important;
+    }
+    .form-item {
+      label {
+        @extend %h4;
+        text-transform: none;
+      }
+      .shs-field-container {
+        margin-bottom: rem(32);
+        @include media("800") {
+          display: flex;
+          margin-left: -$silc-grid--gutter;
+          margin-bottom: rem(24);
+        }
+      }
+      .shs-widget-container {
+        @include media("800") {
+          padding-left: $silc-grid--gutter;
+          width: 50%;
+        }
+        &:not(:last-child) {
+          margin-bottom: rem(16);
+          @include media("800") {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .js-form-type-managed-file {
+    > label {
+      @extend %h4;
+      text-transform: none;
+    }
+    img {
+      display: block;
+      margin-bottom: rem(32);
+    }
+    .file {
+      word-break: break-word;
+    }
+    .file-size {
+      white-space: nowrap;
+    }
+    .form-submit {
+      &:not(.js-hide) {
+        display: table;
+        margin-top: rem(24);
+      }
+    }
+  }
+  .js-form-type-vertical-tabs {
+    width: 100%;
+    .vertical-tabs {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .vertical-tabs__pane {
+      padding: rem(16);
+    }
+    .vertical-tabs__menu-item {
+      .vertical-tabs__menu-item-title,
+      .vertical-tabs__menu-item-summary {
+        color: $black;
+      }
+    }
+  }
+  .field--name-moderation-state {
+    display: none;
+  }
+  .js-form-type-vertical-tabs.form-no-label {
+    display: none;
+  }
+  #edit-delete {
+    @extend %button-as-link;
+  }
+}
+
+.msac_profiles-about__form {
+  > form {
+    > fieldset {
+      &:not(:last-of-type) {
+        margin-bottom: rem(88);
+      }
+      > .fieldset-wrapper {
+        @include media("800") {
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: -$silc-grid--gutter;
+        }
+        > .form-wrapper {
+          @include media("800") {
+            padding-left: $silc-grid--gutter;
+            width: 50%;
+          }
+          &.field--name-title,
+          &.field--name-field-artist-email,
+          &.field--name-field-artist-phone,
+          &.field--name-field-org-email,
+          &.field--name-field-org-phone,
+          &.field--name-field-artist-p-work,
+          &.field--name-field-org-type {
+            @include media("800") {
+              padding-left: 0;
+              width: 100%;
+            }
+            > .form-item {
+              @include media("800") {
+                padding-left: $silc-grid--gutter;
+                width: 50%;
+              }
+            }
+          }
+          &.field--type-address {
+            @include media("800") {
+              width: 100%;
+            }
+            > details {
+              > div {
+                > .form-wrapper {
+                  @include media("800") {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-left: -$silc-grid--gutter;
+                  }
+                  > .form-item {
+                    @include media("800") {
+                      padding-left: $silc-grid--gutter;
+                      width: 50%;
+                    }
+                    &.form-item-field-artist-address-0-address-address-line1,
+                    &.form-item-field-artist-address-0-address-address-line2,
+                    &.form-item-field-org-address-0-address-address-line1,
+                    &.form-item-field-org-address-0-address-address-line2 {
+                      @include media("800") {
+                        width: 100%;
+                      }
+                      label,
+                      input {
+                        @include media("800") {
+                          width: calc(50% - #{rem(17.5)});
+                        }
+                      }
+                    }
+                  }
+                  > .form-wrapper {
+                    @include media("800") {
+                      display: flex;
+                      width: 100%;
+                    }
+                    &.address-container-inline {
+                      margin-left: -$silc-grid--gutter;
+                      @include media("550") {
+                        display: flex;
+                        flex-wrap: wrap;
+                        padding-left: 0;
+                      }
+                      @include media("800") {
+                        margin-left: 0;
+                      }
+                      > .form-item {
+                        display: block;
+                        margin-right: 0;
+                        padding-left: $silc-grid--gutter;
+                        &.form-item-field-artist-address-0-address-locality,
+                        &.form-item-field-org-address-0-address-locality {
+                          width: 100%;
+                          @include media("800") {
+                            width: 50%;
+                          }
+                        }
+                        &.form-item-field-artist-address-0-address-administrative-area,
+                        &.form-item-field-org-address-0-address-administrative-area {
+                          width: 100%;
+                          @include media("550") {
+                            width: 50%;
+                          }
+                          @include media("1024") {
+                            width: 30%;
+                          }
+                        }
+                        &.form-item-field-artist-address-0-address-postal-code,
+                        &.form-item-field-org-address-0-address-postal-code {
+                          width: 100%;
+                          @include media("550") {
+                            width: 50%;
+                          }
+                          @include media("1024") {
+                            width: 20%;
+                          }
+                        }
+                      }
+                    }
+                    > .form-item {
+                      @include media("800") {
+                        padding-left: $silc-grid--gutter;
+                        width: 50%;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            summary {
+              @extend %visible-for-screen-readers;
+            }
+          }
+          &.field--name-field-artist-districts,
+          &.field--name-field-org-districts {
+            @include media("800") {
+              width: 100%;
+            }
+          }
+          &.field--name-field-artist-websites,
+          &.field--name-field-org-websites {
+            @include media("800") {
+              width: 100%;
+            }
+            .field-multiple-table {
+              th {
+                .label {
+                  &:after {
+                    @extend %hint-text;
+                    content: "This must be a full URL, such as https://msac.org.";
+                    display: block;
+                  }
+                }
+              }
+              tr {
+                &.draggable {
+                  > td:not(.field-multiple-drag) {
+                    margin-left: -$silc-grid--gutter;
+                    @include media("800") {
+                      display: flex;
+                    }
+                    .form-item {
+                      padding-left: $silc-grid--gutter;
+                    }
+                  }
+                }
+              }
+            }
+            .js-form-type-url {
+              [id$="--description"] {
+                display: none;
+              }
+            }
+          }
+          &.field--type-text-with-summary,
+          &.field--type-string-long,
+          &.field--type-text-long {
+            @include media("800") {
+              width: 100%;
+            }
+          }
+          &#edit-group-social,
+          &#edit-group-social-media {
+            @include media("800") {
+              width: 100%;
+            }
+            > .fieldset-wrapper {
+              @include media("800") {
+                width: calc(50% - 17.5px);
+              }
+            }
+            legend {
+              &:after {
+                @extend %hint-text;
+                content: "This must be a full URL, such as https://msac.org.";
+                display: block;
+                letter-spacing: normal;
+                text-transform: none;
+              }
+            }
+            .js-form-type-url {
+              [id$="--description"] {
+                display: none;
+              }
+            }
+          }
+          &:last-child {
+            .form-item {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  [class*="field--name-field-artist-social"],
+  [class*="field--name-field-org-social"] {
+    position: relative;
+    padding-left: rem(54);
+    &.field--name-field-artist-social-facebook,
+    &.field--name-field-org-social-facebook {
+      &:before {
+        background-image: url("../../img/fb-icon-white.svg");
+        background-size: rem(16) rem(16);
+      }
+    }
+    &.field--name-field-artist-social-twitter,
+    &.field--name-field-org-social-twitter {
+      &:before {
+        background-image: url("../../img/twitter-icon-white.svg");
+        background-size: rem(19) rem(16);
+      }
+    }
+    &.field--name-field-artist-social-instagram,
+    &.field--name-field-org-social-instagram {
+      &:before {
+        background-image: url("../../img/instagram-icon-white.svg");
+        background-size: rem(18) rem(18);
+      }
+    }
+    &.field--name-field-artist-social-linkedin,
+    &.field--name-field-org-social-linkedin {
+      &:before {
+        background-image: url("../../img/linkedin-icon-white.svg");
+        background-size: rem(18) rem(18);
+      }
+    }
+    &.field--name-field-artist-social-youtube,
+    &.field--name-field-org-social-youtube {
+      &:before {
+        background-image: url("../../img/youtube-icon-white.svg");
+        background-size: rem(18) rem(12);
+      }
+    }
+    &.field--name-field-artist-social-vimeo,
+    &.field--name-field-org-social-vimeo {
+      &:before {
+        background-image: url("../../img/vimeo-icon-white.svg");
+        background-size: rem(18) rem(16);
+      }
+    }
+    &.field--name-field-artist-social-dribbble,
+    &.field--name-field-org-social-dribbble {
+      &:before {
+        background-image: url("../../img/dribbble-icon-white.svg");
+        background-size: rem(18) rem(18);
+      }
+    }
+    &.field--name-field-artist-social-behance,
+    &.field--name-field-org-social-behance {
+      &:before {
+        background-image: url("../../img/behance-icon-white.svg");
+        background-size: rem(18) rem(12);
+      }
+    }
+    &:before {
+      content: "";
+      background-color: $black;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      display: block;
+      height: rem(32);
+      width: rem(32);
+      position: absolute;
+      left: 0;
+      top: rem(28);
+      transform: translateY(-50%);
+    }
+    label {
+      @extend %visible-for-screen-readers;
+    }
+  }
+}
+
+.msac_profiles-work-add-edit__form {
+  > form {
+    > .form-wrapper:not(.form-actions) {
+      @include media("800") {
+        padding-left: 0;
+        width: 100%;
+      }
+      > div,
+      > fieldset {
+        @include media("800") {
+          padding-left: $silc-grid--gutter;
+          width: 100%;
+        }
+      }
+      &.field--name-field-work-artistic-categories {
+        > fieldset {
+          @include media("800") {
+            width: 100%;
+          }
+        }
+      }
+      &.field--name-field-work-price,
+      &.field--name-title,
+      &.field--name-field-work-medium,
+      &.field--name-field-work-year,
+      &.field--name-field-work-details,
+      &.field--name-field-work-video,
+      &.field--name-field-work-audio-url {
+        @include media("800") {
+          width: 50%;
+        }
+      }
+      &.field--name-field-work-price {
+        .form-item__input-wrapper {
+          margin-left: rem(-16);
+        }
+      }
+      &.field--name-field-work-artist-name {
+        .form-item {
+          &.form-disabled {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.msac_profiles-account__form {
+  > form {
+    > .form-wrapper {
+      margin-left: -$silc-grid--gutter;
+      @include media("800") {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      &.form-actions {
+        margin-left: 0;
+      }
+      > .form-item {
+        padding-left: $silc-grid--gutter;
+        @include media("800") {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+.msac_profiles__table-wrap {
+  margin-bottom: rem(24);
+  overflow-x: auto;
+  table {
+    @extend %table;
+    @extend %table--theme-default;
+  }
+}
+.msac_profiles__form-wrap {
+  #group-services {
+    width: 100%;
+    .ajax-new-content {
+      > div[id^="field-org-services-"][id*="-item-wrapper--"] {
+        > .form-wrapper {
+          > div[id^="edit-field-org-services-"][id*="-top--"] {
+            display: none;
+          }
+        }
+      }
+      div[id^="edit-field-org-services-"][id*="-subform--"] {
+      }
+    }
+
+    .form-wrapper {
+      width: 100%;
+      em {
+        padding: rem(20) rem(0) rem(30);
+        display: block;
+      }
+      strong {
+        display: none;
+      }
+      thead {
+        display: none;
+      }
+      tbody {
+        border-top: 1px solid $gray-2;
+        border-bottom: 1px solid $gray-2;
+        padding: rem(10) 0;
+        margin: 0 0 rem(10);
+        td {
+          > div {
+            > div.form-wrapper {
+              display: flex;
+              flex-direction: column;
+              > div {
+                &:first-child {
+                  order: 1000;
+                  .paragraph-type-title {
+                    display: none;
+                  }
+                  .form-submit {
+                    border-color: $dark-red;
+                    color: $dark-red;
+                    padding: rem(5) rem(10);
+                    font-size: rem(16);
+                    &:hover {
+                      background-color: $dark-red;
+                      color: #fff;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .field-add-more-submit {
+    }
+  }
+  #group-services--description {
+    order: -100;
+    padding-left: rem(35);
+    font-size: rem(18);
+    color: #000;
+    margin-bottom: rem(20);
+  }
+}
+
+.featured-videos {
+  > div {
+    padding-bottom: rem(48);
+    @include media("800") {
+      padding-bottom: rem(64);
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}

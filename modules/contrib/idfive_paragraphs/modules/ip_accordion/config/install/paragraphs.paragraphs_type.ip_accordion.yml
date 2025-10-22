@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: EVQRANfShplcjq8MfPVvrXQacI1X6uQl9bNjRE-UAsw
+id: ip_accordion
+label: 'Accordion Group'
+icon_uuid: null
+description: 'This Paragraph type provides an accordion into the Kitchen Sink Widgets. It is controlled by the idfive Paragraphs module.'
+behavior_plugins: {  }

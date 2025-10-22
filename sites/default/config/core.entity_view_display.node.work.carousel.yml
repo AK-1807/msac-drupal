@@ -1,0 +1,193 @@
+uuid: 74f79990-65b0-4bd1-91be-361abe5867ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.carousel
+    - field.field.node.work.feeds_item
+    - field.field.node.work.field_work_artist_name
+    - field.field.node.work.field_work_artistic_categories
+    - field.field.node.work.field_work_audio
+    - field.field.node.work.field_work_audio_url
+    - field.field.node.work.field_work_description
+    - field.field.node.work.field_work_details
+    - field.field.node.work.field_work_document
+    - field.field.node.work.field_work_featured
+    - field.field.node.work.field_work_for_sale
+    - field.field.node.work.field_work_image
+    - field.field.node.work.field_work_legacy_node_id
+    - field.field.node.work.field_work_legacy_user_id
+    - field.field.node.work.field_work_legacy_user_name
+    - field.field.node.work.field_work_legacy_work_id
+    - field.field.node.work.field_work_medium
+    - field.field.node.work.field_work_owner
+    - field.field.node.work.field_work_price
+    - field.field.node.work.field_work_price_range
+    - field.field.node.work.field_work_type
+    - field.field.node.work.field_work_video
+    - field.field.node.work.field_work_year
+    - node.type.work
+  module:
+    - file
+    - image
+    - options
+    - user
+    - video_embed_field
+id: node.work.carousel
+targetEntityType: node
+bundle: work
+mode: carousel
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_work_artist_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_work_audio:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_work_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 119
+    region: content
+  field_work_details:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_work_document:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_work_featured:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  field_work_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_work_legacy_node_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 115
+    region: content
+  field_work_legacy_user_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 116
+    region: content
+  field_work_legacy_user_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 117
+    region: content
+  field_work_legacy_work_id:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_work_medium:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_work_owner:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 118
+    region: content
+  field_work_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_work_video:
+    type: video_embed_field_video
+    label: above
+    settings:
+      autoplay: true
+      responsive: true
+      width: 854
+      height: 480
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_work_year:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  feeds_item: true
+  field_work_artistic_categories: true
+  field_work_audio_url: true
+  field_work_for_sale: true
+  field_work_price: true
+  field_work_price_range: true
+  search_api_excerpt: true

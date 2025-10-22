@@ -1,0 +1,19 @@
+uuid: 057cd74e-6c68-4ad8-9837-6bf384414877
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_home_cs_title
+    - paragraphs.paragraphs_type.home_carousel_slide
+id: paragraph.home_carousel_slide.field_home_cs_title
+field_name: field_home_cs_title
+entity_type: paragraph
+bundle: home_carousel_slide
+label: 'Slide Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

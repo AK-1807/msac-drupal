@@ -1,0 +1,21 @@
+uuid: cb418672-5f31-4118-91fa-6502d5c0a2b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_artist_reference_location
+field_name: field_artist_reference_location
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

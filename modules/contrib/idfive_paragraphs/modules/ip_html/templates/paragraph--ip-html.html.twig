@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * IP HTML paragraph bundle.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{%
+  set classes = [
+    'paragraph-widget',
+    'paragraph-widget--ip_html',
+  ]
+%}
+
+{% block paragraph %}
+	<div{{attributes.addClass(classes).setAttribute('id','ip_html-'~paragraph.id())}}>
+		{% block content %}
+			<div class="text-content">
+				{{ content.field_ip_html_text }}
+			</div>
+		{% endblock %}
+	</div>
+	{{ content|without('field_ip_html_text') }}
+{% endblock paragraph %}

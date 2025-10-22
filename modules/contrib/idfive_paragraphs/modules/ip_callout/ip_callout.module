@@ -1,0 +1,72 @@
+<?php
+
+/**
+ * @file
+ * Ip_callout module file.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ *
+ * @inheritdoc
+ */
+function ip_callout_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.ip_callout':
+      $text = file_get_contents(dirname(__FILE__) . "/README.md");
+      if (!\Drupal::moduleHandler()->moduleExists('markdown')) {
+        return '<pre>' . $text . '</pre>';
+      }
+      else {
+        // Use the Markdown filter to render the README.
+        $filter_manager = \Drupal::service('plugin.manager.filter');
+        $settings = \Drupal::configFactory()->get('markdown.settings')->getRawData();
+        $config = ['settings' => $settings];
+        $filter = $filter_manager->createInstance('markdown', $config);
+        return $filter->process($text, 'en');
+      }
+  }
+  return NULL;
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * Lets us define our paragraphs templates in this module.
+ */
+function ip_callout_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__ip_callout' => [
+      'base hook' => 'paragraph',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_field_WIDGET_TYPE_paragraphs_form_alter().
+ *
+ * Adds "Content Tips from idfive" helper text to the paragraph.
+ */
+function ip_callout_field_widget_paragraphs_form_alter(&$element, &$form_state, $context) {
+  if ($element['#paragraph_type'] == 'ip_callout') {
+
+    // Tips text from idfive.
+    $markup = '<h3>Do:</h3><ul>';
+    $markup .= '<li><strong>Limit the content to one idea/action.</strong> Callouts should be focused and not have more than one link/button.</li>';
+    $markup .= '<li><strong>Be concise with the amount of copy included.</strong></li>';
+    $markup .= '</ul>';
+    $markup .= '<h3>Dont:</h3><ul>';
+    $markup .= '<li><strong>Overuse callouts.</strong> These should be used sparingly—at most one per page and depending on the site, only a few within the site overall.</li>';
+    $markup .= '</ul>';
+    $markup .= '<p><a target="_blank" href="/admin/help/ip_callout">Callout Module Help</a></p>';
+    $element['ip_callout_tips'] = [
+      '#type' => 'details',
+      '#title' => t('Callout Content Tips'),
+      '#weight' => -1000,
+    ];
+    $element['ip_callout_tips']['#markup'] = $markup;
+
+  }
+}

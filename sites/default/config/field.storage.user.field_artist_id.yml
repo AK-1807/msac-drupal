@@ -1,0 +1,20 @@
+uuid: e2878450-e816-4576-9f8f-7f838dac5a85
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_artist_id
+field_name: field_artist_id
+entity_type: user
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

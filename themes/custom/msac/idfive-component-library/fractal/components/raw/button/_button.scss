@@ -1,0 +1,62 @@
+@import "variables";
+
+.button,
+%button {
+  display: block;
+  border: $button-border;
+  padding: $button-padding;
+  appearance: none;
+  cursor: pointer;
+  background: $button-background;
+  color: $button-color;
+  font-family: $button-font-family;
+  font-size: rem(18);
+  font-weight: $button-font-weight;
+  height: rem(56);
+  letter-spacing: em(2, 18);
+  line-height: (23 / 18);
+  text-align: $button-text-align;
+  text-decoration: $button-text-decoration;
+  text-transform: $button-text-transform;
+  transition: $button-transition;
+  width: 100%;
+  @include media("550") {
+    display: inline-block;
+    width: auto;
+  }
+  &:focus,
+  &:hover {
+    border: $button_hover-border;
+    background: $button_hover-background;
+    color: $button_hover-color;
+  }
+  &--reverse,
+  &--primary {
+    background: $button_hover-background;
+    border: $button_hover-border;
+    color: $button_hover-color;
+    &:focus,
+    &:hover {
+      background: $button-background;
+      border: $button-border;
+      color: $button-color;
+    }
+  }
+  &--white {
+    background-color: #fff;
+    border-color: #fff;
+    color: $mid-red;
+    &:focus,
+    &:hover {
+      background-color: transparent;
+      border-color: #fff;
+      color: #fff;
+    }
+  }
+  &:not(:last-child) {
+    margin-bottom: rem(16);
+    @include media("550") {
+      margin-right: rem(30);
+    }
+  }
+}

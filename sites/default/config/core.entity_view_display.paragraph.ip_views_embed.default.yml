@@ -1,0 +1,36 @@
+uuid: f82cafd3-3233-4771-aff7-2e9146f45b39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ip_views_embed.field_ip_ve_title
+    - field.field.paragraph.ip_views_embed.field_ip_ve_view
+    - paragraphs.paragraphs_type.ip_views_embed
+  module:
+    - viewfield
+_core:
+  default_config_hash: alMx2luhs9pbJb-M9fDP9NJ-RWKYiQTVRKPQYLsfTJE
+id: paragraph.ip_views_embed.default
+targetEntityType: paragraph
+bundle: ip_views_embed
+mode: default
+content:
+  field_ip_ve_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ip_ve_view:
+    type: viewfield_default
+    label: hidden
+    settings:
+      view_title: hidden
+      always_build_output: false
+      empty_view_title: hidden
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

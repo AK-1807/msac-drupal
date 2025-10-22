@@ -1,0 +1,36 @@
+features:
+  comment_user_picture: 1
+  favicon: 1
+  logo: true
+  name: true
+  node_user_picture: 1
+  comment_user_verification: 1
+settings:
+  idfive_breadcrumbs_show_node_title: 0
+  idfive_search_block_placeholder: ''
+  idfive_search_block_button_text: ''
+  idfive_disable_base_css: false
+  idfive_disable_base_js: false
+  idfive_page_site_name: true
+  idfive_page_site_logo: true
+  idfive_assets_path: ''
+langcode: en
+_core:
+  default_config_hash: OX-pCYag_6vZkE2E6QprV7jqiEsdSiWslbAM5oN01ZU
+logo:
+  use_default: 1
+favicon:
+  use_default: 1
+idfive_breadcrumbs_show_node_title: '1'
+idfive_search_block_placeholder: ''
+idfive_search_block_button_text: ''
+idfive_page_site_name: 0
+idfive_page_site_logo: 0
+idfive_disable_base_css: 0
+idfive_disable_base_js: 0
+idfive_assets_path: /idfive-component-library/build
+msac_explore_arts_hero_title: 'Find your favorite arts experience. Discover something new.'
+msac_explore_arts_hero_text:
+  value: "<p>Whether you're visiting our state or looking for activities for you or your family, Maryland has a wealth of arts experiences waiting for you. Use our map to find public art, arts venues, and Arts &amp; Entertainment Districts to explore. Visit linked websites or MSAC's <a data-entity-substitution=\"canonical\" data-entity-type=\"node\" data-entity-uuid=\"b9a9fb3b-6d03-4c58-b601-58b56c4fe3d6\" href=\"/calendar\">Events Calendar</a> for date-specific events.</p>\r\n"
+  format: full_html
+msac_directory_path: directory

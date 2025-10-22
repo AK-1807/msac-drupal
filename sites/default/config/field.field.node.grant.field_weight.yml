@@ -1,0 +1,24 @@
+uuid: 33104a08-7224-433e-9ac6-0b42968b1ffd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_weight
+    - node.type.grant
+  module:
+    - weight
+id: node.grant.field_weight
+field_name: field_weight
+entity_type: node
+bundle: grant
+label: Weight
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings:
+  range: '20'
+field_type: weight

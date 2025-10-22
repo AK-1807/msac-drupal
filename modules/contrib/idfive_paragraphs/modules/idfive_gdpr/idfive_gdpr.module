@@ -1,0 +1,62 @@
+<?php
+
+/**
+ * @file
+ * Implements various hooks and functions to run the GDPR module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ *
+ * Shows the module's readme file on the help page.
+ */
+function idfive_gdpr_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.idfive_gdpr':
+      $filepath = dirname(__FILE__) . '/README.md';
+      if (file_exists($filepath)) {
+        $readme = file_get_contents($filepath);
+      }
+      else {
+        $filepath = dirname(__FILE__) . '/README.txt';
+        if (file_exists($filepath)) {
+          $readme = file_get_contents($filepath);
+        }
+      }
+      if (!isset($readme)) {
+        return NULL;
+      }
+      if (\Drupal::moduleHandler()->moduleExists('markdown')) {
+        // TODO Add markdown support.
+        $output = '<pre>' . $readme . '</pre>';
+      }
+      else {
+        $output = '<pre>' . $readme . '</pre>';
+      }
+
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function idfive_gdpr_theme($existing, $type, $theme, $path) {
+  return [
+    'idfive_gdpr_pp_page' => [
+      'template' => 'idfive-gdpr-pp-page',
+      'variables' => [
+        'gdpr_settings' => NULL,
+      ],
+    ],
+    'idfive_gdpr_block' => [
+      'template' => 'idfive-gdpr-block',
+      'variables' => [
+        'gdpr_settings' => NULL,
+      ],
+    ],
+  ];
+
+}

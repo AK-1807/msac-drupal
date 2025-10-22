@@ -1,0 +1,37 @@
+uuid: 2c4427a7-16c7-4c61-b1d1-597f317391ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.artist_award
+  module:
+    - paragraphs
+id: awards_importer
+label: 'Awards Importer'
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: csv
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:paragraph'
+processor_configuration:
+  values:
+    type: artist_award
+  langcode: en
+  update_existing: 0
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+  insert_new: 1
+custom_sources: {  }
+mappings: {  }

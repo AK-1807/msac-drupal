@@ -1,0 +1,25 @@
+uuid: f82f86bf-3a07-4f2a-95dd-cf077bc61b54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ip_html.field_ip_html_text
+    - paragraphs.paragraphs_type.ip_html
+  module:
+    - text
+_core:
+  default_config_hash: 5ax9uPvzgIQo3i_saRDTYoMIH2NVyGq-FQAnfis7RMk
+id: paragraph.ip_html.default
+targetEntityType: paragraph
+bundle: ip_html
+mode: default
+content:
+  field_ip_html_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,12 @@
+uuid: 9ba87d59-222f-42a1-b2d9-8ca4a6f3fa9f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: IekqcC-c_C2yT_WPd1m9r92UA9heRXz2kIbnw7-psLY
+id: ip_button_link
+label: Button/Link
+icon_uuid: null
+icon_default: null
+description: 'This Paragraph type provides a button or link into the Kitchen Sink Widgets. It is controlled by the idfive Paragraphs module.'
+behavior_plugins: {  }

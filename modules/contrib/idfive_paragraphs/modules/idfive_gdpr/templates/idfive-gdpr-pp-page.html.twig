@@ -1,0 +1,16 @@
+<!-- Privacy Policy Page -->
+{% if gdpr_settings.idfive_gdpr_pp_page_show_ys != 0 %}
+  <div class="consent">
+    <h2 class="consent__title">{{ gdpr_settings.idfive_gdpr_pp_page_ys_title }}</h2>
+    <div class="button-bar consent__preferences">
+      <a href="#" class="button button--reversed cookie-consent__decline">
+        <span>{{ gdpr_settings.idfive_gdpr_decline_text }}</span>
+      </a>
+      <a href="#" class="button button--reversed cookie-consent__accept">
+        <span>{{ gdpr_settings.idfive_gdpr_accept_text }}</span>
+      </a>
+    </div>
+  </div>
+{% endif %}
+
+{{ gdpr_settings.idfive_gdpr_pp_page_body.value | raw }}

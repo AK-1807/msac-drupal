@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_cl_image
+    - media.type.image
+    - paragraphs.paragraphs_type.ip_carousel_item
+_core:
+  default_config_hash: e-nzU5K1Q4lU84XDC_WpaVCJBX1HsICK1FbPxDEnyOU
+id: paragraph.ip_carousel_item.field_ip_cl_image
+field_name: field_ip_cl_image
+entity_type: paragraph
+bundle: ip_carousel_item
+label: Image
+description: 'Please choose an Image for this slide.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

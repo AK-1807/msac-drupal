@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_cg_columns
+    - paragraphs.paragraphs_type.ip_cards_group
+  module:
+    - options
+id: paragraph.ip_cards_group.field_ip_cg_columns
+field_name: field_ip_cg_columns
+entity_type: paragraph
+bundle: ip_cards_group
+label: Columns
+description: 'Please choose the number of columns this Card Group should display in.'
+required: true
+translatable: false
+default_value:
+  -
+    value: silc-grid__col--4-800
+default_value_callback: ''
+settings: {  }
+field_type: list_string

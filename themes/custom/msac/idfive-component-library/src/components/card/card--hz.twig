@@ -1,0 +1,23 @@
+<div class="card card--hz"{% if cta.url %} data-clickable="true"{% endif %}>
+	<div class="card__media">
+		<img src="{{ image|path }}" alt="">
+	</div>
+	<div class="card__content">
+		<div class="card__content-icon-lines" role="presentation">
+			<div></div>
+			<div></div>
+		</div>
+		<h2 class="card__title">{{ title }}</h2>
+		{% if body %}
+			<div class="card__body">{{ body|raw }}</div>
+		{% endif %}
+		{% if cta.url %}
+			{% if cta.text %}
+				<a href="{{ cta.url }}" class="card__cta button">{{ cta.text }}</a>
+			{% else %}
+				{# Provide a screen-reader only fallback if no text is provided to allow JS to work properly #}
+				<a href="{{ cta.url }}" class="card__cta visible-for-screen-readers">Learn more about {{ title }}</a>
+			{% endif %}
+		{% endif %}
+	</div>
+</div>

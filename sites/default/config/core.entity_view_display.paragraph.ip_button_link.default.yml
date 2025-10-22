@@ -1,0 +1,39 @@
+uuid: 371616d4-00b5-488d-97d0-0244e02ad73b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ip_button_link.field_ip_bl_link
+    - field.field.paragraph.ip_button_link.field_ip_bl_type
+    - paragraphs.paragraphs_type.ip_button_link
+  module:
+    - link
+    - options
+_core:
+  default_config_hash: J3zggbwkq9eo9g0tyVGy-4kqk8lJojsxEzOSghzWlsc
+id: paragraph.ip_button_link.default
+targetEntityType: paragraph
+bundle: ip_button_link
+mode: default
+content:
+  field_ip_bl_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ip_bl_type:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

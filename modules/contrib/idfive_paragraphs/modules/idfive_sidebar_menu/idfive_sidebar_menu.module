@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * @file
+ * Implements various hooks and functions to run the Sidebar Menu module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ *
+ * Shows the module's readme file on the help page.
+ */
+function idfive_sidebar_menu_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.idfive_sidebar_menu':
+      $filepath = dirname(__FILE__) . '/README.md';
+      if (file_exists($filepath)) {
+        $readme = file_get_contents($filepath);
+      }
+      else {
+        $filepath = dirname(__FILE__) . '/README.txt';
+        if (file_exists($filepath)) {
+          $readme = file_get_contents($filepath);
+        }
+      }
+      if (!isset($readme)) {
+        return NULL;
+      }
+      if (\Drupal::moduleHandler()->moduleExists('markdown')) {
+        // TODO Add markdown support.
+        $output = '<pre>' . $readme . '</pre>';
+      }
+      else {
+        $output = '<pre>' . $readme . '</pre>';
+      }
+
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * This hook defines the template, also need to reference this in hook_block_view()
+ */
+function idfive_sidebar_menu_theme($existing, $type, $theme, $path) {
+  $theme = [];
+  $theme['idfive_sidebar_menu__main'] = [
+    'base hook' => 'menu',
+    'render element' => 'menu',
+  ];
+  $theme['block__idfive_sidebar_menu'] = [
+    'base hook' => 'block',
+    'render element' => 'block',
+  ];
+  return $theme;
+}

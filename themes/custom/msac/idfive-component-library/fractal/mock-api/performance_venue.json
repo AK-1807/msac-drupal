@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "type": "node--performance_venue",
+      "id": "2d76e476-6593-41ba-bfb6-95544525e7ec",
+      "attributes": {
+        "title": "Hippodrome Theater",
+        "thumbnail": "https://via.placeholder.com/300x300",
+        "street_address": "12 N Eutaw St",
+        "city": "Baltimore",
+        "state": "MD",
+        "zip": "21201",
+        "lat": "39.289760",
+        "lng": "-76.621180",
+        "path": {
+          "alias": "https://idfive.com"
+        }
+      },
+      "relationships": {
+        "county": {
+          "data": {
+            "type": "node--county",
+            "id": "da021feb-0577-41e9-a6f6-644196da6d2a"
+          }
+        }
+      }
+    },
+    {
+      "type": "node--performance_venue",
+      "id": "c85e40b3-759c-4ca5-bf2b-ed7b27e45b6e",
+      "attributes": {
+        "title": "Joseph Meyerhoff Symphony Hall",
+        "thumbnail": "https://via.placeholder.com/300x300",
+        "street_address": "1212 Cathedral St",
+        "city": "Baltimore",
+        "state": "MD",
+        "zip": "21201",
+        "lat": "39.303980",
+        "lng": "-76.619060",
+        "path": {
+          "alias": "https://idfive.com"
+        }
+      },
+      "relationships": {
+        "county": {
+          "data": {
+            "type": "node--county",
+            "id": "da021feb-0577-41e9-a6f6-644196da6d2a"
+          }
+        }
+      }
+    },
+    {
+      "type": "node--performance_venue",
+      "id": "f683c223-bec4-4f7c-aa35-b8b66cc00ed0",
+      "attributes": {
+        "title": "Modell Performing Arts Center at the Lyric",
+        "thumbnail": "https://via.placeholder.com/300x300",
+        "street_address": "140 W Mount Royal Ave",
+        "city": "Baltimore",
+        "state": "MD",
+        "zip": "21201",
+        "lat": "39.305750",
+        "lng": "-76.618700",
+        "path": {
+          "alias": "https://idfive.com"
+        }
+      },
+      "relationships": {
+        "county": {
+          "data": {
+            "type": "node--county",
+            "id": "da021feb-0577-41e9-a6f6-644196da6d2a"
+          }
+        }
+      }
+    }
+  ]
+}

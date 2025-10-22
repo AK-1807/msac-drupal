@@ -1,0 +1,27 @@
+uuid: d9a9f69f-9b96-4313-9600-3a2e9dc76284
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_audio
+    - node.type.artist
+  module:
+    - file
+id: node.artist.field_artist_audio
+field_name: field_artist_audio
+entity_type: node
+bundle: artist
+label: Audio
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: artist/audio
+  file_extensions: mp3
+  max_filesize: ''
+  description_field: false
+field_type: file

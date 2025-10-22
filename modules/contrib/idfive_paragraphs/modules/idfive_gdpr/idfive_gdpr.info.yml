@@ -1,0 +1,9 @@
+name: 'idfive GDPR'
+type: module
+description: 'Custom module for ICL specific GDPR prompt.'
+core_version_requirement: ^8 || ^9 || ^10
+version: '8.x-1.0'
+package: 'idfive'
+configure: idfive_gdpr.settings
+dependencies:
+  - drupal:block

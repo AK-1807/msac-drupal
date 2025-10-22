@@ -1,0 +1,19 @@
+uuid: 3bfe0410-4b05-49e4-b4fc-b06de30b52b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_org_email
+    - node.type.organization
+id: node.organization.field_org_email
+field_name: field_org_email
+entity_type: node
+bundle: organization
+label: 'Contact Email'
+description: 'This email address is used for those wishing to get in touch with you about your work or opportunities.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

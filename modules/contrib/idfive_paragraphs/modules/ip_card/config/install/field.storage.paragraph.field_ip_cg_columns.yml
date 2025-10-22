@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_ip_cg_columns
+field_name: field_ip_cg_columns
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: silc-grid__col--6-800
+      label: '2 Column'
+    -
+      value: silc-grid__col--4-800
+      label: '3 Column'
+    -
+      value: silc-grid__col--3-800
+      label: '4 Column'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

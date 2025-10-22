@@ -1,0 +1,21 @@
+name: idfive
+type: theme
+description: 'Drupal 9/10 base theme for all idfive projects. THIS THEME SHOULD NEVER BE ENABLED DIRECTLY. PLEASE SEE DOCUMENTATION ON GENERATING CHILD THEME.'
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10
+package: idfive
+base theme: stable9
+
+# Image appears on admin/appearance
+screenshot: images/screenshot.jpg
+
+libraries:
+  - idfive/global
+regions:
+   primary_menu: 'Primary menu'
+   secondary_menu: 'Secondary menu'
+   utility_menu: 'Utility menu'
+   breadcrumbs: 'Breadcrumbs'
+   page_sidebar: 'Page Sidebar'
+   content: 'Content'
+   footer_menu: 'Footer menu'

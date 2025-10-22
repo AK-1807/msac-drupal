@@ -1,0 +1,27 @@
+uuid: ca2a39c7-6576-4c05-83a7-88c7a6580caa
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_artist_juried_exhib_year
+field_name: field_artist_juried_exhib_year
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '2016'
+      label: '2016'
+    -
+      value: '2019'
+      label: '2019'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

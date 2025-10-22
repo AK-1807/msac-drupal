@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Idfive lazyload module file.
+ */
+
+
+/**
+ * Implements template_preprocess_image().
+ *
+ * Adds new attributes to base img template.
+ */
+function idfive_lazyload_preprocess_image(&$vars)
+{
+    $theme = \Drupal::theme()->getActiveTheme()->getName();
+    $admin_theme = \Drupal::config('system.theme')->get('admin');
+    if ($theme !=  $admin_theme) {
+        $vars['attributes']['class'][] = 'lazyload';
+        $vars['attributes']['data-src'] = $vars['attributes']['src'];
+    }
+}
+
+/**
+ * Implements hook_theme_registry_alter().
+ *
+ * Point image template to our file
+ */
+function idfive_lazyload_theme_registry_alter(&$theme_registry)
+{
+    $theme = \Drupal::theme()->getActiveTheme()->getName();
+    $admin_theme = \Drupal::config('system.theme')->get('admin');
+    if ($theme != $admin_theme) {
+        $theme_registry['image']['path'] = \Drupal::service('extension.list.module')->getPath('idfive_lazyload') . '/templates';
+    }
+}

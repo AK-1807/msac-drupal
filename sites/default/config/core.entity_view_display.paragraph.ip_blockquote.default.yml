@@ -1,0 +1,68 @@
+uuid: 788af8c4-e5f4-4bcf-9729-94e94e37fe81
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ip_blockquote.field_ip_bq_author_photo
+    - field.field.paragraph.ip_blockquote.field_ip_bq_cite
+    - field.field.paragraph.ip_blockquote.field_ip_bq_quote
+    - field.field.paragraph.ip_blockquote.field_ip_bq_source
+    - field.field.paragraph.ip_blockquote.field_ip_bq_source_url
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.ip_blockquote
+  module:
+    - link
+    - media
+_core:
+  default_config_hash: nGwhwoUYAtUFmqWDmRf8rjr3Xuj0_j5LEwokNgVmtow
+id: paragraph.ip_blockquote.default
+targetEntityType: paragraph
+bundle: ip_blockquote
+mode: default
+content:
+  field_ip_bq_author_photo:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: thumbnail
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_ip_bq_cite:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ip_bq_quote:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ip_bq_source:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ip_bq_source_url:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

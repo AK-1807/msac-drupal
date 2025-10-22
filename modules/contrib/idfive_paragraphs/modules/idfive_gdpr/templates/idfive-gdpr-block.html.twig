@@ -1,0 +1,9 @@
+<div class="gdpr-consent" hidden>
+  <div class="gdpr-content__content">
+    {{ gdpr_settings.message | raw }}
+  </div>
+  <div class="gdrp__buttons">
+    <button class="button gdpr-consent__accept" type="button">{{ gdpr_settings.accept }}</button>
+    <button class="button gdpr-consent__decline" type="button">{{ gdpr_settings.decline }}</button>
+  </div>
+</div>

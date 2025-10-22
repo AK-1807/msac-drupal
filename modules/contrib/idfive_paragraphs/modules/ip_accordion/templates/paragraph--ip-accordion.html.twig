@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * IP Accordion paragraph bundle.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{%
+  set classes = [
+    'paragraph-widget',
+    'paragraph-widget--ip_accordion'
+  ]
+%}
+
+{% block paragraph %}
+	<div{{attributes.addClass(classes).setAttribute('id','ip_accordion-'~paragraph.id())}}>
+		{% block content %}
+			{% if content.field_ip_ac_title[0] %}
+				<h2>{{ content.field_ip_ac_title }}</h2>
+			{% endif %}
+			<div class="{{ ip_accordion_type }}" id="accordion-{{ accordion_id }}" {{ ip_accordion_open_first }} {{ ip_accordion_open_multiple }} {{ ip_accordion_animated }}>
+				{{ content.field_ip_ac_item }}
+			</div>
+		{% endblock %}
+		{{ content|without('field_ip_ac_title', 'field_ip_ac_allow_mult', 'field_ip_ac_item', 'field_ip_ac_open_first', 'field_ip_ac_type', 'field_ip_ac_animate') }}
+	</div>
+{% endblock paragraph %}

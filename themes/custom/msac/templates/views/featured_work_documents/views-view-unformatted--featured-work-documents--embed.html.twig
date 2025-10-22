@@ -1,0 +1,9 @@
+<div class="featured-documents">
+  <ul class="profile__works-list">
+    {% for row in rows %}
+      <li class="profile__works-list-item">
+        {{ row.content }}
+      </li>
+    {% endfor %}
+  </ul>
+</div>

@@ -1,0 +1,21 @@
+uuid: d37a2708-862e-4e43-815f-119841390228
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_grant_audience
+    - node.type.grant
+  module:
+    - options
+id: node.grant.field_grant_audience
+field_name: field_grant_audience
+entity_type: node
+bundle: grant
+label: 'Grant Audience'
+description: 'If an audience is chosen, it will show as an available opportunity in the corresponding artist or Organization dashboards, to encourage applicants.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

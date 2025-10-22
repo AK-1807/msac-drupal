@@ -1,0 +1,19 @@
+uuid: ae39abde-5d39-4318-94ac-9f54c4ecc15a
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_org_social_twitter
+field_name: field_org_social_twitter
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

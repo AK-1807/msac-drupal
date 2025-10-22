@@ -1,0 +1,26 @@
+uuid: eb1c6729-a7da-4c2c-94dd-78f0f97807e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_bk_contact_info
+    - node.type.artist
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - plain_text
+id: node.artist.field_artist_bk_contact_info
+field_name: field_artist_bk_contact_info
+entity_type: node
+bundle: artist
+label: 'Booking Details and Contact Info'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

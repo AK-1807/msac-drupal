@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * IP Webform Embed paragraph bundle.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{%
+  set classes = [
+    'paragraph-widget',
+    'paragraph-widget--ip_webform_embed',
+  ]
+%}
+
+{% block paragraph %}
+	<div{{attributes.addClass(classes).setAttribute('id','ip_webform_embed-'~paragraph.id())}}>
+		{% block content %}
+			{% if content.field_ip_we_title[0] %}
+        <h2>{{ content.field_ip_we_title }}</h2>
+      {% endif %}
+      {{ content.field_ip_we_webform }}
+		{% endblock %}
+	</div>
+	{{ content|without('field_ip_we_title', 'field_ip_we_webform') }}
+{% endblock paragraph %}

@@ -1,0 +1,21 @@
+uuid: 6d7da4b4-32d7-4e9e-8df7-4bade51fb7c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta
+    - node.type.program
+  module:
+    - metatag
+id: node.program.field_meta
+field_name: field_meta
+entity_type: node
+bundle: program
+label: Meta
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

@@ -1,0 +1,73 @@
+uuid: e78e3a02-3cd6-407d-a79d-152d065a6e74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_home_carousel
+    - node.type.home
+    - paragraphs.paragraphs_type.home_carousel_slide
+  module:
+    - entity_reference_revisions
+id: node.home.field_home_carousel
+field_name: field_home_carousel
+entity_type: node
+bundle: home
+label: Carousel
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      home_carousel_slide: home_carousel_slide
+    negate: 0
+    target_bundles_drag_drop:
+      home_carousel_slide:
+        weight: 16
+        enabled: true
+      home_cta:
+        weight: 17
+        enabled: false
+      home_feature:
+        weight: 18
+        enabled: false
+      ip_accordion:
+        weight: 19
+        enabled: false
+      ip_accordion_item:
+        weight: 20
+        enabled: false
+      ip_blockquote:
+        weight: 21
+        enabled: false
+      ip_button_link:
+        weight: 22
+        enabled: false
+      ip_card:
+        weight: 23
+        enabled: false
+      ip_cards_group:
+        weight: 24
+        enabled: false
+      ip_carousel:
+        weight: 25
+        enabled: false
+      ip_carousel_item:
+        weight: 26
+        enabled: false
+      ip_html:
+        weight: 27
+        enabled: false
+      ip_video:
+        weight: 28
+        enabled: false
+      ip_views_embed:
+        weight: 29
+        enabled: false
+      ip_webform_embed:
+        weight: 30
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,25 @@
+$blockquote-background: $white;
+$blockquote-color: $dark-red;
+$blockquote-margin: 0 auto;
+$blockquote-padding: rem(45) 0 rem(50);
+$blockquote-max-width: none;
+
+$blockquote_quote-font-family: $red-hat-display;
+$blockquote_quote-font-size: rem(22);
+$blockquote_quote-font-weight: 500;
+$blockquote_quote-line-height: (32 / 22);
+$blockquote_quote-margin: 0;
+$blockquote_quote-padding: 0;
+
+$blockquote_footer-font-family: $base-font-family;
+$blockquote_footer-margin: 0;
+$blockquote_footer-padding: 0;
+
+$blockquote_author-font-size: 1rem;
+$blockquote_author-font-weight: 400;
+
+$blockquote_source-font-size: 1rem;
+$blockquote_source-font-weight: 400;
+
+$blockquote_portrait-width: 6.25rem; // 100px
+$blockquote_portrait-aspect-ratio: 100%;

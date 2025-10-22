@@ -1,0 +1,7 @@
+name: Linkit attributes
+type: module
+description: Provides a linkit widget with attributes settings.
+core_version_requirement: ^8 || ^9
+dependencies:
+  - drupal:linkit
+  - drupal:link_attributes

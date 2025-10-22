@@ -1,0 +1,19 @@
+uuid: 46d41270-53ee-4c2a-8c18-6aa4dd8467e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_org_social_behance
+field_name: field_org_social_behance
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

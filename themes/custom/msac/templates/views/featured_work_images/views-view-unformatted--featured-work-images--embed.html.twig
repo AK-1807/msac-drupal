@@ -1,0 +1,90 @@
+<div class="featured-images">
+  <div class="featured-work-carousel">
+    <div class="featured-work-carousel__thumbnail-carousel-holder">
+      <div class="carousel">
+        {% for row in view.result %}
+          {% set row_node = row._entity %}
+          <div class="carousel__slide" data-wid="{{ row_node.id }}">
+            <div class="carousel__slide-image">
+              <img src="{{ file_url(row_node.field_work_image.0.entity.uri.value | image_style('optimized')) }}" alt="{{ row_node.field_work_description.value }}">
+            </div>
+            <button class="carousel__modal-trigger" aria-label="View more details about {{ row_node.field_work_description.value }}">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
+                <g fill="#FFF" fill-rule="evenodd"><path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zm0 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"/><path d="M10.907 6v4.908H6v2.185h4.907V18h2.185v-4.907H18v-2.185h-4.908V6z"/></g>
+              </svg>
+              <span class="visible-for-screen-readers">View more details about
+                {{ row_node.title.value }}</span>
+            </button>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="carousel__nav">
+        <div class="carousel__nav-sizer"></div>
+        <button class="button carousel__nav-previous" aria-label="Previous slide">
+          <span class="visible-for-screen-readers">Previous slide</span>
+        </button>
+        <button class="button carousel__nav-next" aria-label="Next slide">
+          <span class="visible-for-screen-readers">Next slide</span>
+        </button>
+      </div>
+    </div>
+    <div class="featured-work-carousel__modal modal" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+          <div class="modal__header">
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
+                <g fill="#FFF" fill-rule="evenodd"><path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zm0 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"/><path d="M10.907 6v4.908H6v2.185h4.907V18h2.185v-4.907H18v-2.185h-4.908V6z"/></g>
+              </svg>
+              <span class="visible-for-screen-readers">Close modal</span>
+            </button>
+            <h2 class="modal__title">Featured Work: Photos</h2>
+          </div>
+          <div class="modal__content">
+            <div class="featured-work-carousel__modal-carousel-holder">
+              <div class="carousel carousel--fade">
+                {% for row in view.result %}
+                  {% set row_node = row._entity %}
+                    <div class="carousel__slide" data-wid="{{ row_node.id }}">
+                      <div class="carousel__slide-image" style="background-image:url({{file_url(row_node.field_work_image.0.entity.uri.value | image_style('optimized'))}})"></div>
+                      <div class="featured-work__slide-content carousel__slide-content">
+                        <div class="text-content">
+                          <h3 class="featured-work__slide-content-title carousel__slide-title">{{ row_node.title.value }}</h3>
+                          {% if row_node.field_work_medium.value %}
+                            <div class="featured-work__slide-content-medium hint-text">{{ row_node.field_work_medium.value }}</div>
+                          {% endif %}
+                          {% if row_node.field_work_year.value %}
+                            <div class="featured-work__slide-content-year hint-text">{{ row_node.field_work_year.value }}</div>
+                          {% endif %}
+                          {% if row_node.field_work_description.value %}
+                            <div class="featured-work__slide-content-description">{{ row_node.field_work_description.value }}</div>
+                          {% endif %}
+                          {% if row_node.field_work_for_sale.value %}
+                            <div class="featured-work__slide-content-for-sale">
+                                <span class="tag tag--yellow">For Sale</span>
+                                <span class="featured-work__slide-content-for-sale-price">${{ row_node.field_work_price.value|number_format(2, '.', ',') }}</span>
+                                <div class="caption featured-work__slide-content-for-sale-contact">Contact the artist to purchase this piece</div>
+                            </div>
+                          {% endif %}
+                        </div>
+                      </div>
+                    </div>
+
+                {% endfor %}
+              </div>
+              <div class="carousel__nav">
+                <div class="carousel__nav-sizer"></div>
+                <button class="button carousel__nav-previous" aria-label="Previous slide">
+                  <span class="visible-for-screen-readers">Previous slide</span>
+                </button>
+                <button class="button carousel__nav-next" aria-label="Next slide">
+                  <span class="visible-for-screen-readers">Next slide</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

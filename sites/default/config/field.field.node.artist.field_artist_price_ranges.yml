@@ -1,0 +1,29 @@
+uuid: b7674b8b-6ab7-428c-baf1-d72f341ea81d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_price_ranges
+    - node.type.artist
+    - taxonomy.vocabulary.price_ranges
+id: node.artist.field_artist_price_ranges
+field_name: field_artist_price_ranges
+entity_type: node
+bundle: artist
+label: 'Price Ranges'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      price_ranges: price_ranges
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

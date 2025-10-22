@@ -1,0 +1,30 @@
+<div class="carousel-holder">
+    <div class="carousel">
+        {% for slide in slides %}
+            <div class="carousel__slide">
+                <div class="carousel__slide-image">
+                  <img src="{{ slide.image|path }}" alt="alt text lorem">
+                </div>
+                {% if slide.content %}
+                    <div class="carousel__slide-content">
+                        {% if slide.title %}
+                            <h2 class="carousel__slide-title">{{ slide.title }}</h2>
+                        {% endif %}
+                        <div class="text-content">
+                            {{ slide.content|raw }}
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+    <div class="carousel__nav">
+        <div class="carousel__nav-sizer"></div>
+        <button class="button carousel__nav-previous" aria-label="Previous slide">
+            <span class="visible-for-screen-readers">Previous slide</span>
+        </button>
+        <button class="button carousel__nav-next" aria-label="Next slide">
+            <span class="visible-for-screen-readers">Next slide</span>
+        </button>
+    </div>
+</div>

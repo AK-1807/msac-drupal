@@ -1,0 +1,42 @@
+uuid: 71633cf4-9025-42e4-99ce-aa577556b797
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ip_carousel_item.field_ip_cl_caption
+    - field.field.paragraph.ip_carousel_item.field_ip_cl_image
+    - field.field.paragraph.ip_carousel_item.field_ip_cl_title
+    - paragraphs.paragraphs_type.ip_carousel_item
+_core:
+  default_config_hash: uxkYVwv55tXSU2JOLzVTQP0eaGVdoK0JBDiNWttsodw
+id: paragraph.ip_carousel_item.default
+targetEntityType: paragraph
+bundle: ip_carousel_item
+mode: default
+content:
+  field_ip_cl_caption:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ip_cl_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: ip_url_only
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ip_cl_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  search_api_excerpt: true

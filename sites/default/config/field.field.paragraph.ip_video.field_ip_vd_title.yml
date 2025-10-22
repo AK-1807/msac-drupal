@@ -1,0 +1,23 @@
+uuid: 4d1c9eab-00d0-4a8b-95b1-9053e708164a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_vd_title
+    - paragraphs.paragraphs_type.ip_video
+  module:
+    - text
+_core:
+  default_config_hash: 9RdFjOnfSRb0dYZEXHkZwqSeCRDrf-MzuMneONREHmk
+id: paragraph.ip_video.field_ip_vd_title
+field_name: field_ip_vd_title
+entity_type: paragraph
+bundle: ip_video
+label: Title
+description: 'Title text'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

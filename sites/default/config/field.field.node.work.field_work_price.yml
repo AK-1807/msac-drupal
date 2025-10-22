@@ -1,0 +1,23 @@
+uuid: b82d6f20-faf7-4bcd-aa96-3e891c6d9599
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_work_price
+    - node.type.work
+id: node.work.field_work_price
+field_name: field_work_price
+entity_type: node
+bundle: work
+label: Price
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: ''
+field_type: decimal

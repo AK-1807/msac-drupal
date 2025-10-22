@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_cd_image
+    - media.type.image
+    - paragraphs.paragraphs_type.ip_card
+_core:
+  default_config_hash: CsY0su9qrrsrj4B-jh5nq97jbhLi53nK_aGfRuGxveg
+id: paragraph.ip_card.field_ip_cd_image
+field_name: field_ip_cd_image
+entity_type: paragraph
+bundle: ip_card
+label: 'Card Image'
+description: 'Please choose an image if the card style requires it.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

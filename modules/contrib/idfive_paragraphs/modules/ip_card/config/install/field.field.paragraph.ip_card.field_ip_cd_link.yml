@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_cd_link
+    - paragraphs.paragraphs_type.ip_card
+  module:
+    - link
+id: paragraph.ip_card.field_ip_cd_link
+field_name: field_ip_cd_link
+entity_type: paragraph
+bundle: ip_card
+label: Link
+description: 'Optional. Please provide a call to action link.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

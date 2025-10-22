@@ -1,0 +1,26 @@
+uuid: f8e4b030-b2b9-4549-a90d-b4d99f3a03cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_org_quote
+    - node.type.organization
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - simple_html
+id: node.organization.field_org_quote
+field_name: field_org_quote
+entity_type: node
+bundle: organization
+label: 'Mission Statement'
+description: 'Max 250 characters. This will be styled as a featured quote at the top of your profile.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

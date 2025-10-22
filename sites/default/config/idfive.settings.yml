@@ -1,0 +1,18 @@
+_core:
+  default_config_hash: OX-pCYag_6vZkE2E6QprV7jqiEsdSiWslbAM5oN01ZU
+langcode: en
+features:
+  comment_user_picture: true
+  favicon: true
+  logo: true
+  name: true
+  node_user_picture: true
+settings:
+  idfive_breadcrumbs_show_node_title: 0
+  idfive_search_block_placeholder: ''
+  idfive_search_block_button_text: ''
+  idfive_disable_base_css: false
+  idfive_disable_base_js: false
+  idfive_page_site_name: true
+  idfive_page_site_logo: true
+  idfive_assets_path: ''

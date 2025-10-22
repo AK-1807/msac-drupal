@@ -1,0 +1,14 @@
+uuid: 7aad9480-1a17-4010-a743-c4dfd72b9408
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.pending_artist
+  module:
+    - user
+id: user_remove_role_action.pending_artist
+label: 'Remove the Pending Artist role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: pending_artist

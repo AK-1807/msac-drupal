@@ -1,0 +1,540 @@
+uuid: 46555421-7542-4b82-abc8-6d30d32650a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.work.feeds_item
+    - field.field.node.work.field_work_artist_name
+    - field.field.node.work.field_work_artistic_categories
+    - field.field.node.work.field_work_audio
+    - field.field.node.work.field_work_audio_url
+    - field.field.node.work.field_work_description
+    - field.field.node.work.field_work_details
+    - field.field.node.work.field_work_document
+    - field.field.node.work.field_work_featured
+    - field.field.node.work.field_work_for_sale
+    - field.field.node.work.field_work_image
+    - field.field.node.work.field_work_legacy_node_id
+    - field.field.node.work.field_work_legacy_user_id
+    - field.field.node.work.field_work_legacy_user_name
+    - field.field.node.work.field_work_legacy_work_id
+    - field.field.node.work.field_work_medium
+    - field.field.node.work.field_work_owner
+    - field.field.node.work.field_work_price
+    - field.field.node.work.field_work_price_range
+    - field.field.node.work.field_work_type
+    - field.field.node.work.field_work_video
+    - field.field.node.work.field_work_year
+    - image.style.thumbnail
+    - node.type.work
+    - workflows.workflow.editorial
+  module:
+    - conditional_fields
+    - content_moderation
+    - field_group
+    - file
+    - image
+    - link
+    - path
+    - video_embed_field
+third_party_settings:
+  field_group:
+    group_legacy:
+      children:
+        - field_work_legacy_node_id
+        - field_work_legacy_user_id
+        - field_work_legacy_work_id
+        - field_work_legacy_user_name
+      label: Legacy
+      region: content
+      parent_name: ''
+      weight: 22
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+        weight: 0
+id: node.work.default
+targetEntityType: node
+bundle: work
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_work_artist_name:
+    type: string_textfield
+    weight: 16
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        ca4bdb71-1565-4223-8c02-b0a373ff1187:
+          entity_type: node
+          bundle: work
+          dependee: field_work_type
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 3
+            value: ''
+            values: "audio\r\ndocument\r\nimage\r\nvideo"
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_work_artistic_categories:
+    type: options_buttons
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        676bbe10-e299-4add-92a3-537b342cd493:
+          entity_type: node
+          bundle: work
+          dependee: field_work_type
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 3
+            value: ''
+            values: "audio\r\ndocument\r\nimage\r\nvideo"
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_work_audio:
+    type: file_generic
+    weight: 4
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings:
+      conditional_fields:
+        e4a02b4b-9b56-4a4e-95b6-94974f1e1646:
+          entity_type: node
+          bundle: work
+          dependee: field_work_type
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: audio
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_work_audio_url:
+    type: link_default
+    weight: 5
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings:
+      conditional_fields:
+        efda7af4-f494-4255-a2c9-fc6761af4a55:
+          entity_type: node
+          bundle: work
+          dependee: field_work_type
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: audio
+            effect: show
+            effect_options: {  }
+            selector: ''
+        b255283f-964b-4560-a7f7-4fbe31081edb:
+          entity_type: node
+          bundle: work
+          dependee: field_work_type
+          settings:
+            state: required
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: audio
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_work_description:
+    type: string_textarea
+    weight: 23
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        c1825015-5a62-4afb-a6c3-077ff476ef3e:
+          entity_type: node
+          bundle: work
+          dependee: field_work_type
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 3
+            value: ''
+            values: "audio\r\nimage\r\nvideo"
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_work_details:
+    type: string_textfield
+    weight: 19
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields: {  }
+  field_work_document:
+    type: file_generic
+    weight: 6
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings:
+      conditional_fields:
+        71148a18-4508-42d4-a310-1ad417d570aa:
+          entity_type: node
+          bundle: work
+          dependee: field_work_type
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: document
+            effect: show
+            effect_options: {  }
+            selector: ''
+        9feeff7c-6a2a-4cdd-8948-21e01c704ba0:
+          entity_type: node
+          bundle: work
+          dependee: field_work_type
+          settings:
+            state: required
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: document
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_work_featured:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_work_for_sale:
+    type: boolean_checkbox
+    weight: 20
+    region: content
+    settings:
+      display_label: true
+    third_party_settings:
+      conditional_fields:
+        98354d92-5729-441b-8566-7b0bcb0d0009:
+          entity_type: node
+          bundle: work
+          dependee: field_work_type
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: image
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_work_image:
+    type: image_image
+    weight: 7
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings:
+      conditional_fields:
+        09fd85c4-71fc-4800-a6c5-d50aa8180972:
+          entity_type: node
+          bundle: work
+          dependee: field_work_type
+          settings:
+            state: required
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: image
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_work_legacy_node_id:
+    type: string_textfield
+    weight: 28
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_work_legacy_user_id:
+    type: string_textfield
+    weight: 29
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_work_legacy_user_name:
+    type: string_textfield
+    weight: 32
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_work_legacy_work_id:
+    type: number
+    weight: 31
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_work_medium:
+    type: string_textfield
+    weight: 17
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields: {  }
+  field_work_owner:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_work_price:
+    type: number
+    weight: 21
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        774c520b-17af-492a-841c-768c71b9fc9b:
+          entity_type: node
+          bundle: work
+          dependee: field_work_type
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: image
+            effect: show
+            effect_options: {  }
+            selector: ''
+        67912f13-e164-4f0c-81ad-e9cde4dac2b8:
+          entity_type: node
+          bundle: work
+          dependee: field_work_for_sale
+          settings:
+            state: '!visible'
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: 1
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_work_type:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
+  field_work_video:
+    type: video_embed_field_textfield
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        0cd7cb2c-96c4-4c66-b83a-3d6d86de0c99:
+          entity_type: node
+          bundle: work
+          dependee: field_work_type
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: video
+            effect: show
+            effect_options: {  }
+            selector: ''
+        981d63a5-a888-432d-950f-33e1be19e24b:
+          entity_type: node
+          bundle: work
+          dependee: field_work_type
+          settings:
+            state: required
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: video
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_work_year:
+    type: string_textfield
+    weight: 18
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 25
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 12
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 13
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        5d50019a-78c4-480c-bbcd-4868528b1ac6:
+          entity_type: node
+          bundle: work
+          dependee: field_work_type
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 3
+            value: ''
+            values: "audio\r\ndocument\r\nimage\r\nvideo"
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  uid:
+    type: entity_reference_autocomplete
+    weight: 10
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 24
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  feeds_item: true
+  field_work_price_range: true

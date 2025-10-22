@@ -1,0 +1,23 @@
+uuid: e63b6e80-f96e-4917-8614-c98d5574fe13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_org_arts_in_edu_roster
+    - node.type.organization
+id: node.organization.field_org_arts_in_edu_roster
+field_name: field_org_arts_in_edu_roster
+entity_type: node
+bundle: organization
+label: 'Arts in Education Program'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

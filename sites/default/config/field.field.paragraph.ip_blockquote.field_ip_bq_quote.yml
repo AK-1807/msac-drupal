@@ -1,0 +1,21 @@
+uuid: ada927aa-7d45-4821-a0ba-a9abdf583da2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_bq_quote
+    - paragraphs.paragraphs_type.ip_blockquote
+_core:
+  default_config_hash: ZexvL-w7Xhw9PoLoHQ9mkbzLtJmsDOmPrUcog9IT990
+id: paragraph.ip_blockquote.field_ip_bq_quote
+field_name: field_ip_bq_quote
+entity_type: paragraph
+bundle: ip_blockquote
+label: Quote
+description: 'Please add the desired Quote.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

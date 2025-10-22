@@ -1,0 +1,14 @@
+uuid: bb3d9e98-ad68-436b-a5c8-c2c3bcec8bfc
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.programs_and_grants_perms
+  module:
+    - user
+id: user_add_role_action.programs_and_grants_perms
+label: 'Add the Programs and Grants Perms role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: programs_and_grants_perms

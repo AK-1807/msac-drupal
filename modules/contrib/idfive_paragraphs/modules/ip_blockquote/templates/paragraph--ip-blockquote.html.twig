@@ -1,0 +1,47 @@
+{#
+/**
+ * @file
+ * IP Blockquote paragraph bundle.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{%
+  set classes = [
+    'paragraph-widget',
+    'paragraph-widget--ip_blockquote',
+  ]
+%}
+
+{% block paragraph %}
+	<div{{attributes.addClass(classes).setAttribute('id','ip_blockquote-'~paragraph.id())}}>
+		{% block content %}
+			<blockquote class="blockquote" {% if content.field_ip_bq_source_url|render %} cite="{{ content.field_ip_bq_source_url[0]['#url'] }}{% endif %}">
+				<div class="blockquote__quote">
+					<p>{{ content.field_ip_bq_quote }}</p>
+					<p>{{ content.field_ip_bq_source_url }}</p>
+				</div>
+				<footer class="blockquote__footer">
+					{% if content.field_ip_bq_cite|render %}
+						<cite>&mdash;{{ content.field_ip_bq_cite }}
+						{% endif %}
+						{% if content.field_ip_bq_source|render %}
+							<span class="blockquote__source">,
+								{{ content.field_ip_bq_source }}</span>
+						{% endif %}
+						{% if content.field_ip_bq_cite|render %}
+						</cite>
+					{% endif %}
+					{% if content.field_ip_bq_author_photo|render %}
+						<div class="blockquote__portrait">
+							{{ content.field_ip_bq_author_photo }}
+						</div>
+					{% endif %}
+				</footer>
+			</blockquote>
+		{% endblock %}
+	</div>
+	{{ content|without('field_ip_bq_quote', 'field_ip_bq_source_url', 'field_ip_bq_cite', 'field_ip_bq_source', 'field_ip_bq_author_photo') }}
+{% endblock paragraph %}
+

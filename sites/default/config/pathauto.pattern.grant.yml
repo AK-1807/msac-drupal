@@ -1,0 +1,22 @@
+uuid: da9dcfb8-df94-42c3-b3a2-80bd8f0555d1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: grant
+label: Grant
+type: 'canonical_entities:node'
+pattern: 'programs/[node:field_grant_program]/[node:title]'
+selection_criteria:
+  e4aa9fc7-8a28-4c65-8fa9-69a1bcd99859:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: e4aa9fc7-8a28-4c65-8fa9-69a1bcd99859
+    context_mapping:
+      node: node
+    bundles:
+      grant: grant
+selection_logic: and
+weight: -5
+relationships: {  }

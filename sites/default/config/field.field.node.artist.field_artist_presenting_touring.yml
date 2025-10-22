@@ -1,0 +1,23 @@
+uuid: 4326e845-ae92-4c96-bb1f-4c94e9d40d50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_presenting_touring
+    - node.type.artist
+id: node.artist.field_artist_presenting_touring
+field_name: field_artist_presenting_touring
+entity_type: node
+bundle: artist
+label: 'Presenting & Touring Program'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

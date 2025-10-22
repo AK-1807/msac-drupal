@@ -1,0 +1,21 @@
+uuid: c70f632d-fee4-4564-82ff-4646d66046af
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_work_medium
+field_name: field_work_medium
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

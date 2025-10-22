@@ -1,0 +1,20 @@
+uuid: 114c3f9e-7bdb-4878-8dd7-c2ae1ab76a41
+langcode: en
+status: true
+dependencies:
+  theme:
+    - idfive
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: idfive_local_actions
+theme: idfive
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,92 @@
+uuid: 58994ee1-8110-4082-99c5-be46a5710911
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_widgets
+    - node.type.article
+    - paragraphs.paragraphs_type.ip_accordion
+    - paragraphs.paragraphs_type.ip_blockquote
+    - paragraphs.paragraphs_type.ip_html
+  module:
+    - entity_reference_revisions
+id: node.article.field_widgets
+field_name: field_widgets
+entity_type: node
+bundle: article
+label: Widgets
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      ip_html: ip_html
+      ip_accordion: ip_accordion
+      ip_blockquote: ip_blockquote
+    negate: 0
+    target_bundles_drag_drop:
+      home_carousel_slide:
+        weight: -37
+        enabled: false
+      home_cta:
+        weight: -36
+        enabled: false
+      home_feature:
+        weight: -35
+        enabled: false
+      ip_accordion:
+        weight: -40
+        enabled: true
+      ip_accordion_item:
+        weight: -34
+        enabled: false
+      ip_blockquote:
+        weight: -39
+        enabled: true
+      ip_button_link:
+        weight: -33
+        enabled: false
+      ip_callout:
+        weight: -32
+        enabled: false
+      ip_card:
+        weight: -31
+        enabled: false
+      ip_cards_group:
+        weight: -30
+        enabled: false
+      ip_carousel:
+        weight: -29
+        enabled: false
+      ip_carousel_item:
+        weight: -28
+        enabled: false
+      ip_html:
+        weight: -41
+        enabled: true
+      ip_image:
+        weight: -38
+        enabled: false
+      ip_table:
+        weight: -27
+        enabled: false
+      ip_video:
+        weight: -26
+        enabled: false
+      ip_views_embed:
+        weight: -25
+        enabled: false
+      ip_webform_embed:
+        weight: -24
+        enabled: false
+      person:
+        weight: -23
+        enabled: false
+      reference:
+        weight: -22
+        enabled: false
+field_type: entity_reference_revisions

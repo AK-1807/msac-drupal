@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * IP Cards Group paragraph bundle.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{%
+  set classes = [
+    'paragraph-widget',
+    'paragraph-widget--ip_cards',
+  ]
+%}
+
+{% block paragraph %}
+	<div{{attributes.addClass(classes).setAttribute('id','ip_cards-'~paragraph.id())}}>
+		{% block content %}
+			<div class="silc-grid">
+				{{ content.field_ip_cg_item }}
+			</div>
+		{% endblock %}
+	</div>
+	{{ content|without('field_ip_cg_item', 'field_ip_cg_columns', 'field_ip_cg_type') }}
+{% endblock paragraph %}

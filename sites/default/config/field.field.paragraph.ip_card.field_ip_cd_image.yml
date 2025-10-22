@@ -1,0 +1,30 @@
+uuid: fcb8e634-28ba-46e9-9f97-8c0c4f575ea6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_cd_image
+    - media.type.image
+    - paragraphs.paragraphs_type.ip_card
+_core:
+  default_config_hash: WpMnAkSNFYkLHaRyJkUALAp01DE6n0Bf3kb9uk4FAvw
+id: paragraph.ip_card.field_ip_cd_image
+field_name: field_ip_cd_image
+entity_type: paragraph
+bundle: ip_card
+label: 'Card Image'
+description: 'Please choose an image if the card style requires it.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

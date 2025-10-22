@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * IP Image paragraph bundle.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{%
+  set classes = [
+    'paragraph-widget',
+    'paragraph-widget--ip_image',
+  ]
+%}
+
+{% block paragraph %}
+	<div{{attributes.addClass(classes).setAttribute('id','ip_image-'~paragraph.id())}}>
+		{% block content %}
+			<div class="image">
+				<figure class="image__media">
+					{{ content.field_ip_im_image }}
+					{% if content.field_ip_im_caption|render %}
+						<figcaption class="image__caption">
+							{{ content.field_ip_im_caption }}
+						</figcaption>
+					{% endif %}
+				</figure>
+			</div>
+		{% endblock %}
+	</div>
+	{{ content|without('field_ip_im_image', 'field_ip_im_caption') }}
+{% endblock paragraph %}

@@ -1,0 +1,29 @@
+uuid: 35c33178-95f6-4cc0-989c-615db2418179
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_org_bk_price
+    - node.type.organization
+    - taxonomy.vocabulary.booking_prices
+id: node.organization.field_org_bk_price
+field_name: field_org_bk_price
+entity_type: node
+bundle: organization
+label: 'Booking Price'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      booking_prices: booking_prices
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

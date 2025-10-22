@@ -1,0 +1,63 @@
+uuid: e2ed634c-ff26-4c18-9228-6e69c1b40afb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_ve_view
+    - paragraphs.paragraphs_type.ip_views_embed
+  module:
+    - viewfield
+_core:
+  default_config_hash: cf1ZfQC_Na-pLtK1hmmU8s7q4H0lzGEXsiX5D5NOIFY
+id: paragraph.ip_views_embed.field_ip_ve_view
+field_name: field_ip_ve_view
+entity_type: paragraph
+bundle: ip_views_embed
+label: View
+description: 'Please choose the view you wish to embed here.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  force_default: false
+  allowed_views:
+    comment: '0'
+    content: '0'
+    content_artists: '0'
+    content_organizations: '0'
+    content_works: '0'
+    block_content: '0'
+    directory_works: '0'
+    featured_audio: '0'
+    featured_documents: '0'
+    featured_work: '0'
+    featured_modals: '0'
+    featured_video: '0'
+    feeds_feed: '0'
+    files: '0'
+    frontpage: '0'
+    idfive_media_browser: '0'
+    media: '0'
+    news_feed: '0'
+    user_admin_people: '0'
+    program_contacts: '0'
+    comments_recent: '0'
+    content_recent: '0'
+    redirect: '0'
+    similar_funding_opportunities: '0'
+    taxonomy_term: '0'
+    watchdog: '0'
+    webform_submissions: '0'
+    who_s_new: '0'
+    who_s_online: '0'
+  allowed_display_types:
+    block: block
+    embed: embed
+    entity_browser: '0'
+    feed: '0'
+    default: '0'
+    page: '0'
+  handler: 'default:view'
+  handler_settings: {  }
+field_type: viewfield

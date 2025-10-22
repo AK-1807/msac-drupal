@@ -1,0 +1,23 @@
+uuid: dfb96a50-5b48-4894-8317-b8f609de032a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_disctrict_social_youtube
+    - node.type.district
+  module:
+    - link
+id: node.district.field_disctrict_social_youtube
+field_name: field_disctrict_social_youtube
+entity_type: node
+bundle: district
+label: Youtube
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 16
+field_type: link

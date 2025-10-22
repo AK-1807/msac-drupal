@@ -1,0 +1,36 @@
+{% extends "node--full.html.twig" %}
+
+{% block node_hero %}{% endblock %}
+
+{% block node_heading %}
+  <div class="page-heading" style="background-image:url({{ assets_path }}/img/AD_Hero.png)">
+      <div class="page-heading__title-wrap" style="background-image:url({{ assets_path }}/img/AD_Hero.png)">
+          <div class="page-heading__title-wrap-inner">
+              <h1>{{ drupal_title() }}</h1>
+              {{ drupal_breadcrumb() }}
+          </div>
+      </div>
+      <div class="silc-grid silc-grid--collapse silc-grid--justify-center">
+          <div class="silc-grid__col silc-grid__col--10-800 silc-grid__col--8-1200">
+              <div class="page-heading__content">
+                  {{ content.body }}
+                  <div class="page-heading__signup-cta">
+                      <h3 class="h4">Join the Directory Today!</h3>
+                      <p>Artists, arts organizations, and arts businesses can create a free Arts Directory profile to highlight their work and offerings.</p>
+                      <a href="/profile" class="button">Sign Up</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+{% endblock %}
+
+{% block node_content %}
+  <div class="page-content">
+    {{ drupal_messages() }}
+    <div id="arts-directory-root">
+      <arts-directory />
+      <noscript>Please enable Javascript to explore the arts across Maryland.</noscript>
+    </div>
+  </div>
+{% endblock %}

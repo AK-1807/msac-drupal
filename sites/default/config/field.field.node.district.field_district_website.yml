@@ -1,0 +1,23 @@
+uuid: 3e7a4cd2-2510-42b8-b656-a43400c38662
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_district_website
+    - node.type.district
+  module:
+    - link
+id: node.district.field_district_website
+field_name: field_district_website
+entity_type: node
+bundle: district
+label: 'Website (DO NOT USE)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

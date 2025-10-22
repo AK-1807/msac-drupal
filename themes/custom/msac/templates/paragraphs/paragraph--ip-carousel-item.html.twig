@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * IP Carousel Item paragraph bundle.
+ *
+ * @ingroup themeable
+ */
+#}
+
+<div class="carousel__slide">
+  {% if content.field_ip_cl_image|field_value %}
+	  <div class="carousel__slide-image">
+      {{ content.field_ip_cl_image }}
+    </div>
+  {% endif %}
+	<div class="carousel__slide-content">
+		<h2 class="carousel__slide-title">{{ content.field_ip_cl_title }}</h2>
+		{{ content.field_ip_cl_caption }}
+	</div>
+</div>

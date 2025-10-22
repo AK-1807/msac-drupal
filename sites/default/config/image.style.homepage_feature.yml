@@ -1,0 +1,16 @@
+uuid: 00528785-d909-4bee-bc5f-e1e2651ef49c
+langcode: en
+status: true
+dependencies: {  }
+name: homepage_feature
+label: 'Homepage Feature'
+effects:
+  323e802e-59a9-4f92-b5d0-256f841adaab:
+    uuid: 323e802e-59a9-4f92-b5d0-256f841adaab
+    id: image_scale
+    weight: 1
+    data:
+      width: 850
+      height: null
+      upscale: false
+pipeline: __default__

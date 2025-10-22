@@ -1,0 +1,19 @@
+uuid: 966d683b-233e-4aa5-b76e-802a9beefa05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_district_object_id
+    - node.type.district
+id: node.district.field_district_object_id
+field_name: field_district_object_id
+entity_type: node
+bundle: district
+label: 'Object ID'
+description: 'For map rendering and outline please enter the "GIS Object ID" for this district found here <a target="_blank" href="https://data.imap.maryland.gov/datasets/57ca8c352332496b86280e9ff0be8d57_2/data">https://data.imap.maryland.gov/datasets/57ca8c352332496b86280e9ff0be8d57_2/data</a>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,56 @@
+uuid: 36b1fa8a-715a-4b71-845e-66e111ea573d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ip_callout.field_ip_co_headline
+    - field.field.paragraph.ip_callout.field_ip_co_image
+    - field.field.paragraph.ip_callout.field_ip_co_link
+    - field.field.paragraph.ip_callout.field_ip_co_text
+    - paragraphs.paragraphs_type.ip_callout
+  module:
+    - link
+_core:
+  default_config_hash: Tq_ndEDjcpBVuslaf52GmcG8MzmV3rkTNa0iU6r7gJY
+id: paragraph.ip_callout.default
+targetEntityType: paragraph
+bundle: ip_callout
+mode: default
+content:
+  field_ip_co_headline:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ip_co_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: ip_url_only
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ip_co_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ip_co_text:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  search_api_excerpt: true

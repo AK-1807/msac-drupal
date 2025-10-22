@@ -1,0 +1,19 @@
+uuid: de805a99-f905-4942-9d75-c3355436c54b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_artist_reference_name
+    - paragraphs.paragraphs_type.reference
+id: paragraph.reference.field_artist_reference_name
+field_name: field_artist_reference_name
+entity_type: paragraph
+bundle: reference
+label: Name
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

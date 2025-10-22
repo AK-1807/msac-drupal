@@ -1,0 +1,29 @@
+uuid: 4dd1ff83-5e89-433c-9325-421dd0f128d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_county
+    - node.type.artist
+    - taxonomy.vocabulary.counties
+id: node.artist.field_county
+field_name: field_county
+entity_type: node
+bundle: artist
+label: 'County of residence'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      counties: counties
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

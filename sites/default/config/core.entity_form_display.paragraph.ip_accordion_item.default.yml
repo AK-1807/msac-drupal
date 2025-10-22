@@ -1,0 +1,36 @@
+uuid: 4bf84874-5282-49da-9faa-093590ba490b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ip_accordion_item.field_ip_ac_body
+    - field.field.paragraph.ip_accordion_item.field_ip_ac_title
+    - paragraphs.paragraphs_type.ip_accordion_item
+  module:
+    - text
+_core:
+  default_config_hash: 7rlsJJkPXGCwR9PX_fN5qBYnRvQC83XHkYffpPJ009c
+id: paragraph.ip_accordion_item.default
+targetEntityType: paragraph
+bundle: ip_accordion_item
+mode: default
+content:
+  field_ip_ac_body:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_ip_ac_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

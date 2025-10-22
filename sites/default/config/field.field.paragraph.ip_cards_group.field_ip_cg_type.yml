@@ -1,0 +1,25 @@
+uuid: 69130846-81e3-4434-bc1e-62effa9d1b53
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_cg_type
+    - paragraphs.paragraphs_type.ip_cards_group
+  module:
+    - options
+_core:
+  default_config_hash: X7ZGE9f4f92qOTYYXIg4FEIjmRLinNZoUnyajqFL134
+id: paragraph.ip_cards_group.field_ip_cg_type
+field_name: field_ip_cg_type
+entity_type: paragraph
+bundle: ip_cards_group
+label: Type
+description: 'Please choose whether this should be a normal, clickable, or horizontal layout.'
+required: true
+translatable: false
+default_value:
+  -
+    value: card-clickable
+default_value_callback: ''
+settings: {  }
+field_type: list_string

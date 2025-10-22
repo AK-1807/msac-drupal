@@ -1,0 +1,23 @@
+uuid: 92996a89-44e4-4147-9b0b-ee014ca2d991
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_engmt_type_5
+    - node.type.artist
+id: node.artist.field_artist_engmt_type_5
+field_name: field_artist_engmt_type_5
+entity_type: node
+bundle: artist
+label: 'Visiting Performance'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

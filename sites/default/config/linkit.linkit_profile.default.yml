@@ -1,0 +1,41 @@
+uuid: c6f6f02a-3e66-4289-92c0-ee0460d0e39b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: Tt8DtxZ3Nooo0PoWPpJvszA3R_5d8MmpUW7LM_R-BzY
+label: Default
+id: default
+description: 'A default Linkit profile'
+matchers:
+  556010a3-e317-48b3-b4ed-854c10f4b950:
+    id: 'entity:node'
+    uuid: 556010a3-e317-48b3-b4ed-854c10f4b950
+    settings:
+      metadata: '[node:url:path]'
+      bundles:
+        article: article
+        district: district
+        grant: grant
+        home: home
+        location: location
+        organization: organization
+        page: page
+        program: program
+      group_by_bundle: true
+      substitution_type: canonical
+      limit: 200
+      include_unpublished: false
+    weight: 0
+  5133cee5-6909-4229-9523-9c64541cb7bb:
+    id: 'entity:media'
+    uuid: 5133cee5-6909-4229-9523-9c64541cb7bb
+    settings:
+      metadata: '[media:url:path]'
+      bundles: {  }
+      group_by_bundle: true
+      substitution_type: media_download_inline
+      limit: 100
+    weight: 0

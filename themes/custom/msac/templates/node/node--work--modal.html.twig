@@ -1,0 +1,27 @@
+<div class="carousel__slide">
+	<div class="carousel__slide-image" style="background-image:url({{file_url(node.field_work_image.0.entity.uri.value | image_style('optimized'))}})"></div>
+	<div class="featured-work__slide-content carousel__slide-content">
+		<div class="text-content">
+			<h3 class="featured-work__slide-content-title carousel__slide-title">{{ label }}</h3>
+			{% if content.field_work_medium|field_value %}
+				<div class="featured-work__slide-content-medium hint-text">{{ content.field_work_medium|field_value }}</div>
+			{% endif %}
+			{% if content.field_work_year|field_value %}
+				<div class="featured-work__slide-content-year hint-text">{{ content.field_work_year|field_value }}</div>
+			{% endif %}
+			{% if content.field_work_details|field_value %}
+				<div class="featured-work__slide-content-details hint-text">{{ content.field_work_details|field_value }}</div>
+			{% endif %}
+			{% if content.field_work_description|field_value %}
+				<div class="featured-work__slide-content-description">{{ content.field_work_description|field_value }}</div>
+			{% endif %}
+			{% if node.field_work_for_sale.value %}
+				<div class="featured-work__slide-content-for-sale">
+						<span class="tag tag--yellow">For Sale</span>
+						<span class="featured-work__slide-content-for-sale-price">{{ node.field_work_price.value|number_format(2, '.', ',') }}</span>
+						<div class="caption featured-work__slide-content-for-sale-contact">Contact the artist to purchase this piece</div>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,36 @@
+uuid: 7561c946-c61b-47e0-96a0-0dacf2506675
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ip_table.field_ip_tb_table
+    - field.field.paragraph.ip_table.field_ip_tb_title
+    - paragraphs.paragraphs_type.ip_table
+  module:
+    - tablefield
+_core:
+  default_config_hash: nAk7KEZkUB25t8RR377YyLUFxZmPkGrrn3PYhJXvA20
+id: paragraph.ip_table.default
+targetEntityType: paragraph
+bundle: ip_table
+mode: default
+content:
+  field_ip_tb_table:
+    type: tablefield
+    weight: 1
+    region: content
+    settings:
+      input_type: textfield
+    third_party_settings: {  }
+  field_ip_tb_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

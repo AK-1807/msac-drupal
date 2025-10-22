@@ -1,0 +1,19 @@
+uuid: 19f67d22-1e64-45fc-81a7-dc0328516f0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_cl_title
+    - paragraphs.paragraphs_type.ip_carousel_item
+id: paragraph.ip_carousel_item.field_ip_cl_title
+field_name: field_ip_cl_title
+entity_type: paragraph
+bundle: ip_carousel_item
+label: 'Slide Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

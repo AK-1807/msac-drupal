@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * IP Accordion Item paragraph bundle.
+ *
+ * @ingroup themeable
+ */
+#}
+
+<div class="silc-accordion__section">
+    <button id="accordion-{{ accordion_id }}-section-{{ section_id }}-label" class="silc-accordion__label" aria-controls="accordion-{{ accordion_id }}-section-{{ section_id }}-content">
+        {{ content.field_ip_ac_title }}
+    </button>
+    <div class="silc-accordion__content" id="accordion-{{ accordion_id }}-section-{{ section_id }}-content"  aria-labelled-by="accordion-{{ accordion_id }}-section-{{ section_id }}-label">
+        <div class="silc-accordion__content-compartment">
+            {{ content.field_ip_ac_body }}
+        </div>
+    </div>
+</div>
+

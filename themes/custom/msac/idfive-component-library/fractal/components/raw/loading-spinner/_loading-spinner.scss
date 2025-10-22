@@ -1,0 +1,32 @@
+.msac-loading-spinner {
+  margin: rem(48) auto;
+  text-align: center;
+}
+
+.msac-loading-spinner > div {
+  animation: loadingSpinner 1s infinite ease-in-out;
+  background-color: $dark-red;
+  display: inline-block;
+  height: rem(36);
+  width: rem(4);
+  margin-right: rem(4);
+  transform: skewX(-30deg);
+  &:nth-child(2) {
+    animation-delay: -0.9s;
+  }
+  &:nth-child(3) {
+    animation-delay: -0.8s;
+  }
+  &:nth-child(4) {
+    animation-delay: -0.7s;
+  }
+}
+
+@keyframes loadingSpinner {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

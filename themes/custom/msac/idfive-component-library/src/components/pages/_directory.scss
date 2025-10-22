@@ -1,0 +1,115 @@
+.path--directory {
+  .page-heading {
+    background-size: cover;
+    color: $white;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+    h1 {
+      text-shadow: 0 0 3px rgba($black, 0.6);
+    }
+  }
+  .page-heading__title-wrap {
+    background-position: center;
+    background-size: cover;
+    color: $white;
+    padding: rem(48) rem(16) rem(70);
+    position: relative;
+    @include media("550") {
+      padding-right: rem(32);
+      padding-left: rem(32);
+    }
+    @include media("800") {
+      background-image: none !important;
+      padding-right: rem(64);
+      padding-left: rem(64);
+    }
+    @include media("1024") {
+      padding: rem(210) rem(64) rem(128);
+    }
+    &::before {
+      content: "";
+      background-image: linear-gradient(180deg, $black 0%, transparent 100%);
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    * {
+      color: inherit;
+    }
+    .silc-breadcrumb__list li {
+      &::after {
+        color: $white;
+      }
+    }
+  }
+  .page-heading__title-wrap-inner {
+    position: relative;
+  }
+  .page-heading__content {
+    background-color: $black;
+    color: $white;
+    margin: 0 auto;
+    padding: rem(20) rem(16);
+    position: relative;
+    @include media("800") {
+      padding: rem(42) rem(42) rem(16);
+    }
+    @include media("1200") {
+      padding-right: 25%;
+      padding-bottom: rem(56);
+      width: 90%;
+    }
+    * {
+      color: inherit;
+    }
+    .icon-circle {
+      margin-right: 0;
+      margin-left: rem(-9);
+    }
+  }
+  .page-heading__signup-cta {
+    background-color: $white;
+    border: rem(4) solid $yellow;
+    box-shadow: 0 0 rem(16) rgba($black, 0.2);
+    color: $black;
+    margin: rem(48) auto rem(-160);
+    padding: rem(20) rem(16) rem(30);
+    @include media("550") {
+      max-width: rem(415);
+      padding: rem(24) rem(24) rem(30);
+    }
+    @include media("1200") {
+      margin: 0;
+      max-width: none;
+      position: absolute;
+      top: rem(44);
+      right: 0;
+      transform: translateX(55%);
+      width: 48%;
+    }
+    .button {
+      color: $red;
+      &:hover {
+        color: $white;
+      }
+      &:focus{
+        color: $white;
+      }
+    }
+  }
+  .silc-breadcrumb__list {
+    a {
+      text-shadow: 0 0 3px rgba($black, 0.6);
+      &:hover {
+        border-bottom-color: $white;
+      }
+    }
+  }
+  .page-content {
+    position: static;
+  }
+}

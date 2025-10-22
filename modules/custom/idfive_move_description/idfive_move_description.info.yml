@@ -1,0 +1,7 @@
+name: Idfive Move Description Text
+type: module
+description: Provide a way to move description text between field and title, for node edit pages/etc.
+version: '8.x-1.0'
+core: '8.x'
+core_version_requirement: ^8 || ^9 || ^10
+package: 'idfive'

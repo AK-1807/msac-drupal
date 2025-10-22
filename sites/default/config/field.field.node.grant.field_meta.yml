@@ -1,0 +1,21 @@
+uuid: 7cc5b953-5454-43fd-99df-0e4b78a38bd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta
+    - node.type.grant
+  module:
+    - metatag
+id: node.grant.field_meta
+field_name: field_meta
+entity_type: node
+bundle: grant
+label: Meta
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

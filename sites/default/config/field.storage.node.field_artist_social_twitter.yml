@@ -1,0 +1,19 @@
+uuid: 3c9c4873-66b0-41f7-820b-57c4f018c508
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_artist_social_twitter
+field_name: field_artist_social_twitter
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

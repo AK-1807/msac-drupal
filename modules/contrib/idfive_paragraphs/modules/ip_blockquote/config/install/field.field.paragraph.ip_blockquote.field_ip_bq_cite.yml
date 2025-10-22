@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_bq_cite
+    - paragraphs.paragraphs_type.ip_blockquote
+_core:
+  default_config_hash: JUsc_yaNSHJRXtwSBhIr56y24_l1zxmrXiptoermYcY
+id: paragraph.ip_blockquote.field_ip_bq_cite
+field_name: field_ip_bq_cite
+entity_type: paragraph
+bundle: ip_blockquote
+label: Cite/Attribution
+description: 'Please add an attribution/cite. This can be formatted in several different ways, but in general "Author, Title/position/etc" works well.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

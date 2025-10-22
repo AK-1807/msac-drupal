@@ -1,0 +1,151 @@
+@import "variables";
+
+.card {
+  border: $card-border;
+  border-radius: $card-border-radius;
+  box-shadow: 0 0 rem(16) rgba($black, 0.2);
+  background: $white;
+  box-sizing: $card-box-sizing;
+  margin-top: 10%;
+  height: 100%;
+  &[href] {
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      .card__media {
+        transform: scale3d(1, 1.1, 1);
+        img {
+          transform: scale3d(1.1, 1, 1);
+        }
+      }
+      .card__cta {
+        background-color: $red;
+        color: $white;
+      }
+    }
+    &:focus-within {
+      .card__cta {
+        background-color: $red;
+        color: $white;
+      }
+    }
+  }
+}
+
+.card--hz {
+  @include media("800") {
+    display: flex;
+    margin-top: 4%;
+    position: relative;
+  }
+}
+
+.card__cta {
+  background-color: $card__cta-background;
+  color: $red;
+  text-decoration: $card__cta-text-decoration;
+  transition: $card__cta_hover-transition;
+  will-change: $card__cta-will-change;
+  font-size: rem(14);
+  overflow: visible;
+  height: auto;
+  width: 100%;
+  &:hover,
+  &:focus {
+    background-color: $red;
+    color: $white;
+  }
+}
+
+.card__title {
+  @extend %h4;
+  margin-top: 0;
+}
+
+.card__content {
+  margin: $card__content-margin;
+  overflow: hidden;
+  padding: rem(30) rem(30) rem(32);
+  position: relative;
+  .card--hz & {
+    flex: 1;
+    overflow: visible;
+    @include media("800") {
+      position: static;
+    }
+  }
+}
+
+.card__content-icon-lines {
+  position: absolute;
+  top: rem(2);
+  left: rem(36);
+  height: rem(40);
+  transform: translateY(-100%);
+  @include media("800") {
+    height: rem(80);
+    top: auto;
+    bottom: 0;
+    transform: translateY(50%);
+  }
+  div {
+    height: 100%;
+    width: rem(20);
+    position: absolute;
+    &:first-child {
+      margin-left: rem(32);
+    }
+    &:before,
+    &:after {
+      content: "";
+      background-color: $white;
+      display: block;
+      height: 100%;
+      width: rem(4);
+      position: absolute;
+      transform: rotate(20deg);
+      top: 0;
+    }
+    &:before {
+      left: rem(0);
+    }
+    &:after {
+      right: rem(0);
+    }
+  }
+}
+
+.card__media {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  transform-origin: bottom;
+  transition: 0.15s transform ease-in-out;
+  will-change: transform;
+  &:before {
+    content: "";
+    display: block;
+    padding-top: 60%;
+  }
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: $card__media-background-size;
+    object-position: $card__media-background-position;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom;
+    transition: 0.15s transform ease-in-out;
+    will-change: transform;
+  }
+  .card--hz & {
+    @include media("800") {
+      flex: 0 0 auto;
+      width: 45%;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+uuid: 79e0ccab-fd5c-47db-bd8c-54d560e95fa2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.msac_profiles_work_node
+label: 'MSAC Profiles Work'
+targetEntityType: node
+cache: true

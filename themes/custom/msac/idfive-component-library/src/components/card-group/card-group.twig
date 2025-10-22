@@ -1,0 +1,9 @@
+<div class="card-group">
+  <div class="silc-grid silc-grid--justify-center">
+    {% for card in cards %}
+      <div class="silc-grid__col silc-grid__col--10-550 silc-grid__col--6-700 silc-grid__col--4-1200">
+        {% include "@card" with card %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

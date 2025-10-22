@@ -1,0 +1,25 @@
+uuid: 63a25edf-2aed-434b-97ae-4d80cea6a92e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_cd_link
+    - paragraphs.paragraphs_type.ip_card
+  module:
+    - link
+_core:
+  default_config_hash: bECfosqGB8u5Wog9X1I6xJ10mX0oWDdkv6rMrcO-1D8
+id: paragraph.ip_card.field_ip_cd_link
+field_name: field_ip_cd_link
+entity_type: paragraph
+bundle: ip_card
+label: Link
+description: 'Optional. Please provide a call to action link.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

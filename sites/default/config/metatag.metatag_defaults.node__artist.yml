@@ -1,0 +1,9 @@
+uuid: 78cba9fd-2443-4f05-a143-f9e119f3d008
+langcode: en
+status: true
+dependencies: {  }
+id: node__artist
+label: 'Content: Artist'
+tags:
+  image_src: '[node:field_artist_cover:optimized:url]'
+  og_image: '[node:field_artist_cover:optimized:url]'

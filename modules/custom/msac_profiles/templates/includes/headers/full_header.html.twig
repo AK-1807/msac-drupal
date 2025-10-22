@@ -1,0 +1,40 @@
+
+{% set thumbnail = assets_path ~ '/img/MSAC_default_profile_image_square.jpg' %}
+{% if profile.thumbnail %}
+  {% set thumbnail = profile.thumbnail %}
+{% endif %}
+
+{% if profile.hero %}
+	<div class="hero">
+    <figure class="hero__media">
+      <div class="hero__media-image">
+        <img src="{{ profile.hero }}" alt="">
+      </div>
+    </figure>
+  </div>
+{% endif %}
+
+<div class="page-heading outer-pad">
+  <div class="silc-grid silc-grid--collapse silc-grid--justify-center">
+    <div class="silc-position--relative silc-grid__col silc-grid__col--3-1024 silc-grid__col--2-1200">
+      <div class="profile-photo__container">
+        <div class="profile__photo">
+          <img src="{{ thumbnail }}" alt="Portrait of {{ profile.name }}">
+        </div>
+      </div>
+    </div>
+    <div class="silc-grid__col silc-grid__col--9-1024 silc-grid__col--10-1200">
+      <h1>{{ profile.name }}</h1>
+      <nav class="silc-breadcrumb" aria-label="Breadcrumb">
+        <ol class="silc-breadcrumb__list">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/profile" aria-current="page">My Arts Directory Profile</a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+</div>

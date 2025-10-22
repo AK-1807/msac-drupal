@@ -1,0 +1,58 @@
+uuid: 1229eb6a-2fb7-43f6-86fd-7e5e4ee51365
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.rss
+    - field.field.node.article.body
+    - field.field.node.article.feeds_item
+    - field.field.node.article.field_article_category
+    - field.field.node.article.field_article_cover_caption
+    - field.field.node.article.field_article_cover_image
+    - field.field.node.article.field_article_date
+    - field.field.node.article.field_article_file_attachment
+    - field.field.node.article.field_article_image
+    - field.field.node.article.field_article_lead_in
+    - field.field.node.article.field_article_legacy_node_id
+    - field.field.node.article.field_article_legacy_path
+    - field.field.node.article.field_article_media_contact
+    - field.field.node.article.field_article_programs
+    - field.field.node.article.field_article_type
+    - field.field.node.article.field_meta
+    - field.field.node.article.field_widgets
+    - node.type.article
+  module:
+    - user
+_core:
+  default_config_hash: 2rIr6K5Q0UQ9khg0zE_CK-PtJH76UL-BDDZcZnZzwCc
+id: node.article.rss
+targetEntityType: node
+bundle: article
+mode: rss
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  body: true
+  feeds_item: true
+  field_article_category: true
+  field_article_cover_caption: true
+  field_article_cover_image: true
+  field_article_date: true
+  field_article_file_attachment: true
+  field_article_image: true
+  field_article_lead_in: true
+  field_article_legacy_node_id: true
+  field_article_legacy_path: true
+  field_article_media_contact: true
+  field_article_programs: true
+  field_article_type: true
+  field_meta: true
+  field_widgets: true
+  search_api_excerpt: true

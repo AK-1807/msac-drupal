@@ -1,0 +1,29 @@
+<div class="msac_profiles-dashboard__funding">
+  <h2 class="h4">Funding Opportunities for Me</h2>
+  <ul class="msac_profiles-dashboard__grants-list">
+    {% for grant in profile.funding %}
+      <li class="msac_profiles-dashboard__grants-list-item">
+        <div class="msac_profiles-dashboard__grant">
+          <div class="silc-mbottom--1">
+            <a href="{{ grant.url }}">{{ grant.title }}</a>
+          </div>
+          {% if grant.application_closed %}
+            <div>
+              <strong>Application Closed</strong>
+            </div>
+          {% else %}
+            {% if grant.rolling_deadline %}
+              <div>
+                <strong>Rolling Deadline</strong>
+              </div>
+            {% elseif grant.deadline %}
+              <div>
+                <strong>Deadline to apply:</strong> {{ grant.deadline }}
+              </div>
+            {% endif %}
+          {% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

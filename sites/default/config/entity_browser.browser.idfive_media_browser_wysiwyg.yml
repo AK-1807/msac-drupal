@@ -1,0 +1,44 @@
+uuid: 5dec856d-5ba6-4e47-96ac-a814e244f558
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.idfive_media_browser
+  module:
+    - entity_browser_entity_form
+    - views
+_core:
+  default_config_hash: AkTXZscMCLOHB6K8DXMb19WlYFcTSkjjvs_c5RO38EI
+name: idfive_media_browser_wysiwyg
+label: 'Media Browser Image for WYSIWYG'
+display: iframe
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  becbbe5f-5ca5-49f2-93de-23172865b8a6:
+    id: view
+    uuid: becbbe5f-5ca5-49f2-93de-23172865b8a6
+    label: 'Image Library'
+    weight: 1
+    settings:
+      submit_text: 'Select Image'
+      auto_select: false
+      view: idfive_media_browser
+      view_display: entity_browser_image
+  37df6e16-bc72-436e-acc2-9674c1c3100a:
+    id: entity_form
+    uuid: 37df6e16-bc72-436e-acc2-9674c1c3100a
+    label: 'Add Image'
+    weight: 2
+    settings:
+      submit_text: 'Save entity'
+      entity_type: media
+      bundle: image
+      form_mode: default

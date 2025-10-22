@@ -1,0 +1,87 @@
+<?php
+
+/**
+ * @file
+ * Ip_webform_embed module file.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ *
+ * @inheritdoc
+ */
+function ip_webform_embed_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.ip_webform_embed':
+      $text = file_get_contents(dirname(__FILE__) . "/README.md");
+      if (!\Drupal::moduleHandler()->moduleExists('markdown')) {
+        return '<pre>' . $text . '</pre>';
+      }
+      else {
+        // Use the Markdown filter to render the README.
+        $filter_manager = \Drupal::service('plugin.manager.filter');
+        $settings = \Drupal::configFactory()->get('markdown.settings')->getRawData();
+        $config = ['settings' => $settings];
+        $filter = $filter_manager->createInstance('markdown', $config);
+        return $filter->process($text, 'en');
+      }
+  }
+  return NULL;
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * Lets us define our paragraphs templates in this module.
+ */
+function ip_webform_embed_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__ip_webform_embed' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_ip_we_webform' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_ip_we_title' => [
+      'base hook' => 'paragraph',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_field_WIDGET_TYPE_paragraphs_form_alter().
+ *
+ * Adds "Content Tips from idfive" helper text to the paragraph.
+ */
+function ip_webform_field_widget_paragraphs_form_alter(&$element, &$form_state, $context) {
+  if ($element['#paragraph_type'] == 'ip_webform') {
+
+    // Tips text from idfive.
+    $markup = '<h3>Do:</h3><ul>';
+    $markup .= '<li><strong>Make placeholder text an example of what the user can write.</strong> This is especially helpful for questions that go beyond simple information such as name and address.</li>';
+    $markup .= '<li><strong>Try to use specific language in your “Submit” button.</strong> Rather than using the word “Submit,” try something that is more specific to the form information being gathered, and where that information is going.</li>';
+    $markup .= '</ul>';
+    $markup .= '<h3>Dont:</h3><ul>';
+    $markup .= '<li><strong>Use the form label as the placeholder text.</strong> This looks odd when, for example, someone is putting in their name and they read “First Name” as the label and then immediately following is “First Name” as the placeholder text.</li>';
+    $markup .= '</ul>';
+    $element['ip_webform_tips'] = [
+      '#type' => 'details',
+      '#title' => t('Webform Content Tips'),
+      '#weight' => -1000,
+    ];
+    $element['ip_webform_tips']['#markup'] = $markup;
+
+    // Additional help text from idfive.
+    $markup = '<p>This Kitchen Sink widget embeds existing webforms into a page. It is neccesary for you to create the webform first, before it will be available here.</p>';
+    $markup .= '<p><a target="_blank" href="/admin/help/ip_webform">Webform Embed Module Help</a></p>';
+    $element['ip_webform_help'] = [
+      '#type' => 'details',
+      '#title' => t('Additional Help'),
+      '#weight' => -999,
+    ];
+    $element['ip_webform_help']['#markup'] = $markup;
+
+  }
+}

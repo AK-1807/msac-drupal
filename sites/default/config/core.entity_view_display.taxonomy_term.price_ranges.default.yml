@@ -1,0 +1,42 @@
+uuid: c4e3cc63-a6ea-4cc7-8596-8dc7c3526806
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.price_ranges.field_price_max
+    - field.field.taxonomy_term.price_ranges.field_price_min
+    - taxonomy.vocabulary.price_ranges
+  module:
+    - text
+id: taxonomy_term.price_ranges.default
+targetEntityType: taxonomy_term
+bundle: price_ranges
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_price_max:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_price_min:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  search_api_excerpt: true

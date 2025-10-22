@@ -1,0 +1,9 @@
+view:
+  css:
+    theme:
+      assets/css/idfive_paragraphs.view.css: {}
+  js:
+    assets/js/idfive_paragraphs.view.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

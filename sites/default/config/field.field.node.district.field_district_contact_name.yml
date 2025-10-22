@@ -1,0 +1,19 @@
+uuid: 83ff8ae1-3118-4822-aac5-59fa56a1b99b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_district_contact_name
+    - node.type.district
+id: node.district.field_district_contact_name
+field_name: field_district_contact_name
+entity_type: node
+bundle: district
+label: 'Contact Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,18 @@
+{% include "@hero" with hero %}
+<div class="page-heading outer-pad">
+	<div class="silc-grid silc-grid--collapse">
+		<div class="silc-grid__col silc-grid__col--12">
+			<h1>{{ title }}</h1>
+			{% include "@breadcrumb" with breadcrumb %}
+		</div>
+	</div>
+</div>
+<div class="page-content outer-pad">
+	{% include "@arts-calendar" %}
+</div>
+
+{# FOR DEV ONLY #}
+<script>
+	document.body.classList.add("path--calendar");
+	document.body.classList.add("has-hero");
+</script>

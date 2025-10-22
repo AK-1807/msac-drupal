@@ -1,0 +1,154 @@
+{
+  "preview": "@page-preview",
+  "context": {
+    "title": "Everyman Theater",
+    "hero": {
+      "media": "/img/OP_Hero.jpg"
+    },
+    "photo": "/img/MSAC_default_profile_image_square.jpg",
+    "disciplines": ["Performing Art", "Discipline"],
+    "subdisciplines": ["Optional Subdiscipline", "Subdiscipline"],
+    "featuredQuote": {
+      "quote": "We support the arts through our grassroots programming...lorem ipsum dolor sit amt consectetur",
+      "author": "",
+      "source": "",
+      "sourceUrl": "",
+      "portrait": ""
+    },
+    "about": {
+      "content": "<h2>About this Organization</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam dolorum at officiis quaerat sapiente ipsum illum atque vel aperiam, ut reiciendis odio dignissimos minima ad explicabo nihil consequatur sint quo!</p><p>Minus repellendus corporis laborum aliquid repellat itaque atque maxime, qui quaerat. Temporibus qui molestias repellendus. Doloribus nihil labore nostrum eum voluptates. Quasi, iste quia. Voluptas debitis maiores autem voluptate aspernatur?</p><p>Sequi libero reiciendis ratione culpa sed, assumenda obcaecati a maiores nemo, quo velit! Dignissimos doloribus enim possimus aliquam minima ea qui laborum velit autem! Vitae excepturi soluta voluptate odit fuga!</p>"
+    },
+    "website": "http://idfive.com",
+    "phoneNumber": "(410) XXX-XXXX",
+    "email": "email@email.com",
+    "address": {
+      "county": "Baltimore City",
+      "street": "123 Main St",
+      "city": "Baltimore",
+      "state": "MD",
+      "zip": "21230"
+    },
+    "aeDistricts": [
+      {
+        "name": "Highlandtown A&E District",
+        "url": "https://idfive.com"
+      }
+    ],
+    "facebook": "https://idfive.com",
+    "twitter": "https://idfive.com",
+    "instagram": "https://idfive.com",
+    "youtube": "https://idfive.com",
+    "vimeo": "https://idfive.com",
+    "servicesOpportunities": {
+      "id": "services-opportunities-accordion",
+      "sections": [
+        {
+          "title": "Acting Classes",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi nesciunt assumenda aspernatur. Repellat, perferendis quae culpa repudiandae numquam harum facilis necessitatibus ad eum amet? Beatae amet quo deserunt asperiores provident?</p>"
+        },
+        {
+          "title": "Youth Summer Camps",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi nesciunt assumenda aspernatur. Repellat, perferendis quae culpa repudiandae numquam harum facilis necessitatibus ad eum amet? Beatae amet quo deserunt asperiores provident?</p>"
+        },
+        {
+          "title": "Service/Opportunity Name",
+          "content": "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi nesciunt assumenda aspernatur. Repellat, perferendis quae culpa repudiandae numquam harum facilis necessitatibus ad eum amet? Beatae amet quo deserunt asperiores provident?</p>"
+        }
+      ]
+    },
+    "photos": {
+      "slides": [
+        {
+          "image": "/img/OP_Featured_Photo_1.png",
+          "title": "Featured Work 1 Lorem Ipsum",
+          "medium": "Performance/Theater",
+          "year": "2019",
+          "dimensions": "",
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Donec quam felis, ultricies nec, pellentesque eu, pretium quis.",
+          "price": ""
+        },
+        {
+          "image": "/img/OP_Featured_Photo_2.png",
+          "title": "Featured Work 2 Lorem",
+          "medium": "Performance/Theater",
+          "year": "2018",
+          "dimensions": "",
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Donec quam felis, ultricies nec, pellentesque eu, pretium quis.",
+          "price": ""
+        },
+        {
+          "image": "/img/OP_Featured_Photo_3.png",
+          "title": "Featured Work 3 Lorem",
+          "medium": "Performance/Theater",
+          "year": "2019",
+          "dimensions": "",
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Donec quam felis, ultricies nec, pellentesque eu, pretium quis.",
+          "price": ""
+        },
+        {
+          "image": "/img/OP_Featured_Photo_4.png",
+          "title": "Featured Work 4 Lorem",
+          "medium": "Performance/Theater",
+          "year": "2018",
+          "dimensions": "",
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Donec quam felis, ultricies nec, pellentesque eu, pretium quis.",
+          "price": ""
+        }
+      ],
+      "modalTitle": "Featured Work: Photos"
+    },
+    "videos": [
+      {
+        "title": "Arts Across Maryland: Highlandtown Arts & Entertainment District",
+        "media": "https://www.youtube.com/embed/W7KS4D837Jg",
+        "caption": "Video caption lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
+      }
+    ],
+    "audio": [
+      {
+        "title": "Amy Sauer on Spotify",
+        "link": "https://idfive.com",
+        "fileUrl": null
+      },
+      {
+        "title": "Amy Sauer on Bandcamp",
+        "link": "https://idfive.com",
+        "fileUrl": null
+      },
+      {
+        "title": "Amy Sauer's Album on Soundcloud",
+        "link": "https://idfive.com",
+        "fileUrl": null
+      },
+      {
+        "title": "Amy Sauer on Spotify",
+        "link": null,
+        "fileUrl": "https://idfive.com"
+      },
+      {
+        "title": "Amy Sauer on Spotify",
+        "link": null,
+        "fileUrl": "https://idfive.com"
+      },
+      {
+        "title": "Amy Sauer on Spotify",
+        "link": null,
+        "fileUrl": "https://idfive.com"
+      }
+    ],
+    "written": [
+      {
+        "title": "Selected Literary Work Title Lorem Ipsum Dolor 1",
+        "fileUrl": "sample.pdf"
+      },
+      {
+        "title": "Selected Literary Work Title Lorem Ipsum Dolor 2",
+        "fileUrl": "sample.pdf"
+      },
+      {
+        "title": "Selected Literary Work Title Lorem Ipsum Dolor 3",
+        "fileUrl": "sample.pdf"
+      }
+    ]
+  }
+}

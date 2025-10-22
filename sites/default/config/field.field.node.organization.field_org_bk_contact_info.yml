@@ -1,0 +1,26 @@
+uuid: a4c8efef-0cd8-47bf-9b5b-ee3997c34510
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_org_bk_contact_info
+    - node.type.organization
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - plain_text
+id: node.organization.field_org_bk_contact_info
+field_name: field_org_bk_contact_info
+entity_type: node
+bundle: organization
+label: 'Booking Details and Contact Info'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

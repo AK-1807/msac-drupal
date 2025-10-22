@@ -1,0 +1,19 @@
+uuid: d6566189-953f-4d54-948a-d44feed3d49a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_caption
+    - node.type.page
+id: node.page.field_hero_caption
+field_name: field_hero_caption
+entity_type: node
+bundle: page
+label: 'Hero Caption'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

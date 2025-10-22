@@ -1,0 +1,14 @@
+idfive_gdpr.settings:
+  path: '/admin/config/services/idfive_gdpr/settings'
+  defaults:
+    _form: '\Drupal\idfive_gdpr\Form\IdfiveGdprSettingsForm'
+    _title: 'GDPR Settings'
+  requirements:
+    _permission: 'Configure GDPR Settings'
+idfive_gdpr.privacy_policy:
+  path: 'privacy-policy'
+  defaults:
+      _controller: '\Drupal\idfive_gdpr\Controller\IdfiveGdprController::privacyPolicyPage'
+      _title: 'Privacy Policy'
+  requirements:
+      _permission: 'access content'

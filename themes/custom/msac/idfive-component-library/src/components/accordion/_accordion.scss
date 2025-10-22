@@ -1,0 +1,125 @@
+.paragraph-widget--ip_accordion {
+  @extend %widget-spacing;
+  @include media("800") {
+    max-width: 91.667%;
+  }
+  @include media("1024") {
+    max-width: 83.333%;
+  }
+  @include media("1200") {
+    max-width: 66.667%;
+  }
+  .paragraph-widget--ip_accordion {
+    margin: 0;
+    max-width: none;
+    width: 100%;
+  }
+  .silc-accordion {
+    margin: 0;
+    max-width: none;
+    width: 100%;
+  }
+}
+
+.silc-accordion {
+  @extend %widget-spacing;
+  @include media("800") {
+    max-width: 91.667%;
+  }
+  @include media("1024") {
+    max-width: 83.333%;
+  }
+  @include media("1200") {
+    max-width: 66.667%;
+  }
+}
+
+.silc-accordion__section {
+  border-bottom: rem(3) solid $black;
+  transition: 0.3s border ease-in-out;
+  &.silc-accordion__section--active {
+    border-bottom-color: $red;
+  }
+  &:hover {
+    border-bottom-color: $red;
+  }
+  &:focus-within {
+    border-bottom-color: $red;
+  }
+}
+
+.silc-accordion__label {
+  font-family: $red-hat-display;
+  font-weight: 700;
+  position: relative;
+  transition: 0.3s color ease-in-out;
+  &:hover,
+  &:focus {
+    .silc-accordion__label-icon {
+      fill: $silc-accordion__label--hover-color;
+    }
+  }
+  &[aria-expanded="true"] {
+    .silc-accordion__label-icon {
+      transform: translateY(-50%) rotate(45deg);
+    }
+  }
+  &[aria-selected="true"] {
+    &[role="tab"] {
+      @include media("800") {
+        border-width: rem(4);
+      }
+    }
+  }
+  &:not([aria-selected="true"]) {
+    &[role="tab"] {
+      &:hover,
+      &:focus {
+        @include media("800") {
+          border-width: rem(4);
+        }
+      }
+    }
+  }
+  &[role="tab"] {
+    @extend %tab-panel-tab;
+    @include media("800") {
+      border-width: rem(4);
+      padding: rem(12) rem(24) rem(13);
+      width: auto;
+    }
+  }
+}
+
+.silc-accordion__label-icon {
+  height: rem(32);
+  width: rem(32);
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  right: rem(20);
+  transform: translateY(-50%);
+  transition: 0.3s fill ease-in-out, 0.3s transform ease-in-out;
+}
+
+.silc-accordion__tablist {
+  display: flex;
+  margin-bottom: rem(-3);
+  @include media("800") {
+    display: block;
+    margin-bottom: rem(-4);
+  }
+}
+
+.silc-accordion__content {
+  &[role="tabpanel"] {
+    .silc-accordion__content-compartment {
+      border: rem(3) solid $yellow;
+      padding: rem(20) rem(28) rem(38);
+      @include media("800") {
+        border-width: rem(4);
+        padding: rem(52) rem(64);
+      }
+    }
+  }
+}

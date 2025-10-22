@@ -1,0 +1,23 @@
+uuid: 555d0d6b-57a9-421e-80e0-dd617db6ec17
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.idfive_media_browser_wysiwyg
+    - media.type.image
+  module:
+    - entity_embed
+    - media
+label: Media
+id: media
+type_id: entity
+type_settings:
+  entity_type: media
+  bundles:
+    - image
+  display_plugins: {  }
+  entity_browser: idfive_media_browser_wysiwyg
+  entity_browser_settings:
+    display_review: true
+icon: {  }
+icon_uuid: null

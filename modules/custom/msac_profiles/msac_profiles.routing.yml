@@ -1,0 +1,96 @@
+msac_profiles.msac_profile_login:
+    path: 'profile'
+    defaults:
+        _controller: '\Drupal\msac_profiles\Controller\MsacProfilesController::login'
+        _title: 'Login'
+    requirements:
+        _permission: 'access content'
+    options:
+        no_cache: 'TRUE'        
+msac_profiles.msac_profile_interstatial:
+    path: 'profile/additional_questions'
+    defaults:
+        _controller: '\Drupal\msac_profiles\Controller\MsacProfilesController::interstatial'
+        _title: 'Almost There'
+    requirements:
+        _role: 'artist+administrator'
+    options:
+        no_cache: 'TRUE'        
+msac_profiles.msac_profile_dashboard:
+    path: 'profile/dashboard'
+    defaults:
+        _controller: '\Drupal\msac_profiles\Controller\MsacProfilesController::dashboard'
+        _title: 'My Dashboard'
+    requirements:
+        _role: 'artist+administrator'
+    options:
+        no_cache: 'TRUE'
+msac_profiles.msac_profile_about:
+    path: 'profile/about'
+    defaults:
+        _controller: '\Drupal\msac_profiles\Controller\MsacProfilesController::about'
+        _title: 'About Me'
+    requirements:
+        _role: 'artist+administrator'
+    options:
+        no_cache: 'TRUE'        
+msac_profiles.msac_profile_work:
+    path: 'profile/work'
+    defaults:
+        _controller: '\Drupal\msac_profiles\Controller\MsacProfilesController::work'
+        _title: 'My Work'
+    requirements:
+        _role: 'artist+administrator'
+    options:
+        no_cache: 'TRUE'        
+msac_profiles.msac_profile_work_add:
+    path: 'profile/work/add/{work_type}'
+    defaults:
+        _controller: '\Drupal\msac_profiles\Controller\MsacProfilesController::workAdd'
+        _title: 'Add Work'
+    requirements:
+        _role: 'artist+administrator'
+    options:
+        no_cache: 'TRUE'        
+msac_profiles.msac_profile_work_edit:
+    path: 'profile/work/edit/{node}'
+    defaults:
+        _controller: '\Drupal\msac_profiles\Controller\MsacProfilesController::workEdit'
+        _title: 'Edit Work'
+    requirements:
+        _role: 'artist+administrator'
+        node: \d+
+    options:
+        no_cache: 'TRUE'
+        parameters:
+            node:
+                type: entity:node
+msac_profiles.msac_profile_work_delete:
+    path: 'profile/work/delete/{node}'
+    defaults:
+        _controller: '\Drupal\msac_profiles\Controller\MsacProfilesController::workDelete'
+        _title: 'Delete Work'
+    requirements:
+        _role: 'artist+administrator'
+        node: \d+
+    options:
+        no_cache: 'TRUE'
+        parameters:
+            node:
+                type: entity:node
+msac_profiles.msac_profile_account:
+    path: 'profile/account'
+    defaults:
+        _controller: '\Drupal\msac_profiles\Controller\MsacProfilesController::account'
+        _title: 'My Account'
+    requirements:
+        _role: 'artist+administrator'
+    options:
+        no_cache: 'TRUE'        
+msac_profiles.settings:
+  path: '/admin/config/services/msac_profiles/settings'
+  defaults:
+    _form: '\Drupal\msac_profiles\Form\MsacProfilesSettingsForm'
+    _title: 'MSAC Profiles Settings'
+  requirements:
+    _permission: 'Configure MSAC Profiles Dashboard'

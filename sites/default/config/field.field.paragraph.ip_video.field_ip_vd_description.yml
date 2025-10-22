@@ -1,0 +1,23 @@
+uuid: ec8b04da-7cab-403c-ae5d-f2db1527ca58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_vd_description
+    - paragraphs.paragraphs_type.ip_video
+  module:
+    - text
+_core:
+  default_config_hash: vi2HXbhXlJCsU7X8fKRJjW_-yig1ATvbn7baSyhydjE
+id: paragraph.ip_video.field_ip_vd_description
+field_name: field_ip_vd_description
+entity_type: paragraph
+bundle: ip_video
+label: Description
+description: 'Descriptive text for video embed'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

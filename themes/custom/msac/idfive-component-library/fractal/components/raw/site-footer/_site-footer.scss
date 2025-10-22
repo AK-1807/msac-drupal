@@ -1,0 +1,134 @@
+.site-footer {
+  background-color: #000;
+  color: #fff;
+  padding-top: rem(120);
+  position: relative;
+  @include media("800") {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  > .outer-pad {
+    padding: 0 rem(40) rem(56);
+    @include media("800") {
+      padding: rem(46) rem(36) rem(40) rem(24);
+    }
+    @include media("1200") {
+      padding-right: rem(72);
+      padding-left: rem(36);
+    }
+  }
+}
+
+.site-footer__inner {
+  @include media("800") {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.site-footer__md-logo {
+  background-color: $white;
+  box-shadow: 0 0 rem(16) rgba($black, 0.2);
+  padding: rem(24);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: rem(158);
+  z-index: 1;
+  @include media("800") {
+    align-self: flex-end;
+    margin: 0 0 rem(-40);
+    position: static;
+    transform: none;
+  }
+}
+
+.site-footer__info {
+  margin: 0 auto;
+  @include media("800") {
+    align-self: center;
+    margin: 0;
+  }
+}
+
+.site-footer__social {
+  text-align: center;
+  @include media("800") {
+    text-align: right;
+  }
+  li {
+    display: inline-block;
+    margin: 0 rem(24) rem(30);
+    @include media("800") {
+      margin-bottom: rem(20);
+    }
+    &:last-child {
+      @include media("800") {
+        margin-right: 0;
+      }
+    }
+  }
+  a {
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    height: rem(32);
+    width: rem(32);
+    justify-content: center;
+    transition: 0.25s background-color ease-in-out;
+    &:hover {
+      background-color: $mid-red;
+    }
+  }
+  .icon {
+    display: block;
+    height: rem(16);
+  }
+}
+
+.site-footer__nav {
+  margin: 0 auto rem(64);
+  text-align: center;
+  @include media("800") {
+    margin-bottom: 0;
+    text-align: right;
+  }
+  ul {
+    @include media("800") {
+      display: inline-block;
+    }
+  }
+  .translation-menu li {
+    @include media("800") {
+      margin: 0 0 rem(14) rem(24);
+    }
+  }
+  li {
+    margin: 0 0 rem(30);
+    @include media("800") {
+      margin: 0 rem(24) rem(14) 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    @include media("800") {
+      display: inline-block;
+    }
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.site-footer__copyright {
+  text-align: center;
+  @include media("800") {
+    text-align: right;
+  }
+}

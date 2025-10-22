@@ -1,0 +1,19 @@
+uuid: 6cb50396-d6af-4c08-8546-796d902ebc72
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_work_legacy_node_id
+    - node.type.work
+id: node.work.field_work_legacy_node_id
+field_name: field_work_legacy_node_id
+entity_type: node
+bundle: work
+label: 'Legacy Node ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

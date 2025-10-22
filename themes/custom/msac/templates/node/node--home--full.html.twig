@@ -1,0 +1,257 @@
+{% extends "node--full.html.twig" %}
+
+{% block node_hero %}
+	<div class="home-hero">
+		<h1 class="home-hero__heading">Maryland
+			<span>State Arts</span>
+			Council</h1>
+		<span class="home-hero__heading home-hero__heading--fade" aria-hidden="true">Maryland<br>
+			State Arts<br>
+			Council</span>
+		<div class="home-hero__carousel">
+			{% if  content.field_home_carousel|field_value %}
+				<div class="carousel carousel--fade">
+					{{ content.field_home_carousel }}
+				</div>
+			{% endif %}
+
+			<div class="carousel__nav">
+				<div class="carousel__nav-sizer"></div>
+				<ul>
+				<li><button class="carousel__nav-previous" aria-label="Previous" tabindex="0">
+					<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 14 21"><path d="M3.297 0L14 10.5 3.297 21 0 17.766 7.407 10.5 0 3.234z" fill="#FFF" fill-rule="evenodd"/></svg>
+				</button></li>
+				<li><button class="carousel__nav-next" aria-label="Next" tabindex="0">
+					<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 14 21"><path d="M3.297 0L14 10.5 3.297 21 0 17.766 7.407 10.5 0 3.234z" fill="#FFF" fill-rule="evenodd"/></svg>
+				</button></li>
+				<li><button class="carousel__nav-play-pause" aria-label="Pause carousel" tabindex="0">
+					<svg aria-hidden="true" class="icon" data-icon="play" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><path fill="#FFF" d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"/></svg>
+					<svg aria-hidden="true" class="icon" data-icon="pause" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><path fill="#FFF" d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"/></svg>
+				</button></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="home-hero__ctas">
+			{% if content.field_home_hero_links|field_value %}
+				<ul>
+					{% for item in content.field_home_hero_links|field_value %}
+						<li>
+							<a href="{{ item["#url"] }}" class="home-hero__cta" target="{{ item['#options'].attributes.target|default('_self') }}">
+								<span class="home-hero__cta-title"><strong>{{ item["#title"] }}</strong></span>
+								<span class="home-hero__cta-description">
+									<span class="home-hero__cta-description-inner">
+										<span>{{ item['#options'].attributes.title }}</span>
+									</span>
+								</span>
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}
+
+{% block node_heading %}{% endblock %}
+
+{% block node_content %}
+	<div class="home-content-wrap">
+		<section class="home-directory-section" aria-labelledby="home-directory-section-heading">
+			<div class="outer-pad">
+				<div class="silc-grid silc-grid--collapse">
+					<div class="silc-grid__col silc-grid__col--6-1024">
+						<div class="home-directory-section__content">
+							{% if  content.field_home_intro_text|field_value or content.field_home_intro_title|field_value %}
+								{% if  content.field_home_intro_title|field_value %}
+									<h2 class="home-directory-section__heading" id="home-directory-section-heading">{{ content.field_home_intro_title }}</h2>
+								{% endif %}
+								{% if  content.field_home_intro_text %}
+									<p>{{ content.field_home_intro_text }}</p>
+								{% endif %}
+							{% endif %}
+						</div>
+					</div>
+					<div class="silc-grid__col silc-grid__col--1-1024 silc-display--none silc-display--block-1024" role="presentation"></div>
+					<div class="silc-grid__col silc-grid__col--8-800 silc-grid__col--5-1024 silc-grid__col--4-1440">
+						<div class="home-directory-explorer">
+							<h3 class="home-directory-explorer__heading">Select a topic to explore</h3>
+							<form class="home-directory-explorer__form">
+								<div class="form-input">
+									<select class="home-directory-explorer__dropdown" name="topic" aria-label="Select a topic to explore">
+										<option value="">I want to…</option>
+										<option value="/directory/works">Browse Artwork in Maryland</option>
+										<option value="/directory/artists">Find an Artist</option>
+										<option value="/directory/organizations">Find Arts Organizations and Businesses</option>
+										<option value="/directory/districts">Explore Arts &amp; Entertainment Districts</option>
+									</select>
+								</div>
+								<button class="button button--reverse" type="submit">Search</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="home-directory-section__separator">
+				<div role="presentation"></div>
+				<div role="presentation"></div>
+				<div role="presentation"></div>
+				<div role="presentation"></div>
+			</div>
+		</section>
+		<div class="home-news-events">
+			<div class="outer-pad">
+				<div class="silc-grid silc-grid--collapse">
+					<div class="silc-grid__col silc-grid__col--2-1440 silc-display--none silc-display--block-1440" role="presentation"></div>
+					<div class="silc-grid__col silc-grid__col--6-1024 silc-grid__col--4-1440 silc-display--flex-1024">
+						<div class="home-news-events__feed">
+							<h2 class="home-news-events__feed-heading">Arts Calendar</h2>
+							<a href="{{ drupal_url('calendar', {absolute: true}) }}" class="home-news-events__feed-view-all">View All<span class="visible-for-screen-readers">Arts Events</span>
+								<span aria-hidden="true">&nbsp;&gt;</span>
+							</a>
+							<div id="home-events-feed-root">
+								<home-events-feed></home-events-feed>
+								<noscript>Please enable Javascript to view arts events across Maryland.</noscript>
+							</div>
+						</div>
+					</div>
+					<div class="silc-grid__col silc-grid__col--1-1440 silc-display--none silc-display--block-1440" role="presentation"></div>
+					<div class="silc-grid__col silc-grid__col--6-1024 silc-grid__col--4-1440 silc-display--flex-1024">
+						<div class="home-news-events__feed">
+							<h2 class="home-news-events__feed-heading">Arts News</h2>
+							<a href="{{ drupal_url('news', {absolute: true}) }}" class="home-news-events__feed-view-all">View All<span class="visible-for-screen-readers">Arts News</span>
+								<span aria-hidden="true">&nbsp;&gt;</span>
+							</a>
+							{{ drupal_view('news_feed', 'block_1') }}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="home-callouts-section">
+			<div class="outer-pad">
+				<div class="home-callout-grid">
+					<div class="home-callout-grid__item">
+						{% if content.field_home_features.0['#paragraph'].field_home_feature_category.value is not empty and content.field_home_features.0['#paragraph'].field_home_feature_content.value is not empty and content.field_home_features.0['#paragraph'].field_home_feature_image.entity.fileuri is not empty %}
+							{% if content.field_home_features.0['#paragraph'].field_home_feature_link.0 %}
+								<a href="{{ content.field_home_features.0['#paragraph'].field_home_feature_link.0.url }}">
+								{% endif %}
+								<div class="home-callout-grid__feature" style="background-image:url({{ content.field_home_features.0['#paragraph'].field_home_feature_image.entity.fileuri | image_style('homepage_feature') }})">
+									<div class="home-callout-grid__feature-content">
+										<span class="home-callout-grid__feature-category">{{ content.field_home_features.0['#paragraph'].field_home_feature_category.value }}</span>
+										<span class="home-callout-grid__feature-title">{{ content.field_home_features.0['#paragraph'].field_home_feature_content.value }}</span>
+									</div>
+								</div>
+								{% if content.field_home_features.0['#paragraph'].field_home_feature_link.0 %}
+								</a>
+							{% endif %}
+						{% endif %}
+					</div>
+					<div class="home-callout-grid__item">
+						{% if content.field_home_features.1['#paragraph'].field_home_feature_category.value is not empty and content.field_home_features.1['#paragraph'].field_home_feature_content.value is not empty and content.field_home_features.1['#paragraph'].field_home_feature_image.entity.fileuri is not empty %}
+							{% if content.field_home_features.1['#paragraph'].field_home_feature_link.0 %}
+								<a href="{{ content.field_home_features.1['#paragraph'].field_home_feature_link.0.url }}">
+								{% endif %}
+								<div class="home-callout-grid__feature" style="background-image:url({{ content.field_home_features.1['#paragraph'].field_home_feature_image.entity.fileuri | image_style('homepage_feature') }})">
+									<div class="home-callout-grid__feature-content">
+										<span class="home-callout-grid__feature-category">{{ content.field_home_features.1['#paragraph'].field_home_feature_category.value }}</span>
+										<span class="home-callout-grid__feature-title">{{ content.field_home_features.1['#paragraph'].field_home_feature_content.value }}</span>
+									</div>
+								</div>
+								{% if content.field_home_features.1['#paragraph'].field_home_feature_link.0 %}
+								</a>
+							{% endif %}
+						{% endif %}
+					</div>
+					<div class="home-callout-grid__item">
+						{% if content.field_home_features.2['#paragraph'].field_home_feature_category.value is not empty and content.field_home_features.2['#paragraph'].field_home_feature_content.value is not empty and content.field_home_features.2['#paragraph'].field_home_feature_image.entity.fileuri is not empty %}
+							{% if content.field_home_features.2['#paragraph'].field_home_feature_link.0 %}
+								<a href="{{ content.field_home_features.2['#paragraph'].field_home_feature_link.0.url }}">
+								{% endif %}
+								<div class="home-callout-grid__feature" style="background-image:url({{ content.field_home_features.2['#paragraph'].field_home_feature_image.entity.fileuri | image_style('homepage_feature') }})">
+									<div class="home-callout-grid__feature-content">
+										<span class="home-callout-grid__feature-category">{{ content.field_home_features.2['#paragraph'].field_home_feature_category.value }}</span>
+										<span class="home-callout-grid__feature-title">{{ content.field_home_features.2['#paragraph'].field_home_feature_content.value }}</span>
+									</div>
+								</div>
+								{% if content.field_home_features.2['#paragraph'].field_home_feature_link.0 %}
+								</a>
+							{% endif %}
+						{% endif %}
+					</div>
+					<div class="home-callout-grid__item">
+						{% if content.field_home_cta.0['#paragraph'].field_cta_head.value is not empty and content.field_home_cta.0['#paragraph'].field_cta_subhead.value is not empty and content.field_home_cta.0['#paragraph'].field_cta_link[0].title is not empty and  content.field_home_cta.0['#paragraph'].field_cta_link[0].uri is not empty %}
+							<div class="home-callout-grid__cta">
+								<div class="home-callout-grid__cta-statistic">
+									<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 79 77">
+										<g stroke="#EC0000" stroke-width="4" fill="none" fill-rule="evenodd" stroke-linecap="square"><path d="M59.912 3.097L36.006 73.903M43.578 3.097L19.673 73.903M76.245 3.097L52.34 73.903M27.245 3.097L3.34 73.903"/></g>
+									</svg>
+									<p>{{ content.field_home_cta.0['#paragraph'].field_cta_head.value }}</p>
+								</div>
+								<div class="home-callout-grid__cta-impact">
+									<p>{{ content.field_home_cta.0['#paragraph'].field_cta_subhead.value }}</p>
+									<a href="{{ content.field_home_cta.0['#paragraph'].field_cta_link[0].uri }}" class="button button--white">{{ content.field_home_cta.0['#paragraph'].field_cta_link[0].title }}</a>
+								</div>
+							</div>
+						{% endif %}
+					</div>
+					<div class="home-callout-grid__item">
+						{% if content.field_home_features.3['#paragraph'].field_home_feature_category.value is not empty and content.field_home_features.3['#paragraph'].field_home_feature_content.value is not empty and content.field_home_features.3['#paragraph'].field_home_feature_image.entity.fileuri is not empty %}
+							{% if content.field_home_features.3['#paragraph'].field_home_feature_link.0 %}
+								<a href="{{ content.field_home_features.3['#paragraph'].field_home_feature_link.0.url }}">
+								{% endif %}
+								<div class="home-callout-grid__feature" style="background-image:url({{ content.field_home_features.3['#paragraph'].field_home_feature_image.entity.fileuri | image_style('optimized') }})">
+									<div class="home-callout-grid__feature-content">
+										<span class="home-callout-grid__feature-category">{{ content.field_home_features.3['#paragraph'].field_home_feature_category.value }}</span>
+										<span class="home-callout-grid__feature-title">{{ content.field_home_features.3['#paragraph'].field_home_feature_content.value }}</span>
+									</div>
+								</div>
+								{% if content.field_home_features.3['#paragraph'].field_home_feature_link.0 %}
+								</a>
+							{% endif %}
+						{% endif %}
+					</div>
+					<div class="home-callout-grid__item">
+						{% if content.field_home_features.4['#paragraph'].field_home_feature_category.value is not empty and content.field_home_features.4['#paragraph'].field_home_feature_content.value is not empty and content.field_home_features.4['#paragraph'].field_home_feature_image.entity.fileuri is not empty %}
+							{% if content.field_home_features.4['#paragraph'].field_home_feature_link.0 %}
+								<a href="{{ content.field_home_features.4['#paragraph'].field_home_feature_link.0.url }}">
+								{% endif %}
+								<div class="home-callout-grid__feature" style="background-image:url({{ content.field_home_features.4['#paragraph'].field_home_feature_image.entity.fileuri | image_style('homepage_feature') }})">
+									<div class="home-callout-grid__feature-content">
+										<span class="home-callout-grid__feature-category">{{ content.field_home_features.4['#paragraph'].field_home_feature_category.value }}</span>
+										<span class="home-callout-grid__feature-title">{{ content.field_home_features.4['#paragraph'].field_home_feature_content.value }}</span>
+									</div>
+								</div>
+								{% if content.field_home_features.4['#paragraph'].field_home_feature_link.0 %}
+								</a>
+							{% endif %}
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="home-footer-cta">
+			{% if content.field_home_footer_text|field_value or content.field_home_footer_image|field_value %}
+				<div class="outer-pad">
+					<div class="silc-grid silc-grid--collapse silc-grid--align-center">
+						<div class="silc-grid__col silc-grid__col--1-1200 silc-grid__col--2-1440 silc-display--none silc-display--block-1200"></div>
+						<div class="silc-grid__col silc-grid__col--6-1024 silc-grid__col--5-1200">
+							{% if content.field_home_footer_text|field_value %}
+								<div class="home-footer-cta__content">
+									{{ content.field_home_footer_text}}
+								</div>
+							{% endif %}
+						</div>
+						<div class="silc-grid__col silc-grid__col--6-1024 silc-grid__col--5-1200 silc-grid__col--4-1440">
+							{% if content.field_home_footer_image|field_value %}
+								<div class="home-footer-cta__governors-image">
+									{{ content.field_home_footer_image}}
+								</div>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}

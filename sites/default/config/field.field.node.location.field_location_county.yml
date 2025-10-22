@@ -1,0 +1,29 @@
+uuid: 2d12e592-0881-4266-9038-027c4aca1558
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location_county
+    - node.type.location
+    - taxonomy.vocabulary.counties
+id: node.location.field_location_county
+field_name: field_location_county
+entity_type: node
+bundle: location
+label: County
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      counties: counties
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

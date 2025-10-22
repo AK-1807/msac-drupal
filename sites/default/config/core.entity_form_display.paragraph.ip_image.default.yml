@@ -1,0 +1,44 @@
+uuid: b5956a33-7ea8-4317-a449-a2ede6137479
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.idfive_media_browser_image
+    - field.field.paragraph.ip_image.field_ip_im_caption
+    - field.field.paragraph.ip_image.field_ip_im_image
+    - paragraphs.paragraphs_type.ip_image
+  module:
+    - entity_browser
+_core:
+  default_config_hash: ZQT3MzIEZEWjnpYyaq1ZBgVoDGzwj8GfrB7MjczZxzQ
+id: paragraph.ip_image.default
+targetEntityType: paragraph
+bundle: ip_image
+mode: default
+content:
+  field_ip_im_caption:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ip_im_image:
+    type: entity_browser_entity_reference
+    weight: 0
+    region: content
+    settings:
+      entity_browser: idfive_media_browser_image
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings:
+        view_mode: default
+      selection_mode: selection_append
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

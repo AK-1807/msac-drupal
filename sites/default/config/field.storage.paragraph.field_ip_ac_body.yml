@@ -1,0 +1,21 @@
+uuid: 139b2f1b-fdb2-47fd-ac8d-1c1d8f5c7387
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: wJtLK9TTrp77YntMgD3l8W81Q-xssuH4Y7QQdcukveY
+id: paragraph.field_ip_ac_body
+field_name: field_ip_ac_body
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: 151ac1f5-e15c-489c-99c1-d9d0a24c1432
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_artist_social_instagram
+field_name: field_artist_social_instagram
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

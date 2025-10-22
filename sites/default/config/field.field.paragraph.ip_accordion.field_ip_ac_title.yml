@@ -1,0 +1,21 @@
+uuid: 85bf2873-eec8-4280-b883-6c477a6b07c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_ac_title
+    - paragraphs.paragraphs_type.ip_accordion
+_core:
+  default_config_hash: 8sH1UVHGdvRBPh9iGxo8ZyJA0o_w_qwdFOa7ToykhCY
+id: paragraph.ip_accordion.field_ip_ac_title
+field_name: field_ip_ac_title
+entity_type: paragraph
+bundle: ip_accordion
+label: 'Accordion Group Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ip_html.field_ip_html_text
+    - paragraphs.paragraphs_type.ip_html
+  module:
+    - text
+_core:
+  default_config_hash: d2zYn7awv_alRtHYmbjzk41-U5nfbTKkIMYiBszGkMI
+id: paragraph.ip_html.default
+targetEntityType: paragraph
+bundle: ip_html
+mode: default
+content:
+  field_ip_html_text:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  search_api_excerpt: true

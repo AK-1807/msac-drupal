@@ -1,0 +1,21 @@
+uuid: 434820fd-8610-43d7-bf76-1f8cca7d9711
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_bq_source
+    - paragraphs.paragraphs_type.ip_blockquote
+_core:
+  default_config_hash: Y-4RpkidrvQwaw_H_ngNiSqHQUrP7azH_Uf_JCMxgXc
+id: paragraph.ip_blockquote.field_ip_bq_source
+field_name: field_ip_bq_source
+entity_type: paragraph
+bundle: ip_blockquote
+label: Citation
+description: 'Quote source. An optional publication that this quote comes from.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

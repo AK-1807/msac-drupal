@@ -1,0 +1,79 @@
+<?php
+
+/**
+ * @file
+ * Ip_carousel module file.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ *
+ * @inheritdoc
+ */
+function ip_carousel_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.ip_carousel':
+      $text = file_get_contents(dirname(__FILE__) . "/README.md");
+      if (!\Drupal::moduleHandler()->moduleExists('markdown')) {
+        return '<pre>' . $text . '</pre>';
+      }
+      else {
+        // Use the Markdown filter to render the README.
+        $filter_manager = \Drupal::service('plugin.manager.filter');
+        $settings = \Drupal::configFactory()->get('markdown.settings')->getRawData();
+        $config = ['settings' => $settings];
+        $filter = $filter_manager->createInstance('markdown', $config);
+        return $filter->process($text, 'en');
+      }
+  }
+  return NULL;
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * Lets us define our paragraphs templates in this module.
+ */
+function ip_carousel_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__ip_carousel' => [
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__ip_carousel_item' => [
+      'base hook' => 'paragraph',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_field_WIDGET_TYPE_paragraphs_form_alter().
+ *
+ * Adds "Content Tips from idfive" helper text to the paragraph.
+ */
+function ip_carousel_field_widget_paragraphs_form_alter(&$element, &$form_state, $context) {
+  if ($element['#paragraph_type'] == 'ip_carousel') {
+
+    // Tips text from idfive.
+    $markup = '<h3>Do:</h3><ul>';
+    $markup .= '<li><strong>Use to showcase photos.</strong> Using a carousel as an image gallery is the best use of carousels.</li>';
+    $markup .= '<li><strong>Use at least 3 slides.</strong> If there is only 1 or 2 slides-worth of content, using a full-width image module may be a better solution.</li>';
+    $markup .= '<li><strong>Use images with a horizontal aspect ratio.</strong> Images in carousels will all be cropped to have the same aspect ratio so they have a consistent display as a user navigates through the carousel. Portrait or square images may be cropped in an unexpected way.</li>';
+    $markup .= '<li><strong>Use high quality images at the specified minimum size.</strong> It can look strange when a slide in a carousel is noticeably lower quality than the others. Smaller images that are unable to go in a carousel can alternatively be used as inline images with captions.</li>';
+    $markup .= '<li><strong>Be consistent when using image descriptions.</strong> If one image has a description, try to make sure all other images also have descriptions. Make sure the description lengths don’t vary too widely.</li>';
+    $markup .= '</ul>';
+    $markup .= '<h3>Dont:</h3><ul>';
+    $markup .= '<li><strong>Use an image that has text embedded in the image itself.</strong> Any text in an image may be cut off in a way you don’t expect. Use the description field to add extra information about an image.</li>';
+    $markup .= '<li><strong>Use an image that has important features toward the edges or covered by the image description.</strong> For example, if you are featuring a person, make the face is towards the top third and easily visible.</li>';
+    $markup .= '</ul>';
+    $markup .= '<p><a target="_blank" href="/admin/help/ip_carousel">Carousel Module Help</a></p>';
+    $element['ip_carousel_tips'] = [
+      '#type' => 'details',
+      '#title' => t('Carousel Group Content Tips'),
+      '#weight' => -1000,
+    ];
+    $element['ip_carousel_tips']['#markup'] = $markup;
+
+  }
+}

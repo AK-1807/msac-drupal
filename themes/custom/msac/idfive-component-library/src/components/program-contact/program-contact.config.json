@@ -1,0 +1,9 @@
+{
+  "context": {
+    "photo": "https://via.placeholder.com/450x450",
+    "name": "John Doe",
+    "title": "Executive Director",
+    "email": "john.doe@test.com",
+    "phone": "123-456-7890"
+  }
+}

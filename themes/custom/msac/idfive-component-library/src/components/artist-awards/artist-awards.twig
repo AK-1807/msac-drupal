@@ -1,0 +1,14 @@
+<div class="artist-awards">
+    <h2 class="artist-awards__heading">Awards Received</h2>
+    <div class="artist-awards__content">
+        {% for award in awards %}
+            <div class="artist-awards__award">
+                <div class="artist-awards__award-icon">
+                    {{ award.icon|raw }}
+                </div>
+                <h3 class="artist-awards__award-name">{{ award.name }}</h3>
+                <p>{{ join(award.years) }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>

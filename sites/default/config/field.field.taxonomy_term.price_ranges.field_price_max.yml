@@ -1,0 +1,23 @@
+uuid: 245166ad-6f3c-42a8-a92e-449a305e976e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_price_max
+    - taxonomy.vocabulary.price_ranges
+id: taxonomy_term.price_ranges.field_price_max
+field_name: field_price_max
+entity_type: taxonomy_term
+bundle: price_ranges
+label: 'Price Max'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

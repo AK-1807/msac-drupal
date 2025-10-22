@@ -1,0 +1,174 @@
+uuid: ecfeb6c5-9c51-44b1-92f1-b961b6e05bfd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.artist.body
+    - field.field.node.artist.feeds_item
+    - field.field.node.artist.field_artist_address
+    - field.field.node.artist.field_artist_artistic_categories
+    - field.field.node.artist.field_artist_arts_in_edu_roster
+    - field.field.node.artist.field_artist_audio
+    - field.field.node.artist.field_artist_awards
+    - field.field.node.artist.field_artist_bk_contact_info
+    - field.field.node.artist.field_artist_bk_materials_tech
+    - field.field.node.artist.field_artist_bk_price
+    - field.field.node.artist.field_artist_bk_references
+    - field.field.node.artist.field_artist_bk_travel_req_rest
+    - field.field.node.artist.field_artist_cover
+    - field.field.node.artist.field_artist_cover_caption
+    - field.field.node.artist.field_artist_districts
+    - field.field.node.artist.field_artist_email
+    - field.field.node.artist.field_artist_engmt_type_1
+    - field.field.node.artist.field_artist_engmt_type_1_text
+    - field.field.node.artist.field_artist_engmt_type_2
+    - field.field.node.artist.field_artist_engmt_type_2_text
+    - field.field.node.artist.field_artist_engmt_type_3
+    - field.field.node.artist.field_artist_engmt_type_3_text
+    - field.field.node.artist.field_artist_engmt_type_4
+    - field.field.node.artist.field_artist_engmt_type_4_text
+    - field.field.node.artist.field_artist_engmt_type_5
+    - field.field.node.artist.field_artist_engmt_type_5_text
+    - field.field.node.artist.field_artist_engmt_type_6
+    - field.field.node.artist.field_artist_engmt_type_6_text
+    - field.field.node.artist.field_artist_engmt_type_7
+    - field.field.node.artist.field_artist_engmt_type_7_text
+    - field.field.node.artist.field_artist_engmt_type_8
+    - field.field.node.artist.field_artist_engmt_type_8_text
+    - field.field.node.artist.field_artist_first_name
+    - field.field.node.artist.field_artist_gallery_website
+    - field.field.node.artist.field_artist_grants
+    - field.field.node.artist.field_artist_iaa_recipient
+    - field.field.node.artist.field_artist_juried_exhib
+    - field.field.node.artist.field_artist_juried_exhib_year
+    - field.field.node.artist.field_artist_last_name
+    - field.field.node.artist.field_artist_legacy_node_id
+    - field.field.node.artist.field_artist_legacy_user_id
+    - field.field.node.artist.field_artist_legacy_user_name
+    - field.field.node.artist.field_artist_mp_categories
+    - field.field.node.artist.field_artist_mp_image
+    - field.field.node.artist.field_artist_mp_join_date
+    - field.field.node.artist.field_artist_mp_opt_in
+    - field.field.node.artist.field_artist_p_work
+    - field.field.node.artist.field_artist_phone
+    - field.field.node.artist.field_artist_photo
+    - field.field.node.artist.field_artist_population_types
+    - field.field.node.artist.field_artist_presenting_touring
+    - field.field.node.artist.field_artist_price_ranges
+    - field.field.node.artist.field_artist_quote
+    - field.field.node.artist.field_artist_registry_tags
+    - field.field.node.artist.field_artist_resume
+    - field.field.node.artist.field_artist_show_email
+    - field.field.node.artist.field_artist_social_behance
+    - field.field.node.artist.field_artist_social_dribbble
+    - field.field.node.artist.field_artist_social_facebook
+    - field.field.node.artist.field_artist_social_instagram
+    - field.field.node.artist.field_artist_social_linkedin
+    - field.field.node.artist.field_artist_social_twitter
+    - field.field.node.artist.field_artist_social_vimeo
+    - field.field.node.artist.field_artist_social_youtube
+    - field.field.node.artist.field_artist_statement
+    - field.field.node.artist.field_artist_video
+    - field.field.node.artist.field_artist_video_url
+    - field.field.node.artist.field_artist_website
+    - field.field.node.artist.field_artist_websites
+    - field.field.node.artist.field_county
+    - node.type.artist
+  module:
+    - text
+    - user
+id: node.artist.teaser
+targetEntityType: node
+bundle: artist
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  feeds_item: true
+  field_artist_address: true
+  field_artist_artistic_categories: true
+  field_artist_arts_in_edu_roster: true
+  field_artist_audio: true
+  field_artist_awards: true
+  field_artist_bk_contact_info: true
+  field_artist_bk_materials_tech: true
+  field_artist_bk_price: true
+  field_artist_bk_references: true
+  field_artist_bk_travel_req_rest: true
+  field_artist_cover: true
+  field_artist_cover_caption: true
+  field_artist_districts: true
+  field_artist_email: true
+  field_artist_engmt_type_1: true
+  field_artist_engmt_type_1_text: true
+  field_artist_engmt_type_2: true
+  field_artist_engmt_type_2_text: true
+  field_artist_engmt_type_3: true
+  field_artist_engmt_type_3_text: true
+  field_artist_engmt_type_4: true
+  field_artist_engmt_type_4_text: true
+  field_artist_engmt_type_5: true
+  field_artist_engmt_type_5_text: true
+  field_artist_engmt_type_6: true
+  field_artist_engmt_type_6_text: true
+  field_artist_engmt_type_7: true
+  field_artist_engmt_type_7_text: true
+  field_artist_engmt_type_8: true
+  field_artist_engmt_type_8_text: true
+  field_artist_first_name: true
+  field_artist_gallery_website: true
+  field_artist_grants: true
+  field_artist_iaa_recipient: true
+  field_artist_juried_exhib: true
+  field_artist_juried_exhib_year: true
+  field_artist_last_name: true
+  field_artist_legacy_node_id: true
+  field_artist_legacy_user_id: true
+  field_artist_legacy_user_name: true
+  field_artist_mp_categories: true
+  field_artist_mp_image: true
+  field_artist_mp_join_date: true
+  field_artist_mp_opt_in: true
+  field_artist_p_work: true
+  field_artist_phone: true
+  field_artist_photo: true
+  field_artist_population_types: true
+  field_artist_presenting_touring: true
+  field_artist_price_ranges: true
+  field_artist_quote: true
+  field_artist_registry_tags: true
+  field_artist_resume: true
+  field_artist_show_email: true
+  field_artist_social_behance: true
+  field_artist_social_dribbble: true
+  field_artist_social_facebook: true
+  field_artist_social_instagram: true
+  field_artist_social_linkedin: true
+  field_artist_social_twitter: true
+  field_artist_social_vimeo: true
+  field_artist_social_youtube: true
+  field_artist_statement: true
+  field_artist_video: true
+  field_artist_video_url: true
+  field_artist_website: true
+  field_artist_websites: true
+  field_county: true
+  search_api_excerpt: true

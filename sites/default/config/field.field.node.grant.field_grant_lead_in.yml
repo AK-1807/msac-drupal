@@ -1,0 +1,19 @@
+uuid: 9209f294-c693-4a71-8251-d10510fac6b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_grant_lead_in
+    - node.type.grant
+id: node.grant.field_grant_lead_in
+field_name: field_grant_lead_in
+entity_type: node
+bundle: grant
+label: 'Lead In'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

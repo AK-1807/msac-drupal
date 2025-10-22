@@ -1,0 +1,21 @@
+uuid: a65d3eb6-c055-4751-b1cd-72f967b4264c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_hero_caption
+field_name: field_hero_caption
+entity_type: node
+type: string
+settings:
+  max_length: 500
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

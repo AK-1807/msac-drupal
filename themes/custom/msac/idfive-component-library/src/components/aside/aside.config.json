@@ -1,0 +1,19 @@
+{
+  "context": {
+    "title": "Aside Title",
+    "sections": [
+      {
+        "title": "",
+        "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nemo earum maiores aut atque, aliquid.</p>"
+      },
+      {
+        "title": "Aside subheading",
+        "content": "<ul><li><a href=\"\">Link 1</a></li><li><a href=\"\">Link 2</a></li><li><a href=\"\">Link 3</a></li></ul>"
+      },
+      {
+        "title": "",
+        "content": "<a href=\"\" class=\"button\">Aside Button Lorem</a>"
+      }
+    ]
+  }
+}

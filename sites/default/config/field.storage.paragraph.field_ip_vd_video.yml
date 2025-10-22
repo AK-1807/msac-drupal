@@ -1,0 +1,22 @@
+uuid: b46948a9-497f-40c7-9d87-9da67570ec2c
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+_core:
+  default_config_hash: hPlvy47GBmjwdmwSGdKr3DoI3VLxlRgy2vf6KUYRZiE
+id: paragraph.field_ip_vd_video
+field_name: field_ip_vd_video
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

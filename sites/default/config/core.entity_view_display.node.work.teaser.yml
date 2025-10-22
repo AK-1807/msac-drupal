@@ -1,0 +1,234 @@
+uuid: 1edb5eeb-942b-455e-b4f2-c6ddd0ad8f7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.work.feeds_item
+    - field.field.node.work.field_work_artist_name
+    - field.field.node.work.field_work_artistic_categories
+    - field.field.node.work.field_work_audio
+    - field.field.node.work.field_work_audio_url
+    - field.field.node.work.field_work_description
+    - field.field.node.work.field_work_details
+    - field.field.node.work.field_work_document
+    - field.field.node.work.field_work_featured
+    - field.field.node.work.field_work_for_sale
+    - field.field.node.work.field_work_image
+    - field.field.node.work.field_work_legacy_node_id
+    - field.field.node.work.field_work_legacy_user_id
+    - field.field.node.work.field_work_legacy_user_name
+    - field.field.node.work.field_work_legacy_work_id
+    - field.field.node.work.field_work_medium
+    - field.field.node.work.field_work_owner
+    - field.field.node.work.field_work_price
+    - field.field.node.work.field_work_price_range
+    - field.field.node.work.field_work_type
+    - field.field.node.work.field_work_video
+    - field.field.node.work.field_work_year
+    - node.type.work
+  module:
+    - audiofield
+    - feeds
+    - file
+    - image
+    - link
+    - options
+    - user
+    - video_embed_field
+id: node.work.teaser
+targetEntityType: node
+bundle: work
+mode: teaser
+content:
+  feeds_item:
+    type: feeds_item_imported
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: ''
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_work_artist_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_work_artistic_categories:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_work_audio:
+    type: audiofield_audioplayer
+    label: hidden
+    settings:
+      audio_player: mediaelement_audio_player
+      audio_player_jplayer_theme: none
+      audio_player_wavesurfer_combine_files: false
+      audio_player_wavesurfer_audiorate: 1
+      audio_player_wavesurfer_autocenter: true
+      audio_player_wavesurfer_bargap: 0
+      audio_player_wavesurfer_barheight: 1
+      audio_player_wavesurfer_barwidth: null
+      audio_player_wavesurfer_cursorcolor: '#000000'
+      audio_player_wavesurfer_cursorwidth: 1
+      audio_player_wavesurfer_forcedecode: false
+      audio_player_wavesurfer_normalize: false
+      audio_player_wavesurfer_progresscolor: '#000000'
+      audio_player_wavesurfer_responsive: false
+      audio_player_wavesurfer_wavecolor: '#000000'
+      audio_player_wordpress_combine_files: false
+      audio_player_wordpress_animation: true
+      audio_player_soundmanager_theme: default
+      audio_player_initial_volume: 8
+      audio_player_autoplay: false
+      audio_player_lazyload: true
+      download_button: false
+      download_link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_work_audio_url:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_work_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_work_details:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_work_document:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_work_featured:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_work_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_work_medium:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_work_owner:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_work_price:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_work_price_range:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_work_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_work_video:
+    type: video_embed_field_video
+    label: above
+    settings:
+      autoplay: true
+      responsive: true
+      width: 854
+      height: 480
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_work_year:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+hidden:
+  content_moderation_control: true
+  field_work_for_sale: true
+  field_work_legacy_node_id: true
+  field_work_legacy_user_id: true
+  field_work_legacy_user_name: true
+  field_work_legacy_work_id: true
+  links: true
+  search_api_excerpt: true

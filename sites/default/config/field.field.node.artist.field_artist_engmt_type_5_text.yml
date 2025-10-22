@@ -1,0 +1,26 @@
+uuid: ee284e4b-504f-40cd-b45a-c9bafc934138
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_engmt_type_5_text
+    - node.type.artist
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - plain_text
+id: node.artist.field_artist_engmt_type_5_text
+field_name: field_artist_engmt_type_5_text
+entity_type: node
+bundle: artist
+label: 'Visiting Performances Offered'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

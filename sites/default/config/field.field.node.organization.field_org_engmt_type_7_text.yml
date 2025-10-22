@@ -1,0 +1,26 @@
+uuid: e575b1fb-d71d-43fd-add6-736306db9104
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_org_engmt_type_7_text
+    - node.type.organization
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - plain_text
+id: node.organization.field_org_engmt_type_7_text
+field_name: field_org_engmt_type_7_text
+entity_type: node
+bundle: organization
+label: 'Professional Development Offered'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

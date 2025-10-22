@@ -1,0 +1,725 @@
+uuid: 58118420-918a-4707-87d4-fd40eb7b4ff7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.artist.body
+    - field.field.node.artist.feeds_item
+    - field.field.node.artist.field_artist_address
+    - field.field.node.artist.field_artist_artistic_categories
+    - field.field.node.artist.field_artist_arts_in_edu_roster
+    - field.field.node.artist.field_artist_audio
+    - field.field.node.artist.field_artist_awards
+    - field.field.node.artist.field_artist_bk_contact_info
+    - field.field.node.artist.field_artist_bk_materials_tech
+    - field.field.node.artist.field_artist_bk_price
+    - field.field.node.artist.field_artist_bk_references
+    - field.field.node.artist.field_artist_bk_travel_req_rest
+    - field.field.node.artist.field_artist_cover
+    - field.field.node.artist.field_artist_cover_caption
+    - field.field.node.artist.field_artist_districts
+    - field.field.node.artist.field_artist_email
+    - field.field.node.artist.field_artist_engmt_type_1
+    - field.field.node.artist.field_artist_engmt_type_1_text
+    - field.field.node.artist.field_artist_engmt_type_2
+    - field.field.node.artist.field_artist_engmt_type_2_text
+    - field.field.node.artist.field_artist_engmt_type_3
+    - field.field.node.artist.field_artist_engmt_type_3_text
+    - field.field.node.artist.field_artist_engmt_type_4
+    - field.field.node.artist.field_artist_engmt_type_4_text
+    - field.field.node.artist.field_artist_engmt_type_5
+    - field.field.node.artist.field_artist_engmt_type_5_text
+    - field.field.node.artist.field_artist_engmt_type_6
+    - field.field.node.artist.field_artist_engmt_type_6_text
+    - field.field.node.artist.field_artist_engmt_type_7
+    - field.field.node.artist.field_artist_engmt_type_7_text
+    - field.field.node.artist.field_artist_engmt_type_8
+    - field.field.node.artist.field_artist_engmt_type_8_text
+    - field.field.node.artist.field_artist_first_name
+    - field.field.node.artist.field_artist_gallery_website
+    - field.field.node.artist.field_artist_grants
+    - field.field.node.artist.field_artist_iaa_recipient
+    - field.field.node.artist.field_artist_juried_exhib
+    - field.field.node.artist.field_artist_juried_exhib_year
+    - field.field.node.artist.field_artist_last_name
+    - field.field.node.artist.field_artist_legacy_node_id
+    - field.field.node.artist.field_artist_legacy_user_id
+    - field.field.node.artist.field_artist_legacy_user_name
+    - field.field.node.artist.field_artist_mp_categories
+    - field.field.node.artist.field_artist_mp_image
+    - field.field.node.artist.field_artist_mp_join_date
+    - field.field.node.artist.field_artist_mp_opt_in
+    - field.field.node.artist.field_artist_p_work
+    - field.field.node.artist.field_artist_phone
+    - field.field.node.artist.field_artist_photo
+    - field.field.node.artist.field_artist_population_types
+    - field.field.node.artist.field_artist_presenting_touring
+    - field.field.node.artist.field_artist_price_ranges
+    - field.field.node.artist.field_artist_quote
+    - field.field.node.artist.field_artist_registry_tags
+    - field.field.node.artist.field_artist_resume
+    - field.field.node.artist.field_artist_show_email
+    - field.field.node.artist.field_artist_social_behance
+    - field.field.node.artist.field_artist_social_dribbble
+    - field.field.node.artist.field_artist_social_facebook
+    - field.field.node.artist.field_artist_social_instagram
+    - field.field.node.artist.field_artist_social_linkedin
+    - field.field.node.artist.field_artist_social_twitter
+    - field.field.node.artist.field_artist_social_vimeo
+    - field.field.node.artist.field_artist_social_youtube
+    - field.field.node.artist.field_artist_statement
+    - field.field.node.artist.field_artist_video
+    - field.field.node.artist.field_artist_video_url
+    - field.field.node.artist.field_artist_website
+    - field.field.node.artist.field_artist_websites
+    - field.field.node.artist.field_county
+    - node.type.artist
+  module:
+    - address
+    - datetime
+    - entity_reference_revisions
+    - file
+    - image
+    - link
+    - options
+    - telephone
+    - text
+    - user
+    - video_embed_field
+id: node.artist.default
+targetEntityType: node
+bundle: artist
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_artist_address:
+    type: address_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_artist_artistic_categories:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 126
+    region: content
+  field_artist_arts_in_edu_roster:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 195
+    region: content
+  field_artist_audio:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 118
+    region: content
+  field_artist_awards:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 191
+    region: content
+  field_artist_bk_contact_info:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 172
+    region: content
+  field_artist_bk_materials_tech:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 177
+    region: content
+  field_artist_bk_price:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 173
+    region: content
+  field_artist_bk_references:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 179
+    region: content
+  field_artist_bk_travel_req_rest:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 178
+    region: content
+  field_artist_cover:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: optimized
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 139
+    region: content
+  field_artist_cover_caption:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 225
+    region: content
+  field_artist_districts:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 137
+    region: content
+  field_artist_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_artist_engmt_type_1:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 209
+    region: content
+  field_artist_engmt_type_1_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 217
+    region: content
+  field_artist_engmt_type_2:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 210
+    region: content
+  field_artist_engmt_type_2_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 218
+    region: content
+  field_artist_engmt_type_3:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 211
+    region: content
+  field_artist_engmt_type_3_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 219
+    region: content
+  field_artist_engmt_type_4:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 212
+    region: content
+  field_artist_engmt_type_4_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 220
+    region: content
+  field_artist_engmt_type_5:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 213
+    region: content
+  field_artist_engmt_type_5_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 221
+    region: content
+  field_artist_engmt_type_6:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 214
+    region: content
+  field_artist_engmt_type_6_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 222
+    region: content
+  field_artist_engmt_type_7:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 215
+    region: content
+  field_artist_engmt_type_7_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 223
+    region: content
+  field_artist_engmt_type_8:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 216
+    region: content
+  field_artist_engmt_type_8_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 224
+    region: content
+  field_artist_first_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_artist_gallery_website:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 174
+    region: content
+  field_artist_grants:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 197
+    region: content
+  field_artist_iaa_recipient:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 128
+    region: content
+  field_artist_juried_exhib:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 120
+    region: content
+  field_artist_juried_exhib_year:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 121
+    region: content
+  field_artist_last_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_artist_legacy_node_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 124
+    region: content
+  field_artist_legacy_user_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 129
+    region: content
+  field_artist_legacy_user_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 130
+    region: content
+  field_artist_mp_categories:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 133
+    region: content
+  field_artist_mp_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 134
+    region: content
+  field_artist_mp_join_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 131
+    region: content
+  field_artist_mp_opt_in:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 135
+    region: content
+  field_artist_p_work:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 194
+    region: content
+  field_artist_phone:
+    type: telephone_link
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_artist_photo:
+    type: image_url
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_artist_population_types:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 201
+    region: content
+  field_artist_presenting_touring:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 198
+    region: content
+  field_artist_price_ranges:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 123
+    region: content
+  field_artist_quote:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 138
+    region: content
+  field_artist_registry_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 127
+    region: content
+  field_artist_resume:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 167
+    region: content
+  field_artist_show_email:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 192
+    region: content
+  field_artist_social_behance:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 176
+    region: content
+  field_artist_social_dribbble:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 175
+    region: content
+  field_artist_social_facebook:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_artist_social_instagram:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_artist_social_linkedin:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 116
+    region: content
+  field_artist_social_twitter:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_artist_social_vimeo:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 115
+    region: content
+  field_artist_social_youtube:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  field_artist_statement:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 125
+    region: content
+  field_artist_video:
+    type: video_embed_field_video
+    label: above
+    settings:
+      autoplay: true
+      responsive: true
+      width: 854
+      height: 480
+    third_party_settings: {  }
+    weight: 117
+    region: content
+  field_artist_video_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 196
+    region: content
+  field_artist_website:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 132
+    region: content
+  field_artist_websites:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_county:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 190
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  feeds_item: true
+  search_api_excerpt: true

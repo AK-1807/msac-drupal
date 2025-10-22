@@ -1,0 +1,28 @@
+uuid: 84252858-993e-4438-8433-06b234bb09b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.organization
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - simple_html
+id: node.organization.body
+field_name: body
+entity_type: node
+bundle: organization
+label: 'About the Organization'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

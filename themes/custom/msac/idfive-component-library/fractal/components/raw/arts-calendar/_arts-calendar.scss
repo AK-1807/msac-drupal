@@ -1,0 +1,221 @@
+.arts-calendar {
+  .calendar {
+    margin-bottom: rem(32);
+    @include media("1200") {
+      max-width: none;
+    }
+  }
+}
+
+.arts-calendar__search {
+  margin-top: rem(88);
+  @include media("800") {
+    margin-top: rem(72);
+  }
+  @include media("1200") {
+    margin-top: 0;
+  }
+}
+
+.arts-calendar__keyword-search {
+  margin-bottom: rem(42);
+  @include media("550") {
+    align-items: flex-end;
+    display: flex;
+  }
+  .form-item {
+    @include media("550") {
+      flex: 1 1 0px;
+      margin-right: rem(20);
+      margin-bottom: 0;
+    }
+  }
+}
+
+.arts-calendar__keyword-search-submit {
+  @include media("1024") {
+    flex: 0;
+  }
+}
+
+.arts-calendar__feed {
+  margin-top: rem(88);
+  @include media("800") {
+    margin-top: rem(72);
+  }
+}
+
+.arts-calendar__feed-events {
+  margin-left: rem(-48);
+  @include media("1024") {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.arts-calendar__feed-events-item {
+  margin-bottom: rem(32);
+  padding-left: rem(48);
+  @include media("800") {
+    margin-bottom: rem(48);
+  }
+  @include media("1024") {
+    flex: 0 1 auto;
+    width: 50%;
+  }
+}
+
+.arts-calendar__feed-event-title {
+  font-family: $red-hat-display;
+  font-size: rem(22);
+  font-weight: 700;
+  line-height: (30 / 22);
+  margin: 0 0 rem(16);
+  @include media("800") {
+    margin-bottom: rem(24);
+  }
+  a {
+    color: $dark-red;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.arts-calendar__feed-event-city {
+  font-family: $red-hat-display;
+  font-size: rem(16);
+  font-weight: 700;
+  letter-spacing: em(1.75, 16);
+  line-height: (20 / 16);
+  margin-bottom: rem(4);
+  text-transform: uppercase;
+}
+
+.arts-calendar__feed-event-datetime {
+  text-transform: uppercase;
+}
+
+.arts-calendar__filters {
+  .form-input {
+    margin-bottom: rem(32);
+    @include media("800") {
+      margin-bottom: 0;
+    }
+  }
+  .form-select {
+    max-width: none;
+  }
+}
+
+.arts-calendar__modal {
+  .modal__container {
+    max-width: rem(930);
+    width: 88%;
+    @include media("800") {
+      width: 65%;
+    }
+  }
+  .modal__header {
+    display: block;
+    padding: rem(16) rem(16) rem(24) rem(60);
+    position: relative;
+  }
+  .modal__close {
+    position: absolute;
+    top: rem(16);
+    left: rem(8);
+  }
+}
+
+.arts-calendar__modal-section {
+  &:not(:last-child) {
+    margin-bottom: rem(32);
+  }
+}
+
+.arts-calendar__modal-subheading {
+  color: $black;
+  font-size: rem(16);
+  font-weight: 700;
+  letter-spacing: em(1.75, 16);
+  line-height: (20 / 16);
+  margin: 0 0 rem(8);
+  text-transform: uppercase;
+}
+
+.arts-calendar__modal-event-category {
+  font-family: $red-hat-display;
+  font-size: rem(16);
+  font-weight: 700;
+  letter-spacing: em(1.75, 16);
+  line-height: (20 / 16);
+  margin-top: rem(16);
+  text-transform: uppercase;
+}
+
+.arts-calendar__modal-details {
+  margin-bottom: rem(32);
+  @include media("600") {
+    display: flex;
+  }
+}
+
+.arts-calendar__modal-thumbnail {
+  margin: 0 0 rem(24);
+  position: relative;
+  width: rem(136);
+  @include media("600") {
+    align-self: flex-start;
+    flex: 0 0 auto;
+    margin: 0 rem(40) 0 0;
+  }
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 130%;
+  }
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.arts-calendar__modal-description {
+  margin-bottom: rem(16);
+}
+
+.arts-calendar__modal-contact-method {
+  padding-left: rem(42);
+  position: relative;
+  &:not(:last-child) {
+    margin-bottom: rem(16);
+  }
+  a[href^="mailto:"] {
+    word-break: break-word;
+  }
+  .icon-circle {
+    position: absolute;
+    top: rem(-2);
+    left: 0;
+  }
+}
+
+.arts-calendar__modal-share-links {
+  li {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: rem(20);
+    }
+    .icon-circle {
+      margin-right: 0;
+    }
+  }
+}

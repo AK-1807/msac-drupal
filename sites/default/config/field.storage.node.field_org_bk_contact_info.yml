@@ -1,0 +1,19 @@
+uuid: bb713410-bf90-48f4-aaf1-b016b537b035
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_org_bk_contact_info
+field_name: field_org_bk_contact_info
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

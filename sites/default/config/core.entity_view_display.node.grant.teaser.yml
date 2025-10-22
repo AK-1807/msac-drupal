@@ -1,0 +1,71 @@
+uuid: 56300b18-d12e-4932-adb3-f4fb1dd992fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.grant.body
+    - field.field.node.grant.field_grant_accordion
+    - field.field.node.grant.field_grant_application_closed
+    - field.field.node.grant.field_grant_audience
+    - field.field.node.grant.field_grant_background
+    - field.field.node.grant.field_grant_contacts
+    - field.field.node.grant.field_grant_image
+    - field.field.node.grant.field_grant_lead_in
+    - field.field.node.grant.field_grant_program
+    - field.field.node.grant.field_grant_ql_application
+    - field.field.node.grant.field_grant_ql_apply_link
+    - field.field.node.grant.field_grant_ql_deadline
+    - field.field.node.grant.field_grant_ql_deadline_text
+    - field.field.node.grant.field_grant_ql_funding
+    - field.field.node.grant.field_grant_related_grants
+    - field.field.node.grant.field_grant_resources
+    - field.field.node.grant.field_grant_rolling_deadline
+    - field.field.node.grant.field_meta
+    - field.field.node.grant.field_weight
+    - node.type.grant
+  module:
+    - image
+    - user
+id: node.grant.teaser
+targetEntityType: node
+bundle: grant
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_grant_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  field_grant_accordion: true
+  field_grant_application_closed: true
+  field_grant_audience: true
+  field_grant_background: true
+  field_grant_contacts: true
+  field_grant_lead_in: true
+  field_grant_program: true
+  field_grant_ql_application: true
+  field_grant_ql_apply_link: true
+  field_grant_ql_deadline: true
+  field_grant_ql_deadline_text: true
+  field_grant_ql_funding: true
+  field_grant_related_grants: true
+  field_grant_resources: true
+  field_grant_rolling_deadline: true
+  field_meta: true
+  field_weight: true
+  links: true
+  search_api_excerpt: true

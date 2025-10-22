@@ -1,0 +1,93 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ip_accordion.field_ip_ac_allow_mult
+    - field.field.paragraph.ip_accordion.field_ip_ac_animate
+    - field.field.paragraph.ip_accordion.field_ip_ac_item
+    - field.field.paragraph.ip_accordion.field_ip_ac_open_first
+    - field.field.paragraph.ip_accordion.field_ip_ac_title
+    - field.field.paragraph.ip_accordion.field_ip_ac_type
+    - paragraphs.paragraphs_type.ip_accordion
+  module:
+    - field_group
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_ip_ac_options:
+      children:
+        - field_ip_ac_type
+        - field_ip_ac_animate
+        - field_ip_ac_open_first
+        - field_ip_ac_allow_mult
+      parent_name: ''
+      weight: 1
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Accordion Options'
+id: paragraph.ip_accordion.default
+targetEntityType: paragraph
+bundle: ip_accordion
+mode: default
+content:
+  field_ip_ac_allow_mult:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_ip_ac_animate:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_ip_ac_item:
+    type: paragraphs
+    weight: 6
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ip_accordion_item
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: '0'
+    third_party_settings: {  }
+  field_ip_ac_open_first:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_ip_ac_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ip_ac_type:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

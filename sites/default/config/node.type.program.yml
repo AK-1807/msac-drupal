@@ -1,0 +1,21 @@
+uuid: ee038236-a320-4b86-be93-3fe47ba627ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - node_title_help_text
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:menu_link_content:6ed6a680-2e19-444f-a721-4506abfab13d'
+  node_title_help_text:
+    title_help: ''
+name: Program
+type: program
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

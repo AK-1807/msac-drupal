@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 4yTl7hHw2vr0c4SLAx5FSLCjgy1_Hf9UpOuAgSDfaFU
+id: ip_webform_embed
+label: 'Webform Embed (Advanced)'
+icon_uuid: null
+description: '(DEVELOPER USE ONLY) This Paragraph type provides a way to embed webforms created in drupal, into the Kitchen Sink Widgets. It is controlled by the idfive Paragraphs module.'
+behavior_plugins: {  }

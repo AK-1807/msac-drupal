@@ -1,0 +1,26 @@
+uuid: c4739640-8c4b-44c2-98bd-d67689f36aa1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_org_engmt_type_3_text
+    - node.type.organization
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - plain_text
+id: node.organization.field_org_engmt_type_3_text
+field_name: field_org_engmt_type_3_text
+entity_type: node
+bundle: organization
+label: 'Out of School Time Offered'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

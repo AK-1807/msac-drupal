@@ -1,0 +1,670 @@
+uuid: 3b684442-4d3e-42f6-ad3f-5a436399ee56
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.artist.title
+    - field.field.node.artist.body
+    - field.field.node.artist.field_artist_address
+    - field.field.node.artist.field_artist_audio
+    - field.field.node.artist.field_artist_email
+    - field.field.node.artist.field_artist_first_name
+    - field.field.node.artist.field_artist_gallery_website
+    - field.field.node.artist.field_artist_iaa_recipient
+    - field.field.node.artist.field_artist_juried_exhib
+    - field.field.node.artist.field_artist_juried_exhib_year
+    - field.field.node.artist.field_artist_last_name
+    - field.field.node.artist.field_artist_legacy_node_id
+    - field.field.node.artist.field_artist_legacy_user_id
+    - field.field.node.artist.field_artist_legacy_user_name
+    - field.field.node.artist.field_artist_mp_categories
+    - field.field.node.artist.field_artist_mp_image
+    - field.field.node.artist.field_artist_mp_join_date
+    - field.field.node.artist.field_artist_mp_opt_in
+    - field.field.node.artist.field_artist_phone
+    - field.field.node.artist.field_artist_photo
+    - field.field.node.artist.field_artist_price_ranges
+    - field.field.node.artist.field_artist_registry_tags
+    - field.field.node.artist.field_artist_social_facebook
+    - field.field.node.artist.field_artist_social_instagram
+    - field.field.node.artist.field_artist_social_linkedin
+    - field.field.node.artist.field_artist_social_twitter
+    - field.field.node.artist.field_artist_social_youtube
+    - field.field.node.artist.field_artist_statement
+    - field.field.node.artist.field_artist_video_url
+    - field.field.node.artist.field_artist_websites
+    - field.field.node.artist.field_county
+    - node.type.artist
+  module:
+    - address
+    - feeds_tamper
+    - node
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      79cdf607-c8b7-4b8e-a7fd-bcd870451cb5:
+        separator: ;
+        limit: null
+        uuid: 79cdf607-c8b7-4b8e-a7fd-bcd870451cb5
+        plugin: explode
+        source: price_range
+        weight: -5
+        label: Explode
+      417b1587-80a6-4b08-9347-119e20077bfa:
+        find: 'More than $1000'
+        replace: '$1,001+'
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 417b1587-80a6-4b08-9347-119e20077bfa
+        plugin: find_replace
+        source: price_range
+        weight: -6
+        label: 'Find replace - More than $1000 -> $1,001+'
+      aedae93f-fead-4c4a-a16f-53c25c3c0fb7:
+        find: '$50 or less'
+        replace: $0-$100
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: aedae93f-fead-4c4a-a16f-53c25c3c0fb7
+        plugin: find_replace
+        source: price_range
+        weight: -10
+        label: 'Find replace - $50 or less -> $0-$100'
+      658bb230-a506-4a1a-9b0d-569162cb1756:
+        find: '$100 or less'
+        replace: $0-$100
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 658bb230-a506-4a1a-9b0d-569162cb1756
+        plugin: find_replace
+        source: price_range
+        weight: -9
+        label: 'Find replace - $100 or less -> $0-$100'
+      6e0605c9-1b83-41de-aed0-70162586880c:
+        find: '$500 or less'
+        replace: $251-$500
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 6e0605c9-1b83-41de-aed0-70162586880c
+        plugin: find_replace
+        source: price_range
+        weight: -8
+        label: 'Find replace - $500 or less -> $251-$500'
+      42907d4e-0609-43e1-bcab-e63f9593eda6:
+        find: '$1000 or less'
+        replace: '$501-$1,000'
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 42907d4e-0609-43e1-bcab-e63f9593eda6
+        plugin: find_replace
+        source: price_range
+        weight: -7
+        label: 'Find replace - $1000 or less -> $501-$1,000'
+      0ed3ba5b-483d-424e-a870-645dba7fc010:
+        separator: ','
+        limit: null
+        uuid: 0ed3ba5b-483d-424e-a870-645dba7fc010
+        plugin: explode
+        source: individual_artist_award
+        weight: 0
+        label: Explode
+      7fbb3ffb-f110-405d-bf3b-adce9313251f:
+        separator: ','
+        limit: null
+        uuid: 7fbb3ffb-f110-405d-bf3b-adce9313251f
+        plugin: explode
+        source: registry_tags
+        weight: 0
+        label: Explode
+      7d42c58b-8822-481e-9041-1d8920cccb1e:
+        find: '%20'
+        replace: ' '
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 7d42c58b-8822-481e-9041-1d8920cccb1e
+        plugin: find_replace
+        source: profile_image
+        weight: -10
+        label: 'Find replace - %20 -> empty_space'
+      005ec790-1e17-4f0a-b5ff-cca77904982c:
+        find: '%20'
+        replace: ' '
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 005ec790-1e17-4f0a-b5ff-cca77904982c
+        plugin: find_replace
+        source: marketplace_image
+        weight: -10
+        label: 'Find replace - %20 -> empty_space'
+      4e74127e-4292-4f57-8485-cfb58070f507:
+        find: '%25'
+        replace: '%'
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 4e74127e-4292-4f57-8485-cfb58070f507
+        plugin: find_replace
+        source: marketplace_image
+        weight: -8
+        label: 'Find replace - %25 -> %'
+      b85513d5-89ac-4fc8-b10b-999883f16be3:
+        find: ' County'
+        replace: ''
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: b85513d5-89ac-4fc8-b10b-999883f16be3
+        plugin: find_replace
+        source: county
+        weight: 0
+        label: 'Find replace'
+      a605f114-da5b-45fd-b4cd-713c5011e7f5:
+        default_value: 'Purchase Art'
+        only_if_empty: false
+        uuid: a605f114-da5b-45fd-b4cd-713c5011e7f5
+        plugin: default_value
+        source: url_to_purchase_art_title
+        weight: 0
+        label: 'Set value or default value'
+      a52ffe1b-4303-4127-a524-4007a18d6afa:
+        default_value: 'View Gallery'
+        only_if_empty: false
+        uuid: a52ffe1b-4303-4127-a524-4007a18d6afa
+        plugin: default_value
+        source: gallery_website_title
+        weight: 0
+        label: 'Set value or default value'
+      a75ae02f-bac9-49c1-b654-d46038434ac2:
+        default_value: 'View Website'
+        only_if_empty: false
+        uuid: a75ae02f-bac9-49c1-b654-d46038434ac2
+        plugin: default_value
+        source: website_title
+        weight: 0
+        label: 'Set value or default value'
+      07757cb2-251c-4729-9e38-63abb867e273:
+        default_value: 'http://www.msacfix.com'
+        only_if_empty: true
+        uuid: 07757cb2-251c-4729-9e38-63abb867e273
+        plugin: default_value
+        source: website
+        weight: 0
+        label: 'Set value or default value'
+      08a2ffec-3296-4f3b-a760-5512baafd37e:
+        default_value: 'http://www.msacfix.com'
+        only_if_empty: true
+        uuid: 08a2ffec-3296-4f3b-a760-5512baafd37e
+        plugin: default_value
+        source: gallery_website
+        weight: 0
+        label: 'Set value or default value'
+      3cca6bf9-cb76-4b73-8890-61381c1c0981:
+        default_value: 'http://www.msacfix.com'
+        only_if_empty: true
+        uuid: 3cca6bf9-cb76-4b73-8890-61381c1c0981
+        plugin: default_value
+        source: url_to_purchase_art
+        weight: 0
+        label: 'Set value or default value'
+id: artist
+label: Artist
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: csv
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: artist
+  langcode: en
+  update_existing: 2
+  update_non_existent: _delete
+  skip_hash_check: true
+  authorize: true
+  expire: -1
+  owner_feed_author: true
+  owner_id: 0
+  insert_new: 1
+custom_sources:
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  nid:
+    value: nid
+    label: nid
+    machine_name: nid
+    type: csv
+  email:
+    value: email
+    label: email
+    machine_name: email
+    type: csv
+  phone:
+    value: phone
+    label: phone
+    machine_name: phone
+    type: csv
+  profile_image:
+    value: profile_image
+    label: profile_image
+    machine_name: profile_image
+    type: csv
+  address_country:
+    value: address_country
+    label: address_country
+    machine_name: address_country
+    type: csv
+  address_state:
+    value: address_state
+    label: address_state
+    machine_name: address_state
+    type: csv
+  address_city:
+    value: address_city
+    label: address_city
+    machine_name: address_city
+    type: csv
+  address_zip:
+    value: address_zip
+    label: address_zip
+    machine_name: address_zip
+    type: csv
+  address_street:
+    value: address_street
+    label: address_street
+    machine_name: address_street
+    type: csv
+  address_premise:
+    value: address_premise
+    label: address_premise
+    machine_name: address_premise
+    type: csv
+  first_name:
+    value: first_name
+    label: first_name
+    machine_name: first_name
+    type: csv
+  last_name:
+    value: last_name
+    label: last_name
+    machine_name: last_name
+    type: csv
+  price_range:
+    value: price_range
+    label: price_range
+    machine_name: price_range
+    type: csv
+  statement:
+    value: statement
+    label: statement
+    machine_name: statement
+    type: csv
+  categories:
+    value: categories
+    label: categories
+    machine_name: categories
+    type: csv
+  county:
+    value: county
+    label: county
+    machine_name: county
+    type: csv
+  body:
+    value: body
+    label: body
+    machine_name: body
+    type: csv
+  gallery_website:
+    value: gallery_website
+    label: gallery_website
+    machine_name: gallery_website
+    type: csv
+  individual_artist_award:
+    value: individual_artist_award
+    label: individual_artist_award
+    machine_name: individual_artist_award
+    type: csv
+  audio:
+    value: audio
+    label: audio
+    machine_name: audio
+    type: csv
+  video:
+    value: video
+    label: video
+    machine_name: video
+    type: csv
+  juried_exhibition:
+    value: juried_exhibition
+    label: juried_exhibition
+    machine_name: juried_exhibition
+    type: csv
+  juried_exhibition_year:
+    value: juried_exhibition_year
+    label: juried_exhibition_year
+    machine_name: juried_exhibition_year
+    type: csv
+  registry_tags:
+    value: registry_tags
+    label: registry_tags
+    machine_name: registry_tags
+    type: csv
+  marketplace_join_date:
+    value: marketplace_join_date
+    label: marketplace_join_date
+    machine_name: marketplace_join_date
+    type: csv
+  uid:
+    value: uid
+    label: uid
+    machine_name: uid
+    type: csv
+  username:
+    value: username
+    label: username
+    machine_name: username
+    type: csv
+  website:
+    value: website
+    label: website
+    machine_name: website
+    type: csv
+  marketplace_categories:
+    value: marketplace_categories
+    label: marketplace_categories
+    machine_name: marketplace_categories
+    type: csv
+  marketplace_opt_in:
+    value: marketplace_opt_in
+    label: marketplace_opt_in
+    machine_name: marketplace_opt_in
+    type: csv
+  marketplace_image:
+    value: marketplace_image
+    label: marketplace_image
+    machine_name: marketplace_image
+    type: csv
+  url_to_purchase_art:
+    value: url_to_purchase_art
+    label: url_to_purchase_art
+    machine_name: url_to_purchase_art
+    type: csv
+  instagram:
+    value: instagram
+    label: instagram
+    machine_name: instagram
+    type: csv
+  facebook:
+    value: facebook
+    label: facebook
+    machine_name: facebook
+    type: csv
+  linkedin:
+    value: linkedin
+    label: linkedin
+    machine_name: linkedin
+    type: csv
+  twitter:
+    value: twitter
+    label: twitter
+    machine_name: twitter
+    type: csv
+  youtube:
+    value: youtube
+    label: youtube
+    machine_name: youtube
+    type: csv
+  status:
+    value: status
+    label: status
+    machine_name: status
+    type: csv
+  website_title:
+    value: website_title
+    label: website_title
+    machine_name: website_title
+    type: csv
+  gallery_website_title:
+    value: gallery_website_title
+    label: gallery_website_title
+    machine_name: gallery_website_title
+    type: csv
+  url_to_purchase_art_title:
+    value: url_to_purchase_art_title
+    label: url_to_purchase_art_title
+    machine_name: url_to_purchase_art_title
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    unique: {  }
+  -
+    target: field_artist_email
+    map:
+      value: email
+    settings:
+      defuse: false
+    unique: {  }
+  -
+    target: field_artist_phone
+    map:
+      value: phone
+  -
+    target: field_artist_photo
+    map:
+      target_id: profile_image
+      alt: ''
+      title: ''
+    settings:
+      reference_by: fid
+      autocreate: '1'
+      existing: '2'
+  -
+    target: field_artist_address
+    map:
+      langcode: ''
+      country_code: address_country
+      administrative_area: address_state
+      locality: address_city
+      dependent_locality: ''
+      postal_code: address_zip
+      sorting_code: ''
+      address_line1: address_street
+      address_line2: address_premise
+      organization: ''
+      given_name: ''
+      additional_name: ''
+      family_name: ''
+  -
+    target: field_artist_first_name
+    map:
+      value: first_name
+    unique: {  }
+  -
+    target: field_artist_last_name
+    map:
+      value: last_name
+    unique: {  }
+  -
+    target: field_artist_legacy_node_id
+    map:
+      value: nid
+    unique:
+      value: '1'
+  -
+    target: field_artist_price_ranges
+    map:
+      target_id: price_range
+    settings:
+      reference_by: name
+      autocreate: '1'
+  -
+    target: field_artist_statement
+    map:
+      value: statement
+    settings:
+      format: simple_html
+  -
+    target: body
+    map:
+      value: body
+      summary: ''
+    settings:
+      format: simple_html
+  -
+    target: field_artist_iaa_recipient
+    map:
+      target_id: individual_artist_award
+    settings:
+      reference_by: name
+      autocreate: '1'
+  -
+    target: field_artist_audio
+    map:
+      target_id: audio
+      description: ''
+    settings:
+      reference_by: fid
+      autocreate: '1'
+      existing: '2'
+  -
+    target: field_artist_juried_exhib
+    map:
+      value: juried_exhibition
+  -
+    target: field_artist_juried_exhib_year
+    map:
+      value: juried_exhibition_year
+  -
+    target: field_artist_registry_tags
+    map:
+      target_id: registry_tags
+    settings:
+      reference_by: name
+      autocreate: '1'
+  -
+    target: field_artist_mp_join_date
+    map:
+      value: marketplace_join_date
+    settings:
+      timezone: UTC
+  -
+    target: field_artist_legacy_user_id
+    map:
+      value: uid
+    unique: {  }
+  -
+    target: field_artist_legacy_user_name
+    map:
+      value: username
+    unique: {  }
+  -
+    target: field_artist_mp_categories
+    map:
+      target_id: marketplace_categories
+    settings:
+      reference_by: name
+      autocreate: '1'
+  -
+    target: field_artist_mp_opt_in
+    map:
+      value: marketplace_opt_in
+  -
+    target: field_artist_mp_image
+    map:
+      target_id: marketplace_image
+      alt: ''
+      title: ''
+    settings:
+      reference_by: fid
+      existing: '2'
+      autocreate: 0
+  -
+    target: field_artist_social_instagram
+    map:
+      uri: instagram
+      title: ''
+  -
+    target: field_artist_social_facebook
+    map:
+      uri: facebook
+      title: ''
+  -
+    target: field_artist_social_linkedin
+    map:
+      uri: linkedin
+      title: ''
+  -
+    target: field_artist_social_twitter
+    map:
+      uri: twitter
+      title: ''
+  -
+    target: field_artist_social_youtube
+    map:
+      uri: youtube
+      title: ''
+  -
+    target: field_artist_gallery_website
+    map:
+      uri: gallery_website
+      title: ''
+  -
+    target: field_county
+    map:
+      target_id: county
+    settings:
+      reference_by: name
+      autocreate: false
+  -
+    target: field_artist_websites
+    map:
+      uri: website
+      title: website_title
+  -
+    target: moderation_state
+    map:
+      value: status
+    unique: {  }
+  -
+    target: uid
+    map:
+      target_id: uid
+    settings:
+      reference_by: field_legacy_id
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_artist_video_url
+    map:
+      uri: video
+      title: ''
+  -
+    target: field_artist_websites
+    map:
+      uri: gallery_website
+      title: gallery_website_title
+  -
+    target: field_artist_websites
+    map:
+      uri: url_to_purchase_art
+      title: url_to_purchase_art_title

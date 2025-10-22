@@ -1,0 +1,23 @@
+uuid: 76214aa0-f830-4f0a-9c9f-8f12210ca9d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.feeds_item
+    - paragraphs.paragraphs_type.artist_award
+  module:
+    - feeds
+id: paragraph.artist_award.feeds_item
+field_name: feeds_item
+entity_type: paragraph
+bundle: artist_award
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

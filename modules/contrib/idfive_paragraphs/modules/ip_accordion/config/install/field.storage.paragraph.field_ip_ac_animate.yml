@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: GrCySpqTRo2zHHIhCkC0o2H2U4p_baxj1jQrDBsxymw
+id: paragraph.field_ip_ac_animate
+field_name: field_ip_ac_animate
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

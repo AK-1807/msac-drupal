@@ -1,0 +1,27 @@
+uuid: 2e6f87bc-622f-44e8-afde-c334843790f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_we_webform
+    - paragraphs.paragraphs_type.ip_webform_embed
+  module:
+    - webform
+_core:
+  default_config_hash: 5bFIfAqIoqZGEg_-RvTacLXphf08D1-q5OhqKakdOjc
+id: paragraph.ip_webform_embed.field_ip_we_webform
+field_name: field_ip_we_webform
+entity_type: paragraph
+bundle: ip_webform_embed
+label: Webform
+description: 'Please choose the view you wish to embed here.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

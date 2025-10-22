@@ -1,0 +1,21 @@
+uuid: 72c1d5ae-be7d-4b56-8267-c6eb9110d970
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_co_text
+    - paragraphs.paragraphs_type.ip_callout
+_core:
+  default_config_hash: qG_9-KGniyKRF-Mpg82kieHtKww2si89lbZnVtBHm58
+id: paragraph.ip_callout.field_ip_co_text
+field_name: field_ip_co_text
+entity_type: paragraph
+bundle: ip_callout
+label: Text
+description: 'Optional supporting text. Please keep it short, if used.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,18 @@
+uuid: 27cf81f5-c0f0-4aa3-a059-1639ef99c4ea
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_artist_engmt_type_5
+field_name: field_artist_engmt_type_5
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

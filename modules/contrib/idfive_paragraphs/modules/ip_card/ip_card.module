@@ -1,0 +1,123 @@
+<?php
+
+/**
+ * @file
+ * Ip_views_embed module file.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ *
+ * @inheritdoc
+ */
+function ip_card_help($route_name, RouteMatchInterface $route_match)
+{
+  switch ($route_name) {
+    case 'help.page.ip_card':
+      $text = file_get_contents(dirname(__FILE__) . "/README.md");
+      if (!\Drupal::moduleHandler()->moduleExists('markdown')) {
+        return '<pre>' . $text . '</pre>';
+      } else {
+        // Use the Markdown filter to render the README.
+        $filter_manager = \Drupal::service('plugin.manager.filter');
+        $settings = \Drupal::configFactory()->get('markdown.settings')->getRawData();
+        $config = ['settings' => $settings];
+        $filter = $filter_manager->createInstance('markdown', $config);
+        return $filter->process($text, 'en');
+      }
+  }
+  return NULL;
+}
+
+/**
+ * Implements hook_preprocess_paragraph().
+ *
+ * This sets several classes needed for the card type.
+ */
+function ip_card_preprocess_paragraph__ip_card(&$variables)
+{
+  // Set classes for card type.
+  if($variables['elements']['#paragraph']->getParentEntity()->hasField('field_ip_cg_type')) {
+    $type = $variables['elements']['#paragraph']->getParentEntity()->field_ip_cg_type->value;
+    $variables['ip_card_type'] = 'card';
+    if ($type == 'card-hz') {
+      $variables['ip_card_type'] = 'card card--hz';
+    } elseif ($type == 'card--fancy') {
+      $variables['ip_card_type'] = 'card card--fancy';
+    } elseif ($type == 'card--list-item') {
+      $variables['ip_card_type'] = 'card card--list-item';
+    }
+    $variables['ip_card_clickable'] = 'false';
+    if ($type == 'card-clickable' || $type == 'card--fancy') {
+      $variables['ip_card_clickable'] = 'true';
+    }
+  }
+  // Set columns.
+  if($variables['elements']['#paragraph']->getParentEntity()->hasField('field_ip_cg_columns')) {
+    $card_group = $variables['elements']['#paragraph']->getParentEntity()->field_ip_cg_columns->value;
+    $variables['ip_card_cols'] = $card_group;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * Lets us define our paragraphs templates in this module.
+ */
+function ip_card_theme($existing, $type, $theme, $path)
+{
+  return [
+    'paragraph__ip_card' => [
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__ip_cards_group' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_ip_cd_text' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_ip_cd_title' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_ip_cd_image' => [
+      'base hook' => 'paragraph',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_field_WIDGET_TYPE_paragraphs_form_alter().
+ *
+ * Adds "Content Tips from idfive" helper text to the paragraph.
+ */
+function ip_card_field_widget_paragraphs_form_alter(&$element, &$form_state, $context)
+{
+  if ($element['#paragraph_type'] == 'ip_cards_group') {
+
+    // Tips text from idfive.
+    $markup = '<h3>Do:</h3><ul>';
+    $markup .= '<li><strong>Use 3-6 cards at a time.</strong></li>';
+    $markup .= '<li><strong>Use the same "Card Type" for all cards in the group.</strong> Mixing is possible, but usually not reccomended.</li>';
+    $markup .= '<li><strong>Use images with a horizontal aspect ratio.</strong></li>';
+    $markup .= '<li><strong>Keep to the character limit specified for headings and text.</strong></li>';
+    $markup .= '</ul>';
+    $markup .= '<h3>Dont:</h3><ul>';
+    $markup .= '<li><strong>Use under 2 and more than 6 cards at a time.</strong></li>';
+    $markup .= '<li><strong>Use the "link target" option without good reason.</strong> Opening links in new windows automatically is against WCAG 2.0 AAA. There is a strong movement towards letting users decide for themselves to open in a new window or not.</li>';
+    $markup .= '</ul>';
+    $markup .= '<p><a target="_blank" href="/admin/help/ip_card">Card Module Help</a></p>';
+    $element['ip_card_tips'] = [
+      '#type' => 'details',
+      '#title' => t('Card Group Content Tips'),
+      '#weight' => -1000,
+    ];
+    $element['ip_card_tips']['#markup'] = $markup;
+  }
+}
+
+function ip_card_update_8001()
+{
+  \Drupal::service('config.installer')->installDefaultConfig('module', 'ip_card');
+}

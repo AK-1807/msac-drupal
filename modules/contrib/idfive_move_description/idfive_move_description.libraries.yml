@@ -1,0 +1,4 @@
+idfive_move_description.modifiers:
+  css:
+    component:
+      assets/css/help_text_modifiers.css: {}

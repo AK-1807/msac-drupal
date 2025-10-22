@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Lv-2aT25M4LcuPZc7tV9C3xWZYfakaHRUHt-8xTPHTM
+id: ip_accordion_item
+label: 'Accordion Item'
+icon_uuid: null
+description: '(HIDE FROM KS FIELD) This Paragraph type provides an individual accordion/tab into the Accordion Group, in the Kitchen Sink Widgets. It is controlled by the idfive Paragraphs module.'
+behavior_plugins: {  }

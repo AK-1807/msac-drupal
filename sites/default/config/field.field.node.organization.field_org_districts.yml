@@ -1,0 +1,28 @@
+uuid: a24d8dbd-e9a3-4538-b1de-b23137fd7ad1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_org_districts
+    - node.type.district
+    - node.type.organization
+id: node.organization.field_org_districts
+field_name: field_org_districts
+entity_type: node
+bundle: organization
+label: 'A&E District(s) in which you are located'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      district: district
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

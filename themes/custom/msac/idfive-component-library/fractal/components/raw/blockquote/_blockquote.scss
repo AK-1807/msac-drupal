@@ -1,0 +1,102 @@
+@import "variables";
+
+blockquote,
+.blockquote {
+  @extend %widget-spacing;
+  border-top: rem(3) solid $red;
+  border-bottom: rem(3) solid $red;
+  position: relative;
+  background: $blockquote-background;
+  color: $blockquote-color;
+  padding: $blockquote-padding;
+  @include media("800") {
+    font-size: rem(26);
+    margin-top: rem(96);
+    max-width: 75%;
+    padding: rem(60) 0;
+  }
+  @include media("1200") {
+    margin-top: rem(136);
+    max-width: 50%;
+  }
+  &.blockquote--full-width {
+    max-width: none;
+  }
+  .text-content & {
+    @include media("1200") {
+      max-width: 75%;
+    }
+  }
+  &:before {
+    content: "";
+    background-color: $white;
+    background-image: url("../../img/blockquote-icon-mobile.svg");
+    background-size: calc(100% - #{24}) 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    height: rem(44);
+    width: rem(88);
+    padding: 0 rem(12);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include media("800") {
+      background-image: url("../../img/blockquote-icon-desktop.svg");
+      height: rem(80);
+      width: rem(98);
+    }
+  }
+}
+
+blockquote > p,
+.blockquote__quote {
+  font-family: $blockquote_quote-font-family;
+  font-size: $blockquote_quote-font-size;
+  font-weight: $blockquote_quote-font-weight;
+  line-height: $blockquote_quote-line-height;
+  margin: $blockquote_quote-margin;
+  padding: $blockquote_quote-padding;
+  .blockquote--full-width & {
+    margin: 0 auto;
+    max-width: 75%;
+    text-align: center;
+  }
+}
+
+.blockquote__footer {
+  font-family: $blockquote_footer-font-family;
+  margin: $blockquote_footer-margin;
+  padding: $blockquote_footer-padding;
+}
+
+.blockquote__author {
+  font-size: $blockquote_author-font-size;
+  font-weight: $blockquote_author-font-weight;
+}
+
+.blockquote__source {
+  font-size: $blockquote_source-font-size;
+  font-weight: $blockquote_source-font-weight;
+}
+
+.blockquote__portrait {
+  position: relative;
+  width: $blockquote_portrait-width;
+  &:before {
+    content: "";
+    display: block;
+    padding-top: $blockquote_portrait-aspect-ratio;
+  }
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

@@ -1,0 +1,358 @@
+<?php
+
+/**
+ * @file
+ * Helpful overrides for the idfive base theme.
+ */
+
+use Drupal\block\Entity\Block;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element;
+use Drupal\node\Entity\Node;
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_preprocess().
+ */
+function idfive_preprocess(&$variables) {
+  // Add theme name and path for use in twig templates.
+  $variables['site_name'] = \Drupal::config('system.site')->get('name');
+  $variables['theme_name'] = \Drupal::service('theme.manager')->getActiveTheme()->getName();
+  $variables['theme_path'] = \Drupal::service('file_url_generator')->generateAbsoluteString(\Drupal::service('extension.list.theme')->getPath($variables['theme_name']));
+  if (theme_get_setting('idfive_assets_path')) {
+    $variables['assets_path'] = $variables['theme_path'] . theme_get_setting('idfive_assets_path');
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ *
+ * Adds body classes if certain regions have content.
+ */
+function idfive_preprocess_html(&$variables) {
+  $variables['is_front_page'] = \Drupal::service('path.matcher')->isFrontPage();
+  if ($variables['is_front_page']) {
+    $variables['attributes']['class'][] = 'home';
+  }
+  else {
+    $variables['attributes']['class'][] = 'internal';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
+function idfive_preprocess_page(&$variables) {
+  // Make any custom theme settings available in the page tpl.
+  _idfive_extend_theme_variables($variables);
+}
+
+/**
+ * Implements hook_preprocess_breadcrumb() for node.html.twig.
+ */
+function idfive_preprocess_breadcrumb(&$variables) {
+  if (theme_get_setting('idfive_breadcrumbs_show_node_title')) {
+    $request = \Drupal::request();
+    $route_match = \Drupal::routeMatch();
+    if (($node = $route_match->getParameter('node')) && $variables['breadcrumb']) {
+      if (is_numeric($node)) {
+        $node = Node::load($node);
+      }
+      $breadcrumb_title = [
+        'text' => $node->getTitle(),
+      ];
+      if (theme_get_setting('idfive_breadcrumbs_show_node_title') == 1) {
+        $breadcrumb_title['url'] = $node->toUrl();
+      }
+      $variables['breadcrumb'][] = $breadcrumb_title;
+      $variables['#cache']['contexts'][] = 'url';
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function idfive_preprocess_block(&$variables) {
+  if (isset($variables['elements']['#id'])) {
+    $variables['content']['#attributes']['data-block'] = $variables['elements']['#id'];
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function idfive_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    // When viewing a revision $node will be numeric.
+    // @see https://www.drupal.org/node/2495703
+    if (is_numeric($node)) {
+      $node = Node::load($node);
+    }
+    $content_type = $node->bundle();
+    // array_splice($suggestions, 1, 0, 'page__node__' . $node->bundle());
+    $suggestions[] = 'page__node__' . $content_type;
+    if (in_array($content_type, ['webform', 'page'])) {
+      $current_path = Drupal::service('path.current')->getPath();
+      $alias = Drupal::service('path_alias.manager')->getAliasByPath($current_path);
+      if ($alias != '') {
+        // Break up the alias "/about/us"  => "", "about", "" ,"us".
+        $parts = explode('/', $alias);
+        // We only start suggestion with one "-" because first "/" will become extra "-".
+        $suggestion = 'page__alias';
+        foreach ($parts as $part) {
+          // Subsequent suggestions get appended.
+          $suggestion .= "_$part";
+        }
+        // Turn "-" in "_".
+        $suggestion = str_replace("-", "_", $suggestion);
+        $suggestions[] = $suggestion;
+      }
+    }
+  }
+  if ($term = \Drupal::routeMatch()->getParameter('taxonomy_term')) {
+    // When viewing a revision $node will be numeric.
+    // @see https://www.drupal.org/node/2495703
+    if (is_numeric($term)) {
+      $term = Term::load($node);
+    }
+    $taxonomy_type = $term->bundle();
+    $suggestions[] = 'page__taxonomy__term__' . $taxonomy_type;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function idfive_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    // When viewing a revision $node will be numeric.
+    // @see https://www.drupal.org/node/2495703
+    if (is_numeric($node)) {
+      $node = Node::load($node);
+    }
+    $content_type = $node->bundle();
+    $current_path = Drupal::service('path.current')->getPath();
+    $alias = Drupal::service('path_alias.manager')->getAliasByPath($current_path);
+    if ($alias != '') {
+      // Break up the alias "/about/us"  => "", "about", "" ,"us".
+      $parts = explode('/', $alias);
+      // We only start suggestion with one "-" because first "/" will become extra "-".
+      $suggestion = 'node__alias';
+      foreach ($parts as $part) {
+        // Subsequent suggestions get appended.
+        $suggestion .= "_$part";
+      }
+      // Turn "-" in "_".
+      $suggestion = str_replace("-", "_", $suggestion);
+      $suggestions[] = $suggestion;
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_node.
+ *
+ * Add template suggestions and classes.
+ */
+function idfive_preprocess_node(&$variables) {
+  // Add node--node_type--view_mode.html.twig suggestions.
+  $variables['theme_hook_suggestions'][] = 'node__' . $variables['elements']['#node']->bundle() . '__' . $variables['view_mode'];
+  // Add node--view_mode.html.twig suggestions.
+  $variables['theme_hook_suggestions'][] = 'node__' . $variables['view_mode'];
+  // Add a class for the view mode.
+  if (!$variables['teaser']) {
+    $variables['content_attributes']['class'][] = 'view-mode-' . $variables['view_mode'];
+  }
+  $variables['title_attributes']['class'][] = 'node-title';
+  // Allow breadcrumbs/sidebar to be available in the node template.
+  $allowed_regions = ['breadcrumbs', 'page_sidebar'];
+  _idfive_add_regions_to_entity($allowed_regions, $variables);
+  // Allow use of theme varables in node templates.
+  _idfive_extend_theme_variables($variables);
+}
+
+/**
+ * Implements hook__suggestions_HOOK_alter().
+ */
+function idfive_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  // Add theme suggestions to blocks based on region.
+  if (!empty($variables['elements']['#id'])) {
+    $block = Block::load($variables['elements']['#id']);
+    $suggestions[] = 'block__' . $block->getRegion();
+    $suggestions[] = 'block__' . $block->getRegion() . '__' . $variables['elements']['#id'];
+  }
+  return $suggestions;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function idfive_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
+  // Read the block id if menus, so we may style some menus per block.
+  if (isset($variables['attributes']['data-block'])) {
+    $hook = str_replace(['block-', '-'], ['', '_'], $variables['attributes']['data-block']);
+    $suggestions[] = $variables['theme_hook_original'] . '__' . $hook;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function idfive_theme_suggestions_field_alter(&$suggestions, $variables) {
+  $suggestions[] = 'field__node__' . $variables['element']['#field_name'] . '__' . $variables['element']['#bundle'] . '__' . $variables['element']['#view_mode'];
+}
+
+/**
+ * Implements hook_theme_suggestions_form_element().
+ */
+function idfive_theme_suggestions_container_alter(array &$suggestions, array $variables) {
+  if (isset($variables['element']['#type']) && isset($variables['element']['#form_id'])) {
+    $suggestions[] = 'container__form_id__' . $variables['element']['#form_id'];
+    $suggestions[] = 'container__' . $variables['element']['#form_id'] . '__' . $variables['element']['#type'];
+  }
+  return $suggestions;
+}
+
+/**
+ * Implements hook_theme_suggestions_form_element().
+ */
+function idfive_theme_suggestions_form_element_alter(array &$suggestions, array $variables) {
+  if (isset($variables['element']['#type']) && isset($variables['element']['#form_id'])) {
+    $suggestions[] = 'form_element__form_id__' . $variables['element']['#form_id'];
+    $suggestions[] = 'form_element__' . $variables['element']['#form_id'] . '__' . $variables['element']['#type'];
+  }
+  return $suggestions;
+}
+
+/**
+ * Implements hook_theme_suggestions_form_element_label().
+ */
+function idfive_theme_suggestions_form_element_label_alter(array &$suggestions, array $variables) {
+  if (isset($variables['element']['#form_element_type'])) {
+    $suggestions[] = 'form_element_label__type__' . $variables['element']['#form_element_type'];
+  }
+  if (isset($variables['element']['#form_id'])) {
+    $suggestions[] = 'form_element_label__form-id__' . $variables['element']['#form_id'];
+  }
+  if (isset($variables['element']['#form_element_type']) && isset($variables['element']['#form_id'])) {
+    $suggestions[] = 'form_element_label__' . $variables['element']['#form_id'] . '__' . $variables['element']['#form_element_type'];
+  }
+  return $suggestions;
+}
+
+/**
+ * Implements hook_theme_suggestions_input_alter().
+ */
+function idfive_theme_suggestions_input_alter(&$suggestions, array $variables) {
+  if (isset($variables['element']['#form_id'])) {
+    $suggestions[] = 'input__form_id__' . $variables['element']['#form_id'];
+    $suggestions[] = 'input__' . $variables['element']['#form_id'] . '__' . $variables['element']['#type'];
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_taxonomy_term_alter().
+ */
+function idfive_theme_suggestions_taxonomy_term_alter(array &$suggestions, array $variables) {
+  /** @var \Drupal\taxonomy\TermInterface $term */
+  $term = $variables['elements']['#taxonomy_term'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+  // Add view mode theme suggestions.
+  $suggestions[] = 'taxonomy_term__' . $sanitized_view_mode;
+  $suggestions[] = 'taxonomy_term__' . $term->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'taxonomy_term__' . $term->id() . '__' . $sanitized_view_mode;
+}
+
+/**
+ * Implements hook_preprocess_form_element().
+ */
+function idfive_preprocess_form_element(array &$variables) {
+  if (!isset($variables['label'])) {
+    return;
+  }
+  if (isset($variables['element']['#form_id'])) {
+    $variables['label']['#form_id'] = $variables['element']['#form_id'];
+  }
+  if (isset($variables['element']['#type'])) {
+    $variables['label']['#form_element_type'] = $variables['element']['#type'];
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_form_element().
+ */
+function idfive_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  if (isset($variables['element']['#form_id'])) {
+    $suggestions[] = 'form__' . $variables['element']['#form_id'];
+  }
+  return $suggestions;
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function idfive_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  _idfive_attach_form_id($form, $form_id);
+}
+
+/**
+ * CUSTOM FUNCTIONS TO SUPPORT HOOKS.
+ */
+
+/**
+ * Attaches form id to all form elements.
+ */
+function _idfive_attach_form_id(&$form, $form_id) {
+  foreach (Element::children($form) as $child) {
+    if (!isset($form[$child]['#form_id'])) {
+      $form[$child]['#form_id'] = $form_id;
+    }
+    _idfive_attach_form_id($form[$child], $form_id);
+  }
+}
+
+/**
+ * Allows regions to be added to nodes/other entities, not just pages.
+ */
+function _idfive_add_regions_to_entity($allowed_regions, &$variables) {
+  // Retrieve active theme.
+  $theme = \Drupal::theme()->getActiveTheme()->getName();
+  // Retrieve theme regions.
+  $available_regions = system_region_list($theme, 'REGIONS_ALL');
+  // Validate allowed regions with available regions.
+  $regions = array_intersect(array_keys($available_regions), $allowed_regions);
+  // For each region.
+  foreach ($regions as $key => $region) {
+    // Load region blocks.
+    $blocks = \Drupal::entityTypeManager()->getStorage('block')->loadByProperties(['theme' => $theme, 'region' => $region]);
+    // Sort �em.
+    uasort($blocks, 'Drupal\block\Entity\Block::sort');
+    // Capture viewable blocks and their settings to $build.
+    $build = [];
+    foreach ($blocks as $key => $block) {
+      if ($block->access('view')) {
+        $view_builder = \Drupal::entityTypeManager()->getViewBuilder($block->getEntityTypeId());
+        $build[$key] = $view_builder->view($block, 'block');
+      }
+    }
+    // Add build to region.
+    $variables[$region] = $build;
+  }
+}
+
+/**
+ * Make all theme settings available to insert in pages/nodes/etc.
+ *
+ * Added to pages by default in hook_preproccess_node above.
+ * Can extent in subtheme to nodes/etc if needed.
+ * Use in theme by var name, as {{twitter_link}} /etc.
+ */
+function _idfive_extend_theme_variables(&$variables) {
+  $theme_name = \Drupal::theme()->getActiveTheme()->getName();
+  $theme_settings = \Drupal::config($theme_name . '.settings');
+  CacheableMetadata::createFromRenderArray($variables)
+    ->addCacheableDependency($theme_settings)
+    ->applyTo($variables);
+  $variables += $theme_settings->getOriginal();
+}

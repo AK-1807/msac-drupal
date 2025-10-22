@@ -1,0 +1,19 @@
+uuid: a8a0285f-a618-4980-a942-873a170179df
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_artist_social_linkedin
+field_name: field_artist_social_linkedin
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

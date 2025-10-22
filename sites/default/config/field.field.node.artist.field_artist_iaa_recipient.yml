@@ -1,0 +1,29 @@
+uuid: ccd49618-5ee3-4010-b194-3baa4a01be58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_iaa_recipient
+    - node.type.artist
+    - taxonomy.vocabulary.individual_artist_award
+id: node.artist.field_artist_iaa_recipient
+field_name: field_artist_iaa_recipient
+entity_type: node
+bundle: artist
+label: 'Individual Artist Award Recipient'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      individual_artist_award: individual_artist_award
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

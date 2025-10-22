@@ -1,0 +1,17 @@
+uuid: b36529dc-7d0d-46c5-acf0-9fb703138c52
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Location
+type: location
+description: 'Used to create points of interest displayed on the "Explore Arts in Maryland" page.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

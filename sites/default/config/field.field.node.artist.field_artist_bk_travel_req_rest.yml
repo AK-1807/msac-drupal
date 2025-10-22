@@ -1,0 +1,26 @@
+uuid: 0694a201-3714-4051-837b-0def783c4a20
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_bk_travel_req_rest
+    - node.type.artist
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - plain_text
+id: node.artist.field_artist_bk_travel_req_rest
+field_name: field_artist_bk_travel_req_rest
+entity_type: node
+bundle: artist
+label: 'Travel Availability and Restrictions'
+description: "Please indicate here which regions you're available to travel to in MD. Please list them using semi-colons and by county. If you have any travel restrictions please indicate them here. Restrictions can include: mileage, distance, limited time (day, week, month) or any additional information. "
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

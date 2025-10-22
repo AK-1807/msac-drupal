@@ -1,0 +1,10 @@
+{
+  "context": {
+    "media": "https://via.placeholder.com/1920x1080",
+    "caption": "Optional hero image caption to describe what's occurring in the image.",
+    "logo": {
+      "src": "https://via.placeholder.com/250x175",
+      "alt": "Alt Text"
+    }
+  }
+}

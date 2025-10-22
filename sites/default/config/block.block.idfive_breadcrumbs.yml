@@ -1,0 +1,22 @@
+uuid: 30b04afa-353a-4d74-99e8-a9d16ad27c7b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - idfive
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: idfive_breadcrumbs
+theme: idfive
+region: primary_menu
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

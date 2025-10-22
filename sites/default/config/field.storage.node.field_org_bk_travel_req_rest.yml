@@ -1,0 +1,19 @@
+uuid: 8182a261-44f1-4fcd-b14c-c44302ddd8c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_org_bk_travel_req_rest
+field_name: field_org_bk_travel_req_rest
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

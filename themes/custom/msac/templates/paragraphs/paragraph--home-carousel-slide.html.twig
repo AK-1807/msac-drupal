@@ -1,0 +1,21 @@
+<div class="carousel__slide">
+	<div class="carousel__slide-image">
+    {{ content.field_home_cs_image }}
+  </div>
+	<div class="carousel__slide-content">
+		<div>
+      {% if content.field_home_cs_category|field_value %}
+			  <span class="home-hero__carousel-slide-medium">{{ content.field_home_cs_category }}</span>
+      {% endif %}
+      {% if content.field_home_cs_title|field_value %}
+			  <span class="home-hero__carousel-slide-title">{{ content.field_home_cs_title }}</span>
+      {% endif %}
+      {% if content.field_home_cs_title|field_value and content.field_home_cs_location|field_value %}
+			  <span aria-hidden="true">&nbsp;|&nbsp;</span>
+      {% endif %}
+      {% if content.field_home_cs_location|field_value %}
+			  <span class="home-hero__carousel-slide-location">{{ content.field_home_cs_location }}</span>
+      {% endif %}
+		</div>
+	</div>
+</div>

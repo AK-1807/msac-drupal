@@ -1,0 +1,5 @@
+idfive_gdpr.settings:
+  title: 'GDPR Settings'
+  parent: system.admin_config_services
+  description: 'Adjust GDPR settings'
+  route_name: idfive_gdpr.settings

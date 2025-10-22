@@ -1,0 +1,19 @@
+uuid: 24102cf7-5728-4bec-8a41-2d76cd0b6362
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_email
+    - node.type.artist
+id: node.artist.field_artist_email
+field_name: field_artist_email
+entity_type: node
+bundle: artist
+label: 'Contact Email'
+description: 'This email address is used for those wishing to get in touch with you about your work or opportunities.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

@@ -1,0 +1,38 @@
+{% extends "node--full.html.twig" %}
+
+{% block node_hero %}{% endblock %}
+
+{% block node_heading %}
+  <div class="page-heading outer-pad" style="background-image:url({{ assets_path }}/img/msac-background-2.jpg)">
+    <div class="silc-grid silc-grid--collapse">
+      <div class="silc-grid__col silc-grid__col--12">
+        <h1>{{ drupal_title() }}</h1>
+        {{ drupal_breadcrumb() }}
+      </div>
+      <div class="silc-grid__col silc-grid__col--6-800">
+        <div class="page-heading__lead-in">
+          {{ msac_explore_arts_hero_title }}
+        </div>
+      </div>
+      <div class="silc-grid__col silc-grid__col--6-800">
+        <div class="page-heading__content">
+          {{ msac_explore_arts_hero_text.value|check_markup('full_html') }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block node_content %}
+  <div class="page-content outer-pad">
+    {{ drupal_messages() }}
+    <div id="arts-explorer-root">
+      <arts-explorer></arts-explorer>
+      <noscript>Please enable Javascript to explore the arts across Maryland.</noscript>
+    </div>
+  </div>
+{% endblock %}
+
+{% block node_footer %}
+  <div class="page-background" role="presentation" style="background-image:url({{ assets_path }}/img/msac-background-1.jpg); background-position: 153px 147px; background-repeat: no-repeat; opacity: 0.25;"></div>
+{% endblock %}

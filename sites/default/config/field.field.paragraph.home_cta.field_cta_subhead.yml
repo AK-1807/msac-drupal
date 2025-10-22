@@ -1,0 +1,19 @@
+uuid: 634fb959-fcb3-456f-bbaf-96a654683dd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_subhead
+    - paragraphs.paragraphs_type.home_cta
+id: paragraph.home_cta.field_cta_subhead
+field_name: field_cta_subhead
+entity_type: paragraph
+bundle: home_cta
+label: 'CTA Subhead'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

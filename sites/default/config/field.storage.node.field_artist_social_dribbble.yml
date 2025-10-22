@@ -1,0 +1,19 @@
+uuid: 97d4d946-cf0e-4b35-8c6f-241e9c204540
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_artist_social_dribbble
+field_name: field_artist_social_dribbble
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

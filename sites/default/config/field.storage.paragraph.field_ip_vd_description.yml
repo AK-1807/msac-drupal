@@ -1,0 +1,21 @@
+uuid: 21e22e9c-7431-4c0e-bcfe-1f6403612869
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: LFqRMB90rDphUfSn_xJVpo-mVH1Lw2EVKex-6DQmqgU
+id: paragraph.field_ip_vd_description
+field_name: field_ip_vd_description
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

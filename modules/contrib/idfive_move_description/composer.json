@@ -1,0 +1,8 @@
+{
+    "name": "idfive/idfive_move_description",
+    "type": "drupal-module",
+    "description": "This module is designed to move all help text above the fields, and lightly restyle.",
+    "keywords": ["Drupal"],
+    "homepage": "https://bitbucket.org/idfivellc/idfive_move_description",
+    "license": "GPL-2.0+"
+  }

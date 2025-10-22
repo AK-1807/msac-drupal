@@ -1,0 +1,44 @@
+uuid: 92ba286b-84d6-462c-b081-92bf0fb076cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.idfive_media_browser
+  module:
+    - entity_browser_entity_form
+    - views
+_core:
+  default_config_hash: zaXei7M75DD4HN6t3h7HEqlF21uXFbTXYK8x6xxIO7k
+name: idfive_media_browser_file
+label: 'Media Browser File'
+display: modal
+display_configuration:
+  width: '800'
+  height: '800'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  168b37eb-f83e-4153-974d-29a2d5098347:
+    id: view
+    uuid: 168b37eb-f83e-4153-974d-29a2d5098347
+    label: 'File Library'
+    weight: 1
+    settings:
+      submit_text: 'Select File'
+      auto_select: false
+      view: idfive_media_browser
+      view_display: entity_browser_files
+  3962a761-c944-4cce-9c48-33704fe20af5:
+    id: entity_form
+    uuid: 3962a761-c944-4cce-9c48-33704fe20af5
+    label: 'Add file'
+    weight: 3
+    settings:
+      submit_text: 'Save files'
+      entity_type: media
+      bundle: document
+      form_mode: default

@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: baGdMJQzApsEAcIYmkC04EcOZRjzoFkC9MI_KSNDoyw
+id: paragraph.field_ip_bl_type
+field_name: field_ip_bl_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: button
+      label: Button
+    -
+      value: fancy_link
+      label: 'Fancy Link'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

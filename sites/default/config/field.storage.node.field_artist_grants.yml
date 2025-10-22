@@ -1,0 +1,19 @@
+uuid: 1a5aad70-086a-467f-8ce1-d29b2fb5b111
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_artist_grants
+field_name: field_artist_grants
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

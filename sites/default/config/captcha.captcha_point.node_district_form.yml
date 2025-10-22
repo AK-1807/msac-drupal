@@ -1,0 +1,7 @@
+uuid: a24dafda-4fd9-4433-8b5d-637a9a1690cc
+langcode: en
+status: false
+dependencies: {  }
+formId: node_district_form
+captchaType: default
+label: node_district_form

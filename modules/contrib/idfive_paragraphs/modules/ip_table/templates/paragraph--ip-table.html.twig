@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * IP Table paragraph bundle.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{%
+  set classes = [
+    'paragraph-widget',
+    'paragraph-widget--ip_table',
+  ]
+%}
+
+{% block paragraph %}
+	<div{{attributes.addClass(classes).setAttribute('id','ip_table-'~paragraph.id())}}>
+		{% block content %}
+			{% if content.field_ip_tb_title[0] %}
+				<h2>{{ content.field_ip_tb_title }}</h2>
+			{% endif %}
+			{{ content.field_ip_tb_table }}
+		{% endblock %}
+	</div>
+	{{ content|without('field_ip_tb_title', 'field_ip_tb_table') }}
+{% endblock paragraph %}

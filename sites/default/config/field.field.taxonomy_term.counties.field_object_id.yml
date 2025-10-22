@@ -1,0 +1,19 @@
+uuid: 26ad01a4-33e8-48f4-8c57-3bce6d732326
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_object_id
+    - taxonomy.vocabulary.counties
+id: taxonomy_term.counties.field_object_id
+field_name: field_object_id
+entity_type: taxonomy_term
+bundle: counties
+label: 'Object ID'
+description: 'Please enter the "GIS Object ID" for the county found here <a target="_blank" href="https://data.imap.maryland.gov/datasets/4c172f80b626490ea2cff7b699febedb_1/data">https://data.imap.maryland.gov/datasets/4c172f80b626490ea2cff7b699febedb_1/data</a>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

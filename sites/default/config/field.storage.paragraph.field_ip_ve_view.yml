@@ -1,0 +1,23 @@
+uuid: 54755d4f-2e4f-4180-a440-42e15f857ee4
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - viewfield
+    - views
+_core:
+  default_config_hash: gQCvr6u8KBEdtlG1IGMYodtwxox36ET5yQzKwvw33nI
+id: paragraph.field_ip_ve_view
+field_name: field_ip_ve_view
+entity_type: paragraph
+type: viewfield
+settings:
+  target_type: view
+module: viewfield
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

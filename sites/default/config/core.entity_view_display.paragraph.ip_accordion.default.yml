@@ -1,0 +1,78 @@
+uuid: 6894b55f-46fb-4d90-88b3-dc8131782bab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ip_accordion.field_ip_ac_allow_mult
+    - field.field.paragraph.ip_accordion.field_ip_ac_animate
+    - field.field.paragraph.ip_accordion.field_ip_ac_item
+    - field.field.paragraph.ip_accordion.field_ip_ac_open_first
+    - field.field.paragraph.ip_accordion.field_ip_ac_title
+    - field.field.paragraph.ip_accordion.field_ip_ac_type
+    - paragraphs.paragraphs_type.ip_accordion
+  module:
+    - entity_reference_revisions
+    - options
+_core:
+  default_config_hash: pjI-M11LualZnDq0auZqZmb3oBa-OVLvwxgXcdWABG8
+id: paragraph.ip_accordion.default
+targetEntityType: paragraph
+bundle: ip_accordion
+mode: default
+content:
+  field_ip_ac_allow_mult:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ip_ac_animate:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ip_ac_item:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ip_ac_open_first:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_ip_ac_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ip_ac_type:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,161 @@
+uuid: 903c2a87-a6f4-4093-8f59-a65d96c9e751
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.article.body
+    - field.field.node.article.feeds_item
+    - field.field.node.article.field_article_category
+    - field.field.node.article.field_article_cover_caption
+    - field.field.node.article.field_article_cover_image
+    - field.field.node.article.field_article_date
+    - field.field.node.article.field_article_file_attachment
+    - field.field.node.article.field_article_image
+    - field.field.node.article.field_article_lead_in
+    - field.field.node.article.field_article_legacy_node_id
+    - field.field.node.article.field_article_legacy_path
+    - field.field.node.article.field_article_media_contact
+    - field.field.node.article.field_article_programs
+    - field.field.node.article.field_article_type
+    - field.field.node.article.field_meta
+    - field.field.node.article.field_widgets
+    - image.style.optimized
+    - node.type.article
+  module:
+    - datetime
+    - entity_reference_revisions
+    - image
+    - media
+    - metatag
+    - options
+    - text
+    - user
+_core:
+  default_config_hash: ChmU3AVqDKU32A_fyChG0W9dTRKmVBR58B6OClCLvZI
+id: node.article.full
+targetEntityType: node
+bundle: article
+mode: full
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_article_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_article_cover_caption:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_article_cover_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: optimized
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_article_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: article_date
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_article_file_attachment:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_article_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_article_lead_in:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_article_media_contact:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_article_programs:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_article_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_meta:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_widgets:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  feeds_item: true
+  field_article_legacy_node_id: true
+  field_article_legacy_path: true
+  search_api_excerpt: true

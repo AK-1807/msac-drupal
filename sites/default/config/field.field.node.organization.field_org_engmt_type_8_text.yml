@@ -1,0 +1,26 @@
+uuid: f72c0fe5-25c5-4617-a835-e181009b56a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_org_engmt_type_8_text
+    - node.type.organization
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - plain_text
+id: node.organization.field_org_engmt_type_8_text
+field_name: field_org_engmt_type_8_text
+entity_type: node
+bundle: organization
+label: 'Field Trips Offered'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

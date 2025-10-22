@@ -1,0 +1,56 @@
+uuid: 9086ff10-8a81-46cf-b28b-ab4728116bb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.location.body
+    - field.field.node.location.field_location_address
+    - field.field.node.location.field_location_county
+    - field.field.node.location.field_location_image
+    - field.field.node.location.field_location_latitude
+    - field.field.node.location.field_location_longitude
+    - field.field.node.location.field_location_no_linking
+    - field.field.node.location.field_location_type
+    - field.field.node.location.field_location_url
+    - field.field.node.location.field_meta
+    - field.field.node.location.field_widgets
+    - node.type.location
+  module:
+    - text
+    - user
+id: node.location.teaser
+targetEntityType: node
+bundle: location
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_location_address: true
+  field_location_county: true
+  field_location_image: true
+  field_location_latitude: true
+  field_location_longitude: true
+  field_location_no_linking: true
+  field_location_type: true
+  field_location_url: true
+  field_meta: true
+  field_widgets: true
+  search_api_excerpt: true

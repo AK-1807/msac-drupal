@@ -1,0 +1,148 @@
+{#
+/**
+* @file
+* Default theme implementation for the basic structure of a single Drupal page.
+*
+* Variables:
+* - logged_in: A flag indicating if user is logged in.
+* - root_path: The root path of the current page (e.g., node, admin, user).
+* - node_type: The content type for the current node, if the page is a node.
+* - head_title: List of text elements that make up the head_title variable.
+*   May contain one or more of the following:
+*   - title: The title of the page.
+*   - name: The name of the site.
+*   - slogan: The slogan of the site.
+* - page_top: Initial rendered markup. This should be printed before 'page'.
+* - page: The rendered page markup.
+* - page_bottom: Closing rendered markup. This variable should be printed after
+*   'page'.
+* - db_offline: A flag indicating if the database is offline.
+* - placeholder_token: The token for generating head, css, js and js-bottom
+*   placeholders.
+*
+* @see template_preprocess_html()
+*
+* @ingroup themeable
+*/
+#}
+{%
+	set classes = [
+		node_type=='grant'? 'individual-grant':node_type,
+		node_type=='organization'? 'profile-page':node_type,
+		node_type=='artist'? 'profile-page':node_type,
+	]
+%}
+
+<!DOCTYPE html>
+<html{{html_attributes}}>
+	<head>
+		<head-placeholder token="{{ placeholder_token }}">
+		<title>{{ head_title|safe_join(' | ') }}</title>
+		<css-placeholder token="{{ placeholder_token }}">
+		<js-placeholder token="{{ placeholder_token }}">
+		<script>
+			document.documentElement.classList.add('js');
+		</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		{# start favicon code #}
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ theme_path }}/favicons/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ theme_path }}/favicons/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ theme_path }}/favicons/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ theme_path }}/favicons/apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ theme_path }}/favicons/apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ theme_path }}/favicons/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ theme_path }}/favicons/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ theme_path }}/favicons/apple-touch-icon-152x152.png">
+		<link rel="icon" type="image/png" href="{{ theme_path }}/favicons/favicon-196x196.png" sizes="196x196">
+		<link rel="icon" type="image/png" href="{{ theme_path }}/favicons/favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/png" href="{{ theme_path }}/favicons/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="{{ theme_path }}/favicons/favicon-16x16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="{{ theme_path }}/favicons/favicon-128.png" sizes="128x128">
+		<meta name="application-name" content="{{ site_name }}"/>
+		<meta name="msapplication-TileColor" content="#FFFFFF">
+		<meta name="msapplication-TileImage" content="{{ theme_path }}/favicons/mstile-144x144.png">
+		<meta name="msapplication-square70x70logo" content="{{ theme_path }}/favicons/mstile-70x70.png">
+		<meta name="msapplication-square150x150logo" content="{{ theme_path }}/favicons/mstile-150x150.png">
+		<meta name="msapplication-wide310x150logo" content="{{ theme_path }}/favicons/mstile-310x150.png">
+		<meta name="msapplication-square310x310logo" content="{{ theme_path }}/favicons/mstile-310x310.png">
+		{# end favicon code #}
+
+		<meta name="google-site-verification" content="CmiJi3NebiIce_9zilnobjeHuVFwzc_F8MS9MSbFSnQ" />
+		
+		<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+		<link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500,700|Red+Hat+Text:400,400i,500,700&display=swap" rel="stylesheet">
+	</head>
+	<body{{attributes.addClass(classes)}}>
+		{#
+		Keyboard navigation/accessibility link to main content section in page.html.twig.
+		#}
+		<a href="#main-content" class="visually-hidden focusable skip-to-main-content">
+			{{ 'Skip to main content'|t }}
+		</a>
+
+		{{ page_top }}
+		{{ page }}
+		{{ page_bottom }}
+
+		<script>
+			const currentHost = location.hostname;
+			const socialDomains = [
+				"facebook.com",
+				"twitter.com",
+				"instagram.com",
+				"linkedin.com",
+				"youtube.com",
+				"tiktok.com",
+				"pinterest.com",
+				"threads.net",
+				"snapchat.com",
+				"x.com"
+			];
+
+			const isExternal = (href) => {
+				try {
+				const url = new URL(href, location.origin);
+				return url.hostname !== currentHost;
+				} catch (e) {
+				return false; 
+				}
+			};
+			const isSocialLink = (href) => {
+				return socialDomains.some(domain => href.includes(domain));
+			};
+
+			const svgIcon = `
+				<span class="external-icon" aria-hidden="true">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 21.671 21.707" fill="currentColor" stroke="currentColor">
+					<g>
+					<g>
+						<g>
+						<path d="m10.136 0-.86.857 3.234 3.225L0 4.122v1.221L12.506 5.3 9.251 8.548l.854.852 4.729-4.715z"
+							transform="rotate(-45 15.43 .976)" />
+						</g>
+						<path d="M-317.054 5947.591h-7.646v13.561h13.947v-8.7"
+						transform="translate(325.696 -5940.444)" fill="none" stroke-width="2px" stroke-linejoin="round" />
+					</g>
+					</g>
+				</svg>
+				</span>
+			`;
+			document.querySelectorAll('a[target="_blank"]').forEach(link => {
+				const href = link.getAttribute('href') || "";
+
+				if (isExternal(href) && !isSocialLink(href)) {
+				link.setAttribute("link-type", "external");
+				link.classList.add("external_link");
+
+				if (!link.querySelector(".external-icon")) {
+					link.insertAdjacentHTML("beforeend", svgIcon);
+				}
+				}
+			});
+		</script>
+
+		<js-bottom-placeholder token="{{ placeholder_token }}">
+		
+	</body>
+</html>

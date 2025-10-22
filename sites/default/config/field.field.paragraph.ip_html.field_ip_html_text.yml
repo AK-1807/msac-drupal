@@ -1,0 +1,23 @@
+uuid: 519a3406-ba9c-432f-8f01-6d8992378493
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_html_text
+    - paragraphs.paragraphs_type.ip_html
+  module:
+    - text
+_core:
+  default_config_hash: blCLYSuVRjJ4DT2-pJhr4qcM-vw8j30kx_XGsvk7Mrw
+id: paragraph.ip_html.field_ip_html_text
+field_name: field_ip_html_text
+entity_type: paragraph
+bundle: ip_html
+label: Text
+description: 'Please add basic HTML in any WYSIWYG format you choose.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

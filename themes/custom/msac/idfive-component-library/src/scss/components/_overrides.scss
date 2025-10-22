@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Button
+   ========================================================================== */
+
+$button-background: transparent;
+$button-border: (3 / 18 * 1em) solid $red;
+$button-color: $red;
+$button-font-family: $red-hat-display;
+$button-font-weight: 700;
+$button-padding: em(13, 18) em(32, 18) em(12, 18);
+$button-transition: 0.25s background-color ease-in-out, 0.25s border-color ease-in-out, 0.25s color ease-in-out;
+$button-text-transform: uppercase;
+$button_hover-background: $red;
+$button_hover-border: (3 / 18 * 1em) solid $red;
+$button_hover-color: #fff;
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+$hero-background: #ddd;
+
+/* ==========================================================================
+   Table
+   ========================================================================== */
+
+$silc-table-thead-background-color: $yellow;
+$silc-table-stripe-background: $gray-1;

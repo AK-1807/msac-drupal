@@ -1,0 +1,78 @@
+<?php
+
+/**
+ * @file
+ * Module file.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Component\Utility\Xss;
+use Drupal\Component\Utility\Html;
+
+/**
+ * {@inheritdoc}
+ */
+function node_delete_redirect_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.node_delete_redirect':
+      $output = file_get_contents(\Drupal::service('extension.list.module')->getPath('node_delete_redirect') . '/README.md');
+      return \Drupal::moduleHandler()
+        ->moduleExists('markdown') ? Xss::filterAdmin(\Drupal::moduleHandler()
+          ->invoke('markdown', 'filter', 'process', 0, -1, $output)) : '<pre>' . str_replace([
+            '_',
+            '*',
+          ], ' ', Html::escape($output)) . '</pre>';
+  }
+}
+
+/**
+ * {@inheritdoc}
+ */
+function node_delete_redirect_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $config = \Drupal::configFactory()
+    ->getEditable('node_delete_redirect.admin_settings_form')
+    ->get('ndr_admin_form_settings');
+
+  if ($config['ndr_check']) {
+    foreach ($config['ndr_settings'] as $type => $values) {
+      if ($values['is_enabled']) {
+        if ($form_id == "node_{$type}_delete_form") {
+          $form['#attributes']['node_delete_redirect_to'] = $values['redirect'];
+          $form['actions']['submit']['#submit'][] = 'node_delete_redirect_form_submit';
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Custom submit hook.
+ *
+ * @param array $form
+ *   Form array.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   Form State Interface.
+ */
+function node_delete_redirect_form_submit(array &$form, FormStateInterface $form_state) {
+  $config = \Drupal::configFactory()
+    ->getEditable('node_delete_redirect.admin_settings_form')
+    ->get('ndr_admin_form_settings');
+  $default_lang_prefix = \Drupal::languageManager()
+    ->getDefaultLanguage()
+    ->getId();
+  $current_lang_prefix = \Drupal::languageManager()
+    ->getCurrentLanguage()
+    ->getId();
+
+  if ($config['ndr_lang'] && $default_lang_prefix != $current_lang_prefix) {
+    $redirect_to = '/' . $current_lang_prefix . $form['#attributes']['node_delete_redirect_to'];
+  }
+  else {
+    $redirect_to = $form['#attributes']['node_delete_redirect_to'];
+  }
+  $response = new RedirectResponse($redirect_to);
+  $response->send();
+  exit();
+}

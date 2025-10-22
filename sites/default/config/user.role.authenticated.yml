@@ -1,0 +1,42 @@
+uuid: 4d3b67e1-c84f-4f6b-8086-2efc9578fb90
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.simple_html
+    - node.type.artist
+    - node.type.organization
+    - node.type.work
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - file
+    - filter
+    - media
+    - media_entity_download
+    - node
+    - search
+    - shortcut
+    - system
+_core:
+  default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access shortcuts'
+  - 'create work content'
+  - 'delete own files'
+  - 'delete own work content'
+  - 'download media'
+  - 'edit own artist content'
+  - 'edit own organization content'
+  - 'edit own work content'
+  - 'search content'
+  - 'use editorial transition create_new_draft'
+  - 'use text format basic_html'
+  - 'use text format simple_html'
+  - 'view media'

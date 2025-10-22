@@ -1,0 +1,19 @@
+uuid: 071f2858-4bd3-4774-804d-7344f427c470
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_district_lead_in
+    - node.type.district
+id: node.district.field_district_lead_in
+field_name: field_district_lead_in
+entity_type: node
+bundle: district
+label: Lead-in
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

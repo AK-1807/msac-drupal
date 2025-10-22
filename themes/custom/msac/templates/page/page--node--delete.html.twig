@@ -1,0 +1,23 @@
+{% extends "page.html.twig" %}
+
+
+{% block page_content %}
+  <div class="page-heading outer-pad">
+    <div class="silc-grid silc-grid--collapse">
+      <div class="silc-grid__col silc-grid__col--12">
+        <h1>{{ drupal_title() }}</h1>
+        {{ drupal_breadcrumb() }}
+      </div>
+    </div>
+  </div>
+  <div class="page-content outer-pad">
+    {{ drupal_messages() }}
+    <div class="silc-grid silc-grid--collapse silc-grid--justify-center">
+      <div class="silc-grid__col silc-grid__col--10-800 silc-grid__col--8-1200">
+        <div class="text-content">
+          {{ page.page_content }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

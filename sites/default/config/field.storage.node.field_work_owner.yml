@@ -1,0 +1,19 @@
+uuid: 3f82b507-5756-4d48-af4f-04a4fd7a4641
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_work_owner
+field_name: field_work_owner
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

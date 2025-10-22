@@ -1,0 +1,29 @@
+uuid: d1ce860c-a10e-49a1-9209-6c9741149f34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ip_video.field_ip_vd_description
+    - field.field.paragraph.ip_video.field_ip_vd_title
+    - field.field.paragraph.ip_video.field_ip_vd_video
+    - paragraphs.paragraphs_type.ip_video
+_core:
+  default_config_hash: mBdr6qcdTIn46qtxaldNoqdOEZkymMWJ53QAhEAqZeY
+id: paragraph.ip_video.default
+targetEntityType: paragraph
+bundle: ip_video
+mode: default
+content:
+  field_ip_vd_video:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_ip_vd_description: true
+  field_ip_vd_title: true
+  search_api_excerpt: true

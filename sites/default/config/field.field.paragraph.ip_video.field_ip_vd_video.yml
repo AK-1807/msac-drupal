@@ -1,0 +1,30 @@
+uuid: cf960052-b845-400d-a388-d03b482b2fb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_vd_video
+    - media.type.remote_video
+    - paragraphs.paragraphs_type.ip_video
+_core:
+  default_config_hash: HUzFCfTI6FxuuGcpBLBBv6wkwcgDS8DXvq2scVPzzag
+id: paragraph.ip_video.field_ip_vd_video
+field_name: field_ip_vd_video
+entity_type: paragraph
+bundle: ip_video
+label: Video
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      remote_video: remote_video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

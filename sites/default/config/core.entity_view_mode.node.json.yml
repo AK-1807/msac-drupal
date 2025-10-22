@@ -1,0 +1,10 @@
+uuid: a48c79d0-1da9-4b65-8dce-16b977f27366
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.json
+label: 'JSON Format'
+targetEntityType: node
+cache: true

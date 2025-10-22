@@ -1,0 +1,13 @@
+<div class="offcanvas-overlay">
+	{% include directory ~ '/templates/_includes/global/header.html.twig' %}
+</div>
+{% include directory ~ '/templates/_includes/global/site-search.html.twig' %}
+<div class="max-bound">
+	<main id="main-content" class="main-content">
+		{% block page_content %}
+			{{ page.page_content }}
+		{% endblock %}
+	</main>
+	{% include directory ~ '/templates/_includes/global/footer.html.twig' %}
+</div>
+

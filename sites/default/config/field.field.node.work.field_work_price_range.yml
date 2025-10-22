@@ -1,0 +1,29 @@
+uuid: 7b743029-5fc3-48a8-8e3c-3cc954f20cc6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_work_price_range
+    - node.type.work
+    - taxonomy.vocabulary.price_ranges
+id: node.work.field_work_price_range
+field_name: field_work_price_range
+entity_type: node
+bundle: work
+label: 'Price Range'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      price_ranges: price_ranges
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: b90f1e81-a6bf-452d-a3d9-a46b731cdc79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_article_type
+    - node.type.article
+  module:
+    - options
+id: node.article.field_article_type
+field_name: field_article_type
+entity_type: node
+bundle: article
+label: Type
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: news
+default_value_callback: ''
+settings: {  }
+field_type: list_string

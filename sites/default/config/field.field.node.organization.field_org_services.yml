@@ -1,0 +1,97 @@
+uuid: e3b6aa88-1745-442f-942a-6ceeebf5e152
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_org_services
+    - node.type.organization
+    - paragraphs.paragraphs_type.services
+  module:
+    - entity_reference_revisions
+id: node.organization.field_org_services
+field_name: field_org_services
+entity_type: node
+bundle: organization
+label: Services
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      services: services
+    negate: 0
+    target_bundles_drag_drop:
+      artist_award:
+        weight: 24
+        enabled: false
+      home_carousel_slide:
+        weight: 18
+        enabled: false
+      home_cta:
+        weight: 19
+        enabled: false
+      home_feature:
+        weight: 20
+        enabled: false
+      ip_accordion:
+        weight: 21
+        enabled: false
+      ip_accordion_item:
+        weight: 22
+        enabled: false
+      ip_blockquote:
+        weight: 23
+        enabled: false
+      ip_button_link:
+        weight: 24
+        enabled: false
+      ip_callout:
+        weight: 32
+        enabled: false
+      ip_card:
+        weight: 25
+        enabled: false
+      ip_cards_group:
+        weight: 26
+        enabled: false
+      ip_carousel:
+        weight: 27
+        enabled: false
+      ip_carousel_item:
+        weight: 28
+        enabled: false
+      ip_html:
+        weight: 29
+        enabled: false
+      ip_image:
+        weight: 38
+        enabled: false
+      ip_table:
+        weight: 39
+        enabled: false
+      ip_video:
+        weight: 30
+        enabled: false
+      ip_views_embed:
+        weight: 31
+        enabled: false
+      ip_webform_embed:
+        weight: 32
+        enabled: false
+      person:
+        weight: 34
+        enabled: false
+      reference:
+        weight: 44
+        enabled: false
+      services:
+        weight: 45
+        enabled: true
+      services_item:
+        weight: 46
+        enabled: false
+field_type: entity_reference_revisions

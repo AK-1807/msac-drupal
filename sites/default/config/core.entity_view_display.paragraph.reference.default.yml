@@ -1,0 +1,58 @@
+uuid: 5d35f2ec-e6ff-4ddc-8f1a-c59372bc08ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.reference.field_artist_reference_email
+    - field.field.paragraph.reference.field_artist_reference_location
+    - field.field.paragraph.reference.field_artist_reference_name
+    - field.field.paragraph.reference.field_artist_reference_phone
+    - field.field.paragraph.reference.field_artist_reference_title
+    - paragraphs.paragraphs_type.reference
+  module:
+    - telephone
+id: paragraph.reference.default
+targetEntityType: paragraph
+bundle: reference
+mode: default
+content:
+  field_artist_reference_email:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_artist_reference_location:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_artist_reference_name:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_artist_reference_phone:
+    type: telephone_link
+    label: inline
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_artist_reference_title:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

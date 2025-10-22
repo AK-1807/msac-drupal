@@ -1,0 +1,19 @@
+uuid: 84420b76-b5e2-4894-a5be-4aa660697133
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_grant_ql_deadline_text
+    - node.type.grant
+id: node.grant.field_grant_ql_deadline_text
+field_name: field_grant_ql_deadline_text
+entity_type: node
+bundle: grant
+label: 'Deadline Text'
+description: 'Optionally, please add any plain text to describe recurring dates/etc.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

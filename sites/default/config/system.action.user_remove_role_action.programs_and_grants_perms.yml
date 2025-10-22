@@ -1,0 +1,14 @@
+uuid: 3de29a13-3a30-4eb3-bdd7-f3ba8b51d66a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.programs_and_grants_perms
+  module:
+    - user
+id: user_remove_role_action.programs_and_grants_perms
+label: 'Remove the Programs and Grants Perms role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: programs_and_grants_perms

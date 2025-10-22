@@ -1,0 +1,19 @@
+uuid: 6dabf227-a675-4060-9487-f383f9b757bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_cover_caption
+    - node.type.artist
+id: node.artist.field_artist_cover_caption
+field_name: field_artist_cover_caption
+entity_type: node
+bundle: artist
+label: 'Cover Photo Caption'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

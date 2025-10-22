@@ -1,0 +1,14 @@
+Global Header/Nav/Etc Here.
+
+<!-- HELPFUL TWIG SNIPPETS -->
+
+<!-- Logo -->
+<a href="{{front_page}}">
+  <img src="{{ base_path ~ directory }}/idfive-component-library/build/img/YOUR_LOGO.svg" alt="Site Logo">
+</a>
+
+<!-- Menus. Add menus to corresponding block regions, then display via -->
+<!-- Primary menu block -->
+{{ page.primary_menu }}
+<!-- Secondary menu block -->
+{{ page.secondary_menu }}

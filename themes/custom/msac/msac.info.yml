@@ -1,0 +1,17 @@
+core_version_requirement: ^8 || ^9 || ^10
+type: theme
+base theme: idfive
+name: Maryland State Arts Council
+description: 'Maryland State Arts Council (msac), is a child theme of the general idfive Drupal 8 theme.'
+package: idfive
+
+libraries:
+  - msac/global
+regions:
+   primary_menu: 'Primary menu'
+   secondary_menu: 'Secondary menu'
+   utility_menu: 'Utility menu'
+   breadcrumbs: 'Breadcrumbs'
+   page_sidebar: 'Page Sidebar'
+   page_content: 'Page Content'
+   footer_menu: 'Footer menu'

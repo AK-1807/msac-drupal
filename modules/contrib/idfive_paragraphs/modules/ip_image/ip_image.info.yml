@@ -1,0 +1,10 @@
+name: 'idfive Paragraphs: Image'
+type: module
+description: Provides a paragraphs bundle for embedding an image as a Kitchen Sink Widget.
+version: '8.x-1.0'
+core_version_requirement: ^8 || ^9 || ^10
+
+package: idfive
+dependencies:
+  - entity_reference_revisions
+  - idfive_paragraphs

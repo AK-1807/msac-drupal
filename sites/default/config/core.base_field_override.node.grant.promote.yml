@@ -1,0 +1,22 @@
+uuid: a0f8e297-0bf1-4317-9f76-a13968bebb5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.grant
+id: node.grant.promote
+field_name: promote
+entity_type: node
+bundle: grant
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

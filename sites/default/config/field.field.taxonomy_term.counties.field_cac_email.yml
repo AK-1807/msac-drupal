@@ -1,0 +1,19 @@
+uuid: e788874a-9583-4ccd-942d-be2f26fc6570
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_cac_email
+    - taxonomy.vocabulary.counties
+id: taxonomy_term.counties.field_cac_email
+field_name: field_cac_email
+entity_type: taxonomy_term
+bundle: counties
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

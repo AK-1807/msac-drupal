@@ -1,0 +1,23 @@
+uuid: be69d0ff-9ad7-4003-a784-f516e2238fd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_juried_exhib
+    - node.type.artist
+id: node.artist.field_artist_juried_exhib
+field_name: field_artist_juried_exhib
+entity_type: node
+bundle: artist
+label: 'Juried Exhibition'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

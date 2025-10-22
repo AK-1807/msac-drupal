@@ -1,0 +1,33 @@
+uuid: 9ee16369-cded-4cc9-aa11-d3f348df3d41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.article
+  module:
+    - allowed_formats
+    - text
+    - text_summary_options
+third_party_settings:
+  text_summary_options:
+    show_summary: 0
+    summary_help: 'Please keep the summary to 150 character limit for optimal display of descriptors on feeds throughout the site'
+  allowed_formats:
+    allowed_formats: {  }
+_core:
+  default_config_hash: IjZnOLWk1Pjq3WRg2pLSA1ERh7Po7izCq_p6UztZr2c
+id: node.article.body
+field_name: body
+entity_type: node
+bundle: article
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: true
+field_type: text_with_summary

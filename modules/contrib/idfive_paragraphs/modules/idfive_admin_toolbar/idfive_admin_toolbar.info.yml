@@ -1,0 +1,6 @@
+name: 'idfive Admin Toolbar'
+type: module
+description: 'Custom module to add Admin tabs as an edit button in the toolbar, rather than being needed on page.'
+core_version_requirement: ^8 || ^9 || ^10
+version: VERSION
+package: 'idfive'

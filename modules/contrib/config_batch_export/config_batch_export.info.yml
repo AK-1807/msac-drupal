@@ -1,0 +1,11 @@
+name: 'Configuration Batch Export'
+type: module
+description: 'Allows administrators export configuration using batch'
+package: Core
+# version: VERSION
+core_version_requirement: ^9.1 || ^10
+configure: config.sync
+dependencies:
+  - drupal:config
+  - drupal:file
+  - drupal:datetime

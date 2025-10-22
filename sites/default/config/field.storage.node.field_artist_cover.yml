@@ -1,0 +1,30 @@
+uuid: c0b2e6ed-da8b-47b3-997a-ced73ed87976
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - node
+id: node.field_artist_cover
+field_name: field_artist_cover
+entity_type: node
+type: image
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  default_image:
+    uuid: 12c871b8-f88f-4319-8084-34835796019c
+    alt: ''
+    title: ''
+    width: 1440
+    height: 535
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

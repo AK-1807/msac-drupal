@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ip_cards_group
+label: 'Card Group'
+icon_uuid: null
+description: 'This Paragraph type provides cards into the Kitchen Sink Widgets. It is controlled by the idfive Paragraphs module.'
+behavior_plugins: {  }

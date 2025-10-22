@@ -1,0 +1,19 @@
+uuid: 62532b35-db56-4902-a698-dd2649505afa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_abbreviation
+    - taxonomy.vocabulary.counties
+id: taxonomy_term.counties.field_abbreviation
+field_name: field_abbreviation
+entity_type: taxonomy_term
+bundle: counties
+label: Abbreviation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

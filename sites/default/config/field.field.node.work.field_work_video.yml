@@ -1,0 +1,25 @@
+uuid: f13ec4b3-9e82-4438-9eae-e9c6814fabfd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_work_video
+    - node.type.work
+  module:
+    - video_embed_field
+id: node.work.field_work_video
+field_name: field_work_video
+entity_type: node
+bundle: work
+label: 'Video URL'
+description: "You may add URL's from either YouTube, or Vimeo."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    vimeo: vimeo
+    youtube: youtube
+    youtube_playlist: youtube_playlist
+field_type: video_embed_field

@@ -1,0 +1,18 @@
+{%
+  set classes = [
+    'paragraph-widget',
+    'paragraph-widget--ip_video',
+  ]
+%}
+<div{{attributes.addClass(classes).setAttribute('id','ip_video-'~paragraph.id())}}>
+	<section>
+		<figure class="iframe">
+			<div class="iframe__media-wrapper">
+				{{ content.field_ip_vd_video }}
+			</div>
+			{% if content.field_ip_vd_description|field_value %}
+				<figcaption>{{ content.field_ip_vd_description|field_value }}</figcaption>
+			{% endif %}
+		</figure>
+	</section>
+</div>

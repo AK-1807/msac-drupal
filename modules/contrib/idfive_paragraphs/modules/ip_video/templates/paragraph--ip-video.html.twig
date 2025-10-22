@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * IP Video paragraph bundle.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{%
+  set classes = [
+    'paragraph-widget',
+    'paragraph-widget--ip_video',
+  ]
+%}
+
+{% block paragraph %}
+	<div{{attributes.addClass(classes).setAttribute('id','ip_video-'~paragraph.id())}}>
+		<div class="iframe__wrapper">
+			{{ content.field_ip_vd_video }}
+		</div>
+		<p class="caption">{{ content.field_ip_vd_description }}</p>
+	</div>
+	{{ content|without('field_ip_vd_video', 'field_ip_vd_title', 'field_ip_vd_description') }}
+{% endblock paragraph %}

@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * IP Carousel Item paragraph bundle.
+ *
+ * @ingroup themeable
+ */
+#}
+
+<div class="carousel__slide">
+
+    {% set imageBody %}
+        {{ content.field_ip_cl_image }}
+    {% endset %}
+
+    <div class="carousel__slide-image" style="background-image:url({{ imageBody|striptags }})"></div>
+    <div class="carousel__slide-content">
+        {{ content.field_ip_cl_caption }}
+    </div>
+</div>

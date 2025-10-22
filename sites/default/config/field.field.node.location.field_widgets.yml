@@ -1,0 +1,109 @@
+uuid: e89cd031-8a13-44a0-b049-0711254c9368
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_widgets
+    - node.type.location
+    - paragraphs.paragraphs_type.ip_accordion
+    - paragraphs.paragraphs_type.ip_blockquote
+    - paragraphs.paragraphs_type.ip_button_link
+    - paragraphs.paragraphs_type.ip_cards_group
+    - paragraphs.paragraphs_type.ip_carousel
+    - paragraphs.paragraphs_type.ip_html
+    - paragraphs.paragraphs_type.ip_video
+    - paragraphs.paragraphs_type.ip_views_embed
+    - paragraphs.paragraphs_type.ip_webform_embed
+    - paragraphs.paragraphs_type.person
+  module:
+    - entity_reference_revisions
+id: node.location.field_widgets
+field_name: field_widgets
+entity_type: node
+bundle: location
+label: Widgets
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      ip_html: ip_html
+      ip_accordion: ip_accordion
+      ip_blockquote: ip_blockquote
+      ip_button_link: ip_button_link
+      ip_cards_group: ip_cards_group
+      ip_carousel: ip_carousel
+      person: person
+      ip_video: ip_video
+      ip_views_embed: ip_views_embed
+      ip_webform_embed: ip_webform_embed
+    negate: 0
+    target_bundles_drag_drop:
+      artist_award:
+        weight: -33
+        enabled: false
+      home_carousel_slide:
+        weight: -32
+        enabled: false
+      home_cta:
+        weight: -31
+        enabled: false
+      home_feature:
+        weight: -30
+        enabled: false
+      ip_accordion:
+        weight: -42
+        enabled: true
+      ip_accordion_item:
+        weight: -29
+        enabled: false
+      ip_blockquote:
+        weight: -41
+        enabled: true
+      ip_button_link:
+        weight: -40
+        enabled: true
+      ip_callout:
+        weight: -28
+        enabled: false
+      ip_card:
+        weight: -27
+        enabled: false
+      ip_cards_group:
+        weight: -39
+        enabled: true
+      ip_carousel:
+        weight: -38
+        enabled: true
+      ip_carousel_item:
+        weight: -26
+        enabled: false
+      ip_html:
+        weight: -43
+        enabled: true
+      ip_image:
+        weight: -25
+        enabled: false
+      ip_table:
+        weight: -24
+        enabled: false
+      ip_video:
+        weight: -36
+        enabled: true
+      ip_views_embed:
+        weight: -35
+        enabled: true
+      ip_webform_embed:
+        weight: -34
+        enabled: true
+      person:
+        weight: -37
+        enabled: true
+      reference:
+        weight: -23
+        enabled: false
+field_type: entity_reference_revisions

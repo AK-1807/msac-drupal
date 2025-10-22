@@ -1,0 +1,17 @@
+<aside class="aside">
+  {% if title %}
+    <h2 class="aside__heading">{{ title }}</h2>
+  {% endif %}
+  <div class="aside__content">
+    {% for section in sections %}
+      <div class="aside__section">
+        {% if section.title %}
+          <h3 class="aside__section-heading">{{ section.title }}</h3>
+        {% endif %}
+        <div>
+          {{ section.content|raw }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</aside>

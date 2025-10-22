@@ -1,0 +1,144 @@
+<div class="page-heading outer-pad">
+	<div class="silc-grid silc-grid--collapse">
+		<div class="silc-grid__col silc-grid__col--12">
+			<h1>{{ title }}</h1>
+			{% include "@breadcrumb" with breadcrumb %}
+		</div>
+	</div>
+</div>
+<div class="page-content outer-pad">
+    <div class="silc-grid silc-grid--justify-center">
+        <div class="silc-grid__col silc-grid__col--10-1024 silc-grid__col--8-1200">
+            <div class="text-content">
+                <h2>The Arts Directory is a place where…Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque</h2>
+            </div>
+        </div>
+        <div class="silc-grid__col silc-grid__col--12">
+            <div class="silc-grid silc-grid--justify-center">
+                <div class="silc-grid__col silc-grid__col--6-800 silc-grid__col--5-1024 silc-grid__col--4-1200">
+                    <div class="text-content">
+                        <h3>Artists</h3>
+                        <ul>
+                            <li>Promote your work to the arts community</li>
+                            <li>Sell your work or get booked for performances</li>
+                            <li>Browse personalized funding opportunities and professional development</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="silc-grid__col silc-grid__col--6-800 silc-grid__col--5-1024 silc-grid__col--4-1200">
+                    <div class="text-content">
+                        <h3>Arts Organizations &amp; Businesses</h3>
+                        <ul>
+                            <li>Help grow the arts community in MD</li>
+                            <li>Showcase available services and opportunities</li>
+                            <li>Find local artists in your area</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="silc-grid__col silc-grid__col--12">
+            <div class="silc-grid silc-grid--justify-center">
+                <div class="silc-grid__col silc-grid__col--10-800 silc-grid__col--8-1024 silc-grid__col--6-1200">
+                    <div class="profile-login-tabs silc-accordion silc-accordion--tabs" id="accordion-tabs-0">
+                        <div class="silc-accordion__section">
+                            <button id="accordion-tabs-0-section-1-label" class="silc-accordion__label" aria-controls="accordion-tabs-0-section-1-content">
+                                Login
+                            </button>
+                            <div class="silc-accordion__content" id="accordion-tabs-0-section-1-content" aria-labelledby="accordion-tabs-0-section-1-label">
+                                <div class="silc-accordion__content-compartment">
+                                    <form class="user-login-form" data-drupal-selector="user-login-form" action="/profile" method="post" id="user-login-form" accept-charset="UTF-8">
+                                        <div class="js-form-item form-item js-form-type-textfield form-item-name js-form-item-name">
+                                            <label for="edit-name" class="js-form-required form-required">Username</label>
+                                            <div id="edit-name--description">
+                                                Enter your Maryland State Arts Council username.
+                                            </div>
+                                            <input autocorrect="none" autocapitalize="none" spellcheck="false" autofocus="autofocus" data-drupal-selector="edit-name" aria-describedby="edit-name--description" type="text" id="edit-name" name="name" value="" size="60" maxlength="60" class="form-text required" required="required" aria-required="true">
+                                        </div>
+                                        <div class="js-form-item form-item js-form-type-password form-item-pass js-form-item-pass">
+                                            <label for="edit-pass" class="js-form-required form-required">Password</label>
+                                            <div id="edit-pass--description">
+                                                Enter the password that accompanies your username.
+                                            </div>
+                                            <input data-drupal-selector="edit-pass" aria-describedby="edit-pass--description" type="password" id="edit-pass" name="pass" size="60" maxlength="128" class="form-text required" required="required" aria-required="true">
+                                        </div>
+                                        <input autocomplete="off" data-drupal-selector="form-l-o3gxgme-r9dep7oxhun6-vpq5og-rgg4sepew1ski" type="hidden" name="form_build_id" value="form-l_o3gXgMe_r9DEP7oXHuN6-vPQ5Og_rGG4sEpEw1SKI">
+                                        <input data-drupal-selector="edit-user-login-form" type="hidden" name="form_id" value="user_login_form">
+                                        <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Log in" class="button js-form-submit form-submit">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="silc-accordion__section">
+                            <button id="accordion-tabs-0-section-2-label" class="silc-accordion__label" aria-controls="accordion-tabs-0-section-2-content">
+                                Register
+                            </button>
+                            <div class="silc-accordion__content" id="accordion-tabs-0-section-2-content" aria-labelledby="accordion-tabs-0-section-2-label">
+                                <div class="silc-accordion__content-compartment">
+                                    <form class="user-msac-profiles-register-form user-form" data-user-info-from-browser="" data-drupal-selector="user-msac-profiles-register-form" action="/profile" method="post" id="user-msac-profiles-register-form" accept-charset="UTF-8">
+                                        <div data-drupal-selector="edit-account" id="edit-account" class="js-form-wrapper form-wrapper">
+                                            <div class="js-form-item form-item js-form-type-email form-item-mail js-form-item-mail">
+                                                <label for="edit-mail" class="js-form-required form-required">Email address</label>
+                                                <div id="edit-mail--description">
+                                                    A valid email address. All emails from the system will be sent to this address. The email address is not made public and will only be used if you wish to receive a new password or wish to receive certain news or notifications by email.
+                                                </div>
+                                                <input data-drupal-selector="edit-mail" aria-describedby="edit-mail--description" type="email" id="edit-mail" name="mail" value="" size="60" maxlength="254" class="form-email required" required="required" aria-required="true">
+                                            </div>
+                                            <div class="js-form-item form-item js-form-type-textfield form-item-name js-form-item-name">
+                                                <label for="edit-name--2" class="js-form-required form-required">Username</label>
+                                                <div id="edit-name--2--description">
+                                                    Several special characters are allowed, including space, period (.), hyphen (-), apostrophe ('), underscore (_), and the @ sign.
+                                                </div>
+                                                <input class="username form-text required" autocorrect="off" autocapitalize="off" spellcheck="false" data-drupal-selector="edit-name" aria-describedby="edit-name--2--description" type="text" id="edit-name--2" name="name" value="" size="60" maxlength="60" required="required" aria-required="true">
+                                            </div>
+                                            <div id="edit-pass--2" class="js-form-item form-item js-form-type-password-confirm form-item-pass js-form-item-pass form-no-label">
+                                                <div id="edit-pass--2--description">
+                                                    Provide a password for the new account in both fields.
+                                                </div>
+                                                <div class="js-form-item form-item js-form-type-password form-item-pass-pass1 js-form-item-pass-pass1">
+                                                    <label for="edit-pass-pass1" class="js-form-required form-required">Password</label>
+                                                    <input class="password-field js-password-field form-text required" data-drupal-selector="edit-pass-pass1" type="password" id="edit-pass-pass1" name="pass[pass1]" size="25" maxlength="128" required="required" aria-required="true">
+                                                </div>
+                                                <div class="js-form-item form-item js-form-type-password form-item-pass-pass2 js-form-item-pass-pass2">
+                                                    <label for="edit-pass-pass2" class="js-form-required form-required">Confirm password</label>
+                                                    <input class="password-confirm js-password-confirm form-text required" data-drupal-selector="edit-pass-pass2" type="password" id="edit-pass-pass2" name="pass[pass2]" size="25" maxlength="128" required="required" aria-required="true">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <fieldset data-drupal-selector="edit-user-type" aria-describedby="edit-user-type--wrapper--description" id="edit-user-type--wrapper" class="fieldgroup form-composite required js-form-item form-item js-form-wrapper form-wrapper" required="required" aria-required="true">
+                                            <legend>
+                                                <span class="fieldset-legend js-form-required form-required">I am a...</span>
+                                            </legend>
+                                            <div class="fieldset-wrapper">
+                                                <div id="edit-user-type">
+                                                    <div class="js-form-item form-item js-form-type-radio form-item-user-type js-form-item-user-type">
+                                                        <input data-drupal-selector="edit-user-type-ind" type="radio" id="edit-user-type-ind" name="user_type" value="ind" checked="checked" class="form-radio">
+                                                        <label for="edit-user-type-ind" class="option">Artist/Performer</label>
+                                                    </div>
+                                                    <div class="js-form-item form-item js-form-type-radio form-item-user-type js-form-item-user-type">
+                                                        <input data-drupal-selector="edit-user-type-org" type="radio" id="edit-user-type-org" name="user_type" value="org" class="form-radio">
+                                                        <label for="edit-user-type-org" class="option">Organization/Business</label>
+                                                    </div>
+                                                </div>
+                                                <div id="edit-user-type--wrapper--description" class="description">Please choose if you wish to register as an individual artist, or an organization. This cannot be changed easily, so be sure to choose the correct classification.</div>
+                                            </div>
+                                        </fieldset>
+                                        <div class="js-form-item form-item js-form-type-checkbox form-item-terms js-form-item-terms">
+                                            <input data-drupal-selector="edit-terms" type="checkbox" id="edit-terms" name="terms" value="1" class="form-checkbox required" required="required" aria-required="true">
+                                            <label for="edit-terms" class="option js-form-required form-required">I accept the <a href="/terms">terms and conditions</a> of use.</label>
+                                        </div>
+                                        <input autocomplete="off" data-drupal-selector="form-e3opfk1xeuclfi0oart2feboxyuowjtgeqnzh8qoop4" type="hidden" name="form_build_id" value="form-E3OpfK1xEuClfI0oART2FebOxYuOwJTGEQnzH8qOOP4">
+                                        <input data-drupal-selector="edit-user-msac-profiles-register-form" type="hidden" name="form_id" value="user_msac_profiles_register_form">
+                                        <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions--2"><input data-drupal-selector="edit-submit" type="submit" id="edit-submit--2" name="op" value="Sign Up" class="button button--primary js-form-submit form-submit">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

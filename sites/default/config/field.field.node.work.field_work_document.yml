@@ -1,0 +1,27 @@
+uuid: 08c90f19-a46a-4b19-b766-3ac14a7cb056
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_work_document
+    - node.type.work
+  module:
+    - file
+id: node.work.field_work_document
+field_name: field_work_document
+entity_type: node
+bundle: work
+label: Document
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: artist_work/documents
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+field_type: file

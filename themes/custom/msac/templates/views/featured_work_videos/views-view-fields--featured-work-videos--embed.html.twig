@@ -1,0 +1,8 @@
+<figure class="iframe">
+  <div class="iframe__media-wrapper">
+    {{ fields.field_work_video.content }}
+  </div>
+  {% if fields.field_work_description.content %}
+    <div class="work-details--description">{{ fields.field_work_description.content }}</div>
+  {% endif %}
+</figure>

@@ -1,0 +1,23 @@
+uuid: bc7fa2c5-dcf1-4c61-8550-2d2e4e1f58fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_org_engmt_type_3
+    - node.type.organization
+id: node.organization.field_org_engmt_type_3
+field_name: field_org_engmt_type_3
+entity_type: node
+bundle: organization
+label: 'Out of School Time'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

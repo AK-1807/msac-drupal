@@ -1,0 +1,216 @@
+uuid: fa9bcb31-a2e7-4982-a1fa-1554e4203a1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.location
+  module:
+    - jsonapi_defaults
+third_party_settings:
+  jsonapi_defaults:
+    page_limit: 200
+id: node--location
+disabled: false
+path: node/location
+resourceType: node--location
+resourceFields:
+  nid:
+    disabled: false
+    fieldName: nid
+    publicName: nid
+    enhancer:
+      id: ''
+  uuid:
+    disabled: false
+    fieldName: uuid
+    publicName: uuid
+    enhancer:
+      id: ''
+  vid:
+    disabled: false
+    fieldName: vid
+    publicName: vid
+    enhancer:
+      id: ''
+  langcode:
+    disabled: false
+    fieldName: langcode
+    publicName: langcode
+    enhancer:
+      id: ''
+  type:
+    disabled: false
+    fieldName: type
+    publicName: type
+    enhancer:
+      id: ''
+  revision_timestamp:
+    disabled: false
+    fieldName: revision_timestamp
+    publicName: revision_timestamp
+    enhancer:
+      id: ''
+  revision_uid:
+    disabled: false
+    fieldName: revision_uid
+    publicName: revision_uid
+    enhancer:
+      id: ''
+  revision_log:
+    disabled: false
+    fieldName: revision_log
+    publicName: revision_log
+    enhancer:
+      id: ''
+  status:
+    disabled: false
+    fieldName: status
+    publicName: status
+    enhancer:
+      id: ''
+  uid:
+    disabled: false
+    fieldName: uid
+    publicName: uid
+    enhancer:
+      id: ''
+  title:
+    disabled: false
+    fieldName: title
+    publicName: title
+    enhancer:
+      id: ''
+  created:
+    disabled: false
+    fieldName: created
+    publicName: created
+    enhancer:
+      id: ''
+  changed:
+    disabled: false
+    fieldName: changed
+    publicName: changed
+    enhancer:
+      id: ''
+  promote:
+    disabled: false
+    fieldName: promote
+    publicName: promote
+    enhancer:
+      id: ''
+  sticky:
+    disabled: false
+    fieldName: sticky
+    publicName: sticky
+    enhancer:
+      id: ''
+  default_langcode:
+    disabled: false
+    fieldName: default_langcode
+    publicName: default_langcode
+    enhancer:
+      id: ''
+  revision_default:
+    disabled: false
+    fieldName: revision_default
+    publicName: revision_default
+    enhancer:
+      id: ''
+  revision_translation_affected:
+    disabled: false
+    fieldName: revision_translation_affected
+    publicName: revision_translation_affected
+    enhancer:
+      id: ''
+  moderation_state:
+    disabled: false
+    fieldName: moderation_state
+    publicName: moderation_state
+    enhancer:
+      id: ''
+  metatag:
+    disabled: false
+    fieldName: metatag
+    publicName: metatag
+    enhancer:
+      id: ''
+  path:
+    disabled: false
+    fieldName: path
+    publicName: path
+    enhancer:
+      id: ''
+  menu_link:
+    disabled: false
+    fieldName: menu_link
+    publicName: menu_link
+    enhancer:
+      id: ''
+  body:
+    disabled: false
+    fieldName: body
+    publicName: body
+    enhancer:
+      id: ''
+  field_location_address:
+    disabled: false
+    fieldName: field_location_address
+    publicName: field_location_address
+    enhancer:
+      id: ''
+  field_location_county:
+    disabled: false
+    fieldName: field_location_county
+    publicName: field_location_county
+    enhancer:
+      id: ''
+  field_location_image:
+    disabled: false
+    fieldName: field_location_image
+    publicName: field_location_image
+    enhancer:
+      id: ''
+  field_location_latitude:
+    disabled: false
+    fieldName: field_location_latitude
+    publicName: field_location_latitude
+    enhancer:
+      id: ''
+  field_location_longitude:
+    disabled: false
+    fieldName: field_location_longitude
+    publicName: field_location_longitude
+    enhancer:
+      id: ''
+  field_location_no_linking:
+    disabled: false
+    fieldName: field_location_no_linking
+    publicName: field_location_no_linking
+    enhancer:
+      id: ''
+  field_location_type:
+    disabled: false
+    fieldName: field_location_type
+    publicName: field_location_type
+    enhancer:
+      id: ''
+  field_location_url:
+    disabled: false
+    fieldName: field_location_url
+    publicName: field_location_url
+    enhancer:
+      id: url_link
+      settings:
+        absolute_url: '1'
+  field_meta:
+    disabled: false
+    fieldName: field_meta
+    publicName: field_meta
+    enhancer:
+      id: ''
+  field_widgets:
+    disabled: false
+    fieldName: field_widgets
+    publicName: field_widgets
+    enhancer:
+      id: ''

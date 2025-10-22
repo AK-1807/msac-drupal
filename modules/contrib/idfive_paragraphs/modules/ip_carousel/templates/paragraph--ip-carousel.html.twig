@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * IP Carousel paragraph bundle.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{%
+  set classes = [
+    'paragraph-widget',
+    'paragraph-widget--ip_carousel',
+  ]
+%}
+
+{% block paragraph %}
+	<div{{attributes.addClass(classes).setAttribute('id','ip_carousel-'~paragraph.id())}}>
+		{% block content %}
+			<div class="carousel-holder">
+				<div class="carousel">
+					{{ content.field_ip_cl_items }}
+				</div>
+				<div class="carousel__nav">
+					<div class="carousel__nav-sizer"></div>
+					<div class="carousel__nav-previous" role="button" aria-label="Previous" tabindex="0"></div>
+					<div class="carousel__nav-next" role="button" aria-label="Next" tabindex="0"></div>
+				</div>
+			</div>
+		{% endblock %}
+	</div>
+	{{ content|without('field_ip_cl_items') }}
+{% endblock paragraph %}

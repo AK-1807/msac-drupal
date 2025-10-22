@@ -1,0 +1,29 @@
+uuid: a3c77495-6ea0-419c-9b2b-64d26f279aed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_work_artistic_categories
+    - node.type.work
+    - taxonomy.vocabulary.artistic_categories
+id: node.work.field_work_artistic_categories
+field_name: field_work_artistic_categories
+entity_type: node
+bundle: work
+label: 'Artistic Categories'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      artistic_categories: artistic_categories
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

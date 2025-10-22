@@ -1,0 +1,12 @@
+uuid: 92a5e4a3-bc85-4134-b481-1f84b57d2f2c
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: programs_and_grants_perms
+label: 'Programs and Grants Perms'
+weight: 7
+is_admin: null
+permissions:
+  - 'delete own files'

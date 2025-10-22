@@ -1,0 +1,21 @@
+uuid: 1e5cdc10-2ca8-459e-856d-844dc6dda7cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_grant_ql_deadline
+    - node.type.grant
+  module:
+    - datetime
+id: node.grant.field_grant_ql_deadline
+field_name: field_grant_ql_deadline
+entity_type: node
+bundle: grant
+label: Deadline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

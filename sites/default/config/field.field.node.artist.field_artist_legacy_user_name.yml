@@ -1,0 +1,19 @@
+uuid: e2c602fa-949a-44c4-9e1c-b2e8c05d57f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_legacy_user_name
+    - node.type.artist
+id: node.artist.field_artist_legacy_user_name
+field_name: field_artist_legacy_user_name
+entity_type: node
+bundle: artist
+label: 'Legacy User Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

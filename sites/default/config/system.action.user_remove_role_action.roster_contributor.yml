@@ -1,0 +1,14 @@
+uuid: 850513b0-152e-4eaf-b768-3163cbe334e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.roster_contributor
+  module:
+    - user
+id: user_remove_role_action.roster_contributor
+label: 'Remove the Roster Contributor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: roster_contributor

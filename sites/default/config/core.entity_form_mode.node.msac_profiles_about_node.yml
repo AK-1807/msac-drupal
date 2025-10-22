@@ -1,0 +1,10 @@
+uuid: 5625d2a9-3b29-43f0-8bbc-3976c25de3a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.msac_profiles_about_node
+label: 'MSAC Profiles About'
+targetEntityType: node
+cache: true

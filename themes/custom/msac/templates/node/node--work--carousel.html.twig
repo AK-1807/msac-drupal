@@ -1,0 +1,12 @@
+<div class="carousel__slide">
+	<div class="carousel__slide-image">
+		<img src="{{file_url(node.field_work_image.0.entity.uri.value | image_style('optimized'))}}" alt="{{node.field_work_description.value}}">
+	</div>
+	<button class="carousel__modal-trigger" aria-label="View more details about {{node.field_work_description.value}}">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
+			<g fill="#FFF" fill-rule="evenodd"><path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zm0 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"/><path d="M10.907 6v4.908H6v2.185h4.907V18h2.185v-4.907H18v-2.185h-4.908V6z"/></g>
+		</svg>
+		<span class="visible-for-screen-readers">View more details about
+			{{node.title.value}}</span>
+	</button>
+</div>

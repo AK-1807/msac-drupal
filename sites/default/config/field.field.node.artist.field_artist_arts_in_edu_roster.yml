@@ -1,0 +1,23 @@
+uuid: 4bba511d-9c2f-4ecd-889f-dac7c649e344
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_arts_in_edu_roster
+    - node.type.artist
+id: node.artist.field_artist_arts_in_edu_roster
+field_name: field_artist_arts_in_edu_roster
+entity_type: node
+bundle: artist
+label: 'Arts in Education Program'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

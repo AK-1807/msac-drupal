@@ -1,0 +1,467 @@
+uuid: 77dfdc97-237a-4c56-86af-1002a138d2f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.organization.body
+    - field.field.node.organization.field_county
+    - field.field.node.organization.field_org_address
+    - field.field.node.organization.field_org_artistic_categories
+    - field.field.node.organization.field_org_arts_in_edu_roster
+    - field.field.node.organization.field_org_bk_contact_info
+    - field.field.node.organization.field_org_bk_materials_tech
+    - field.field.node.organization.field_org_bk_price
+    - field.field.node.organization.field_org_bk_references
+    - field.field.node.organization.field_org_bk_travel_req_rest
+    - field.field.node.organization.field_org_cover
+    - field.field.node.organization.field_org_cover_caption
+    - field.field.node.organization.field_org_districts
+    - field.field.node.organization.field_org_email
+    - field.field.node.organization.field_org_engmt_type_1
+    - field.field.node.organization.field_org_engmt_type_1_text
+    - field.field.node.organization.field_org_engmt_type_2
+    - field.field.node.organization.field_org_engmt_type_2_text
+    - field.field.node.organization.field_org_engmt_type_3
+    - field.field.node.organization.field_org_engmt_type_3_text
+    - field.field.node.organization.field_org_engmt_type_4
+    - field.field.node.organization.field_org_engmt_type_4_text
+    - field.field.node.organization.field_org_engmt_type_5
+    - field.field.node.organization.field_org_engmt_type_5_text
+    - field.field.node.organization.field_org_engmt_type_6
+    - field.field.node.organization.field_org_engmt_type_6_text
+    - field.field.node.organization.field_org_engmt_type_7
+    - field.field.node.organization.field_org_engmt_type_7_text
+    - field.field.node.organization.field_org_engmt_type_8
+    - field.field.node.organization.field_org_engmt_type_8_text
+    - field.field.node.organization.field_org_image
+    - field.field.node.organization.field_org_p_work
+    - field.field.node.organization.field_org_phone
+    - field.field.node.organization.field_org_population_types
+    - field.field.node.organization.field_org_presenting_touring
+    - field.field.node.organization.field_org_quote
+    - field.field.node.organization.field_org_services
+    - field.field.node.organization.field_org_show_email
+    - field.field.node.organization.field_org_social_behance
+    - field.field.node.organization.field_org_social_dribbble
+    - field.field.node.organization.field_org_social_facebook
+    - field.field.node.organization.field_org_social_instagram
+    - field.field.node.organization.field_org_social_linkedin
+    - field.field.node.organization.field_org_social_twitter
+    - field.field.node.organization.field_org_social_vimeo
+    - field.field.node.organization.field_org_social_youtube
+    - field.field.node.organization.field_org_type
+    - field.field.node.organization.field_org_websites
+    - node.type.organization
+  module:
+    - address
+    - entity_reference_revisions
+    - image
+    - link
+    - text
+    - user
+id: node.organization.full
+targetEntityType: node
+bundle: organization
+mode: full
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_county:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_org_address:
+    type: address_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_org_aftr_wknd_offered:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 42
+    region: content
+  field_org_artistic_categories:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_org_arts_in_edu_roster:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_org_bk_contact_info:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_org_bk_materials_tech:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_org_bk_price:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  field_org_bk_references:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_org_bk_travel_req_rest:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  field_org_ci_fldtrips_for:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 33
+    region: content
+  field_org_ci_fldtrips_offered:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 34
+    region: content
+  field_org_cover:
+    type: image_url
+    label: above
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_org_districts:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_org_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_org_engmt_type_1_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 39
+    region: content
+  field_org_engmt_type_2_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 35
+    region: content
+  field_org_engmt_type_3_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 36
+    region: content
+  field_org_engmt_type_4_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 33
+    region: content
+  field_org_engmt_type_5_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 34
+    region: content
+  field_org_engmt_type_6_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 31
+    region: content
+  field_org_engmt_type_7_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 38
+    region: content
+  field_org_engmt_type_8_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 32
+    region: content
+  field_org_image:
+    type: image_url
+    label: above
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_org_p_work:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_org_pf_fldtrips_for:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 32
+    region: content
+  field_org_pf_fldtrips_offered:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  field_org_phone:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_org_population_types:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 37
+    region: content
+  field_org_quote:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_org_services:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_org_show_email:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_org_social_behance:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_org_social_dribbble:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_org_social_facebook:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_org_social_instagram:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_org_social_linkedin:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_org_social_twitter:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_org_social_vimeo:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_org_social_youtube:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_org_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_org_visiting_for:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_org_websites:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_org_aftr_wknd: true
+  field_org_cover_caption: true
+  field_org_engmt_type_1: true
+  field_org_engmt_type_2: true
+  field_org_engmt_type_3: true
+  field_org_engmt_type_4: true
+  field_org_engmt_type_5: true
+  field_org_engmt_type_6: true
+  field_org_engmt_type_7: true
+  field_org_engmt_type_8: true
+  field_org_lectures: true
+  field_org_presenting_touring: true
+  field_org_visiting_offered: true
+  field_org_workshops: true
+  search_api_excerpt: true

@@ -1,0 +1,19 @@
+uuid: 05e10c00-95a7-42da-98ee-0edd93bcc297
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_article_legacy_node_id
+    - node.type.article
+id: node.article.field_article_legacy_node_id
+field_name: field_article_legacy_node_id
+entity_type: node
+bundle: article
+label: 'Legacy Node ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

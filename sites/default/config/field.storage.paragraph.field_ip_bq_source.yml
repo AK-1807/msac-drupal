@@ -1,0 +1,23 @@
+uuid: 0a3d64b4-5dd7-46dc-a02a-659c7dcc5f30
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: Rv6ZZbhBd5R73adqn3MFcvCW-Bj512Un-YwIJkHe-0c
+id: paragraph.field_ip_bq_source
+field_name: field_ip_bq_source
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,12 @@
+uuid: 01aab4d9-c747-4c37-818b-4ce9c2b2a1d9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: BqGiaM5XQA-U_zbi5Sa5FxNb9-vVYZ05-8oiT-6fdJc
+id: ip_html
+label: Text/HTML
+icon_uuid: null
+icon_default: null
+description: 'This Paragraph type provides an HTML WYSIWYG field into the Kitchen Sink Widgets. It is controlled by the idfive Paragraphs module.'
+behavior_plugins: {  }

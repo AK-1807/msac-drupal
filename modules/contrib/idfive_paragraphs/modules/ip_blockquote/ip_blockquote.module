@@ -1,0 +1,79 @@
+<?php
+
+/**
+ * @file
+ * Ip_blockquote module file.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ *
+ * @inheritdoc
+ */
+function ip_blockquote_help($route_name, RouteMatchInterface $route_match)
+{
+  switch ($route_name) {
+    case 'help.page.ip_blockquote':
+      $text = file_get_contents(dirname(__FILE__) . "/README.md");
+      if (!\Drupal::moduleHandler()->moduleExists('markdown')) {
+        return '<pre>' . $text . '</pre>';
+      } else {
+        // Use the Markdown filter to render the README.
+        $filter_manager = \Drupal::service('plugin.manager.filter');
+        $settings = \Drupal::configFactory()->get('markdown.settings')->getRawData();
+        $config = ['settings' => $settings];
+        $filter = $filter_manager->createInstance('markdown', $config);
+        return $filter->process($text, 'en');
+      }
+  }
+  return NULL;
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * Lets us define our paragraphs templates in this module.
+ */
+function ip_blockquote_theme($existing, $type, $theme, $path)
+{
+  return [
+    'paragraph__ip_blockquote' => [
+      'base hook' => 'paragraph',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_field_WIDGET_TYPE_paragraphs_form_alter().
+ *
+ * Adds "Content Tips from idfive" helper text to the paragraph.
+ */
+function ip_blockquote_field_widget_paragraphs_form_alter(&$element, &$form_state, $context)
+{
+  if ($element['#paragraph_type'] == 'ip_blockquote') {
+
+    // Tips text from idfive.
+    $markup = '<h3>Do:</h3><ul>';
+    $markup .= '<li><strong>Use blockquotes to break up long copy.</strong> A brief quote can provide visual interest and offset larger text blocks.</li>';
+    $markup .= '<li><strong>Use plain text.</strong> Avoid including links or other styled elements.</li>';
+    $markup .= '</ul>';
+    $markup .= '<h3>Dont:</h3><ul>';
+    $markup .= '<li><strong>Use an overly long quote.</strong> Often block quotes use font sizes/weights that can be overwhelming if used for copy that is very long.</li>';
+    $markup .= '<li><strong>Place a blockquote as the last element on the page.</strong></li>';
+    $markup .= '</ul>';
+    $markup .= '<p><a target="_blank" href="/admin/help/ip_blockquote">Blockquote Module Help</a></p>';
+    $element['ip_blockquote_tips'] = [
+      '#type' => 'details',
+      '#title' => t('Blockquote Content Tips'),
+      '#weight' => -1000,
+    ];
+    $element['ip_blockquote_tips']['#markup'] = $markup;
+  }
+}
+
+function ip_blockquote_update_8001()
+{
+  \Drupal::service('config.installer')->installDefaultConfig('module', 'ip_blockquote');
+}

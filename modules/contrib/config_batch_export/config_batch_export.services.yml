@@ -1,0 +1,10 @@
+services:
+  config_batch_export.cache.factory.null:
+    class: Drupal\Core\Cache\NullBackendFactory
+  config_batch_export.cache_backend.null:
+    class: Drupal\Core\Cache\CacheBackendInterface
+    factory: config_batch_export.cache.factory.null:get
+    arguments: [ config ]
+  config_batch_export.config_storage:
+    class: Drupal\config_batch_export\Config\Storage
+    arguments: [ '@config.storage.active', '@config_batch_export.cache_backend.null' ]

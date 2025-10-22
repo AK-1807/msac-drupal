@@ -1,0 +1,18 @@
+<!-- Header -->
+{% include module_directory ~ '/templates/includes/headers/full_header.html.twig' %}
+<div class="page-content outer-pad">
+	<div class="widget-spacing">
+		<div class="silc-grid silc-grid--collapse silc-grid--justify-center">
+			<div class="silc-grid__col silc-grid__col--10-800 silc-grid__col--8-1200">
+        <!-- Nav -->
+        {% include module_directory ~ '/templates/includes/common/nav.html.twig' %}
+        <div class="msac_profiles__intro">
+          <div class="h4">{{ profile_settings.acct_intro_text.value | raw }}</div>
+        </div>
+        <div class="msac_profiles-account__form msac_profiles__form-wrap">
+          {{ user_form }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

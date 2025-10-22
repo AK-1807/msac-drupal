@@ -1,0 +1,221 @@
+<?php
+
+/**
+ * @file
+ * Maryland State Arts Council (msac), an idfive sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+
+use Drupal\node\Entity\Node;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\Component\Utility\Html;
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ *
+ * @param $variables
+ */
+function msac_preprocess_html(&$variables) {
+  $variables['current_path'] = \Drupal::service('path.current')->getPath();
+  $variables['current_path_alias'] = ltrim(\Drupal::service('path_alias.manager')->getAliasByPath($variables['current_path']), '/');
+  $variables['attributes']['class'][] = 'path--' . Html::cleanCssIdentifier($variables['current_path_alias'], ['/' => '--']);
+
+  // Set social share image
+
+  if ($default_social_image = msac_get_social_image($variables)) {
+    $variables['page']['#attached']['html_head'][] = [$default_social_image, "twitter:image"];
+  }
+
+  if ($hero = msac_get_hero_image($variables)) {
+    if (!empty($hero['url'])) {
+      $variables['attributes']['class'][] = 'has-hero';
+    }
+  }
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
+function msac_preprocess_page(&$variables) {
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ *
+ * @param $variables
+ */
+function msac_preprocess_node(&$variables) {
+  $node = $variables['elements']['#node'];
+  $bundle = $node->bundle();
+  $nid = $node->id();
+  $uid = $node->getOwnerId();
+  if ($bundle == 'organization' || $bundle == 'artist') {
+    $variables['user_id'] = $uid;
+  }
+}
+
+/**
+ * Test views to see if they have results before displaying.
+ *
+ * @param $variables
+ * @param $view
+ * @param $tab
+ * @param null $var1
+ * @param null $var2
+ *
+ * @return array|null
+ */
+function _msac_test_view_for_results($variables, $view, $tab, $var1 = NULL, $var2 = NULL) {
+  $test = views_get_view_result($view, $tab, $var1, $var2);
+  if (count($test) > 0) {
+    return views_embed_view($view, $tab, $var1, $var2);
+  }
+  return NULL;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function msac_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  $node = $variables['elements']['#node'];
+  if ($node->hasField('field_work_type')) {
+    $suggestions[] = 'node__' . $node->bundle() . '__' . $node->field_work_type->value . '__' . $variables['elements']['#view_mode'];
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_alter().
+ */
+function msac_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
+  if (
+    isset($variables['element']['#type'])
+    && isset($variables['element']['#name'])
+  ) {
+    $element = $variables['element'];
+    $suggestions[] = $hook . '__' . $element['#name'] . '__' . $element['#type'];
+  }
+}
+
+function msac_get_node_from_route() {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+
+  switch ($route_name) {
+    case 'entity.node.canonical':
+      $node = \Drupal::routeMatch()->getParameter('node');
+      break;
+
+    case 'entity.node.preview':
+      $node = \Drupal::routeMatch()->getParameter('node_preview');
+      break;
+
+    case 'entity.node.revision':
+      $revision_id = \Drupal::routeMatch()->getParameter('node_revision');
+      $node = \Drupal::entityTypeManager()->getStorage('node')->loadRevision($revision_id);
+      break;
+
+    case 'entity.node.latest_version':
+      $node = \Drupal::routeMatch()->getParameter('node');
+      break;
+  }
+
+  if (!empty($node)) {
+    if (is_numeric($node)) {
+      $node = Node::load($node);
+    }
+  }
+  return !empty($node) ? $node : FALSE;
+}
+/**
+ * Build hero details based on content type.
+ */
+function msac_get_hero_image($variables) {
+
+  $hero = array();
+  if ($node = msac_get_node_from_route()) {
+    if (is_numeric($node)) {
+      $node = Node::load($node);
+    }
+    $nid = $node->id();
+    // Note: We probably could have shared a field on hero image/titles but
+    // opted not to for consistency on scoping fields to content types.
+    $hero['content_type'] = $node->getType();
+    switch ($hero['content_type']) {
+      case 'grant':
+      case 'program':
+      case 'page':
+        if (isset($node->field_hero_image) && $node->field_hero_image->entity) {
+          $hero['uri'] = $node->get('field_hero_image')->entity->get('field_media_image')->entity->getFileUri();
+        }
+        break;
+
+      case 'district':
+        if (isset($node->field_hero_image) && $node->field_hero_image->entity) {
+          $hero['uri'] = $node->get('field_hero_image')->entity->get('field_media_image')->entity->getFileUri();
+        }
+        else {
+          $hero['url'] = $variables['assets_path'] . '/img/MSAC_default_profile_image.jpg';
+        }
+        break;
+
+      case 'artist':
+        if (isset($node->field_artist_cover) && $node->field_artist_cover->entity) {
+          $hero['uri'] = $node->get('field_artist_cover')->entity->getFileUri();
+        }
+        else {
+          $hero['url'] = $variables['assets_path'] . '/img/MSAC_default_profile_image.jpg';
+        }
+        break;
+
+      case 'organization':
+        if (isset($node->field_org_cover) && $node->field_org_cover->entity) {
+          $hero['uri'] = $node->get('field_org_cover')->entity->getFileUri();
+        }
+        else {
+          $hero['url'] = $variables['assets_path'] . '/img/MSAC_default_profile_image.jpg';
+        }
+        break;
+
+      case 'person':
+        $hero['url'] = $variables['assets_path'] . '/img/MSAC_default_profile_image.jpg';
+        break;
+
+      case 'article':
+        if (isset($node->field_article_cover_image) && $node->field_article_cover_image->entity) {
+          $hero['uri'] = $node->get('field_article_cover_image')->entity->get('field_media_image')->entity->getFileUri();
+        }
+        break;
+
+    }
+    if (!empty($hero['uri'])) {
+      $hero['url'] = ImageStyle::load('optimized')->buildUrl($hero['uri']);
+    }
+  }
+  return !empty($hero) ? $hero : FALSE;
+}
+
+
+/**
+ * Build social share image
+ */
+function msac_get_social_image($variables) {
+  $hero = msac_get_hero_image($variables);
+  $social_share_content_types = array('page', 'district', 'home', 'program', 'artist');
+  if (in_array($hero['content_type'], $social_share_content_types)) {
+    // If we found no url set default sharing image
+    if (empty($hero['url'])) {
+      $metatag = [
+        '#tag' => 'meta',
+        '#attributes' => [
+            'name' => 'og:image',
+            'content' => $variables['assets_path'] . '/img/MSAC_default_social_sharing_image.jpg'
+        ],
+      ];
+    }
+    // print_r($hero);
+    // exit;
+  }
+  return !empty($metatag) ? $metatag : FALSE;
+}

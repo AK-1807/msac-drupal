@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ip_carousel.field_ip_cl_items
+    - paragraphs.paragraphs_type.ip_carousel
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: TPwe8GfaXEgjcgXeYIr6hPgyb8HSsUNjOhfO29tlGwY
+id: paragraph.ip_carousel.default
+targetEntityType: paragraph
+bundle: ip_carousel
+mode: default
+content:
+  field_ip_cl_items:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true

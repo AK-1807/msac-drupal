@@ -1,0 +1,11 @@
+{% extends "node--full.html.twig" %}
+
+{% block node_content %}
+  <div class="page-content outer-pad">
+    {{ drupal_messages() }}
+    <div id="arts-calendar-root">
+        <arts-calendar />
+        <noscript>Please enable Javascript to view arts events across Maryland.</noscript>
+    </div>
+  </div>
+{% endblock %}

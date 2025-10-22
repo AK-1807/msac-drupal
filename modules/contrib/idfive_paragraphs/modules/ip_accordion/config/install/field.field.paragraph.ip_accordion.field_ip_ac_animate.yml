@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_ac_animate
+    - paragraphs.paragraphs_type.ip_accordion
+_core:
+  default_config_hash: rVljok6XDwzIWldvgGmN5FLuHsP4ubejB5H3eSZipfc
+id: paragraph.ip_accordion.field_ip_ac_animate
+field_name: field_ip_ac_animate
+entity_type: paragraph
+bundle: ip_accordion
+label: 'Animate the opening/closing'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

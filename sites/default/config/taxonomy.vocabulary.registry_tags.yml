@@ -1,0 +1,8 @@
+uuid: d4a00f6f-4818-45e1-ac07-e2ff721da1ec
+langcode: en
+status: true
+dependencies: {  }
+name: 'Registry Tags [legacy]'
+vid: registry_tags
+description: ''
+weight: 0

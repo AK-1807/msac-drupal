@@ -1,0 +1,23 @@
+uuid: c7391e01-21a2-4c4e-8083-c2f2b9327f8d
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: mKkciickHZeKb9ctVwINgqJWo8HJamx3ztCn0UFtGso
+id: paragraph.field_ip_ve_title
+field_name: field_ip_ve_title
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

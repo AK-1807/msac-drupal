@@ -1,0 +1,14 @@
+name: GMap Polygon Field
+description: Google Map with polygon drawing tools
+type: module
+core_version_requirement: ^8.8.0 || ^9 || ^10
+
+dependencies:
+  - drupal:field
+
+configure: gmap_polygon_field.settings
+
+# Information added by Drupal.org packaging script on 2022-04-07
+version: '8.x-1.0'
+project: 'gmap_polygon_field'
+datestamp: 1649334754

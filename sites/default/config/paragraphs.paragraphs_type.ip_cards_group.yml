@@ -1,0 +1,12 @@
+uuid: 325cb7db-c842-40cb-b33f-bcbeaf4cfcb0
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 6bPwVeiTs57YR4mQO6ScgAPRPca_95N7exIGAwMz3_Q
+id: ip_cards_group
+label: 'Card Group'
+icon_uuid: null
+icon_default: null
+description: 'This Paragraph type provides cards into the Kitchen Sink Widgets. It is controlled by the idfive Paragraphs module.'
+behavior_plugins: {  }

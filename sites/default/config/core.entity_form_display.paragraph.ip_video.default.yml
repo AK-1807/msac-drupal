@@ -1,0 +1,47 @@
+uuid: 85758fc6-1c96-4f9d-9fae-0882edabb628
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.idfive_media_browser_video
+    - field.field.paragraph.ip_video.field_ip_vd_description
+    - field.field.paragraph.ip_video.field_ip_vd_title
+    - field.field.paragraph.ip_video.field_ip_vd_video
+    - paragraphs.paragraphs_type.ip_video
+  module:
+    - entity_browser
+    - text
+_core:
+  default_config_hash: 4Rf4ESNrWtzOogm7vRWS1EVo0W8GzpUGMDMPBtOS51M
+id: paragraph.ip_video.default
+targetEntityType: paragraph
+bundle: ip_video
+mode: default
+content:
+  field_ip_vd_description:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_ip_vd_video:
+    type: entity_browser_entity_reference
+    weight: 1
+    region: content
+    settings:
+      entity_browser: idfive_media_browser_video
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: false
+      open: true
+      field_widget_display_settings:
+        view_mode: default
+      selection_mode: selection_append
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_ip_vd_title: true
+  status: true

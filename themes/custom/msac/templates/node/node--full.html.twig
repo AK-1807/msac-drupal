@@ -1,0 +1,52 @@
+{% block node_hero %}
+	{% if content.field_hero_image|field_value %}
+		<div class="hero">
+			<figure class="hero__media">
+				<div class="hero__media-image">
+					{{ content.field_hero_image }}
+				</div>
+				{% if content.field_hero_caption|field_value %}
+					<figcaption class="hero__media-caption{% if content.field_hero_logo %} hero__media-caption-w-logo{% endif %}">{{ content.field_hero_caption }}</figcaption>
+				{% endif %}
+			</figure>
+			{% if content.field_hero_logo|field_value %}
+				<figure class="hero__logo">
+					{{ content.field_hero_logo }}
+				</figure>
+			{% endif %}
+		</div>
+	{% endif %}
+{% endblock %}
+
+{% block node_heading %}
+	<div class="page-heading outer-pad">
+		<div class="silc-grid silc-grid--collapse">
+			<div class="silc-grid__col silc-grid__col--12">
+				<h1>{{ label }}</h1>
+				{{ drupal_block('system_breadcrumb_block') }}
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block node_content %}
+	<div class="page-content outer-pad">
+		{{ drupal_messages() }}
+		<div class="silc-grid silc-grid--collapse silc-grid--justify-center">
+			<div class="silc-grid__col silc-grid__col--10-800 silc-grid__col--8-1200">
+				<div class="text-content">
+					{{ content.body }}
+				</div>
+			</div>
+			{% if content.field_widgets|field_value %}
+				<div class="silc-grid__col silc-grid__col--12">
+					<div class="page-widgets">
+						{{ content.field_widgets }}
+					</div>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}
+
+{% block node_footer %}{% endblock %}

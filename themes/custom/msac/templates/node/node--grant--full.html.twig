@@ -1,0 +1,165 @@
+{% extends "node--full.html.twig" %}
+
+{% block node_hero %}{% endblock %}
+
+{% block node_content %}
+	<div class="page-content outer-pad">
+		<div class="widget-spacing">
+			<div class="silc-grid silc-grid--collapse silc-grid--justify-center silc-grid--justify-right-1024 silc-grid--justify-center-1600">
+				<div class="silc-grid__col silc-grid__col silc-grid__col--8-1024 silc-grid__col--6-1440">
+					<div class="text-content">
+						{% if content.field_grant_lead_in|field_value %}
+							<h2>{{ content.field_grant_lead_in|field_value }}</h2>
+						{% endif %}
+						{{ content.body }}
+					</div>
+				</div>
+				<div class="silc-grid__col silc-grid__col--10-600 silc-grid__col--8-800 silc-grid__col--4-1024">
+					<aside class="aside">
+						<h2 class="aside__heading">Quick Resources</h2>
+						<div class="aside__content">
+							{% if content.field_grant_ql_application|field_value %}
+								<div class="aside__section">
+									<div>
+										<p>
+											<a target="_blank" href="{{ file_url(content.field_grant_ql_application[0]['#media'].field_media_document.entity.uri.value) }}">
+												{{ content.field_grant_ql_application[0]['#media'].field_media_document_title.0.value }}
+											</a>
+										</p>
+									</div>
+								</div>
+							{% endif %}
+							{% if content.field_grant_type|field_value %}
+								<div class="aside__section">
+									<h3 class="aside__section-heading">For…</h3>
+									<div>
+										<ul>
+											{% for key, item in content.field_grant_type|field_value %}
+												<li>
+													{{ item }}
+												</li>
+											{% endfor %}
+										</ul>
+									</div>
+								</div>
+							{% endif %}
+							{% if content.field_grant_ql_funding|field_value %}
+								<div class="aside__section">
+									<h3 class="aside__section-heading">Funding Amount</h3>
+									<div>
+										<p>{{ content.field_grant_ql_funding }}</p>
+									</div>
+								</div>
+							{% endif %}
+							{% if node.field_grant_application_closed.value %}
+								<div class="aside__section">
+									<h3 class="aside__section-heading">Application Closed</h3>
+								</div>
+							{% else %}
+								{% if node.field_grant_rolling_deadline.value %}
+									<div class="aside__section">
+										<h3 class="aside__section-heading">Rolling Deadline</h3>
+									</div>
+								{% elseif (content.field_grant_ql_deadline|field_value) or (content.field_grant_ql_deadline_text|field_value) %}
+									<div class="aside__section">
+										<h3 class="aside__section-heading">Deadline</h3>
+										{% if content.field_grant_ql_deadline|field_value %}
+											<div>
+												<p>{{ content.field_grant_ql_deadline }}</p>
+											</div>
+										{% endif %}
+										{% if content.field_grant_ql_deadline_text|field_value %}
+											<div>
+												<p>{{ content.field_grant_ql_deadline_text }}</p>
+											</div>
+										{% endif %}
+									</div>
+								{% endif %}
+								{% if content.field_grant_ql_apply_link|field_value %}
+									<div class="aside__section">
+										<div>
+											<a class="button" target="_blank" href="{{ content.field_grant_ql_apply_link.0['#url'] }}">{{ content.field_grant_ql_apply_link.0['#title'] }}</a>
+										</div>
+									</div>
+								{% endif %}
+							{% endif %}
+						</div>
+					</aside>
+				</div>
+			</div>
+		</div>
+		{% set grant_content %}
+		{% if content.field_grant_accordion|field_value %}
+			{{ content.field_grant_accordion }}
+		{% endif %}
+		{% if content.field_grant_resources|field_value %}
+			<div class="widget-spacing">
+				<div class="silc-grid silc-grid--collapse silc-grid--justify-center">
+					<div class="silc-grid__col silc-grid__col--10-800 silc-grid__col--8-1200">
+						<div class="editor-widget text-content">
+							<h2>Resources</h2>
+							<ul class="unstyled-list">
+								{% for key, item in content.field_grant_resources|field_value %}
+									<li>
+										<a target="_blank" href="{{ file_url(item['#media'].field_media_document.entity.uri.value) }}">
+											{{ item['#media'].field_media_document_title.0.value }}
+										</a>
+									</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		{% endif %}
+		{% if content.field_grant_contacts|field_value %}
+			<ul class="program-contacts">
+				{% for item in content.field_grant_contacts|field_value %}
+					<li class="program-contacts__item">
+						{{ item }}
+					</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+		{% endset %}
+		{% if grant_content is not empty %}
+			<div class="widget-spacing">
+				<div class="silc-grid silc-grid--collapse silc-grid--justify-center">
+					<div class="silc-grid__col silc-grid__col--12">
+						<div>
+							{{ grant_content }}
+						</div>
+					</div>
+				</div>
+			</div>
+		{% endif %}
+	</div>
+{% endblock %}
+
+{% block node_footer %}
+	{% set background = assets_path ~ '/img/individual-grant-sketch-bg.png' %}
+	{% if content.field_grant_background|field_value %}
+		{% set background = file_url(content.field_grant_background[0]['#media'].field_media_image.entity.uri.value | image_style('optimized')) %}
+	{% endif %}
+
+	<div class="page-background" role="presentation" style="background-image:url({{ background }})"></div>
+
+	<div class="footer-cta related-grants outer-pad">
+		{% if content.field_grant_related_grants|field_value %}
+			<div class="silc-grid silc-grid--collapse silc-grid--justify-center">
+				<div class="silc-grid__col silc-grid__col--12">
+					<h2 class="footer-cta__heading">Similar Funding Opportunities</h2>
+					<ul class="silc-grid silc-grid--collapse silc-grid--justify-center">
+						{% for key, item in content.field_grant_related_grants %}
+						{% if key|first != '#' %}
+							<li class="silc-grid__col silc-grid__col--10-550 silc-grid__col--6-1200">
+								{{ item }}
+							</li>
+						{% endif %}
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		{% endif %}
+	</div>
+{% endblock %}

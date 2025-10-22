@@ -1,0 +1,21 @@
+uuid: 7ccadc4e-2e61-4124-83ac-6ee8ba5b5909
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ip_cd_title
+    - paragraphs.paragraphs_type.ip_card
+_core:
+  default_config_hash: Si4MdFANmGX_xXQcCkeeLp_0ahhmHxkw9HD35kgEtIA
+id: paragraph.ip_card.field_ip_cd_title
+field_name: field_ip_cd_title
+entity_type: paragraph
+bundle: ip_card
+label: 'Card Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

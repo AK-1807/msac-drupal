@@ -1,0 +1,9 @@
+uuid: 426e80e1-e621-48fd-9c40-0461dc982480
+langcode: en
+status: true
+dependencies: {  }
+id: node__program
+label: 'Content: Program'
+tags:
+  image_src: '[node:field_program_image:optimized:url]'
+  og_image: '[node:field_program_image:optimized:url]'

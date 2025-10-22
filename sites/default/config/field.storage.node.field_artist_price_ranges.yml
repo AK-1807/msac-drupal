@@ -1,0 +1,20 @@
+uuid: 098334f0-fd15-49d3-ba67-882e72a1c0c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_artist_price_ranges
+field_name: field_artist_price_ranges
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,8 @@
+uuid: 5e0bd3fa-fa4b-4fe4-8cb8-361658463eac
+langcode: en
+status: true
+dependencies: {  }
+name: 'Marketplace Categories'
+vid: marketplace_categories
+description: ''
+weight: 0

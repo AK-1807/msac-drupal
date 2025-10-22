@@ -1,0 +1,19 @@
+uuid: 9c26e88f-b022-4cd3-9922-b14d002d62f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_cac_name
+    - taxonomy.vocabulary.counties
+id: taxonomy_term.counties.field_cac_name
+field_name: field_cac_name
+entity_type: taxonomy_term
+bundle: counties
+label: Name
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

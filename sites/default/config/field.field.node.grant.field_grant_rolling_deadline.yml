@@ -1,0 +1,23 @@
+uuid: 2e91874f-9020-4564-bcd5-9beeceb68e28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_grant_rolling_deadline
+    - node.type.grant
+id: node.grant.field_grant_rolling_deadline
+field_name: field_grant_rolling_deadline
+entity_type: node
+bundle: grant
+label: 'Rolling Deadline'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

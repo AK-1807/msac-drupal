@@ -1,0 +1,210 @@
+uuid: 2cf1e9ea-0c60-4d8c-926b-31be4d16c2c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.grant.body
+    - field.field.node.grant.field_grant_accordion
+    - field.field.node.grant.field_grant_application_closed
+    - field.field.node.grant.field_grant_audience
+    - field.field.node.grant.field_grant_background
+    - field.field.node.grant.field_grant_contacts
+    - field.field.node.grant.field_grant_image
+    - field.field.node.grant.field_grant_lead_in
+    - field.field.node.grant.field_grant_program
+    - field.field.node.grant.field_grant_ql_application
+    - field.field.node.grant.field_grant_ql_apply_link
+    - field.field.node.grant.field_grant_ql_deadline
+    - field.field.node.grant.field_grant_ql_deadline_text
+    - field.field.node.grant.field_grant_ql_funding
+    - field.field.node.grant.field_grant_related_grants
+    - field.field.node.grant.field_grant_resources
+    - field.field.node.grant.field_grant_rolling_deadline
+    - field.field.node.grant.field_meta
+    - field.field.node.grant.field_weight
+    - node.type.grant
+  module:
+    - datetime
+    - entity_reference_revisions
+    - image
+    - link
+    - metatag
+    - text
+    - user
+id: node.grant.default
+targetEntityType: node
+bundle: grant
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_grant_accordion:
+    type: entity_reference_revisions_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_grant_application_closed:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_grant_background:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_grant_contacts:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_grant_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_grant_lead_in:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_grant_program:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_grant_ql_application:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_grant_ql_apply_link:
+    type: link
+    label: visually_hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_grant_ql_deadline:
+    type: datetime_custom
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: m/d/Y
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_grant_ql_deadline_text:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_grant_ql_funding:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_grant_related_grants:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_grant_resources:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_grant_rolling_deadline:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_meta:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_weight:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_grant_audience: true
+  search_api_excerpt: true

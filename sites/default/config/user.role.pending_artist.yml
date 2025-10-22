@@ -1,0 +1,12 @@
+uuid: 326c3267-54f6-4cf5-a8c8-fa38e50aac08
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: pending_artist
+label: 'Pending Artist'
+weight: 3
+is_admin: null
+permissions:
+  - 'delete own files'

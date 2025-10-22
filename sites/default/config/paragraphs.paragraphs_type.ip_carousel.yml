@@ -1,0 +1,12 @@
+uuid: f5ef36e6-11a3-484d-8534-f77a277f45d0
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: KhKBUQswsPrwj-TR4n2etPw5NklyhbArMlIvyNLLa-4
+id: ip_carousel
+label: 'Carousel Group'
+icon_uuid: null
+icon_default: null
+description: 'This Paragraph type provides a carousel of static content into the Kitchen Sink Widgets. It is controlled by the idfive Paragraphs module.'
+behavior_plugins: {  }

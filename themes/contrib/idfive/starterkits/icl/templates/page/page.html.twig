@@ -1,0 +1,17 @@
+{% include directory ~ '/templates/_includes/global/header.html.twig' %}
+
+<div class="content" id="main-content">
+
+		{{ messages }}
+
+		{% if logged_in and page.admin_tabs  %}
+			<div class="admin--tabs">{{ page.admin_tabs }}</div>
+		{% endif %}
+
+		{{ page.help }}
+
+		{{ page.content }}
+
+	</div>
+
+{% include directory ~ '/templates/_includes/global/footer.html.twig' %}

@@ -1,0 +1,19 @@
+uuid: 962bbadb-7f23-4ef9-b58b-4ce49c1395cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_artist_bk_references
+field_name: field_artist_bk_references
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

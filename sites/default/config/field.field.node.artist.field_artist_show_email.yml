@@ -1,0 +1,23 @@
+uuid: 5c6b55f4-90b9-480a-b18e-d886e75991ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_show_email
+    - node.type.artist
+id: node.artist.field_artist_show_email
+field_name: field_artist_show_email
+entity_type: node
+bundle: artist
+label: 'Display my email address on my profile'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

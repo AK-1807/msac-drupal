@@ -1,0 +1,12 @@
+uuid: f124b08d-932b-4f4b-80d3-4f63b7da243a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: DU91dnItM9zWGADeicbyaeGadZjZyfryBwlB00c--fM
+id: ip_card
+label: 'Card Item'
+icon_uuid: null
+icon_default: null
+description: '(HIDE FROM KS FIELD) This Paragraph type provides an individual card into the Accordion Group, in the Kitchen Sink Widgets. It is controlled by the idfive Paragraphs module.'
+behavior_plugins: {  }

@@ -1,0 +1,38 @@
+uuid: 6b18819a-efb7-46d2-aa41-99c75caf918d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_org_image
+    - node.type.organization
+  module:
+    - image
+id: node.organization.field_org_image
+field_name: field_org_image
+entity_type: node
+bundle: organization
+label: 'Profile Photo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: 1MB
+  max_resolution: 600x600
+  min_resolution: 300x300
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: 189
+    height: 189
+field_type: image

@@ -1,0 +1,19 @@
+uuid: e54d8d27-1eda-4ca5-bfd6-72e95091ade8
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_org_social_instagram
+field_name: field_org_social_instagram
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

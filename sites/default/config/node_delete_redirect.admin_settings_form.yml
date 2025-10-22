@@ -1,0 +1,32 @@
+ndr_admin_form_settings:
+  ndr_check: '1'
+  ndr_settings:
+    article:
+      is_enabled: 0
+    artist:
+      is_enabled: 0
+    district:
+      is_enabled: 0
+    grant:
+      is_enabled: 0
+    home:
+      is_enabled: 0
+    location:
+      is_enabled: 0
+    organization:
+      is_enabled: 0
+    page:
+      is_enabled: 0
+    person:
+      is_enabled: 0
+    program:
+      is_enabled: 0
+    work:
+      is_enabled: 1
+      redirect: /profile/work
+  ndr_lang: 0
+  submit: 'Save configuration'
+  form_build_id: form-JKZzzd6AMpX8zbBMvvmDC0897GzWcgDHQ4vJKLpD0OQ
+  form_token: YtI2qCbCJaNJHfU-EaHy3zMCJe3ilW73_-Uyq0vyv2Y
+  form_id: node_delete_redirect.admin_settings_form
+  op: 'Save configuration'
